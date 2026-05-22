@@ -1,9 +1,14 @@
+export const metadata = {
+  title: "Scorporo IVA",
+  description: "Rimuovi IVA da un totale.",
+  keywords: ["IVA", "scorporo", "calcolo", "Svizzera"],
+};
+
 "use client";
 
 import { useState } from "react";
 
 export default function ScorporoIVA() {
-
   const [totale, setTotale] = useState("");
   const [iva, setIva] = useState("8.1");
 
@@ -11,7 +16,6 @@ export default function ScorporoIVA() {
   const [ivaImporto, setIvaImporto] = useState<number | null>(null);
 
   const scorporaIVA = () => {
-
     const numero = parseFloat(totale);
 
     if (!numero) return;
@@ -28,7 +32,6 @@ export default function ScorporoIVA() {
 
   return (
     <main className="min-h-screen bg-gray-100 p-10">
-
       <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow">
 
         <h1 className="text-4xl font-bold mb-6">
@@ -39,7 +42,7 @@ export default function ScorporoIVA() {
 
           <input
             type="number"
-            placeholder="Totale CHF"
+            placeholder="Totale con IVA"
             value={totale}
             onChange={(e) => setTotale(e.target.value)}
             className="w-full border p-4 rounded-xl"
@@ -50,9 +53,9 @@ export default function ScorporoIVA() {
             onChange={(e) => setIva(e.target.value)}
             className="w-full border p-4 rounded-xl"
           >
-            <option value="8.1">8.1%</option>
-            <option value="2.6">2.6%</option>
-            <option value="3.8">3.8%</option>
+            <option value="8.1">IVA 8.1%</option>
+            <option value="2.6">IVA 2.6%</option>
+            <option value="3.8">IVA 3.8%</option>
           </select>
 
           <button
@@ -77,13 +80,7 @@ export default function ScorporoIVA() {
           )}
 
         </div>
-
       </div>
-
     </main>
   );
-}{
-  title: "Scorporo IVA",
-  description: "Rimuovi l'IVA da un totale.",
-  link: "/scorporo-iva-svizzera",
-},
+}
