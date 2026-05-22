@@ -1,9 +1,3 @@
-export const metadata = {
-  title: "Scorporo IVA",
-  description: "Rimuovi IVA da un totale.",
-  keywords: ["IVA", "scorporo", "calcolo", "Svizzera"],
-};
-
 "use client";
 
 import { useState } from "react";
@@ -32,54 +26,50 @@ export default function ScorporoIVA() {
 
   return (
     <main className="min-h-screen bg-gray-100 p-10">
-      <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow">
+      <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
 
         <h1 className="text-4xl font-bold mb-6">
           Scorporo IVA Svizzera
         </h1>
 
-        <div className="space-y-4">
+        <input
+          type="number"
+          placeholder="Totale CHF"
+          value={totale}
+          onChange={(e) => setTotale(e.target.value)}
+          className="w-full border p-4 rounded-xl mb-4"
+        />
 
-          <input
-            type="number"
-            placeholder="Totale con IVA"
-            value={totale}
-            onChange={(e) => setTotale(e.target.value)}
-            className="w-full border p-4 rounded-xl"
-          />
+        <select
+          value={iva}
+          onChange={(e) => setIva(e.target.value)}
+          className="w-full border p-4 rounded-xl mb-4"
+        >
+          <option value="8.1">IVA 8.1%</option>
+          <option value="2.6">IVA 2.6%</option>
+          <option value="3.8">IVA 3.8%</option>
+        </select>
 
-          <select
-            value={iva}
-            onChange={(e) => setIva(e.target.value)}
-            className="w-full border p-4 rounded-xl"
-          >
-            <option value="8.1">IVA 8.1%</option>
-            <option value="2.6">IVA 2.6%</option>
-            <option value="3.8">IVA 3.8%</option>
-          </select>
+        <button
+          onClick={scorporaIVA}
+          className="bg-black text-white px-6 py-4 rounded-xl w-full"
+        >
+          Scorpora IVA
+        </button>
 
-          <button
-            onClick={scorporaIVA}
-            className="w-full bg-black text-white p-4 rounded-xl"
-          >
-            Scorpora IVA
-          </button>
+        {netto && ivaImporto && (
+          <div className="bg-blue-100 p-4 rounded-xl space-y-2 mt-6">
 
-          {netto && ivaImporto && (
-            <div className="bg-blue-100 p-4 rounded-xl space-y-2">
+            <p className="text-xl font-semibold">
+              Netto: CHF {netto.toFixed(2)}
+            </p>
 
-              <p className="text-xl font-semibold">
-                Netto: CHF {netto.toFixed(2)}
-              </p>
+            <p className="text-xl font-semibold">
+              IVA inclusa: CHF {ivaImporto.toFixed(2)}
+            </p>
 
-              <p className="text-xl font-semibold">
-                IVA inclusa: CHF {ivaImporto.toFixed(2)}
-              </p>
-
-            </div>
-          )}
-
-        </div>
+          </div>
+        )}
       </div>
     </main>
   );
