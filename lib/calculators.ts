@@ -8,7 +8,19 @@ export type CalculatorKind =
   | "mortgage-ch"
   | "trading-risk"
   | "forex-lot-size"
-  | "drawdown";
+  | "drawdown"
+  | "percentage"
+  | "discount"
+  | "percentage-change"
+  | "margin-markup"
+  | "roi"
+  | "break-even"
+  | "loan-payment"
+  | "profit-loss"
+  | "risk-reward"
+  | "savings-goal"
+  | "hourly-cost"
+  | "annual-monthly";
 
 export type CalculatorInput = {
   key: string;
@@ -323,6 +335,655 @@ export const calculators: Calculator[] = [
       { question: "Serve per le prop firm?", answer: "Si, aiuta a rispettare limiti di perdita giornaliera e massima." },
     ],
     relatedSlugs: ["calcolo-rischio-trading", "calcolo-lot-size-forex", "calcolo-interessi-composti"],
+  },
+  {
+    slug: "calcolo-percentuale",
+    kind: "percentage",
+    title: "Calcolatore Percentuale",
+    shortTitle: "Percentuale",
+    category: "Matematica",
+    metaTitle: "Calcolatore Percentuale Online | Calcolich",
+    metaDescription: "Calcola rapidamente una percentuale di un importo senza formule manuali. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Calcola rapidamente una percentuale di un importo senza formule manuali.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "base",
+        label: "Importo base",
+        defaultValue: "1000",
+        min: "0"
+      },
+      {
+        key: "rate",
+        label: "Percentuale %",
+        defaultValue: "15",
+        step: "0.1"
+      }
+    ],
+    article: [
+      "Il Calcolatore Percentuale nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca percentuale vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Percentuale?",
+        answer: "Serve a calcolare rapidamente percentuale partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-sconto",
+      "calcolo-aumento-percentuale",
+      "calcolo-iva-svizzera"
+    ]
+  },
+  {
+    slug: "calcolo-sconto",
+    kind: "discount",
+    title: "Calcolatore Sconto",
+    shortTitle: "Sconto",
+    category: "Business",
+    metaTitle: "Calcolatore Sconto Online | Calcolich",
+    metaDescription: "Calcola sconto, importo risparmiato e prezzo finale partendo dal prezzo iniziale. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Calcola sconto, importo risparmiato e prezzo finale partendo dal prezzo iniziale.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "price",
+        label: "Prezzo iniziale",
+        defaultValue: "199",
+        min: "0"
+      },
+      {
+        key: "discountRate",
+        label: "Sconto %",
+        defaultValue: "20",
+        step: "0.1",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Sconto nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca sconto vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Sconto?",
+        answer: "Serve a calcolare rapidamente sconto partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-percentuale",
+      "calcolo-margine-profitto",
+      "calcolo-prezzo-vendita"
+    ]
+  },
+  {
+    slug: "calcolo-aumento-percentuale",
+    kind: "percentage-change",
+    title: "Calcolatore Aumento Percentuale",
+    shortTitle: "Aumento %",
+    category: "Matematica",
+    metaTitle: "Calcolatore Aumento Percentuale Online | Calcolich",
+    metaDescription: "Misura aumento o diminuzione percentuale tra due valori. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Misura aumento o diminuzione percentuale tra due valori.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "startValue",
+        label: "Valore iniziale",
+        defaultValue: "100",
+        min: "0"
+      },
+      {
+        key: "endValue",
+        label: "Valore finale",
+        defaultValue: "125",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Aumento Percentuale nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca aumento percentuale vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Aumento Percentuale?",
+        answer: "Serve a calcolare rapidamente aumento percentuale partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-percentuale",
+      "calcolo-roi",
+      "calcolo-interessi-composti"
+    ]
+  },
+  {
+    slug: "calcolo-margine-profitto",
+    kind: "margin-markup",
+    title: "Calcolatore Margine Profitto",
+    shortTitle: "Margine profitto",
+    category: "Business",
+    metaTitle: "Calcolatore Margine Profitto Online | Calcolich",
+    metaDescription: "Calcola profitto, margine e markup partendo da costo e prezzo di vendita. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Calcola profitto, margine e markup partendo da costo e prezzo di vendita.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "cost",
+        label: "Costo prodotto/servizio",
+        defaultValue: "60",
+        min: "0"
+      },
+      {
+        key: "price",
+        label: "Prezzo vendita",
+        defaultValue: "100",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Margine Profitto nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca margine profitto vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Margine Profitto?",
+        answer: "Serve a calcolare rapidamente margine profitto partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-break-even",
+      "calcolo-prezzo-vendita",
+      "calcolo-sconto"
+    ]
+  },
+  {
+    slug: "calcolo-roi",
+    kind: "roi",
+    title: "Calcolatore ROI",
+    shortTitle: "ROI",
+    category: "Finanza",
+    metaTitle: "Calcolatore ROI Online | Calcolich",
+    metaDescription: "Calcola ritorno sull'investimento, profitto netto e rendimento percentuale. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Calcola ritorno sull'investimento, profitto netto e rendimento percentuale.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "cost",
+        label: "Investimento iniziale",
+        defaultValue: "1000",
+        min: "0"
+      },
+      {
+        key: "gain",
+        label: "Valore finale o ricavo",
+        defaultValue: "1250",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore ROI nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca roi vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore ROI?",
+        answer: "Serve a calcolare rapidamente roi partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-interessi-composti",
+      "calcolo-aumento-percentuale",
+      "calcolo-profitto-trading"
+    ]
+  },
+  {
+    slug: "calcolo-break-even",
+    kind: "break-even",
+    title: "Calcolatore Break Even",
+    shortTitle: "Break even",
+    category: "Business",
+    metaTitle: "Calcolatore Break Even Online | Calcolich",
+    metaDescription: "Scopri quante vendite servono per coprire i costi e arrivare al pareggio. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Scopri quante vendite servono per coprire i costi e arrivare al pareggio.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "fixedCosts",
+        label: "Costi fissi",
+        defaultValue: "1000",
+        min: "0"
+      },
+      {
+        key: "price",
+        label: "Prezzo vendita unitario",
+        defaultValue: "100",
+        min: "0"
+      },
+      {
+        key: "variableCost",
+        label: "Costo variabile unitario",
+        defaultValue: "35",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Break Even nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca break even vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Break Even?",
+        answer: "Serve a calcolare rapidamente break even partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-margine-profitto",
+      "calcolo-prezzo-vendita",
+      "calcolo-fattura-freelance"
+    ]
+  },
+  {
+    slug: "calcolo-rata-prestito",
+    kind: "loan-payment",
+    title: "Calcolatore Rata Prestito",
+    shortTitle: "Rata prestito",
+    category: "Finanza",
+    metaTitle: "Calcolatore Rata Prestito Online | Calcolich",
+    metaDescription: "Stima rata mensile, interessi e totale pagato per un prestito. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Stima rata mensile, interessi e totale pagato per un prestito.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "principal",
+        label: "Importo prestito",
+        defaultValue: "15000",
+        min: "0"
+      },
+      {
+        key: "months",
+        label: "Durata mesi",
+        defaultValue: "48",
+        min: "1"
+      },
+      {
+        key: "rate",
+        label: "Tasso annuo %",
+        defaultValue: "5.5",
+        step: "0.1",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Rata Prestito nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca rata prestito vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Rata Prestito?",
+        answer: "Serve a calcolare rapidamente rata prestito partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-mutuo-svizzera",
+      "calcolo-interessi-composti",
+      "calcolo-budget-mensile"
+    ]
+  },
+  {
+    slug: "calcolo-profitto-trading",
+    kind: "profit-loss",
+    title: "Calcolatore Profitto Trading",
+    shortTitle: "Profitto trading",
+    category: "Trading",
+    metaTitle: "Calcolatore Profitto Trading Online | Calcolich",
+    metaDescription: "Calcola profitto o perdita di un trade partendo da entrata, uscita e quantita. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Calcola profitto o perdita di un trade partendo da entrata, uscita e quantita.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "direction",
+        label: "Direzione",
+        type: "select",
+        defaultValue: "long",
+        options: [
+          {
+            label: "Long",
+            value: "long"
+          },
+          {
+            label: "Short",
+            value: "short"
+          }
+        ]
+      },
+      {
+        key: "entry",
+        label: "Prezzo entrata",
+        defaultValue: "100",
+        min: "0"
+      },
+      {
+        key: "exit",
+        label: "Prezzo uscita",
+        defaultValue: "112",
+        min: "0"
+      },
+      {
+        key: "quantity",
+        label: "Quantita",
+        defaultValue: "10",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Profitto Trading nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca profitto trading vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Profitto Trading?",
+        answer: "Serve a calcolare rapidamente profitto trading partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-rischio-trading",
+      "calcolo-risk-reward",
+      "calcolo-drawdown"
+    ]
+  },
+  {
+    slug: "calcolo-risk-reward",
+    kind: "risk-reward",
+    title: "Calcolatore Risk Reward",
+    shortTitle: "Risk reward",
+    category: "Trading",
+    metaTitle: "Calcolatore Risk Reward Online | Calcolich",
+    metaDescription: "Confronta rischio e potenziale profitto prima di aprire un trade. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Confronta rischio e potenziale profitto prima di aprire un trade.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "entry",
+        label: "Prezzo entrata",
+        defaultValue: "100",
+        min: "0"
+      },
+      {
+        key: "stop",
+        label: "Stop loss",
+        defaultValue: "96",
+        min: "0"
+      },
+      {
+        key: "target",
+        label: "Take profit",
+        defaultValue: "112",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Risk Reward nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca risk reward vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Risk Reward?",
+        answer: "Serve a calcolare rapidamente risk reward partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-rischio-trading",
+      "calcolo-profitto-trading",
+      "calcolo-lot-size-forex"
+    ]
+  },
+  {
+    slug: "calcolo-obiettivo-risparmio",
+    kind: "savings-goal",
+    title: "Calcolatore Obiettivo Risparmio",
+    shortTitle: "Obiettivo risparmio",
+    category: "Finanza personale",
+    metaTitle: "Calcolatore Obiettivo Risparmio Online | Calcolich",
+    metaDescription: "Calcola quanto tempo serve per raggiungere un obiettivo di risparmio. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Calcola quanto tempo serve per raggiungere un obiettivo di risparmio.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "goal",
+        label: "Obiettivo",
+        defaultValue: "10000",
+        min: "0"
+      },
+      {
+        key: "current",
+        label: "Gia risparmiato",
+        defaultValue: "2500",
+        min: "0"
+      },
+      {
+        key: "monthly",
+        label: "Risparmio mensile",
+        defaultValue: "500",
+        min: "0"
+      }
+    ],
+    article: [
+      "Il Calcolatore Obiettivo Risparmio nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca obiettivo risparmio vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Obiettivo Risparmio?",
+        answer: "Serve a calcolare rapidamente obiettivo risparmio partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-budget-mensile",
+      "calcolo-interessi-composti",
+      "calcolo-rata-prestito"
+    ]
+  },
+  {
+    slug: "calcolo-costo-orario",
+    kind: "hourly-cost",
+    title: "Calcolatore Costo Orario",
+    shortTitle: "Costo orario",
+    category: "Lavoro",
+    metaTitle: "Calcolatore Costo Orario Online | Calcolich",
+    metaDescription: "Trasforma un costo mensile in costo orario per lavoro, servizi o freelance. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Trasforma un costo mensile in costo orario per lavoro, servizi o freelance.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "monthlyCost",
+        label: "Costo mensile",
+        defaultValue: "6000",
+        min: "0"
+      },
+      {
+        key: "hours",
+        label: "Ore mensili",
+        defaultValue: "160",
+        min: "1"
+      }
+    ],
+    article: [
+      "Il Calcolatore Costo Orario nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca costo orario vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Costo Orario?",
+        answer: "Serve a calcolare rapidamente costo orario partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-ore-lavoro",
+      "calcolo-fattura-freelance",
+      "calcolo-salario-netto-svizzera"
+    ]
+  },
+  {
+    slug: "calcolo-stipendio-annuale-mensile",
+    kind: "annual-monthly",
+    title: "Calcolatore Stipendio Annuale Mensile",
+    shortTitle: "Annuale mensile",
+    category: "Stipendio Svizzera",
+    metaTitle: "Calcolatore Stipendio Annuale Mensile Online | Calcolich",
+    metaDescription: "Converti uno stipendio annuale in importo mensile su 12 o 13 mensilita. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
+    intro: "Converti uno stipendio annuale in importo mensile su 12 o 13 mensilita.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    inputs: [
+      {
+        key: "annual",
+        label: "Stipendio annuale",
+        defaultValue: "78000",
+        min: "0"
+      },
+      {
+        key: "months",
+        label: "Mensilita",
+        defaultValue: "13",
+        min: "1",
+        max: "14"
+      }
+    ],
+    article: [
+      "Il Calcolatore Stipendio Annuale Mensile nasce per risolvere un problema semplice ma frequente: ottenere un numero chiaro senza perdere tempo con formule manuali. In molti casi, chi cerca stipendio annuale mensile vuole una risposta immediata per decidere, confrontare alternative o controllare un conteggio prima di usare il dato in una fattura, in un budget, in una trattativa o in una strategia operativa.",
+      "Il funzionamento e pratico: inserisci i valori richiesti, controlli che siano coerenti con il tuo caso e leggi subito il risultato principale. La pagina e pensata per persone che vogliono usare lo strumento velocemente, ma anche capire il significato del risultato. Per questo ogni calcolatore include una spiegazione semplice, FAQ, dati strutturati e collegamenti ad altri strumenti utili.",
+      "Quando usi questo calcolo, evita l'errore piu comune: trattare una stima come se fosse un dato ufficiale. Il risultato serve per orientarti e fare controlli rapidi, ma per decisioni fiscali, contrattuali, bancarie o di investimento conviene verificare sempre con fonti ufficiali, documenti aggiornati o un professionista qualificato.",
+      "Dal punto di vista SEO e business, questo tool ha un obiettivo preciso: portare traffico qualificato su Calcolich e trasformare visite in lead tramite newsletter, richieste servizi o contenuti collegati. Per questo la pagina collega strumenti simili e puo essere usata come destinazione per post social, video brevi, guide e campagne locali."
+    ],
+    faqs: [
+      {
+        question: "A cosa serve Calcolatore Stipendio Annuale Mensile?",
+        answer: "Serve a calcolare rapidamente stipendio annuale mensile partendo dai valori principali inseriti dall'utente."
+      },
+      {
+        question: "Il risultato e ufficiale?",
+        answer: "No, e una stima pratica. Per decisioni importanti verifica sempre documenti ufficiali, contratto, banca, consulente o fonte competente."
+      },
+      {
+        question: "Posso usare il calcolatore gratis?",
+        answer: "Si, lo strumento e gratuito e pensato per essere usato online senza installare nulla."
+      }
+    ],
+    relatedSlugs: [
+      "calcolo-salario-netto-svizzera",
+      "calcolo-lordo-netto-svizzera",
+      "calcolo-tredicesima-svizzera"
+    ]
   },
 ];
 

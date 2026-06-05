@@ -71,6 +71,10 @@ function money(value: number) {
   return `CHF ${value.toFixed(2)}`;
 }
 
+function percent(value: number) {
+  return `${value.toFixed(2)}%`;
+}
+
 function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
   switch (kind) {
     case "work-hours": {
@@ -176,6 +180,141 @@ function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
         { label: "Perdita", value: money(loss) },
         { label: "Drawdown", value: `${drawdown.toFixed(2)}%` },
         { label: "Recupero necessario", value: `${recovery.toFixed(2)}%` },
+      ];
+    }
+    case "percentage": {
+      const base = number(values, "base");
+      const rate = number(values, "rate");
+      const amount = (base * rate) / 100;
+      return [
+        { label: "Base", value: money(base) },
+        { label: "Percentuale", value: percent(rate) },
+        { label: "Risultato", value: money(amount) },
+      ];
+    }
+    case "discount": {
+      const price = number(values, "price");
+      const discountRate = number(values, "discountRate");
+      const discount = (price * discountRate) / 100;
+      return [
+        { label: "Sconto", value: money(discount) },
+        { label: "Percentuale", value: percent(discountRate) },
+        { label: "Prezzo finale", value: money(Math.max(price - discount, 0)) },
+      ];
+    }
+    case "percentage-change": {
+      const startValue = number(values, "startValue");
+      const endValue = number(values, "endValue");
+      const change = endValue - startValue;
+      const rate = startValue !== 0 ? (change / startValue) * 100 : 0;
+      return [
+        { label: "Variazione", value: money(change) },
+        { label: "Valore iniziale", value: money(startValue) },
+        { label: "Cambio percentuale", value: percent(rate) },
+      ];
+    }
+    case "margin-markup": {
+      const cost = number(values, "cost");
+      const price = number(values, "price");
+      const profit = price - cost;
+      const margin = price > 0 ? (profit / price) * 100 : 0;
+      const markup = cost > 0 ? (profit / cost) * 100 : 0;
+      return [
+        { label: "Profitto", value: money(profit) },
+        { label: "Markup", value: percent(markup) },
+        { label: "Margine", value: percent(margin) },
+      ];
+    }
+    case "roi": {
+      const cost = number(values, "cost");
+      const gain = number(values, "gain");
+      const profit = gain - cost;
+      const roi = cost > 0 ? (profit / cost) * 100 : 0;
+      return [
+        { label: "Profitto netto", value: money(profit) },
+        { label: "Investimento", value: money(cost) },
+        { label: "ROI", value: percent(roi) },
+      ];
+    }
+    case "break-even": {
+      const fixedCosts = number(values, "fixedCosts");
+      const price = number(values, "price");
+      const variableCost = number(values, "variableCost");
+      const contribution = Math.max(price - variableCost, 0);
+      const units = contribution > 0 ? fixedCosts / contribution : 0;
+      return [
+        { label: "Margine unitario", value: money(contribution) },
+        { label: "Costi fissi", value: money(fixedCosts) },
+        { label: "Punto pareggio", value: `${Math.ceil(units)} vendite` },
+      ];
+    }
+    case "loan-payment": {
+      const principal = number(values, "principal");
+      const months = Math.max(number(values, "months"), 1);
+      const monthlyRate = number(values, "rate") / 100 / 12;
+      const payment = monthlyRate === 0 ? principal / months : principal * (monthlyRate / (1 - (1 + monthlyRate) ** -months));
+      return [
+        { label: "Rata mensile", value: money(payment) },
+        { label: "Totale pagato", value: money(payment * months) },
+        { label: "Interessi", value: money(payment * months - principal) },
+      ];
+    }
+    case "profit-loss": {
+      const entry = number(values, "entry");
+      const exit = number(values, "exit");
+      const quantity = number(values, "quantity");
+      const direction = values.direction === "short" ? -1 : 1;
+      const profit = (exit - entry) * quantity * direction;
+      const exposure = entry * quantity;
+      const roi = exposure > 0 ? (profit / exposure) * 100 : 0;
+      return [
+        { label: "Esposizione", value: money(exposure) },
+        { label: "Rendimento", value: percent(roi) },
+        { label: "Profitto/perdita", value: money(profit) },
+      ];
+    }
+    case "risk-reward": {
+      const entry = number(values, "entry");
+      const stop = number(values, "stop");
+      const target = number(values, "target");
+      const risk = Math.abs(entry - stop);
+      const reward = Math.abs(target - entry);
+      const ratio = risk > 0 ? reward / risk : 0;
+      return [
+        { label: "Rischio per unita", value: money(risk) },
+        { label: "Profitto potenziale", value: money(reward) },
+        { label: "Risk reward", value: `1:${ratio.toFixed(2)}` },
+      ];
+    }
+    case "savings-goal": {
+      const goal = number(values, "goal");
+      const current = number(values, "current");
+      const monthly = number(values, "monthly");
+      const remaining = Math.max(goal - current, 0);
+      const months = monthly > 0 ? remaining / monthly : 0;
+      return [
+        { label: "Manca", value: money(remaining) },
+        { label: "Risparmio mensile", value: money(monthly) },
+        { label: "Tempo stimato", value: `${Math.ceil(months)} mesi` },
+      ];
+    }
+    case "hourly-cost": {
+      const monthlyCost = number(values, "monthlyCost");
+      const hours = number(values, "hours");
+      const hourly = hours > 0 ? monthlyCost / hours : 0;
+      return [
+        { label: "Costo mensile", value: money(monthlyCost) },
+        { label: "Ore mensili", value: `${hours.toFixed(1)} h` },
+        { label: "Costo orario", value: money(hourly) },
+      ];
+    }
+    case "annual-monthly": {
+      const annual = number(values, "annual");
+      const months = Math.max(number(values, "months"), 1);
+      return [
+        { label: "Importo annuale", value: money(annual) },
+        { label: "Mensilita", value: `${months}` },
+        { label: "Importo mensile", value: money(annual / months) },
       ];
     }
   }

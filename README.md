@@ -14,19 +14,14 @@ Il progetto include:
 - landing servizi AI/SEO
 - cartella contenuti ForexFundingGenius
 - script base per generare asset contenuto da un nuovo calcolatore
+- automazione batch per creare nuovi tool da blueprint JSON
 
 ## Calcolatori attivi
 
-1. Calcolatore ore lavorate
-2. Calcolatore stipendio netto Svizzera
-3. Calcolatore lordo-netto Svizzera
-4. Calcolatore ferie Svizzera
-5. Calcolatore IVA Svizzera
-6. Calcolatore interessi composti
-7. Calcolatore mutuo Svizzera
-8. Calcolatore rischio trading
-9. Calcolatore lot size forex
-10. Calcolatore drawdown
+Il catalogo principale vive in `lib/calculators.ts`.
+
+Sono gia attivi i 10 calcolatori prioritari iniziali piu i tool generati in batch da
+`scripts/calculator-blueprints.json`.
 
 ## Cosa mancava
 
@@ -56,6 +51,8 @@ Il progetto include:
 
 ## Come aggiungere un nuovo calcolatore
 
+Metodo manuale:
+
 1. Aggiungi una voce in `lib/calculators.ts`.
 2. Inserisci `slug`, titolo, SEO, intro, input, articolo, FAQ e related links.
 3. Se serve una nuova formula, aggiungi un caso nello switch di `components/CalculatorWidget.tsx`.
@@ -64,6 +61,36 @@ Il progetto include:
 ```text
 https://calcolich.ch/<slug>
 ```
+
+Metodo automatico batch:
+
+1. Aggiungi uno o piu oggetti in `scripts/calculator-blueprints.json`.
+2. Usa una formula gia supportata da `components/CalculatorWidget.tsx`, per esempio:
+   - `percentage`
+   - `discount`
+   - `percentage-change`
+   - `margin-markup`
+   - `roi`
+   - `break-even`
+   - `loan-payment`
+   - `profit-loss`
+   - `risk-reward`
+   - `savings-goal`
+   - `hourly-cost`
+   - `annual-monthly`
+3. Lancia:
+
+```bash
+npm run tools:add
+```
+
+Lo script aggiunge i nuovi tool a `lib/calculators.ts` e crea asset in `generated/<slug>/`:
+
+- articolo
+- FAQ
+- post social
+- script Short YouTube
+- email newsletter
 
 ## Generare asset contenuto
 
@@ -103,6 +130,6 @@ Quando i controlli passano:
 
 ```bash
 git add .
-git commit -m "add scalable calculator system and growth assets"
+git commit -m "add calculator automation and new tools"
 git push origin main
 ```

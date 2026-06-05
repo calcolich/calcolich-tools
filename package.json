@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },
   "dependencies": {
     "next": "16.2.6",

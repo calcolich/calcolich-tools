@@ -1,0 +1,14 @@
+Oggetto: nuovo tool gratuito - Calcolatore Sconto
+
+Ciao,
+
+ho pubblicato un nuovo calcolatore su Calcolich:
+Calcolatore Sconto
+
+Calcola sconto, importo risparmiato e prezzo finale partendo dal prezzo iniziale.
+
+Lo trovi qui:
+https://calcolich.ch/calcolo-sconto
+
+A presto,
+Calcolich
