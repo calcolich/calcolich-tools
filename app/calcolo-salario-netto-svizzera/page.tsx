@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CalculatorPage from "@/components/CalculatorPage";
 import { getCalculator } from "@/lib/calculators";
 
-const calculator = getCalculator("calcolo-iva-svizzera")!;
+const calculator = getCalculator("calcolo-salario-netto-svizzera")!;
 
 export const metadata: Metadata = {
   title: calculator.metaTitle,
