@@ -15,6 +15,7 @@ Il progetto include:
 - cartella contenuti ForexFundingGenius
 - script base per generare asset contenuto da un nuovo calcolatore
 - automazione batch per creare nuovi tool da blueprint JSON
+- Google Analytics e Google AdSense configurabili da Vercel
 
 ## Calcolatori attivi
 
@@ -123,6 +124,33 @@ pkill -f "curl"
 ```
 
 Poi riprovare solo dopo che il Mac e stabile.
+
+## Analytics e AdSense
+
+Il sito legge gli ID da variabili ambiente, cosi non bisogna modificare codice per cambiare account.
+
+Su Vercel vai in:
+
+```text
+Project Settings -> Environment Variables
+```
+
+Aggiungi:
+
+```text
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-XXXXXXXXXXXXXXXX
+```
+
+Poi fai un nuovo deploy.
+
+Quando `NEXT_PUBLIC_ADSENSE_CLIENT_ID` e presente, il sito genera anche:
+
+```text
+https://calcolich.ch/ads.txt
+```
+
+Questo aiuta Google AdSense a verificare il publisher.
 
 ## Pubblicazione
 

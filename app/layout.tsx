@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import MarketingScripts from "@/components/MarketingScripts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -24,7 +25,10 @@ export default function RootLayout({
       lang="it"
       className="h-full antialiased"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <MarketingScripts />
+        {children}
+      </body>
     </html>
   );
 }
