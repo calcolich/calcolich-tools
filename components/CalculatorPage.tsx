@@ -1,4 +1,6 @@
+import AdSlot from "@/components/AdSlot";
 import CalculatorWidget from "@/components/CalculatorWidget";
+import LeadForm from "@/components/LeadForm";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import Link from "next/link";
 
@@ -45,19 +47,12 @@ export default function CalculatorPage({ calculator }: { calculator: Calculator 
 
         <CalculatorWidget calculator={calculator} />
 
+        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT} />
+
         <section className="mt-8 rounded-2xl bg-black p-6 text-white shadow">
           <h2 className="text-2xl font-bold">Newsletter Calcolich</h2>
           <p className="mt-2 max-w-2xl text-gray-200">{calculator.cta}</p>
-          <form className="mt-5 grid gap-3 md:grid-cols-[1fr_auto]">
-            <input
-              type="email"
-              placeholder="La tua email"
-              className="rounded-xl border border-white/20 bg-white p-4 text-black"
-            />
-            <button className="rounded-xl bg-green-400 px-6 py-4 font-bold text-black" type="button">
-              Avvisami
-            </button>
-          </form>
+          <LeadForm source={`newsletter:${calculator.slug}`} buttonLabel="Avvisami" dark />
         </section>
 
         <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_320px]">
@@ -68,6 +63,8 @@ export default function CalculatorPage({ calculator }: { calculator: Calculator 
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+
+            <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT} label="Risorsa consigliata" />
 
             <h2 className="mt-10 text-3xl font-bold text-gray-950">FAQ</h2>
             <div className="mt-5 space-y-4">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Servizi AI e SEO per piccole aziende | Calcolich",
@@ -97,20 +98,14 @@ export default function Page() {
 
           <aside className="rounded-2xl bg-white p-6 shadow">
             <h2 className="text-2xl font-bold">Richiedi informazioni</h2>
-            <form className="mt-5 space-y-4">
-              <input className="w-full rounded-xl border p-4" placeholder="Nome" />
-              <input className="w-full rounded-xl border p-4" placeholder="Email" type="email" />
-              <input className="w-full rounded-xl border p-4" placeholder="Telefono / WhatsApp" />
-              <select className="w-full rounded-xl border bg-white p-4">
-                <option>Starter - 490</option>
-                <option>Business - 990</option>
-                <option>Premium - 1.990</option>
-              </select>
-              <textarea className="min-h-32 w-full rounded-xl border p-4" placeholder="Di cosa hai bisogno?" />
-              <button type="button" className="w-full rounded-xl bg-black px-6 py-4 font-bold text-white">
-                Invia richiesta
-              </button>
-            </form>
+            <LeadForm
+              source="services-ai-seo"
+              buttonLabel="Invia richiesta"
+              showName
+              showPhone
+              showPackage
+              showMessage
+            />
 
             <h3 className="mt-8 text-xl font-bold">Email automatica</h3>
             <p className="mt-3 rounded-xl bg-gray-100 p-4 text-sm text-gray-700">

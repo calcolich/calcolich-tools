@@ -10,6 +10,7 @@ const routes = Array.from(new Set([
   "/calcolo-giorni-lavorativi-svizzera",
   "/calcolo-straordinari-svizzera",
   "/servizi-ai-seo",
+  "/piano-cashflow-online",
   ...calculators.map((calculator) => `/${calculator.slug}`),
 ]));
 

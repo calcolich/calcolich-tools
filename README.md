@@ -140,6 +140,11 @@ Aggiungi:
 ```text
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-XXXXXXXXXXXXXXXX
+NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT=1234567890
+NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=1234567890
+NEXT_PUBLIC_CONTACT_EMAIL=calcolich@gmail.com
+LEADS_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-url
+LEADS_WEBHOOK_SECRET=change-this-secret
 ```
 
 Poi fai un nuovo deploy.
@@ -151,6 +156,33 @@ https://calcolich.ch/ads.txt
 ```
 
 Questo aiuta Google AdSense a verificare il publisher.
+
+Gli slot `NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT` e `NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT`
+servono per inserire annunci nelle pagine calcolatore. Se non sono presenti, il sito
+carica solo lo script AdSense/Auto Ads.
+
+## Lead e contatti
+
+I form del sito inviano i contatti a:
+
+```text
+/api/leads
+```
+
+Se `LEADS_WEBHOOK_URL` e configurato, il sito inoltra i lead a Make/Zapier/Google Sheet.
+Se non e configurato, il form usa come fallback una email a:
+
+```text
+calcolich@gmail.com
+```
+
+Per una macchina cashflow vera, il setup consigliato e:
+
+1. creare un Google Sheet con account `calcolich@gmail.com`
+2. creare un webhook Make
+3. salvare ogni lead nel Google Sheet
+4. mandare una email di notifica a `calcolich@gmail.com`
+5. rispondere entro 24 ore ai lead servizi AI/SEO
 
 ## Pubblicazione
 

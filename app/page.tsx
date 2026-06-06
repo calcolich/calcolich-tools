@@ -12,6 +12,15 @@ export default function Home() {
           pagine SEO e risposte pratiche per decidere piu velocemente.
         </p>
 
+        <div className="mb-8 flex flex-wrap gap-3">
+          <Link href="/servizi-ai-seo" className="rounded-xl bg-black px-5 py-3 font-bold text-white">
+            Servizi AI/SEO
+          </Link>
+          <Link href="/piano-cashflow-online" className="rounded-xl border border-gray-300 bg-white px-5 py-3 font-bold text-gray-950">
+            Piano cashflow
+          </Link>
+        </div>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {calculators.map((tool) => (
             <Link
