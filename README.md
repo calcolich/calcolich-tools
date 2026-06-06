@@ -145,6 +145,9 @@ NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=1234567890
 NEXT_PUBLIC_CONTACT_EMAIL=calcolich@gmail.com
 LEADS_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-url
 LEADS_WEBHOOK_SECRET=change-this-secret
+RESEND_API_KEY=re_XXXXXXXXXXXXXXXX
+LEADS_TO_EMAIL=calcolich@gmail.com
+LEADS_FROM_EMAIL=Calcolich <onboarding@resend.dev>
 ```
 
 Poi fai un nuovo deploy.
@@ -170,11 +173,14 @@ I form del sito inviano i contatti a:
 ```
 
 Se `LEADS_WEBHOOK_URL` e configurato, il sito inoltra i lead a Make/Zapier/Google Sheet.
-Se non e configurato, il form usa come fallback una email a:
+Se non e configurato ma `RESEND_API_KEY` e presente, il sito invia una email automatica a:
 
 ```text
 calcolich@gmail.com
 ```
+
+Se non sono configurati ne webhook ne Resend, il form apre una bozza email sul dispositivo
+dell'utente. In quel caso l'utente deve premere invio nella propria app email.
 
 Per una macchina cashflow vera, il setup consigliato e:
 

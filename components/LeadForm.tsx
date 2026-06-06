@@ -59,6 +59,10 @@ export default function LeadForm({
             .join("\n"),
         );
         window.location.href = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
+        form.reset();
+        setStatus("success");
+        setMessage("Si apre una bozza email: inviala per completare la richiesta.");
+        return;
       }
 
       form.reset();

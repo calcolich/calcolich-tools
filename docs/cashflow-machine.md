@@ -117,7 +117,25 @@ NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=1234567890
 NEXT_PUBLIC_CONTACT_EMAIL=calcolich@gmail.com
 LEADS_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-url
 LEADS_WEBHOOK_SECRET=change-this-secret
+RESEND_API_KEY=re_XXXXXXXXXXXXXXXX
+LEADS_TO_EMAIL=calcolich@gmail.com
+LEADS_FROM_EMAIL=Calcolich <onboarding@resend.dev>
 ```
+
+## Email automatiche lead
+
+Ci sono tre livelli:
+
+1. `LEADS_WEBHOOK_URL` configurato: il lead va a Make/Zapier/Google Sheet.
+2. `RESEND_API_KEY` configurato: il lead viene inviato via email a `LEADS_TO_EMAIL`.
+3. Nessuno dei due configurato: il sito apre una bozza email sul dispositivo dell'utente.
+
+Per ricevere subito email automatiche su `calcolich@gmail.com`, usare Resend:
+
+- creare account Resend
+- creare API key
+- inserirla in Vercel come `RESEND_API_KEY`
+- impostare `LEADS_TO_EMAIL=calcolich@gmail.com`
 
 ## AdSense
 
