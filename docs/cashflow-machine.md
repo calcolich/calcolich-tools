@@ -119,7 +119,7 @@ LEADS_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-url
 LEADS_WEBHOOK_SECRET=change-this-secret
 RESEND_API_KEY=re_XXXXXXXXXXXXXXXX
 LEADS_TO_EMAIL=calcolich@gmail.com
-LEADS_FROM_EMAIL=Calcolich <onboarding@resend.dev>
+LEADS_FROM_EMAIL=onboarding@resend.dev
 ```
 
 ## Email automatiche lead

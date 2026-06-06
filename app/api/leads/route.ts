@@ -4,7 +4,7 @@ const webhookUrl = process.env.LEADS_WEBHOOK_URL;
 const webhookSecret = process.env.LEADS_WEBHOOK_SECRET;
 const resendApiKey = process.env.RESEND_API_KEY;
 const leadsToEmail = process.env.LEADS_TO_EMAIL ?? "calcolich@gmail.com";
-const leadsFromEmail = process.env.LEADS_FROM_EMAIL ?? "Calcolich <onboarding@resend.dev>";
+const leadsFromEmail = process.env.LEADS_FROM_EMAIL ?? "onboarding@resend.dev";
 
 type LeadPayload = {
   source?: string;
@@ -64,15 +64,23 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: leadsFromEmail,
-        to: leadsToEmail,
+        to: [leadsToEmail],
         subject: `Nuovo lead Calcolich - ${lead.source ?? "sito"}`,
         text: formatLeadEmail(lead),
       }),
     });
 
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Resend email delivery failed", {
+        status: response.status,
+        error: errorText,
+        from: leadsFromEmail,
+        to: leadsToEmail,
+      });
+
       return NextResponse.json(
-        { ok: false, error: "Lead ricevuto, ma invio email non riuscito." },
+        { ok: false, error: "Lead ricevuto, ma invio email non riuscito. Controlla i Logs Vercel per il dettaglio Resend." },
         { status: 502 },
       );
     }
