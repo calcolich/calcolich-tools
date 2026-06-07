@@ -46,19 +46,20 @@ export default function LeadForm({
       });
 
       const result = await response.json();
+      if (result.emailFallback) {
+        openEmailFallback(data, source);
+        form.reset();
+        setStatus("success");
+        setMessage(`${result.error} Si apre una bozza email di sicurezza.`);
+        return;
+      }
+
       if (!response.ok || !result.ok) {
         throw new Error(result.error ?? "Invio non riuscito.");
       }
 
       if (!result.configured) {
-        const subject = encodeURIComponent(`Nuovo contatto Calcolich - ${source}`);
-        const body = encodeURIComponent(
-          Object.entries(data)
-            .filter(([, value]) => value)
-            .map(([key, value]) => `${key}: ${value}`)
-            .join("\n"),
-        );
-        window.location.href = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
+        openEmailFallback(data, source);
         form.reset();
         setStatus("success");
         setMessage("Si apre una bozza email: inviala per completare la richiesta.");
@@ -110,4 +111,15 @@ export default function LeadForm({
       ) : null}
     </form>
   );
+}
+
+function openEmailFallback(data: Record<string, FormDataEntryValue>, source: string) {
+  const subject = encodeURIComponent(`Nuovo contatto Calcolich - ${source}`);
+  const body = encodeURIComponent(
+    Object.entries(data)
+      .filter(([, value]) => value)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join("\n"),
+  );
+  window.location.href = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
 }

@@ -72,6 +72,7 @@ export async function POST(request: Request) {
 
     if (!response.ok) {
       const errorText = await response.text();
+      const resendMessage = getResendErrorMessage(errorText);
       console.error("Resend email delivery failed", {
         status: response.status,
         error: errorText,
@@ -80,7 +81,11 @@ export async function POST(request: Request) {
       });
 
       return NextResponse.json(
-        { ok: false, error: "Lead ricevuto, ma invio email non riuscito. Controlla i Logs Vercel per il dettaglio Resend." },
+        {
+          ok: false,
+          emailFallback: true,
+          error: `Lead ricevuto, ma Resend non ha inviato l'email: ${resendMessage}`,
+        },
         { status: 502 },
       );
     }
@@ -106,4 +111,13 @@ function formatLeadEmail(lead: LeadPayload & { createdAt: string; site: string }
     `Pagina: ${lead.page ?? "-"}`,
     `Sito: ${lead.site}`,
   ].join("\n");
+}
+
+function getResendErrorMessage(errorText: string) {
+  try {
+    const parsed = JSON.parse(errorText) as { message?: string; name?: string };
+    return parsed.message ?? parsed.name ?? "errore Resend non specificato.";
+  } catch {
+    return errorText || "errore Resend non specificato.";
+  }
 }
