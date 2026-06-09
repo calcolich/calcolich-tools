@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CalculatorPage from "@/components/CalculatorPage";
 import { calculatorSlugs, getCalculator } from "@/lib/calculators";
+import { publicCopy } from "@/lib/copy";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: calculator.metaTitle,
-    description: calculator.metaDescription,
+    title: publicCopy(calculator.metaTitle),
+    description: publicCopy(calculator.metaDescription),
     alternates: {
       canonical: `https://calcolich.ch/${calculator.slug}`,
     },

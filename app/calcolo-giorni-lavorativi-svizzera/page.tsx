@@ -3,15 +3,15 @@ import ToolPage from "@/components/ToolPage";
 import WorkingDaysCalculator from "@/components/WorkingDaysCalculator";
 
 export const metadata: Metadata = {
-  title: "Calcolo Giorni Lavorativi Svizzera 2026 | Calcolich",
+  title: "Calcolo Giorni Lavorativi 2026 | Calcolich",
   description:
-    "Calcola i giorni lavorativi tra due date in Svizzera sottraendo weekend e giorni festivi.",
+    "Calcola i giorni lavorativi tra due date sottraendo weekend e giorni festivi.",
 };
 
 export default function Page() {
   return (
     <ToolPage
-      title="Calcolo Giorni Lavorativi Svizzera"
+      title="Calcolo Giorni Lavorativi"
       intro="Calcola quanti giorni lavorativi ci sono tra due date, escludendo sabati, domeniche e un numero personalizzato di festivi."
       explanation={
         <div className="space-y-5 text-gray-700">

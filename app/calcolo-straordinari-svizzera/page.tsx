@@ -3,15 +3,15 @@ import ToolPage from "@/components/ToolPage";
 import OvertimeCalculator from "@/components/OvertimeCalculator";
 
 export const metadata: Metadata = {
-  title: "Calcolo Straordinari Svizzera 2026 | Calcolich",
+  title: "Calcolo Straordinari 2026 | Calcolich",
   description:
-    "Calcola ore straordinarie e importo stimato in Svizzera partendo da ore previste, ore lavorate e tariffa oraria.",
+    "Calcola ore straordinarie e importo stimato partendo da ore previste, ore lavorate e tariffa oraria.",
 };
 
 export default function Page() {
   return (
     <ToolPage
-      title="Calcolo Straordinari Svizzera"
+      title="Calcolo Straordinari"
       intro="Inserisci ore previste, ore lavorate, tariffa oraria e supplemento per stimare il valore degli straordinari."
       explanation={
         <div className="space-y-5 text-gray-700">

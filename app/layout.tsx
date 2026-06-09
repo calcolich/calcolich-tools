@@ -5,11 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://calcolich.ch"),
   title: {
-    default: "Calcolich | Calcolatori gratuiti per la Svizzera",
+    default: "Calcolich | Calcolatori gratuiti online",
     template: "%s",
   },
   description:
-    "Calcolatori online gratuiti per IVA, salario, tredicesima, ferie, giorni lavorativi e strumenti utili in Svizzera.",
+    "Calcolatori online gratuiti per lavoro, business, finanza, trading e strumenti pratici per decidere meglio.",
   alternates: {
     canonical: "https://calcolich.ch",
   },
@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="it"
       className="h-full antialiased"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#f6f8fb] text-gray-950">
         <MarketingScripts />
         {children}
       </body>
