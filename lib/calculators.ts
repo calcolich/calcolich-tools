@@ -33,7 +33,9 @@ export type CalculatorKind =
   | "selling-price"
   | "ahv-13th-pension-ch"
   | "self-employed-ahv-ch"
-  | "maternity-allowance-ch";
+  | "maternity-allowance-ch"
+  | "unemployment-benefit-ch"
+  | "ahv-pension-gap-ch";
 
 export type CalculatorInput = {
   key: string;
@@ -1480,6 +1482,144 @@ export const calculators: Calculator[] = [
         href: "/guide/stipendio-netto-svizzera",
         label: "Guida stipendio netto",
         description: "Come leggere reddito, deduzioni e disponibilita mensile in Svizzera.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-indennita-disoccupazione-svizzera",
+    kind: "unemployment-benefit-ch",
+    title: "Calcolatore Indennita Disoccupazione Svizzera",
+    shortTitle: "Indennita disoccupazione",
+    category: "Lavoro Svizzera",
+    metaTitle: "Calcolo Indennita Disoccupazione Svizzera 2026 | Calcolich",
+    metaDescription: "Stima l'indennita giornaliera e mensile di disoccupazione in Svizzera applicando il 70% o 80% al guadagno assicurato.",
+    intro: "Stima l'indennita lorda di disoccupazione partendo dal guadagno assicurato e dall'aliquota applicabile.",
+    cta: "Ricevi strumenti gratuiti per salario, lavoro e protezione del reddito in Svizzera.",
+    inputs: [
+      { key: "insuredIncome", label: "Guadagno assicurato mensile CHF", defaultValue: "6500", min: "0" },
+      {
+        key: "compensationRate",
+        label: "Aliquota indennita",
+        type: "select",
+        defaultValue: "70",
+        options: [
+          { label: "70% - aliquota ordinaria", value: "70" },
+          { label: "80% - figli/reddito basso/AI", value: "80" },
+        ],
+      },
+      { key: "payableDays", label: "Giorni indennizzabili nel mese", defaultValue: "21.7", step: "0.1", min: "1", max: "23" },
+    ],
+    article: [
+      "In Svizzera l'indennita di disoccupazione viene calcolata sul guadagno assicurato, determinato in genere dalla cassa sulla base del reddito degli ultimi sei mesi oppure degli ultimi dodici se piu favorevole.",
+      "L'aliquota ordinaria e il 70 per cento. Si applica normalmente l'80 per cento a chi ha obblighi di mantenimento verso figli minori di 25 anni, a chi ha un guadagno assicurato non superiore a 3'797 franchi o percepisce una rendita AI con grado almeno del 40 per cento.",
+      "Per il 2026 il guadagno massimo assicurato e 148'200 franchi annui, equivalente a 12'350 franchi mensili. Il calcolatore limita automaticamente il reddito a questa soglia e usa i giorni indennizzabili inseriti per stimare il pagamento lordo del mese.",
+      "Dal risultato vengono normalmente dedotti contributi sociali, assicurazione infortuni, eventuale previdenza professionale e imposta alla fonte. Il conteggio definitivo dipende dalla cassa di disoccupazione e dal numero effettivo di giorni lavorativi del mese.",
+    ],
+    faqs: [
+      { question: "Quando si applica l'80 per cento?", answer: "Di regola con figli a carico sotto i 25 anni, guadagno assicurato fino a CHF 3'797 o rendita AI di almeno il 40%." },
+      { question: "Qual e il guadagno massimo assicurato?", answer: "Per il 2026 e CHF 148'200 annui, pari a CHF 12'350 mensili." },
+      { question: "Il risultato e netto?", answer: "No. E una stima lorda prima di contributi sociali, assicurazioni ed eventuale imposta alla fonte." },
+    ],
+    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-budget-mensile", "calcolo-affitto-sostenibile-svizzera"],
+    guideLinks: [
+      {
+        href: "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html",
+        label: "Fonte ufficiale: assicurazione disoccupazione",
+        description: "Regole sul guadagno assicurato, aliquote e pagamento delle indennita.",
+      },
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita",
+        description: "Come rivedere budget, affitto e spese quando cambia il reddito disponibile.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-pensione-avs-stimata",
+    kind: "ahv-pension-gap-ch",
+    title: "Calcolatore Pensione AVS Stimata",
+    shortTitle: "Pensione AVS stimata",
+    category: "Finanza Svizzera",
+    metaTitle: "Calcolo Pensione AVS Stimata e Lacune Contributive | Calcolich",
+    metaDescription: "Stima l'effetto degli anni mancanti sulla pensione AVS: ogni anno di lacuna riduce indicativamente la rendita di 1/44.",
+    intro: "Stima come gli anni di contribuzione mancanti possono ridurre una rendita AVS mensile di riferimento.",
+    cta: "Ricevi strumenti gratuiti per AVS, previdenza e pianificazione finanziaria in Svizzera.",
+    inputs: [
+      { key: "fullPension", label: "Rendita mensile di riferimento CHF", defaultValue: "2520", min: "0" },
+      { key: "contributionYears", label: "Anni di contribuzione", defaultValue: "44", min: "1", max: "44" },
+      { key: "referenceYears", label: "Durata completa di riferimento", defaultValue: "44", min: "1", max: "44" },
+    ],
+    article: [
+      "La rendita AVS dipende soprattutto dal reddito annuo medio determinante e dalla durata di contribuzione. Una durata completa porta alla scala di rendita 44, mentre le lacune contributive generano una rendita parziale.",
+      "In linea indicativa ogni anno mancante comporta una riduzione di un quarantaquattresimo. Questo calcolatore applica tale proporzione a una rendita mensile di riferimento inserita dall'utente.",
+      "La rendita di riferimento non viene calcolata automaticamente dal reddito, perche il conteggio ufficiale considera redditi registrati, accrediti per compiti educativi o assistenziali, ripartizione dei redditi e altri elementi personali. Usa quindi un importo ottenuto da ESCAL o da una stima della cassa.",
+      "Il risultato aiuta a misurare l'effetto delle lacune e a pianificare previdenza e risparmio. Per il dato ufficiale richiedi gratuitamente l'estratto del conto individuale e una stima alla cassa di compensazione.",
+    ],
+    faqs: [
+      { question: "Quanto riduce la pensione un anno mancante?", answer: "Indicativamente un anno mancante riduce la rendita di 1/44, circa il 2.27%." },
+      { question: "Il calcolatore determina la rendita AVS ufficiale?", answer: "No. Applica soltanto la riduzione per lacune a una rendita di riferimento inserita dall'utente." },
+      { question: "Come verifico gli anni contributivi?", answer: "Puoi richiedere gratuitamente un estratto del conto individuale alla cassa di compensazione." },
+    ],
+    relatedSlugs: ["calcolo-tredicesima-avs-2026", "calcolo-terzo-pilastro-risparmio-fiscale", "calcolo-interessi-composti"],
+    guideLinks: [
+      {
+        href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Glossario/term/vollrente",
+        label: "Fonte ufficiale: rendita intera AVS",
+        description: "Durata contributiva completa, scala 44 e rendite parziali.",
+      },
+      {
+        href: "/guide/terzo-pilastro-risparmio-fiscale",
+        label: "Guida terzo pilastro",
+        description: "Come integrare AVS, risparmio previdenziale e vantaggio fiscale.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-indennita-altro-genitore-svizzera",
+    kind: "maternity-allowance-ch",
+    title: "Calcolatore Indennita Altro Genitore Svizzera",
+    shortTitle: "Indennita altro genitore",
+    category: "Lavoro Svizzera",
+    metaTitle: "Calcolo Indennita Altro Genitore Svizzera | Calcolich",
+    metaDescription: "Calcola l'indennita per l'altro genitore in Svizzera: 80% del reddito medio, massimo CHF 220 al giorno per 14 giorni.",
+    intro: "Stima l'indennita per l'altro genitore durante le due settimane di congedo riconosciute.",
+    cta: "Ricevi strumenti gratuiti per congedi, salario e lavoro in Svizzera.",
+    inputs: [
+      {
+        key: "incomeType",
+        label: "Tipo di reddito",
+        type: "select",
+        defaultValue: "monthly",
+        options: [
+          { label: "Salario mensile dipendente", value: "monthly" },
+          { label: "Reddito annuo indipendente", value: "annual" },
+        ],
+      },
+      { key: "income", label: "Reddito determinante CHF", defaultValue: "6500", min: "0" },
+      { key: "days", label: "Indennita giornaliere", defaultValue: "14", min: "1", max: "14" },
+    ],
+    article: [
+      "L'altro genitore riconosciuto ha diritto a due settimane di congedo, compensate attraverso un massimo di 14 indennita giornaliere da utilizzare entro il termine previsto dopo la nascita.",
+      "L'indennita corrisponde all'80 per cento del reddito medio da lavoro percepito prima della nascita, fino a un massimo di 220 franchi al giorno. Il limite viene raggiunto con un salario mensile di 8'250 franchi o un reddito annuo indipendente soggetto all'AVS di 99'000 franchi.",
+      "Seleziona salario mensile per un dipendente oppure reddito annuo per un indipendente. Il calcolatore converte il reddito in valore giornaliero, applica l'80 per cento e limita il risultato al massimale ufficiale.",
+      "Il risultato e una stima. Condizioni di diritto, giorni effettivamente riconosciuti e pagamento definitivo devono essere verificati con il datore di lavoro o la cassa di compensazione.",
+    ],
+    faqs: [
+      { question: "Quanti giorni sono riconosciuti?", answer: "Sono previste al massimo 14 indennita giornaliere, corrispondenti a due settimane di congedo." },
+      { question: "Quanto viene pagato al giorno?", answer: "L'80% del reddito giornaliero medio, fino a un massimo di CHF 220." },
+      { question: "Vale anche per gli indipendenti?", answer: "Si. Inserisci il reddito annuo soggetto all'AVS e seleziona la modalita indipendente." },
+    ],
+    relatedSlugs: ["calcolo-indennita-maternita-svizzera", "calcolo-salario-netto-svizzera", "calcolo-budget-mensile"],
+    guideLinks: [
+      {
+        href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Glossario/term/entschaedigungdesandernelternteils",
+        label: "Fonte ufficiale: indennita altro genitore",
+        description: "Durata, importo e condizioni previste dall'AVS/IPG.",
+      },
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto",
+        description: "Come collegare reddito lordo, netto e indennita sostitutive.",
       },
     ],
   },

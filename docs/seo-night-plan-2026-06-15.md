@@ -77,6 +77,10 @@
   - `/calcolo-contributi-avs-indipendenti`
   - `/calcolo-indennita-maternita-svizzera`
 - Collegati i nuovi strumenti alle categorie finanza, business e stipendio/lavoro; inclusione sitemap automatica.
+- Aggiunto secondo blocco di calcolatori sociali svizzeri:
+  - `/calcolo-indennita-disoccupazione-svizzera`
+  - `/calcolo-pensione-avs-stimata`
+  - `/calcolo-indennita-altro-genitore-svizzera`
 
 ## Priorita SEO prossime
 

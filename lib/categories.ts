@@ -16,9 +16,9 @@ export const calculatorCategories: CalculatorCategory[] = [
     slug: "stipendio-lavoro",
     title: "Calcolatori stipendio e lavoro",
     shortTitle: "Stipendio e lavoro",
-    description: "Strumenti per stimare salario netto, ferie, maternita, ore lavorate, part-time, imposte e altri numeri utili per chi lavora in Svizzera.",
+    description: "Strumenti per stimare salario netto, disoccupazione, congedi, ferie, ore lavorate, part-time, imposte e altri numeri utili per chi lavora in Svizzera.",
     metaTitle: "Calcolatori stipendio e lavoro Svizzera | Calcolich",
-    metaDescription: "Calcolatori gratuiti per stipendio netto, maternita, lordo netto, ferie, ore lavorate, salario orario, part-time e tasse in Svizzera.",
+    metaDescription: "Calcolatori gratuiti per stipendio netto, disoccupazione, maternita, congedi, ferie, ore lavorate, part-time e tasse in Svizzera.",
     match: ["Stipendio", "Lavoro", "Tasse"],
     intro: [
       "Qui trovi i calcolatori piu utili per leggere meglio salario, tempo lavorato e trattenute. Sono strumenti pratici per controllare una busta paga, valutare un'offerta o pianificare un cambio di lavoro.",
@@ -68,9 +68,9 @@ export const calculatorCategories: CalculatorCategory[] = [
     slug: "finanza",
     title: "Calcolatori finanza e investimenti",
     shortTitle: "Finanza",
-    description: "Strumenti per tredicesima AVS, interessi composti, prestiti, mutuo, ROI, risparmio e pianificazione finanziaria.",
+    description: "Strumenti per pensione e tredicesima AVS, interessi composti, prestiti, mutuo, ROI, risparmio e pianificazione finanziaria.",
     metaTitle: "Calcolatori finanza online | Calcolich",
-    metaDescription: "Calcolatori gratuiti per tredicesima AVS 2026, interessi composti, mutuo, rata prestito, ROI e obiettivi di risparmio.",
+    metaDescription: "Calcolatori gratuiti per pensione e tredicesima AVS 2026, interessi composti, mutuo, rata prestito, ROI e risparmio.",
     match: ["Finanza", "Casa e finanza"],
     intro: [
       "Questa sezione raccoglie i calcolatori per ragionare su capitale, rate, rendimento, risparmio e investimenti con numeri immediati.",

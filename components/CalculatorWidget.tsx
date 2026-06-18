@@ -450,5 +450,28 @@ function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
         { label: "Indennita totale stimata", value: money(dailyAllowance * days) },
       ];
     }
+    case "unemployment-benefit-ch": {
+      const insuredIncome = Math.min(number(values, "insuredIncome"), 12350);
+      const rate = number(values, "compensationRate") / 100;
+      const payableDays = Math.min(Math.max(number(values, "payableDays"), 1), 23);
+      const dailyAllowance = (insuredIncome / 21.7) * rate;
+      return [
+        { label: "Guadagno assicurato", value: money(insuredIncome) },
+        { label: "Indennita giornaliera", value: money(dailyAllowance) },
+        { label: "Indennita mensile lorda", value: money(dailyAllowance * payableDays) },
+      ];
+    }
+    case "ahv-pension-gap-ch": {
+      const referenceYears = Math.min(Math.max(number(values, "referenceYears"), 1), 44);
+      const contributionYears = Math.min(Math.max(number(values, "contributionYears"), 1), referenceYears);
+      const missingYears = Math.max(referenceYears - contributionYears, 0);
+      const reductionRate = (missingYears / referenceYears) * 100;
+      const estimatedPension = number(values, "fullPension") * (contributionYears / referenceYears);
+      return [
+        { label: "Anni mancanti", value: `${missingYears}` },
+        { label: "Riduzione indicativa", value: percent(reductionRate) },
+        { label: "Rendita mensile stimata", value: money(estimatedPension) },
+      ];
+    }
   }
 }
