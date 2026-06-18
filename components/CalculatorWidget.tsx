@@ -317,5 +317,138 @@ function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
         { label: "Importo mensile", value: money(annual / months) },
       ];
     }
+    case "withholding-tax-ch": {
+      const gross = number(values, "gross");
+      const social = (gross * number(values, "socialRate")) / 100;
+      const tax = (gross * number(values, "taxRate")) / 100;
+      return [
+        { label: "Contributi stimati", value: money(social) },
+        { label: "Imposta alla fonte", value: money(tax) },
+        { label: "Netto stimato", value: money(Math.max(gross - social - tax, 0)) },
+      ];
+    }
+    case "health-insurance-ch": {
+      const annualPremium = number(values, "premium") * 12;
+      const franchiseCost = Math.min(number(values, "medicalCosts"), number(values, "franchise"));
+      const coPay = Math.max(number(values, "medicalCosts") - number(values, "franchise"), 0) * 0.1;
+      const total = annualPremium + franchiseCost + coPay;
+      return [
+        { label: "Premi annui", value: money(annualPremium) },
+        { label: "Costi sanitari stimati", value: money(franchiseCost + coPay) },
+        { label: "Costo annuo stimato", value: money(total) },
+      ];
+    }
+    case "rent-affordability-ch": {
+      const netIncome = number(values, "netIncome");
+      const maxHousing = (netIncome * number(values, "rentRate")) / 100;
+      const maxRent = Math.max(maxHousing - number(values, "otherHousingCosts"), 0);
+      return [
+        { label: "Budget casa totale", value: money(maxHousing) },
+        { label: "Spese extra", value: money(number(values, "otherHousingCosts")) },
+        { label: "Affitto sostenibile", value: money(maxRent) },
+      ];
+    }
+    case "hourly-wage-ch": {
+      const annualSalary = number(values, "monthlySalary") * 12;
+      const annualHours = number(values, "hoursPerWeek") * number(values, "weeksPerYear");
+      const hourly = annualHours > 0 ? annualSalary / annualHours : 0;
+      return [
+        { label: "Salario annuo", value: money(annualSalary) },
+        { label: "Ore annue", value: `${annualHours.toFixed(0)} h` },
+        { label: "Salario orario", value: money(hourly) },
+      ];
+    }
+    case "part-time-salary-ch": {
+      const gross = (number(values, "fullTimeSalary") * number(values, "workPercent")) / 100;
+      const deductions = (gross * number(values, "deductionRate")) / 100;
+      return [
+        { label: "Lordo part-time", value: money(gross) },
+        { label: "Deduzioni stimate", value: money(deductions) },
+        { label: "Netto stimato", value: money(Math.max(gross - deductions, 0)) },
+      ];
+    }
+    case "pillar3a-tax-ch": {
+      const yearlySaving = (number(values, "contribution") * number(values, "marginalTaxRate")) / 100;
+      const years = Math.max(number(values, "years"), 1);
+      return [
+        { label: "Risparmio fiscale annuo", value: money(yearlySaving) },
+        { label: "Versamenti totali", value: money(number(values, "contribution") * years) },
+        { label: "Risparmio fiscale totale", value: money(yearlySaving * years) },
+      ];
+    }
+    case "monthly-budget-ch": {
+      const expenses = number(values, "rent") + number(values, "healthInsurance") + number(values, "otherCosts");
+      const remaining = number(values, "income") - expenses;
+      const savingsRate = number(values, "income") > 0 ? (remaining / number(values, "income")) * 100 : 0;
+      return [
+        { label: "Spese totali", value: money(expenses) },
+        { label: "Tasso risparmio", value: percent(savingsRate) },
+        { label: "Saldo mensile", value: money(remaining) },
+      ];
+    }
+    case "car-cost-ch": {
+      const monthly = number(values, "leasing") + number(values, "insurance") + number(values, "fuel") + number(values, "maintenance");
+      return [
+        { label: "Costo mensile", value: money(monthly) },
+        { label: "Costo annuo", value: money(monthly * 12) },
+        { label: "Costo medio giorno", value: money((monthly * 12) / 365) },
+      ];
+    }
+    case "freelance-rate-ch": {
+      const requiredRevenue = number(values, "targetIncome") + number(values, "annualCosts");
+      const billableHours = number(values, "billableDays") * number(values, "hoursPerDay");
+      const hourlyRate = billableHours > 0 ? requiredRevenue / billableHours : 0;
+      return [
+        { label: "Ricavi necessari", value: money(requiredRevenue) },
+        { label: "Tariffa giornaliera", value: money(hourlyRate * number(values, "hoursPerDay")) },
+        { label: "Tariffa oraria", value: money(hourlyRate) },
+      ];
+    }
+    case "selling-price": {
+      const cost = number(values, "cost");
+      const marginRate = Math.min(number(values, "marginRate"), 95) / 100;
+      const netPrice = marginRate < 1 ? cost / Math.max(1 - marginRate, 0.01) : cost;
+      const vat = (netPrice * number(values, "vatRate")) / 100;
+      return [
+        { label: "Prezzo netto", value: money(netPrice) },
+        { label: "IVA", value: money(vat) },
+        { label: "Prezzo finale", value: money(netPrice + vat) },
+      ];
+    }
+    case "ahv-13th-pension-ch": {
+      const monthlyPension = number(values, "monthlyPension");
+      const eligibleMonths = Math.min(Math.max(number(values, "eligibleMonths"), 1), 12);
+      const annualPension = monthlyPension * eligibleMonths;
+      const thirteenthPension = Math.round(annualPension / 12);
+      return [
+        { label: "Rendita annua conteggiata", value: money(annualPension) },
+        { label: "Mesi considerati", value: `${eligibleMonths}` },
+        { label: "Tredicesima AVS stimata", value: money(thirteenthPension) },
+      ];
+    }
+    case "self-employed-ahv-ch": {
+      const income = number(values, "netIncome");
+      const calculatedContribution = (income * number(values, "contributionRate")) / 100;
+      const contribution = income > 0
+        ? Math.max(calculatedContribution, number(values, "minimumContribution"))
+        : 0;
+      const adminCosts = (contribution * number(values, "adminRate")) / 100;
+      return [
+        { label: "AVS/AI/IPG stimati", value: money(contribution) },
+        { label: "Spese amministrative", value: money(adminCosts) },
+        { label: "Totale annuo stimato", value: money(contribution + adminCosts) },
+      ];
+    }
+    case "maternity-allowance-ch": {
+      const income = number(values, "income");
+      const dailyIncome = values.incomeType === "annual" ? income / 360 : income / 30;
+      const dailyAllowance = Math.min(dailyIncome * 0.8, 220);
+      const days = Math.min(Math.max(number(values, "days"), 1), 154);
+      return [
+        { label: "Indennita giornaliera", value: money(dailyAllowance) },
+        { label: "Giorni conteggiati", value: `${days}` },
+        { label: "Indennita totale stimata", value: money(dailyAllowance * days) },
+      ];
+    }
   }
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MarketingScripts from "@/components/MarketingScripts";
+import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,9 +11,6 @@ export const metadata: Metadata = {
   },
   description:
     "Calcolatori online gratuiti per lavoro, business, finanza, trading e strumenti pratici per decidere meglio.",
-  alternates: {
-    canonical: "https://calcolich.ch",
-  },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? {
         google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -32,7 +30,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#f6f8fb] text-gray-950">
         <MarketingScripts />
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );

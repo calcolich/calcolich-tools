@@ -1,0 +1,380 @@
+import { type Calculator, getCalculator } from "@/lib/calculators";
+
+export type Locale = "de" | "fr" | "en";
+
+type LocalizedCalculatorContent = Omit<Calculator, "kind">;
+
+export const locales: Locale[] = ["de", "fr", "en"];
+
+export const localeHome = {
+  de: {
+    label: "Deutsch",
+    title: "Calcolich Schweiz | Rechner fuer Lohn, Steuern und Budget",
+    description:
+      "Kostenlose Rechner fuer Lohn, Quellensteuer, Krankenkasse, Miete, Budget und Business in der Schweiz.",
+    eyebrow: "Rechner fuer die Schweiz",
+    heading: "Schnelle Rechner fuer Lohn, Steuern und Alltag in der Schweiz",
+    intro:
+      "Praktische Tools fuer Arbeit, Wohnen, Finanzen und Selbststaendigkeit in der Schweiz.",
+    back: "Alle Rechner",
+    newsletterTitle: "Calcolich Newsletter",
+    newsletterButton: "Benachrichtigen",
+    guideSuffix: "praktischer Leitfaden",
+    recommendedAd: "Empfohlene Ressource",
+    relatedTitle: "Verwandte Rechner",
+  },
+  fr: {
+    label: "Francais",
+    title: "Calcolich Suisse | Calculateurs salaire, impots et budget",
+    description:
+      "Calculateurs gratuits pour salaire, impot a la source, assurance maladie, loyer, budget et business en Suisse.",
+    eyebrow: "Calculateurs pour la Suisse",
+    heading: "Des calculateurs rapides pour le salaire, les impots et le budget en Suisse",
+    intro:
+      "Des outils pratiques pour le travail, le logement, les finances et l'activite independante en Suisse.",
+    back: "Tous les calculateurs",
+    newsletterTitle: "Newsletter Calcolich",
+    newsletterButton: "Me prevenir",
+    guideSuffix: "guide pratique",
+    recommendedAd: "Ressource recommandee",
+    relatedTitle: "Calculateurs lies",
+  },
+  en: {
+    label: "English",
+    title: "Calcolich Switzerland | Salary, tax and budget calculators",
+    description:
+      "Free calculators for Swiss salary, withholding tax, health insurance, rent, budget and business planning.",
+    eyebrow: "Calculators for Switzerland",
+    heading: "Fast calculators for salary, tax and everyday decisions in Switzerland",
+    intro:
+      "Practical tools for work, housing, personal finance and freelance decisions in Switzerland.",
+    back: "All calculators",
+    newsletterTitle: "Calcolich Newsletter",
+    newsletterButton: "Notify me",
+    guideSuffix: "practical guide",
+    recommendedAd: "Recommended resource",
+    relatedTitle: "Related calculators",
+  },
+} satisfies Record<Locale, Record<string, string>>;
+
+const translatedSlugs = {
+  "calcolo-imposta-alla-fonte-svizzera": {
+    de: ["quellensteuer-rechner-schweiz", "Quellensteuer Rechner Schweiz", "Quellensteuer", "Steuern Schweiz"],
+    fr: ["calculateur-impot-a-la-source-suisse", "Calculateur impot a la source Suisse", "Impot source", "Impots Suisse"],
+    en: ["withholding-tax-calculator-switzerland", "Withholding Tax Calculator Switzerland", "Withholding tax", "Swiss taxes"],
+  },
+  "calcolo-cassa-malati-svizzera": {
+    de: ["krankenkasse-praemien-rechner-schweiz", "Krankenkasse Praemien Rechner Schweiz", "Krankenkasse", "Versicherung Schweiz"],
+    fr: ["calculateur-assurance-maladie-suisse", "Calculateur assurance maladie Suisse", "Assurance maladie", "Assurance Suisse"],
+    en: ["health-insurance-premium-calculator-switzerland", "Health Insurance Premium Calculator Switzerland", "Health insurance", "Swiss insurance"],
+  },
+  "calcolo-affitto-sostenibile-svizzera": {
+    de: ["mietbudget-rechner-schweiz", "Mietbudget Rechner Schweiz", "Mietbudget", "Wohnen Schweiz"],
+    fr: ["calculateur-loyer-abordable-suisse", "Calculateur loyer abordable Suisse", "Loyer abordable", "Logement Suisse"],
+    en: ["rent-affordability-calculator-switzerland", "Rent Affordability Calculator Switzerland", "Rent affordability", "Swiss housing"],
+  },
+  "calcolo-salario-orario-svizzera": {
+    de: ["stundenlohn-rechner-schweiz", "Stundenlohn Rechner Schweiz", "Stundenlohn", "Lohn Schweiz"],
+    fr: ["calculateur-salaire-horaire-suisse", "Calculateur salaire horaire Suisse", "Salaire horaire", "Salaire Suisse"],
+    en: ["hourly-wage-calculator-switzerland", "Hourly Wage Calculator Switzerland", "Hourly wage", "Swiss salary"],
+  },
+  "calcolo-salario-part-time-svizzera": {
+    de: ["teilzeit-lohn-rechner-schweiz", "Teilzeit Lohn Rechner Schweiz", "Teilzeitlohn", "Lohn Schweiz"],
+    fr: ["calculateur-salaire-temps-partiel-suisse", "Calculateur salaire temps partiel Suisse", "Temps partiel", "Salaire Suisse"],
+    en: ["part-time-salary-calculator-switzerland", "Part-Time Salary Calculator Switzerland", "Part-time salary", "Swiss salary"],
+  },
+  "calcolo-terzo-pilastro-risparmio-fiscale": {
+    de: ["saeule-3a-steuerersparnis-rechner", "Saeule 3a Steuerersparnis Rechner", "Saeule 3a", "Vorsorge Schweiz"],
+    fr: ["calculateur-troisieme-pilier-economie-impot", "Calculateur troisieme pilier economie d'impot", "Troisieme pilier", "Prevoyance Suisse"],
+    en: ["pillar-3a-tax-savings-calculator", "Pillar 3a Tax Savings Calculator", "Pillar 3a", "Swiss pension"],
+  },
+  "calcolo-budget-mensile": {
+    de: ["budget-rechner-schweiz", "Budget Rechner Schweiz", "Budget", "Finanzen Schweiz"],
+    fr: ["calculateur-budget-mensuel-suisse", "Calculateur budget mensuel Suisse", "Budget mensuel", "Finances Suisse"],
+    en: ["monthly-budget-calculator-switzerland", "Monthly Budget Calculator Switzerland", "Monthly budget", "Swiss personal finance"],
+  },
+  "calcolo-spese-auto-svizzera": {
+    de: ["autokosten-rechner-schweiz", "Autokosten Rechner Schweiz", "Autokosten", "Mobilitaet Schweiz"],
+    fr: ["calculateur-cout-voiture-suisse", "Calculateur cout voiture Suisse", "Cout voiture", "Mobilite Suisse"],
+    en: ["car-cost-calculator-switzerland", "Car Cost Calculator Switzerland", "Car cost", "Swiss mobility"],
+  },
+  "calcolo-fattura-freelance": {
+    de: ["freelancer-stundensatz-rechner-schweiz", "Freelancer Stundensatz Rechner Schweiz", "Freelancer Rate", "Business Schweiz"],
+    fr: ["calculateur-tarif-freelance-suisse", "Calculateur tarif freelance Suisse", "Tarif freelance", "Business Suisse"],
+    en: ["freelance-rate-calculator-switzerland", "Freelance Rate Calculator Switzerland", "Freelance rate", "Swiss business"],
+  },
+  "calcolo-prezzo-vendita": {
+    de: ["verkaufspreis-rechner", "Verkaufspreis Rechner", "Verkaufspreis", "Business"],
+    fr: ["calculateur-prix-de-vente", "Calculateur prix de vente", "Prix de vente", "Business"],
+    en: ["selling-price-calculator", "Selling Price Calculator", "Selling price", "Business"],
+  },
+} satisfies Record<string, Record<Locale, [string, string, string, string]>>;
+
+const localeCopy = {
+  de: {
+    meta: (title: string) => `${title} | Calcolich`,
+    description: (title: string) => `${title}: kostenloser Online-Rechner fuer die Schweiz mit Ergebnis, FAQ und praktischer Erklaerung.`,
+    intro: (title: string) => `${title} fuer schnelle Schaetzungen und klare Entscheidungen in der Schweiz.`,
+    cta: "Erhalte neue Rechner fuer Lohn, Steuern, Budget und Business in der Schweiz.",
+    article: (title: string) => [
+      `${title} hilft dir, wichtige Zahlen schnell zu pruefen, ohne Formeln manuell nachzubauen. Der Rechner ist fuer typische Entscheidungen in der Schweiz gedacht: Jobangebot, Umzug, Budget, Versicherungen, Steuern oder selbststaendige Arbeit.`,
+      "Das Ergebnis ist eine praktische Schaetzung. Fuer offizielle Entscheidungen solltest du kantonale Tabellen, Vertragsunterlagen, Versicherungsdaten oder eine qualifizierte Beratung verwenden.",
+      "Nutze die verwandten Rechner, um mehrere Aspekte zusammenzubringen. So entsteht aus einem einzelnen Wert ein brauchbarer Blick auf dein monatliches Budget und deine naechsten Entscheidungen.",
+    ],
+    faqs: (title: string) => [
+      { question: `Wofuer ist ${title}?`, answer: "Der Rechner liefert eine schnelle Schaetzung auf Basis deiner Eingaben." },
+      { question: "Ist das Ergebnis offiziell?", answer: "Nein. Es ist eine Orientierung und ersetzt keine offiziellen Quellen." },
+      { question: "Kann ich den Rechner kostenlos nutzen?", answer: "Ja, der Rechner ist kostenlos online nutzbar." },
+    ],
+  },
+  fr: {
+    meta: (title: string) => `${title} | Calcolich`,
+    description: (title: string) => `${title}: calculateur gratuit pour la Suisse avec resultat, FAQ et explication pratique.`,
+    intro: (title: string) => `${title} pour obtenir rapidement une estimation utile en Suisse.`,
+    cta: "Recevez de nouveaux calculateurs pour salaire, impots, budget et business en Suisse.",
+    article: (title: string) => [
+      `${title} aide a verifier rapidement des chiffres importants sans refaire les formules a la main. L'outil est concu pour les decisions courantes en Suisse: emploi, logement, budget, assurances, impots ou activite independante.`,
+      "Le resultat est une estimation pratique. Pour une decision officielle, verifiez toujours les sources cantonales, contrats, donnees d'assurance ou un conseil qualifie.",
+      "Utilisez les calculateurs lies pour combiner plusieurs aspects et obtenir une meilleure vision de votre budget mensuel.",
+    ],
+    faqs: (title: string) => [
+      { question: `A quoi sert ${title}?`, answer: "Il donne une estimation rapide a partir des valeurs saisies." },
+      { question: "Le resultat est-il officiel?", answer: "Non. C'est une orientation pratique, pas une source officielle." },
+      { question: "Le calculateur est-il gratuit?", answer: "Oui, il est gratuit et fonctionne en ligne." },
+    ],
+  },
+  en: {
+    meta: (title: string) => `${title} | Calcolich`,
+    description: (title: string) => `${title}: free Switzerland calculator with result, FAQ and practical explanation.`,
+    intro: (title: string) => `${title} for quick estimates and clearer decisions in Switzerland.`,
+    cta: "Get new calculators for Swiss salary, tax, budget and business decisions.",
+    article: (title: string) => [
+      `${title} helps you check important numbers quickly without rebuilding formulas manually. It is built for common decisions in Switzerland: salary, housing, budget, insurance, taxes or freelance work.`,
+      "The result is a practical estimate. For official decisions, verify the numbers with cantonal sources, contracts, insurance documents or a qualified professional.",
+      "Use the related calculators to connect several parts of the same decision and build a clearer view of your monthly budget.",
+    ],
+    faqs: (title: string) => [
+      { question: `What is ${title} for?`, answer: "It gives a quick estimate based on the values you enter." },
+      { question: "Is the result official?", answer: "No. It is a practical estimate and does not replace official sources." },
+      { question: "Is the calculator free?", answer: "Yes, it is free and works online." },
+    ],
+  },
+} satisfies Record<Locale, {
+  meta: (title: string) => string;
+  description: (title: string) => string;
+  intro: (title: string) => string;
+  cta: string;
+  article: (title: string) => string[];
+  faqs: (title: string) => { question: string; answer: string }[];
+}>;
+
+const inputLabels: Record<Locale, Record<string, string>> = {
+  de: {
+    gross: "Bruttolohn pro Monat CHF",
+    socialRate: "Sozialabgaben %",
+    taxRate: "Quellensteuer %",
+    premium: "Monatspraemie CHF",
+    franchise: "Franchise CHF",
+    medicalCosts: "Erwartete Gesundheitskosten pro Jahr CHF",
+    netIncome: "Nettoeinkommen pro Monat CHF",
+    rentRate: "Maximaler Wohnanteil %",
+    otherHousingCosts: "Weitere Wohnkosten CHF",
+    monthlySalary: "Monatslohn CHF",
+    hoursPerWeek: "Wochenstunden",
+    weeksPerYear: "Bezahlte Wochen pro Jahr",
+    fullTimeSalary: "Vollzeitlohn CHF",
+    workPercent: "Arbeitspensum %",
+    deductionRate: "Geschaetzte Abzuege %",
+    contribution: "3a Einzahlung CHF",
+    marginalTaxRate: "Grenzsteuersatz %",
+    years: "Jahre",
+    income: "Nettoeinnahmen pro Monat CHF",
+    rent: "Miete und Wohnen CHF",
+    healthInsurance: "Krankenkasse CHF",
+    otherCosts: "Weitere Kosten CHF",
+    leasing: "Leasing/Rate pro Monat CHF",
+    insurance: "Versicherung pro Monat CHF",
+    fuel: "Treibstoff/Laden pro Monat CHF",
+    maintenance: "Unterhalt und Steuern pro Monat CHF",
+    targetIncome: "Gewuenschtes Jahreseinkommen CHF",
+    annualCosts: "Jaehrliche Kosten CHF",
+    billableDays: "Verrechenbare Tage pro Jahr",
+    hoursPerDay: "Verrechenbare Stunden pro Tag",
+    cost: "Kosten CHF",
+    marginRate: "Zielmarge %",
+    vatRate: "MWST %",
+  },
+  fr: {
+    gross: "Salaire brut mensuel CHF",
+    socialRate: "Cotisations sociales %",
+    taxRate: "Impot a la source %",
+    premium: "Prime mensuelle CHF",
+    franchise: "Franchise CHF",
+    medicalCosts: "Frais medicaux annuels prevus CHF",
+    netIncome: "Revenu net mensuel CHF",
+    rentRate: "Part maximale pour le logement %",
+    otherHousingCosts: "Autres frais logement CHF",
+    monthlySalary: "Salaire mensuel CHF",
+    hoursPerWeek: "Heures par semaine",
+    weeksPerYear: "Semaines payees par an",
+    fullTimeSalary: "Salaire plein temps CHF",
+    workPercent: "Taux d'activite %",
+    deductionRate: "Deduction estimee %",
+    contribution: "Versement 3a CHF",
+    marginalTaxRate: "Taux marginal estime %",
+    years: "Annees",
+    income: "Revenus nets mensuels CHF",
+    rent: "Loyer et logement CHF",
+    healthInsurance: "Assurance maladie CHF",
+    otherCosts: "Autres depenses CHF",
+    leasing: "Leasing/mensualite CHF",
+    insurance: "Assurance mensuelle CHF",
+    fuel: "Carburant/recharge mensuel CHF",
+    maintenance: "Entretien et taxes mensuels CHF",
+    targetIncome: "Revenu annuel souhaite CHF",
+    annualCosts: "Couts annuels CHF",
+    billableDays: "Jours facturables par an",
+    hoursPerDay: "Heures facturables par jour",
+    cost: "Cout CHF",
+    marginRate: "Marge souhaitee %",
+    vatRate: "TVA %",
+  },
+  en: {
+    gross: "Monthly gross salary CHF",
+    socialRate: "Social deductions %",
+    taxRate: "Withholding tax %",
+    premium: "Monthly premium CHF",
+    franchise: "Deductible CHF",
+    medicalCosts: "Expected annual medical costs CHF",
+    netIncome: "Monthly net income CHF",
+    rentRate: "Maximum housing share %",
+    otherHousingCosts: "Other housing costs CHF",
+    monthlySalary: "Monthly salary CHF",
+    hoursPerWeek: "Hours per week",
+    weeksPerYear: "Paid weeks per year",
+    fullTimeSalary: "Full-time salary CHF",
+    workPercent: "Work percentage %",
+    deductionRate: "Estimated deductions %",
+    contribution: "Pillar 3a contribution CHF",
+    marginalTaxRate: "Estimated marginal tax rate %",
+    years: "Years",
+    income: "Monthly net income CHF",
+    rent: "Rent and housing CHF",
+    healthInsurance: "Health insurance CHF",
+    otherCosts: "Other costs CHF",
+    leasing: "Lease/payment per month CHF",
+    insurance: "Monthly insurance CHF",
+    fuel: "Monthly fuel/charging CHF",
+    maintenance: "Monthly maintenance and taxes CHF",
+    targetIncome: "Target annual income CHF",
+    annualCosts: "Annual costs CHF",
+    billableDays: "Billable days per year",
+    hoursPerDay: "Billable hours per day",
+    cost: "Cost CHF",
+    marginRate: "Target margin %",
+    vatRate: "VAT %",
+  },
+};
+
+const localizedContent = buildLocalizedContent();
+
+export function getLocalizedCalculators(locale: Locale) {
+  return Object.keys(localizedContent[locale])
+    .map((baseSlug) => getLocalizedCalculatorByBaseSlug(locale, baseSlug))
+    .filter((calculator): calculator is Calculator => Boolean(calculator));
+}
+
+export function getLocalizedCalculator(locale: Locale, slug: string) {
+  const baseSlug = getBaseSlug(locale, slug);
+  return baseSlug ? getLocalizedCalculatorByBaseSlug(locale, baseSlug) : undefined;
+}
+
+export function getLocalizedStaticParams(locale: Locale) {
+  return getLocalizedCalculators(locale).map((calculator) => ({ slug: calculator.slug }));
+}
+
+export function getLocalizedRelatedCalculators(locale: Locale, calculator: Calculator) {
+  const baseSlug = getBaseSlug(locale, calculator.slug);
+  const content = baseSlug ? localizedContent[locale][baseSlug] : undefined;
+
+  return (content?.relatedSlugs ?? [])
+    .map((relatedBaseSlug) => getLocalizedCalculatorByBaseSlug(locale, relatedBaseSlug) ?? getCalculator(relatedBaseSlug))
+    .filter((item): item is Calculator => Boolean(item));
+}
+
+export function localizedHref(locale: Locale, calculator: Calculator) {
+  const baseSlug = getBaseSlug(locale, calculator.slug);
+  const isLocalized = Boolean(baseSlug);
+  return isLocalized ? `/${locale}/${calculator.slug}` : `/${calculator.slug}`;
+}
+
+export function localizedAlternates(locale: Locale, slug?: string) {
+  const currentBaseSlug = slug ? getBaseSlug(locale, slug) : undefined;
+
+  return {
+    canonical: `https://calcolich.ch/${locale}${slug ? `/${slug}` : ""}`,
+    languages: {
+      de: `https://calcolich.ch/de${currentBaseSlug ? `/${localizedContent.de[currentBaseSlug].slug}` : ""}`,
+      fr: `https://calcolich.ch/fr${currentBaseSlug ? `/${localizedContent.fr[currentBaseSlug].slug}` : ""}`,
+      en: `https://calcolich.ch/en${currentBaseSlug ? `/${localizedContent.en[currentBaseSlug].slug}` : ""}`,
+      "x-default": "https://calcolich.ch",
+    },
+  };
+}
+
+function getBaseSlug(locale: Locale, slug: string) {
+  return Object.keys(localizedContent[locale]).find(
+    (baseSlug) => localizedContent[locale][baseSlug].slug === slug,
+  );
+}
+
+function getLocalizedCalculatorByBaseSlug(locale: Locale, baseSlug: string) {
+  const base = getCalculator(baseSlug);
+  const content = localizedContent[locale][baseSlug];
+  if (!base || !content) return undefined;
+
+  return {
+    ...base,
+    ...content,
+  };
+}
+
+function buildLocalizedContent() {
+  return Object.fromEntries(
+    locales.map((locale) => [
+      locale,
+      Object.fromEntries(
+        Object.entries(translatedSlugs).map(([baseSlug, translations]) => {
+          const base = getCalculator(baseSlug);
+          const [slug, title, shortTitle, category] = translations[locale];
+          const copy = localeCopy[locale];
+
+          return [
+            baseSlug,
+            {
+              slug,
+              title,
+              shortTitle,
+              category,
+              metaTitle: copy.meta(title),
+              metaDescription: copy.description(title),
+              intro: copy.intro(title),
+              cta: copy.cta,
+              inputs: localizeInputs(locale, base),
+              article: copy.article(title),
+              faqs: copy.faqs(title),
+              relatedSlugs: base?.relatedSlugs ?? [],
+            },
+          ];
+        }),
+      ),
+    ]),
+  ) as Record<Locale, Record<string, LocalizedCalculatorContent>>;
+}
+
+function localizeInputs(locale: Locale, calculator?: Calculator) {
+  return (calculator?.inputs ?? []).map((input) => ({
+    ...input,
+    label: inputLabels[locale][input.key] ?? input.label,
+  }));
+}

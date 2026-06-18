@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Piano Cashflow Online | Calcolich",
   description:
     "Piano operativo Calcolich per creare traffico SEO, raccogliere lead e monetizzare con servizi, AdSense e contenuti trading.",
+  alternates: {
+    canonical: "https://calcolich.ch/piano-cashflow-online",
+  },
 };
 
 const steps = [

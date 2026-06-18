@@ -130,12 +130,27 @@ Ci sono tre livelli:
 2. `RESEND_API_KEY` configurato: il lead viene inviato via email a `LEADS_TO_EMAIL`.
 3. Nessuno dei due configurato: il sito apre una bozza email sul dispositivo dell'utente.
 
+Formato email Resend:
+
+- oggetto: `[Calcolich] Nuovo lead Fonte - Contatto`
+- corpo HTML con priorita, fonte, dati contatto, richiesta e pagina di provenienza
+- corpo testo come fallback
+- risposta diretta al lead quando l'email e presente
+
 Per ricevere subito email automatiche su `calcolich@gmail.com`, usare Resend:
 
 - creare account Resend
 - creare API key
 - inserirla in Vercel come `RESEND_API_KEY`
 - impostare `LEADS_TO_EMAIL=calcolich@gmail.com`
+
+Nota operativa 2026-06-16:
+
+- `RESEND_API_KEY` risulta presente su Vercel ma Resend risponde `API key is invalid`.
+- Il codice ripulisce valori Vercel inseriti nel formato `NOME_VARIABILE = valore`.
+- Finche la chiave Resend non viene rigenerata, il form apre un fallback `mailto` invece di mostrare errore tecnico all'utente.
+- Anche se `RESEND_API_KEY` viene rimossa, il form apre il fallback `mailto` e non mostra un falso successo.
+- Per attivare le email automatiche reali: generare una nuova API key Resend valida e sostituire `RESEND_API_KEY` in Production e Preview.
 
 ## AdSense
 

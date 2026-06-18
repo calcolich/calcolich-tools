@@ -50,7 +50,7 @@ export default function LeadForm({
         openEmailFallback(data, source);
         form.reset();
         setStatus("success");
-        setMessage(`${result.error} Si apre una bozza email di sicurezza.`);
+        setMessage("Si apre una bozza email: inviala per completare la richiesta.");
         return;
       }
 
@@ -114,12 +114,18 @@ export default function LeadForm({
 }
 
 function openEmailFallback(data: Record<string, FormDataEntryValue>, source: string) {
-  const subject = encodeURIComponent(`Nuovo contatto Calcolich - ${source}`);
+  const subject = encodeURIComponent(`[Calcolich] Nuovo contatto - ${source}`);
   const body = encodeURIComponent(
-    Object.entries(data)
-      .filter(([, value]) => value)
-      .map(([key, value]) => `${key}: ${value}`)
-      .join("\n"),
+    [
+      "Nuovo contatto Calcolich",
+      "",
+      `Fonte: ${source}`,
+      `Data: ${new Date().toLocaleString("it-CH")}`,
+      "",
+      ...Object.entries(data)
+        .filter(([key, value]) => key !== "website" && value)
+        .map(([key, value]) => `${key}: ${value}`),
+    ].join("\n"),
   );
   window.location.href = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
 }

@@ -20,7 +20,20 @@ export type CalculatorKind =
   | "risk-reward"
   | "savings-goal"
   | "hourly-cost"
-  | "annual-monthly";
+  | "annual-monthly"
+  | "withholding-tax-ch"
+  | "health-insurance-ch"
+  | "rent-affordability-ch"
+  | "hourly-wage-ch"
+  | "part-time-salary-ch"
+  | "pillar3a-tax-ch"
+  | "monthly-budget-ch"
+  | "car-cost-ch"
+  | "freelance-rate-ch"
+  | "selling-price"
+  | "ahv-13th-pension-ch"
+  | "self-employed-ahv-ch"
+  | "maternity-allowance-ch";
 
 export type CalculatorInput = {
   key: string;
@@ -48,6 +61,7 @@ export type Calculator = {
   article: string[];
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
+  guideLinks?: { href: string; label: string; description: string }[];
 };
 
 export const calculators: Calculator[] = [
@@ -109,6 +123,18 @@ export const calculators: Calculator[] = [
       { question: "Posso usare il risultato per negoziare?", answer: "Si, come stima iniziale. Per decisioni finali verifica sempre la busta paga o un calcolo professionale." },
     ],
     relatedSlugs: ["calcolo-lordo-netto-svizzera", "calcolo-tredicesima-svizzera", "calcolo-ferie-svizzera"],
+    guideLinks: [
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto Svizzera",
+        description: "Deduzioni, lordo, netto, tredicesima e controlli prima di accettare un'offerta.",
+      },
+      {
+        href: "/guide/imposta-alla-fonte-svizzera",
+        label: "Guida imposta alla fonte",
+        description: "Come leggere l'effetto della trattenuta fiscale sul salario mensile.",
+      },
+    ],
   },
   {
     slug: "calcolo-lordo-netto-svizzera",
@@ -137,6 +163,18 @@ export const calculators: Calculator[] = [
       { question: "Posso calcolare il lordo partendo dal netto desiderato?", answer: "Si, scegli la modalita da netto a lordo e inserisci il netto che vuoi ottenere." },
     ],
     relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-tredicesima-svizzera", "calcolo-ore-lavoro"],
+    guideLinks: [
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto Svizzera",
+        description: "Quando usare lordo, netto e deduzioni per confrontare offerte di lavoro.",
+      },
+      {
+        href: "/guide/imposta-alla-fonte-svizzera",
+        label: "Guida imposta alla fonte",
+        description: "Cosa verificare se nel netto entra anche la trattenuta fiscale.",
+      },
+    ],
   },
   {
     slug: "calcolo-ferie-svizzera",
@@ -984,6 +1022,466 @@ export const calculators: Calculator[] = [
       "calcolo-lordo-netto-svizzera",
       "calcolo-tredicesima-svizzera"
     ]
+  },
+  {
+    slug: "calcolo-imposta-alla-fonte-svizzera",
+    kind: "withholding-tax-ch",
+    title: "Calcolatore Imposta alla Fonte Svizzera",
+    shortTitle: "Imposta alla fonte",
+    category: "Tasse Svizzera",
+    metaTitle: "Calcolo Imposta alla Fonte Svizzera | Calcolich",
+    metaDescription: "Stima imposta alla fonte, salario netto e trattenuta mensile partendo da lordo, cantone e aliquota.",
+    intro: "Stima rapidamente quanta imposta alla fonte puo incidere sul salario mensile in Svizzera.",
+    cta: "Ricevi nuovi strumenti per capire salario netto, imposte e lavoro in Svizzera.",
+    inputs: [
+      { key: "gross", label: "Salario lordo mensile CHF", defaultValue: "6500", min: "0" },
+      { key: "socialRate", label: "Deduzioni sociali %", defaultValue: "12", step: "0.1", min: "0", max: "60" },
+      { key: "taxRate", label: "Aliquota imposta alla fonte %", defaultValue: "8", step: "0.1", min: "0", max: "60" },
+    ],
+    article: [
+      "L'imposta alla fonte e una delle ricerche piu importanti per chi lavora in Svizzera con permesso, trasferimento recente o situazione fiscale non ancora ordinaria. Questo calcolatore aiuta a stimare l'effetto della trattenuta mensile partendo dal salario lordo, dalle deduzioni sociali e da una aliquota indicativa.",
+      "Il risultato non sostituisce le tabelle ufficiali cantonali, ma rende immediata la differenza tra lordo, contributi e netto stimato. Per un calcolo piu preciso bisogna verificare cantone, stato civile, figli, confessione, permesso e tariffa applicabile.",
+      "La pagina e pensata anche per chi cerca in tedesco o inglese termini come Quellensteuer Rechner Schweiz o withholding tax calculator Switzerland. Il focus resta pratico: capire subito se una offerta salariale e sostenibile.",
+      "Usa questo strumento insieme al calcolatore stipendio netto, lordo netto e budget mensile per valutare il cashflow reale prima di trasferirti o accettare una nuova posizione.",
+    ],
+    faqs: [
+      { question: "Il calcolo usa le tabelle cantonali ufficiali?", answer: "No, usa una aliquota inserita dall'utente. Per il valore ufficiale bisogna consultare le tabelle del cantone." },
+      { question: "A chi serve l'imposta alla fonte?", answer: "Di solito riguarda lavoratori stranieri o situazioni specifiche. Le regole cambiano in base a permesso, cantone e situazione personale." },
+      { question: "Posso usarlo per confrontare offerte di lavoro?", answer: "Si, come stima iniziale del netto mensile dopo deduzioni e imposta alla fonte." },
+    ],
+    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-lordo-netto-svizzera", "calcolo-budget-mensile"],
+    guideLinks: [
+      {
+        href: "/guide/imposta-alla-fonte-svizzera",
+        label: "Guida imposta alla fonte Svizzera",
+        description: "Dati da preparare, limiti della stima e collegamento con lo stipendio netto.",
+      },
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto",
+        description: "Come leggere deduzioni e netto disponibile prima di una decisione salariale.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-cassa-malati-svizzera",
+    kind: "health-insurance-ch",
+    title: "Calcolatore Cassa Malati Svizzera",
+    shortTitle: "Cassa malati",
+    category: "Assicurazioni Svizzera",
+    metaTitle: "Calcolo Cassa Malati Svizzera | Premi e Franchigia | Calcolich",
+    metaDescription: "Stima costo annuo della cassa malati in Svizzera combinando premio mensile, franchigia e spese mediche.",
+    intro: "Confronta premio mensile, franchigia e spese previste per stimare il costo annuo della cassa malati.",
+    cta: "Ricevi strumenti utili per pianificare spese, assicurazioni e budget in Svizzera.",
+    inputs: [
+      { key: "premium", label: "Premio mensile CHF", defaultValue: "380", min: "0" },
+      { key: "franchise", label: "Franchigia CHF", defaultValue: "2500", min: "0" },
+      { key: "medicalCosts", label: "Spese mediche annue previste CHF", defaultValue: "1200", min: "0" },
+    ],
+    article: [
+      "La cassa malati e una delle spese ricorrenti piu importanti in Svizzera. Il premio mensile non racconta tutto: franchigia, spese mediche previste e partecipazione ai costi cambiano molto il costo annuo reale.",
+      "Questo calcolatore confronta premio annuo, quota di spese fino alla franchigia e una stima semplice della partecipazione. Serve per ragionare su scenari, non per sostituire un confronto assicurativo ufficiale.",
+      "Il tema ha forte domanda anche in tedesco e inglese, da Krankenkasse Pramien Rechner a health insurance premium calculator Switzerland. Una pagina chiara puo intercettare persone residenti, expat e nuovi arrivati.",
+      "Collega il risultato al budget mensile e al salario netto per capire quanto pesa davvero la cassa malati sul reddito disponibile.",
+    ],
+    faqs: [
+      { question: "Il calcolo confronta tutte le assicurazioni?", answer: "No, stima il costo annuo partendo dai valori inseriti. Per confronti ufficiali serve un comparatore aggiornato." },
+      { question: "La franchigia piu alta conviene sempre?", answer: "Non sempre. Dipende da premio, spese mediche previste e rischio personale." },
+      { question: "Il risultato include il modello assicurativo?", answer: "No, considera solo premio, franchigia e spese previste." },
+    ],
+    relatedSlugs: ["calcolo-budget-mensile", "calcolo-salario-netto-svizzera", "calcolo-obiettivo-risparmio"],
+    guideLinks: [
+      {
+        href: "/guide/cassa-malati-svizzera",
+        label: "Guida cassa malati Svizzera",
+        description: "Premio, franchigia e costo annuo letti insieme per evitare confronti parziali.",
+      },
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita",
+        description: "Come inserire la cassa malati dentro il budget mensile svizzero.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-affitto-sostenibile-svizzera",
+    kind: "rent-affordability-ch",
+    title: "Calcolatore Affitto Sostenibile Svizzera",
+    shortTitle: "Affitto sostenibile",
+    category: "Casa Svizzera",
+    metaTitle: "Calcolo Affitto Sostenibile Svizzera | Calcolich",
+    metaDescription: "Calcola quanto affitto puoi sostenere in Svizzera in base al reddito netto e alla percentuale del budget.",
+    intro: "Stima un affitto mensile sostenibile partendo dal reddito netto e dalla quota massima del budget.",
+    cta: "Ricevi strumenti per pianificare casa, budget e trasferimento in Svizzera.",
+    inputs: [
+      { key: "netIncome", label: "Reddito netto mensile CHF", defaultValue: "5200", min: "0" },
+      { key: "rentRate", label: "Quota massima per affitto %", defaultValue: "30", step: "0.1", min: "0", max: "80" },
+      { key: "otherHousingCosts", label: "Spese casa extra CHF", defaultValue: "250", min: "0" },
+    ],
+    article: [
+      "Trovare casa in Svizzera richiede numeri realistici. Un affitto che sembra gestibile sulla carta puo diventare pesante quando si aggiungono cassa malati, trasporti, tasse e spese quotidiane.",
+      "Questo calcolatore parte dal reddito netto mensile e applica una quota massima dedicata all'abitazione. Sottrae poi eventuali costi extra per ottenere un affitto indicativo sostenibile.",
+      "La pagina intercetta intenti in italiano, tedesco e inglese come Mietbudget Rechner Schweiz e rent affordability calculator Switzerland. E utile per residenti, frontalieri e persone in trasferimento.",
+      "Usa il risultato insieme al budget mensile e allo stipendio netto per capire se una zona o una offerta immobiliare sono davvero compatibili con il tuo cashflow.",
+    ],
+    faqs: [
+      { question: "Quale percentuale del reddito usare per l'affitto?", answer: "Molte persone partono dal 25-35% del netto, ma dipende da citta, famiglia e altre spese." },
+      { question: "Il calcolo include spese accessorie?", answer: "Puoi inserirle nel campo spese casa extra per ottenere un limite piu prudente." },
+      { question: "Serve per ottenere un contratto di affitto?", answer: "No, e una stima personale. Agenzie e proprietari possono usare criteri diversi." },
+    ],
+    relatedSlugs: ["calcolo-budget-mensile", "calcolo-salario-netto-svizzera", "calcolo-cassa-malati-svizzera"],
+    guideLinks: [
+      {
+        href: "/guide/affitto-sostenibile-svizzera",
+        label: "Guida affitto sostenibile",
+        description: "Come partire dal netto e mantenere margine per spese, imprevisti e risparmio.",
+      },
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita",
+        description: "Affitto, cassa malati, trasporti e budget mensile letti insieme.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-salario-orario-svizzera",
+    kind: "hourly-wage-ch",
+    title: "Calcolatore Salario Orario Svizzera",
+    shortTitle: "Salario orario",
+    category: "Stipendio Svizzera",
+    metaTitle: "Calcolo Salario Orario Svizzera | Calcolich",
+    metaDescription: "Trasforma salario mensile in salario orario stimato usando ore settimanali e settimane lavorate.",
+    intro: "Calcola una stima del salario orario partendo da salario mensile e ore lavorate.",
+    cta: "Ricevi strumenti per salario, ore lavoro e part-time in Svizzera.",
+    inputs: [
+      { key: "monthlySalary", label: "Salario mensile CHF", defaultValue: "5500", min: "0" },
+      { key: "hoursPerWeek", label: "Ore settimanali", defaultValue: "42", step: "0.1", min: "1" },
+      { key: "weeksPerYear", label: "Settimane pagate annue", defaultValue: "52", step: "0.1", min: "1" },
+    ],
+    article: [
+      "Il salario orario e utile per confrontare offerte, part-time, turni, lavori a chiamata e proposte freelance. In Svizzera molte offerte parlano di salario mensile, ma il valore orario rende il confronto piu trasparente.",
+      "Il calcolatore stima il salario annuo dal mensile e lo divide per le ore annue. Puoi modificare ore settimanali e settimane pagate per adattare il risultato al tuo contratto.",
+      "La stessa esigenza compare spesso come Stundenlohn Rechner Schweiz o hourly wage calculator Switzerland. Una pagina dedicata puo intercettare utenti molto vicini a una decisione lavorativa.",
+      "Per un quadro completo, confronta questo risultato con ore lavorate, straordinari e salario netto.",
+    ],
+    faqs: [
+      { question: "Il salario orario e lordo o netto?", answer: "Dipende dal valore inserito. Se inserisci un salario lordo, il risultato e lordo; se inserisci un netto, il risultato e netto." },
+      { question: "Come gestisco la tredicesima?", answer: "Puoi inserirla nel salario mensile medio oppure usare prima il calcolatore stipendio annuale mensile." },
+      { question: "Funziona per part-time?", answer: "Si, basta inserire le ore settimanali reali del part-time." },
+    ],
+    relatedSlugs: ["calcolo-ore-lavoro", "calcolo-straordinari-svizzera", "calcolo-salario-part-time-svizzera"],
+  },
+  {
+    slug: "calcolo-salario-part-time-svizzera",
+    kind: "part-time-salary-ch",
+    title: "Calcolatore Salario Part-Time Svizzera",
+    shortTitle: "Salario part-time",
+    category: "Stipendio Svizzera",
+    metaTitle: "Calcolo Salario Part-Time Svizzera | Calcolich",
+    metaDescription: "Calcola salario part-time proporzionale partendo da salario full-time e percentuale di lavoro.",
+    intro: "Stima il salario part-time proporzionale in base al salario full-time e alla percentuale lavorativa.",
+    cta: "Ricevi strumenti gratuiti per lavoro, salario e contratti in Svizzera.",
+    inputs: [
+      { key: "fullTimeSalary", label: "Salario full-time CHF", defaultValue: "6500", min: "0" },
+      { key: "workPercent", label: "Percentuale lavoro %", defaultValue: "80", step: "1", min: "1", max: "100" },
+      { key: "deductionRate", label: "Deduzioni stimate %", defaultValue: "14", step: "0.1", min: "0", max: "60" },
+    ],
+    article: [
+      "Il part-time e comune in Svizzera, ma il confronto tra percentuale lavorativa, salario lordo e netto non e sempre immediato. Questo calcolatore trasforma un salario full-time in una stima proporzionale part-time.",
+      "Inserisci il salario full-time, la percentuale lavorativa e una deduzione stimata. Il risultato mostra lordo part-time, deduzioni e netto indicativo.",
+      "Il tema copre query come Teilzeit Lohn Rechner e part time salary calculator Switzerland. E utile per chi valuta riduzione ore, nuova offerta o rientro al lavoro.",
+      "Il calcolo resta indicativo: tredicesima, previdenza, imposte e benefit possono cambiare il risultato reale.",
+    ],
+    faqs: [
+      { question: "Il salario part-time e sempre proporzionale?", answer: "Di solito si parte dalla proporzione, ma contratto, benefit e deduzioni possono cambiare il netto." },
+      { question: "Posso stimare il netto?", answer: "Si, inserendo una percentuale di deduzioni stimata." },
+      { question: "Funziona con 13 mensilita?", answer: "Si come stima mensile, ma per il dettaglio usa anche il calcolatore tredicesima." },
+    ],
+    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-salario-orario-svizzera", "calcolo-tredicesima-svizzera"],
+  },
+  {
+    slug: "calcolo-terzo-pilastro-risparmio-fiscale",
+    kind: "pillar3a-tax-ch",
+    title: "Calcolatore Terzo Pilastro Risparmio Fiscale",
+    shortTitle: "Terzo pilastro",
+    category: "Finanza Svizzera",
+    metaTitle: "Calcolo Terzo Pilastro Risparmio Fiscale | Calcolich",
+    metaDescription: "Stima il risparmio fiscale del pilastro 3a in Svizzera partendo dal versamento e dall'aliquota marginale.",
+    intro: "Stima quanto puoi risparmiare fiscalmente con un versamento nel terzo pilastro.",
+    cta: "Ricevi strumenti per pianificare risparmio, pensione e imposte in Svizzera.",
+    inputs: [
+      { key: "contribution", label: "Versamento 3a CHF", defaultValue: "7056", min: "0" },
+      { key: "marginalTaxRate", label: "Aliquota marginale stimata %", defaultValue: "22", step: "0.1", min: "0", max: "60" },
+      { key: "years", label: "Anni di versamento", defaultValue: "10", min: "1" },
+    ],
+    article: [
+      "Il terzo pilastro e uno degli strumenti piu cercati in Svizzera per risparmio pensionistico e ottimizzazione fiscale. Il vantaggio immediato spesso e il risparmio d'imposta generato dal versamento deducibile.",
+      "Questo calcolatore stima il beneficio usando versamento, aliquota marginale e numero di anni. Non sostituisce una consulenza fiscale, ma rende chiaro l'ordine di grandezza.",
+      "In tedesco e inglese il tema vive con query come Saule 3a Steuerersparnis Rechner e pillar 3a tax savings calculator. Il valore commerciale della pagina e alto.",
+      "Collega il risultato al calcolatore interessi composti e obiettivo risparmio per valutare anche il capitale futuro.",
+    ],
+    faqs: [
+      { question: "Il risparmio fiscale e garantito?", answer: "No, dipende da reddito, cantone, situazione fiscale e limiti annui applicabili." },
+      { question: "Il calcolo include rendimento degli investimenti?", answer: "No, mostra il risparmio fiscale stimato. Per la crescita usa il calcolatore interessi composti." },
+      { question: "Quale aliquota devo inserire?", answer: "Inserisci una stima della tua aliquota marginale o un valore calcolato da un consulente/fonte fiscale." },
+    ],
+    relatedSlugs: ["calcolo-interessi-composti", "calcolo-obiettivo-risparmio", "calcolo-imposta-alla-fonte-svizzera"],
+  },
+  {
+    slug: "calcolo-budget-mensile",
+    kind: "monthly-budget-ch",
+    title: "Calcolatore Budget Mensile Svizzera",
+    shortTitle: "Budget mensile",
+    category: "Finanza personale",
+    metaTitle: "Calcolo Budget Mensile Svizzera | Calcolich",
+    metaDescription: "Calcola saldo mensile disponibile dopo affitto, cassa malati, trasporti, spesa e altri costi.",
+    intro: "Stima il budget mensile disponibile in Svizzera dopo le spese principali.",
+    cta: "Ricevi strumenti per gestire cashflow, spese e risparmio in Svizzera.",
+    inputs: [
+      { key: "income", label: "Entrate nette mensili CHF", defaultValue: "5200", min: "0" },
+      { key: "rent", label: "Affitto e spese casa CHF", defaultValue: "1600", min: "0" },
+      { key: "healthInsurance", label: "Cassa malati CHF", defaultValue: "380", min: "0" },
+      { key: "otherCosts", label: "Altre spese CHF", defaultValue: "1800", min: "0" },
+    ],
+    article: [
+      "Un budget mensile realistico e fondamentale in Svizzera, dove alcune spese fisse possono essere alte. Salario netto, affitto, cassa malati, trasporti e spese quotidiane vanno letti insieme.",
+      "Il calcolatore sottrae le principali uscite dalle entrate nette e mostra saldo disponibile, spese totali e percentuale di risparmio potenziale.",
+      "La pagina supporta query come Budget Rechner Schweiz e monthly budget calculator Switzerland, utili per residenti, expat e persone che stanno valutando trasferimento.",
+      "Usalo come centro del cluster: collega stipendio netto, cassa malati, affitto sostenibile e obiettivo risparmio.",
+    ],
+    faqs: [
+      { question: "Quali spese devo inserire?", answer: "Inserisci affitto, cassa malati e una stima delle altre spese ricorrenti come trasporti, cibo, telefono e tempo libero." },
+      { question: "Il saldo disponibile e risparmio?", answer: "Non necessariamente. E la parte non assegnata dopo le spese inserite." },
+      { question: "Serve per trasferirsi in Svizzera?", answer: "Si, aiuta a stimare se un reddito netto puo sostenere il costo della vita previsto." },
+    ],
+    relatedSlugs: ["calcolo-affitto-sostenibile-svizzera", "calcolo-cassa-malati-svizzera", "calcolo-obiettivo-risparmio"],
+    guideLinks: [
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita Svizzera",
+        description: "Budget, affitto, cassa malati e spese ricorrenti prima di trasferirti o cambiare lavoro.",
+      },
+      {
+        href: "/guide/affitto-sostenibile-svizzera",
+        label: "Guida affitto sostenibile",
+        description: "Come collegare il limite di affitto al budget reale disponibile ogni mese.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-spese-auto-svizzera",
+    kind: "car-cost-ch",
+    title: "Calcolatore Spese Auto Svizzera",
+    shortTitle: "Spese auto",
+    category: "Mobilita Svizzera",
+    metaTitle: "Calcolo Spese Auto Svizzera | Calcolich",
+    metaDescription: "Stima costo mensile e annuo dell'auto in Svizzera includendo leasing, assicurazione, carburante e manutenzione.",
+    intro: "Calcola il costo reale mensile dell'auto sommando rate, assicurazione, carburante e manutenzione.",
+    cta: "Ricevi strumenti per budget, mobilita e spese ricorrenti in Svizzera.",
+    inputs: [
+      { key: "leasing", label: "Rata/leasing mensile CHF", defaultValue: "450", min: "0" },
+      { key: "insurance", label: "Assicurazione mensile CHF", defaultValue: "120", min: "0" },
+      { key: "fuel", label: "Carburante/ricarica mensile CHF", defaultValue: "180", min: "0" },
+      { key: "maintenance", label: "Manutenzione e tasse mensili CHF", defaultValue: "150", min: "0" },
+    ],
+    article: [
+      "Il costo di un'auto in Svizzera non e solo la rata. Assicurazione, carburante, manutenzione, pneumatici, parcheggio e tasse possono cambiare molto il budget mensile.",
+      "Questo calcolatore somma le principali voci ricorrenti e mostra costo mensile, costo annuo e incidenza sul budget.",
+      "La domanda esiste anche come Autokosten Rechner Schweiz e car cost calculator Switzerland. E un contenuto utile per chi sta scegliendo tra auto, leasing, treno o car sharing.",
+      "Collega il risultato al budget mensile per capire se l'auto e sostenibile rispetto al reddito netto.",
+    ],
+    faqs: [
+      { question: "Il calcolo include deprezzamento?", answer: "No, questa versione stima le spese mensili ricorrenti. Il deprezzamento puo essere aggiunto come costo extra nella manutenzione." },
+      { question: "Funziona per auto elettriche?", answer: "Si, inserisci il costo medio di ricarica nel campo carburante/ricarica." },
+      { question: "Posso usarlo per confrontare leasing e acquisto?", answer: "Si, inserendo una rata media o un costo mensile equivalente." },
+    ],
+    relatedSlugs: ["calcolo-budget-mensile", "calcolo-rata-prestito", "calcolo-affitto-sostenibile-svizzera"],
+  },
+  {
+    slug: "calcolo-fattura-freelance",
+    kind: "freelance-rate-ch",
+    title: "Calcolatore Tariffa Freelance Svizzera",
+    shortTitle: "Tariffa freelance",
+    category: "Business Svizzera",
+    metaTitle: "Calcolo Tariffa Freelance Svizzera | Calcolich",
+    metaDescription: "Calcola tariffa oraria freelance partendo da reddito desiderato, costi, giorni fatturabili e margine.",
+    intro: "Stima la tariffa oraria freelance necessaria per coprire costi e reddito desiderato.",
+    cta: "Ricevi strumenti per freelance, prezzi, margini e lavoro indipendente.",
+    inputs: [
+      { key: "targetIncome", label: "Reddito annuo desiderato CHF", defaultValue: "90000", min: "0" },
+      { key: "annualCosts", label: "Costi annui CHF", defaultValue: "18000", min: "0" },
+      { key: "billableDays", label: "Giorni fatturabili annui", defaultValue: "180", min: "1" },
+      { key: "hoursPerDay", label: "Ore fatturabili al giorno", defaultValue: "6", min: "1" },
+    ],
+    article: [
+      "Molti freelance sottostimano la tariffa necessaria per lavorare in modo sostenibile. In Svizzera bisogna considerare reddito desiderato, costi, giorni non fatturabili, assicurazioni, tasse e tempo commerciale.",
+      "Il calcolatore divide reddito piu costi per le ore fatturabili annue e restituisce tariffa oraria e giornaliera indicativa.",
+      "Il tema intercetta query come Freelancer Stundensatz Rechner Schweiz e freelance rate calculator Switzerland. Ha anche valore commerciale per servizi AI, SEO e siti web.",
+      "Usa il risultato con margine profitto, break even e prezzo vendita per costruire offerte piu solide.",
+    ],
+    faqs: [
+      { question: "Perche usare giorni fatturabili e non giorni totali?", answer: "Perche ferie, malattia, amministrazione e vendita riducono il tempo realmente vendibile." },
+      { question: "La tariffa include tasse?", answer: "Include solo i costi che inserisci. Aggiungi imposte e contributi nei costi annui se vuoi una stima piu prudente." },
+      { question: "Funziona per agenzie e consulenti?", answer: "Si, come base per stimare tariffe orarie o giornaliere." },
+    ],
+    relatedSlugs: ["calcolo-costo-orario", "calcolo-margine-profitto", "calcolo-prezzo-vendita"],
+  },
+  {
+    slug: "calcolo-prezzo-vendita",
+    kind: "selling-price",
+    title: "Calcolatore Prezzo Vendita",
+    shortTitle: "Prezzo vendita",
+    category: "Business",
+    metaTitle: "Calcolo Prezzo Vendita | Margine e Markup | Calcolich",
+    metaDescription: "Calcola prezzo di vendita partendo da costo, margine desiderato e IVA.",
+    intro: "Trova un prezzo di vendita sostenibile partendo da costo, margine e IVA.",
+    cta: "Ricevi strumenti per business, pricing, IVA e margini.",
+    inputs: [
+      { key: "cost", label: "Costo CHF", defaultValue: "60", min: "0" },
+      { key: "marginRate", label: "Margine desiderato %", defaultValue: "40", step: "0.1", min: "0", max: "95" },
+      { key: "vatRate", label: "IVA %", defaultValue: "8.1", step: "0.1", min: "0" },
+    ],
+    article: [
+      "Il prezzo di vendita non dovrebbe nascere a caso. Se parti dal costo e scegli un margine target, puoi capire subito quanto devi chiedere per coprire costi, imposte e utile.",
+      "Questo calcolatore usa costo, margine desiderato e IVA per stimare prezzo netto, IVA e prezzo finale al cliente.",
+      "La pagina chiude un buco interno gia presente nei link del sito e rafforza il cluster business insieme a margine profitto, break even e IVA Svizzera.",
+      "Per decisioni commerciali reali considera anche concorrenza, posizionamento, costi fissi e disponibilita del cliente a pagare.",
+    ],
+    faqs: [
+      { question: "Margine e markup sono la stessa cosa?", answer: "No. Il margine si calcola sul prezzo di vendita, il markup sul costo." },
+      { question: "Il prezzo include IVA?", answer: "Il risultato mostra sia prezzo netto sia prezzo finale con IVA." },
+      { question: "Posso usarlo per servizi?", answer: "Si, inserendo il costo stimato di produzione o erogazione del servizio." },
+    ],
+    relatedSlugs: ["calcolo-margine-profitto", "calcolo-break-even", "calcolo-iva-svizzera"],
+  },
+  {
+    slug: "calcolo-tredicesima-avs-2026",
+    kind: "ahv-13th-pension-ch",
+    title: "Calcolatore Tredicesima AVS 2026",
+    shortTitle: "Tredicesima AVS",
+    category: "Finanza Svizzera",
+    metaTitle: "Calcolo Tredicesima AVS 2026 | Calcolich",
+    metaDescription: "Stima la tredicesima rendita AVS 2026 partendo dalla rendita mensile e dai mesi di diritto nell'anno.",
+    intro: "Stima l'importo della tredicesima rendita AVS versata per la prima volta a dicembre 2026.",
+    cta: "Ricevi strumenti gratuiti per AVS, previdenza e pianificazione finanziaria in Svizzera.",
+    inputs: [
+      { key: "monthlyPension", label: "Rendita AVS mensile CHF", defaultValue: "2520", min: "0" },
+      { key: "eligibleMonths", label: "Mesi di rendita nell'anno", defaultValue: "12", min: "1", max: "12" },
+    ],
+    article: [
+      "Dal 2026 le persone che hanno diritto a una rendita di vecchiaia AVS nel mese di dicembre ricevono una mensilita aggiuntiva. Il primo versamento della tredicesima AVS e previsto nel dicembre 2026 insieme alla rendita ordinaria del mese.",
+      "L'importo corrisponde a un dodicesimo della rendita di vecchiaia AVS percepita durante l'anno. Se la rendita mensile e rimasta invariata per dodici mesi, la tredicesima stimata coincide quindi con una mensilita. Se il diritto e iniziato durante l'anno, il calcolo considera soltanto i mesi effettivi inseriti.",
+      "Rendite per figli, rendite completive e supplementi speciali non entrano nel calcolo. Il risultato viene arrotondato al franco e resta una stima, perche l'importo preciso puo essere determinato soltanto nel mese di dicembre.",
+      "Usa questo strumento insieme al calcolatore del terzo pilastro e degli interessi composti per costruire una visione piu completa della previdenza e del reddito disponibile dopo il pensionamento.",
+    ],
+    faqs: [
+      { question: "Quando viene pagata la tredicesima AVS?", answer: "Il primo versamento e previsto a dicembre 2026, insieme alla rendita ordinaria del mese." },
+      { question: "Come si calcola la tredicesima AVS?", answer: "Corrisponde a un dodicesimo della rendita di vecchiaia AVS percepita nell'anno, arrotondato al franco." },
+      { question: "Spetta anche alle rendite AI o per superstiti?", answer: "No. La mensilita aggiuntiva riguarda le rendite di vecchiaia AVS, non le rendite AI o per superstiti." },
+    ],
+    relatedSlugs: ["calcolo-terzo-pilastro-risparmio-fiscale", "calcolo-interessi-composti", "calcolo-budget-mensile"],
+    guideLinks: [
+      {
+        href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/13a-mensilit%C3%A0-AVS/",
+        label: "Fonte ufficiale: tredicesima AVS",
+        description: "Regole, beneficiari e modalita del primo versamento a dicembre 2026.",
+      },
+      {
+        href: "/guide/terzo-pilastro-risparmio-fiscale",
+        label: "Guida terzo pilastro",
+        description: "Come collegare previdenza, risparmio fiscale e pianificazione finanziaria.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-contributi-avs-indipendenti",
+    kind: "self-employed-ahv-ch",
+    title: "Calcolatore Contributi AVS Indipendenti",
+    shortTitle: "AVS indipendenti",
+    category: "Business Svizzera",
+    metaTitle: "Calcolo Contributi AVS Indipendenti 2026 | Calcolich",
+    metaDescription: "Stima contributi AVS, AI e IPG per indipendenti in Svizzera usando reddito netto, aliquota e spese amministrative.",
+    intro: "Stima il costo annuo dei contributi AVS, AI e IPG per un'attivita indipendente in Svizzera.",
+    cta: "Ricevi strumenti per freelance, contributi, tariffe e gestione dell'attivita in Svizzera.",
+    inputs: [
+      { key: "netIncome", label: "Reddito netto annuo CHF", defaultValue: "90000", min: "0" },
+      { key: "contributionRate", label: "Aliquota AVS/AI/IPG %", defaultValue: "10", step: "0.001", min: "0", max: "10" },
+      { key: "adminRate", label: "Spese amministrative %", defaultValue: "5", step: "0.1", min: "0", max: "5" },
+      { key: "minimumContribution", label: "Contributo minimo CHF", defaultValue: "529.20", step: "0.05", min: "0" },
+    ],
+    article: [
+      "Chi lavora come indipendente in Svizzera versa personalmente i contributi AVS, AI e IPG. Il costo dipende dal reddito netto riconosciuto dalla cassa di compensazione e, per i redditi piu bassi, da una scala contributiva decrescente.",
+      "Il calcolatore applica l'aliquota inserita al reddito netto annuo, considera il contributo minimo e aggiunge le spese amministrative. L'aliquota massima AVS, AI e IPG per gli indipendenti e normalmente il 10 per cento; per redditi inferiori va sostituita con quella applicabile alla propria fascia.",
+      "Le casse di compensazione possono applicare anche contributi cantonali, come quelli per gli assegni familiari, che non sono inclusi in questa stima. Per questo il risultato e utile per il budget, ma non sostituisce la decisione ufficiale della cassa.",
+      "Collega questa stima al calcolatore tariffa freelance: inserendo i contributi nei costi annui puoi determinare una tariffa oraria piu realistica e proteggere il margine dell'attivita.",
+    ],
+    faqs: [
+      { question: "Quale aliquota devo inserire?", answer: "Per redditi elevati puoi partire dal 10%. Per redditi inferiori usa l'aliquota della scala contributiva ufficiale o quella comunicata dalla cassa." },
+      { question: "Il calcolo include gli assegni familiari?", answer: "No. I contributi cantonali e altre voci specifiche non sono inclusi e possono aumentare il totale." },
+      { question: "Il risultato e vincolante?", answer: "No. Solo la decisione della cassa di compensazione competente determina i contributi dovuti." },
+    ],
+    relatedSlugs: ["calcolo-fattura-freelance", "calcolo-costo-orario", "calcolo-budget-mensile"],
+    guideLinks: [
+      {
+        href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti",
+        label: "Calcolo ufficiale AVS/AI",
+        description: "Verifica cantone, aliquota e contributi definitivi sul portale ufficiale.",
+      },
+      {
+        href: "/guide/freelance-svizzera",
+        label: "Guida freelance Svizzera",
+        description: "Tariffa, costi, margini e sostenibilita di un'attivita indipendente.",
+      },
+    ],
+  },
+  {
+    slug: "calcolo-indennita-maternita-svizzera",
+    kind: "maternity-allowance-ch",
+    title: "Calcolatore Indennita Maternita Svizzera",
+    shortTitle: "Indennita maternita",
+    category: "Lavoro Svizzera",
+    metaTitle: "Calcolo Indennita Maternita Svizzera 2026 | Calcolich",
+    metaDescription: "Stima indennita giornaliera e totale del congedo maternita in Svizzera: 80% del reddito, massimo CHF 220 al giorno.",
+    intro: "Stima l'indennita giornaliera e totale di maternita in base al reddito determinante.",
+    cta: "Ricevi strumenti gratuiti per salario, congedi e lavoro in Svizzera.",
+    inputs: [
+      {
+        key: "incomeType",
+        label: "Tipo di reddito",
+        type: "select",
+        defaultValue: "monthly",
+        options: [
+          { label: "Salario mensile dipendente", value: "monthly" },
+          { label: "Reddito annuo indipendente", value: "annual" },
+        ],
+      },
+      { key: "income", label: "Reddito determinante CHF", defaultValue: "6500", min: "0" },
+      { key: "days", label: "Indennita giornaliere", defaultValue: "98", min: "1", max: "154" },
+    ],
+    article: [
+      "In Svizzera l'indennita di maternita compensa una parte del reddito perso dopo la nascita. Per chi soddisfa le condizioni previste, viene versata sotto forma di indennita giornaliera per le prime 14 settimane, equivalenti normalmente a 98 giorni.",
+      "L'importo giornaliero corrisponde all'80 per cento del reddito medio precedente, fino a un massimo di 220 franchi al giorno. Il massimale viene raggiunto con un salario mensile di 8'250 franchi o, per una lavoratrice indipendente, con un reddito annuo soggetto all'AVS di 99'000 franchi.",
+      "Seleziona il tipo di reddito corretto: salario mensile per una dipendente oppure reddito annuo soggetto all'AVS per un'indipendente. Il calcolatore converte il dato in reddito giornaliero, applica l'80 per cento e il limite massimo ufficiale.",
+      "Il risultato e una stima economica. Diritto, durata effettiva, eventuali prolungamenti e importo definitivo devono essere confermati dal datore di lavoro o dalla cassa di compensazione competente.",
+    ],
+    faqs: [
+      { question: "Quanto dura normalmente l'indennita di maternita?", answer: "Il diritto ordinario copre 14 settimane, equivalenti a 98 indennita giornaliere." },
+      { question: "Qual e l'importo massimo giornaliero?", answer: "L'indennita e pari all'80% del reddito medio, fino a un massimo di CHF 220 al giorno." },
+      { question: "Il calcolo funziona per le indipendenti?", answer: "Si. Seleziona reddito annuo indipendente e inserisci il reddito soggetto all'AVS." },
+    ],
+    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-salario-part-time-svizzera", "calcolo-budget-mensile"],
+    guideLinks: [
+      {
+        href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Prestazioni-dell-IPG-servizio-maternit%C3%A0-per-laltro-genitore-assistenza-e-adozione/Indennit%C3%A0-in-caso-di-maternit%C3%A0",
+        label: "Fonte ufficiale: indennita di maternita",
+        description: "Condizioni, durata, calcolo e procedura sul portale AVS/AI.",
+      },
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto",
+        description: "Come leggere reddito, deduzioni e disponibilita mensile in Svizzera.",
+      },
+    ],
   },
 ];
 

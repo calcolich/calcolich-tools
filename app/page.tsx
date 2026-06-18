@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
+import { calculatorCategories, getCategoryCalculators } from "@/lib/categories";
 import { calculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
+import { guides } from "@/lib/guides";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Calcolich | Calcolatori gratuiti per la Svizzera",
+  description:
+    "Calcolatori gratuiti per stipendio, IVA, lavoro, finanza, casa e trading in Svizzera.",
+  alternates: {
+    canonical: "https://calcolich.ch",
+  },
+};
+
 export default function Home() {
+  const categories = calculatorCategories.slice(0, 4).map((category) => ({
+    ...category,
+    count: getCategoryCalculators(category).length,
+  }));
+
   return (
     <main className="min-h-screen bg-[#f6f8fb] text-gray-950">
       <section className="border-b border-gray-200 bg-white px-5 py-6 md:px-10">
@@ -53,6 +70,39 @@ export default function Home() {
               ))}
             </div>
           </aside>
+        </section>
+
+        <section className="mb-10 grid gap-4 md:grid-cols-4" aria-label="Categorie calcolatori">
+          {categories.map((category) => (
+            <Link
+              key={category.slug}
+              href={`/categorie/${category.slug}`}
+              className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-emerald-300 hover:bg-emerald-50"
+            >
+              <p className="text-sm font-black text-emerald-700">{category.count} strumenti</p>
+              <h2 className="mt-2 text-xl font-black tracking-tight">{category.shortTitle}</h2>
+            </Link>
+          ))}
+        </section>
+
+        <section className="mb-10 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8" aria-label="Guide pratiche">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Guide pratiche</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight">Approfondimenti per usare meglio i calcolatori</h2>
+            </div>
+            <Link href="/guide" className="rounded-full border border-gray-300 px-4 py-2 text-sm font-black text-gray-800 hover:border-emerald-300 hover:bg-emerald-50">
+              Vedi tutte
+            </Link>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            {guides.map((guide) => (
+              <Link key={guide.slug} href={`/guide/${guide.slug}`} className="rounded-2xl border border-gray-200 p-4 transition hover:border-emerald-300 hover:bg-emerald-50">
+                <h3 className="font-black text-gray-950">{guide.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">{guide.description}</p>
+              </Link>
+            ))}
+          </div>
         </section>
 
         <div id="calcolatori" className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

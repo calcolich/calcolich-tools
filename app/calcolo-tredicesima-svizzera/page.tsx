@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Calcolo Tredicesima 2026 | Calcolich",
   description:
     "Calcola la tredicesima in pochi secondi partendo dal salario mensile lordo e dai mesi lavorati.",
+  alternates: {
+    canonical: "https://calcolich.ch/calcolo-tredicesima-svizzera",
+  },
 };
 
 export default function Page() {

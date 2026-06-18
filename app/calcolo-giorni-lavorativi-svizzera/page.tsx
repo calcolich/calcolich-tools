@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Calcolo Giorni Lavorativi 2026 | Calcolich",
   description:
     "Calcola i giorni lavorativi tra due date sottraendo weekend e giorni festivi.",
+  alternates: {
+    canonical: "https://calcolich.ch/calcolo-giorni-lavorativi-svizzera",
+  },
 };
 
 export default function Page() {

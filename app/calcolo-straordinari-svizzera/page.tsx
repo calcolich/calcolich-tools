@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Calcolo Straordinari 2026 | Calcolich",
   description:
     "Calcola ore straordinarie e importo stimato partendo da ore previste, ore lavorate e tariffa oraria.",
+  alternates: {
+    canonical: "https://calcolich.ch/calcolo-straordinari-svizzera",
+  },
 };
 
 export default function Page() {

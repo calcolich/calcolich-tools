@@ -179,6 +179,13 @@ Se non e configurato ma `RESEND_API_KEY` e presente, il sito invia una email aut
 calcolich@gmail.com
 ```
 
+L'email automatica include:
+
+- oggetto nel formato `[Calcolich] Nuovo lead Fonte - Contatto`
+- versione HTML leggibile con priorita, fonte, contatto, richiesta e pagina
+- versione testo come backup
+- `reply_to` impostato sull'email del lead, quando presente
+
 Se non sono configurati ne webhook ne Resend, il form apre una bozza email sul dispositivo
 dell'utente. In quel caso l'utente deve premere invio nella propria app email.
 

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Servizi AI e SEO per piccole aziende | Calcolich",
   description:
     "Siti web semplici, SEO locale, Google Business Profile, automazioni AI, chatbot e contenuti social per piccole aziende.",
+  alternates: {
+    canonical: "https://calcolich.ch/servizi-ai-seo",
+  },
 };
 
 const packages = [
