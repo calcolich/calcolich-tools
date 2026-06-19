@@ -3,6 +3,7 @@ import { calculatorCategories, getCategoryCalculators } from "@/lib/categories";
 import { calculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
 import { guides } from "@/lib/guides";
+import { servicePages } from "@/lib/service-pages";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -83,6 +84,25 @@ export default function Home() {
               <h2 className="mt-2 text-xl font-black tracking-tight">{category.shortTitle}</h2>
             </Link>
           ))}
+        </section>
+
+        <section className="mb-10 border-y border-gray-200 py-8" aria-label="Servizi per aziende">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Per aziende</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight">Trasforma il sito in uno strumento commerciale</h2>
+            </div>
+            <Link href="/servizi-ai-seo" className="rounded-full bg-gray-950 px-5 py-2 text-sm font-black text-white hover:bg-emerald-800">Vedi prezzi e pacchetti</Link>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+            {servicePages.map((page) => (
+              <Link key={page.slug} href={`/servizi/${page.slug}`} className="bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">{page.eyebrow}</p>
+                <h3 className="mt-2 font-black">{page.shortTitle}</h3>
+                <p className="mt-3 text-sm font-bold text-gray-600">Da {page.priceFrom}</p>
+              </Link>
+            ))}
+          </div>
         </section>
 
         <section className="mb-10 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8" aria-label="Guide pratiche">

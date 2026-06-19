@@ -5,6 +5,7 @@ const footerLinks = [
   { href: "/categorie/business-freelance", label: "Business" },
   { href: "/categorie/trading", label: "Trading" },
   { href: "/guide", label: "Guide" },
+  { href: "/servizi-ai-seo", label: "Servizi" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/privacy", label: "Privacy" },
   { href: "/cookie", label: "Cookie" },

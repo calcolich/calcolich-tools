@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
+import { servicePages } from "@/lib/service-pages";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Siti web, SEO locale e automazioni AI | Calcolich",
@@ -100,6 +102,21 @@ export default async function Page({ searchParams }: PageProps) {
           <p className="mt-3 max-w-3xl leading-7 text-gray-700">Nessun vincolo lungo: si lavora per obiettivi mensili chiari e si rinnova solo quando il lavoro crea valore.</p>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
             {retainers.map((item) => <PriceCard key={item.name} {...item} />)}
+          </div>
+        </section>
+
+        <section className="mt-12 border-y border-gray-200 py-10">
+          <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Soluzioni specifiche</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">Parti dal problema piu vicino alla tua attivita</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {servicePages.map((page) => (
+              <Link key={page.slug} href={`/servizi/${page.slug}`} className="group bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">{page.eyebrow}</p>
+                <h3 className="mt-2 text-xl font-black group-hover:text-emerald-800">{page.shortTitle}</h3>
+                <p className="mt-2 leading-7 text-gray-700">{page.metaDescription}</p>
+                <p className="mt-4 font-black text-gray-950">Da {page.priceFrom}</p>
+              </Link>
+            ))}
           </div>
         </section>
 

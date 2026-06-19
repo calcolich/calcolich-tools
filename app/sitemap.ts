@@ -3,6 +3,7 @@ import { calculatorCategories } from "@/lib/categories";
 import { calculators } from "@/lib/calculators";
 import { guides } from "@/lib/guides";
 import { getLocalizedCalculators, locales, localizedAlternates } from "@/lib/i18n";
+import { servicePages } from "@/lib/service-pages";
 
 const baseUrl = "https://calcolich.ch";
 
@@ -22,6 +23,7 @@ const routes = Array.from(new Set([
   "/guide",
   ...calculatorCategories.map((category) => `/categorie/${category.slug}`),
   ...guides.map((guide) => `/guide/${guide.slug}`),
+  ...servicePages.map((page) => `/servizi/${page.slug}`),
   ...calculators.map((calculator) => `/${calculator.slug}`),
 ]));
 
