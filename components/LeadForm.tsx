@@ -12,7 +12,10 @@ type LeadFormProps = {
   showPhone?: boolean;
   showPackage?: boolean;
   showMessage?: boolean;
+  packageOptions?: string[];
 };
+
+const defaultPackageOptions = ["Starter - CHF 490", "Business - CHF 990", "Premium - CHF 1.990"];
 
 export default function LeadForm({
   source,
@@ -22,6 +25,7 @@ export default function LeadForm({
   showPhone = false,
   showPackage = false,
   showMessage = false,
+  packageOptions = defaultPackageOptions,
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -47,6 +51,7 @@ export default function LeadForm({
 
       const result = await response.json();
       if (result.emailFallback) {
+        trackLead("lead_fallback", source);
         openEmailFallback(data, source);
         form.reset();
         setStatus("success");
@@ -59,6 +64,7 @@ export default function LeadForm({
       }
 
       if (!result.configured) {
+        trackLead("lead_fallback", source);
         openEmailFallback(data, source);
         form.reset();
         setStatus("success");
@@ -67,6 +73,7 @@ export default function LeadForm({
       }
 
       form.reset();
+      trackLead("generate_lead", source);
       setStatus("success");
       setMessage("Richiesta ricevuta. Ti ricontatto presto.");
     } catch (error) {
@@ -86,14 +93,12 @@ export default function LeadForm({
     <form onSubmit={submitLead} className={showMessage ? "mt-5 space-y-4" : "mt-5 grid gap-3 md:grid-cols-[1fr_auto]"}>
       <input className="hidden" name="website" tabIndex={-1} autoComplete="off" />
 
-      {showName ? <input className={inputClass} name="name" placeholder="Nome" /> : null}
-      <input className={inputClass} name="email" placeholder="La tua email" type="email" />
-      {showPhone ? <input className={inputClass} name="phone" placeholder="Telefono / WhatsApp" /> : null}
+      {showName ? <input className={inputClass} name="name" placeholder="Nome" autoComplete="name" /> : null}
+      <input className={inputClass} name="email" placeholder="La tua email" type="email" autoComplete="email" required />
+      {showPhone ? <input className={inputClass} name="phone" placeholder="Telefono / WhatsApp" autoComplete="tel" /> : null}
       {showPackage ? (
-        <select className={inputClass} name="packageName" defaultValue="Business - 990">
-          <option>Starter - 490</option>
-          <option>Business - 990</option>
-          <option>Premium - 1.990</option>
+        <select className={inputClass} name="packageName" defaultValue={packageOptions[0]}>
+          {packageOptions.map((option) => <option key={option}>{option}</option>)}
         </select>
       ) : null}
       {showMessage ? (
@@ -111,6 +116,17 @@ export default function LeadForm({
       ) : null}
     </form>
   );
+}
+
+function trackLead(eventName: "generate_lead" | "lead_fallback", source: string) {
+  const analyticsWindow = window as Window & {
+    gtag?: (command: "event", event: string, params: Record<string, string>) => void;
+  };
+
+  analyticsWindow.gtag?.("event", eventName, {
+    lead_source: source,
+    page_path: window.location.pathname,
+  });
 }
 
 function openEmailFallback(data: Record<string, FormDataEntryValue>, source: string) {

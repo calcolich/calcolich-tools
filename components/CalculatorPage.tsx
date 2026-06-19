@@ -1,6 +1,7 @@
 import AdSlot from "@/components/AdSlot";
 import CalculatorWidget from "@/components/CalculatorWidget";
 import LeadForm from "@/components/LeadForm";
+import RevenueCta from "@/components/RevenueCta";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
 import Link from "next/link";
@@ -80,6 +81,8 @@ export default function CalculatorPage({
         </section>
 
         <CalculatorWidget calculator={calculator} />
+
+        {backHref === "/" ? <RevenueCta calculator={calculator} /> : null}
 
         <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT} />
 
