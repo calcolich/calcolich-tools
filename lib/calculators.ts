@@ -212,9 +212,9 @@ export const calculators: Calculator[] = [
     title: "Calcolatore IVA Svizzera",
     shortTitle: "IVA Svizzera",
     category: "Business Svizzera",
-    metaTitle: "Calcolo IVA Svizzera 2026 | Calcolich",
-    metaDescription: "Calcola IVA svizzera al 8.1%, 3.8% o 2.6% e ottieni totale, imponibile e imposta.",
-    intro: "Calcola importo IVA, totale con IVA e scorporo usando le aliquote svizzere principali.",
+    metaTitle: "Calcolatrice IVA Svizzera 2026: calcolo e scorporo",
+    metaDescription: "Calcola o scorpora l'IVA svizzera all'8.1%, 3.8% o 2.6%. Ottieni subito imponibile, imposta e totale in CHF.",
+    intro: "Aggiungi o scorpora l'IVA svizzera e calcola subito imponibile, imposta e totale in CHF.",
     cta: "Ricevi strumenti gratuiti per freelance, aziende e calcoli fiscali in Svizzera.",
     inputs: [
       { key: "mode", label: "Modalita", type: "select", defaultValue: "add", options: [{ label: "Aggiungi IVA", value: "add" }, { label: "Scorpora IVA", value: "remove" }] },
