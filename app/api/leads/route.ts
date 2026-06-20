@@ -15,6 +15,7 @@ type LeadPayload = {
   message?: string;
   page?: string;
   company?: string;
+  siteUrl?: string;
 };
 
 type LeadRecord = LeadPayload & {
@@ -69,6 +70,20 @@ export async function POST(request: Request) {
     );
   }
 
+  if (cleanPayload.source?.startsWith("audit-sito-gratuito-ticino") && !cleanPayload.siteUrl) {
+    logLeadEvent("warn", "lead_rejected", {
+      requestId,
+      reason: "missing_audit_url",
+      source: cleanPayload.source,
+      page: getPagePath(cleanPayload.page),
+      durationMs: Date.now() - startedAt,
+    });
+    return NextResponse.json(
+      { ok: false, error: "Inserisci un indirizzo web valido da analizzare." },
+      { status: 400 },
+    );
+  }
+
   const lead = {
     ...cleanPayload,
     leadId: crypto.randomUUID(),
@@ -84,6 +99,8 @@ export async function POST(request: Request) {
     packageName: getPackageMetric(lead.packageName),
     hasEmail: Boolean(lead.email),
     hasPhone: Boolean(lead.phone),
+    hasCompany: Boolean(lead.company),
+    hasSiteUrl: Boolean(lead.siteUrl),
   };
 
   logLeadEvent("info", "lead_received", logContext);
@@ -276,6 +293,7 @@ function sanitizeLeadPayload(payload: LeadPayload): LeadPayload {
     message: cleanField(payload.message, 2000),
     page: cleanField(payload.page, 500),
     company: cleanField(payload.company),
+    siteUrl: cleanUrl(payload.siteUrl),
   };
 }
 
@@ -310,6 +328,8 @@ function formatLeadEmail(lead: LeadRecord) {
     `Nome: ${lead.name ?? "-"}`,
     `Email: ${lead.email ?? "-"}`,
     `Telefono: ${lead.phone ?? "-"}`,
+    `Azienda: ${lead.company ?? "-"}`,
+    `Sito da analizzare: ${lead.siteUrl ?? "-"}`,
     "",
     "RICHIESTA",
     `Pacchetto: ${lead.packageName ?? "-"}`,
@@ -332,6 +352,8 @@ function formatLeadEmailHtml(lead: LeadRecord) {
     ["Nome", lead.name ?? "-"],
     ["Email", lead.email ?? "-"],
     ["Telefono", lead.phone ?? "-"],
+    ["Azienda", lead.company ?? "-"],
+    ["Sito da analizzare", lead.siteUrl ?? "-"],
     ["Pacchetto", lead.packageName ?? "-"],
     ["Messaggio", lead.message ?? "-"],
     ["Pagina", lead.page ?? "-"],
@@ -372,8 +394,21 @@ function getLeadSourceLabel(source?: string) {
     return `Newsletter - ${source.replace("newsletter:", "")}`;
   }
 
+  if (source.startsWith("audit-sito-gratuito-ticino")) {
+    return formatAttributedSource("Audit sito gratuito Ticino", source, "audit-sito-gratuito-ticino");
+  }
+
+  if (source.startsWith("services-ai-seo")) {
+    return formatAttributedSource("Servizi AI SEO", source, "services-ai-seo");
+  }
+
+  if (source.startsWith("service-landing:")) {
+    return `Landing servizio - ${source.replace("service-landing:", "")}`;
+  }
+
   const labels: Record<string, string> = {
     "services-ai-seo": "Servizi AI SEO",
+    "audit-sito-gratuito-ticino": "Audit sito gratuito Ticino",
     "cashflow-plan": "Piano cashflow",
     "contact-page": "Pagina contatti",
   };
@@ -382,11 +417,40 @@ function getLeadSourceLabel(source?: string) {
 }
 
 function getLeadPriority(source?: string) {
-  if (source === "services-ai-seo" || source === "cashflow-plan" || source === "contact-page") {
+  const highPrioritySources = [
+    "services-ai-seo",
+    "audit-sito-gratuito-ticino",
+    "service-landing:",
+    "cashflow-plan",
+    "contact-page",
+  ];
+
+  if (source && highPrioritySources.some((item) => source.startsWith(item))) {
     return "Alta";
   }
 
   return "Normale";
+}
+
+function formatAttributedSource(label: string, source: string, baseSource: string) {
+  const attribution = source.slice(baseSource.length).replace(/^:/, "");
+  return attribution ? `${label} - ${attribution}` : label;
+}
+
+function cleanUrl(value: unknown) {
+  const clean = cleanField(value, 500);
+  if (!clean) {
+    return undefined;
+  }
+
+  try {
+    const normalized = /^https?:\/\//i.test(clean) ? clean : `https://${clean}`;
+    const url = new URL(normalized);
+    const validProtocol = url.protocol === "http:" || url.protocol === "https:";
+    return validProtocol && url.hostname.includes(".") ? url.toString() : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 function formatDate(value: string) {

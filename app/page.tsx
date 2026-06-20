@@ -28,8 +28,8 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <Link href="/" className="text-xl font-black tracking-tight">Calcolich</Link>
           <nav className="flex items-center gap-2 text-sm font-semibold text-gray-600">
+            <Link href="/audit-sito-gratuito-ticino" className="rounded-full px-3 py-2 hover:bg-gray-100">Audit</Link>
             <Link href="/servizi-ai-seo" className="rounded-full px-3 py-2 hover:bg-gray-100">Servizi</Link>
-            <Link href="/piano-cashflow-online" className="rounded-full px-3 py-2 hover:bg-gray-100">Cashflow</Link>
           </nav>
         </div>
       </section>
@@ -50,8 +50,8 @@ export default function Home() {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <TrackedLink href="/servizi-ai-seo" source="homepage:hero" className="rounded-full bg-gray-950 px-6 py-3 font-bold text-white transition hover:bg-gray-800">
-                Richiedi un sito che porta lead
+              <TrackedLink href="/audit-sito-gratuito-ticino?source=homepage&tool=hero#audit" source="homepage:hero" className="rounded-full bg-gray-950 px-6 py-3 font-bold text-white transition hover:bg-gray-800">
+                Ricevi l&apos;analisi gratuita
               </TrackedLink>
               <Link href="#calcolatori" className="rounded-full border border-gray-300 bg-white px-6 py-3 font-bold text-gray-950 transition hover:border-gray-500">
                 Esplora i calcolatori

@@ -15,6 +15,7 @@ const routes = Array.from(new Set([
   "/calcolo-giorni-lavorativi-svizzera",
   "/calcolo-straordinari-svizzera",
   "/servizi-ai-seo",
+  "/audit-sito-gratuito-ticino",
   "/piano-cashflow-online",
   "/chi-siamo",
   "/privacy",

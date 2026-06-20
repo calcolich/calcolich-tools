@@ -11,6 +11,8 @@ type LeadFormProps = {
   dark?: boolean;
   showName?: boolean;
   showPhone?: boolean;
+  showCompany?: boolean;
+  showSiteUrl?: boolean;
   showPackage?: boolean;
   showMessage?: boolean;
   packageOptions?: string[];
@@ -24,6 +26,8 @@ export default function LeadForm({
   dark = false,
   showName = false,
   showPhone = false,
+  showCompany = false,
+  showSiteUrl = false,
   showPackage = false,
   showMessage = false,
   packageOptions = defaultPackageOptions,
@@ -96,6 +100,8 @@ export default function LeadForm({
       <input className="hidden" name="website" tabIndex={-1} autoComplete="off" />
 
       {showName ? <input className={inputClass} name="name" placeholder="Nome" autoComplete="name" /> : null}
+      {showCompany ? <input className={inputClass} name="company" placeholder="Azienda / attivita" autoComplete="organization" /> : null}
+      {showSiteUrl ? <input className={inputClass} name="siteUrl" placeholder="iltuosito.ch" type="text" inputMode="url" autoComplete="url" required /> : null}
       <input className={inputClass} name="email" placeholder="La tua email" type="email" autoComplete="email" required />
       {showPhone ? <input className={inputClass} name="phone" placeholder="Telefono / WhatsApp" autoComplete="tel" /> : null}
       {showPackage ? (

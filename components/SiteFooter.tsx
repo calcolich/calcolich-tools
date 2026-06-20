@@ -6,6 +6,7 @@ const footerLinks = [
   { href: "/categorie/trading", label: "Trading" },
   { href: "/guide", label: "Guide" },
   { href: "/servizi-ai-seo", label: "Servizi" },
+  { href: "/audit-sito-gratuito-ticino", label: "Audit gratuito" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/privacy", label: "Privacy" },
   { href: "/cookie", label: "Cookie" },
