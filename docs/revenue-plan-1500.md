@@ -30,6 +30,10 @@
 - 2 proposte inviate
 - 1 vendita ogni 2 settimane nella prima fase
 
+Il consuntivo va aggiornato ogni lunedi in `docs/revenue-scorecard-template.csv`.
+Il campo `target_gap_chf` e calcolato come `1500 - month_to_date_net_chf` e mostra quanto manca
+al target mensile netto.
+
 ## Funnel misurabile
 
 1. Visita a calcolatore
@@ -38,6 +42,10 @@
 4. Invio form tracciato come evento GA `generate_lead`
 5. Risposta entro 24 ore
 6. Proposta Starter, Business, Lead Engine o piano mensile
+
+Ogni invio del form genera nei log Vercel eventi strutturati `lead_received`,
+`lead_delivered` o `lead_delivery_failed`. I log includono fonte, pagina, pacchetto e
+canale di consegna, ma non contengono email, telefono o messaggio del contatto.
 
 ## Priorita operative
 

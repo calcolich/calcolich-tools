@@ -17,6 +17,12 @@ type LeadPayload = {
   company?: string;
 };
 
+type LeadRecord = LeadPayload & {
+  leadId: string;
+  createdAt: string;
+  site: string;
+};
+
 function cleanEnvValue(value: string | undefined, key: string) {
   if (!value) {
     return undefined;
@@ -29,7 +35,19 @@ function cleanEnvValue(value: string | undefined, key: string) {
 }
 
 export async function POST(request: Request) {
-  const payload = (await request.json()) as LeadPayload & { website?: string };
+  const startedAt = Date.now();
+  const requestId = request.headers.get("x-vercel-id") ?? undefined;
+  let payload: LeadPayload & { website?: string };
+
+  try {
+    payload = (await request.json()) as LeadPayload & { website?: string };
+  } catch {
+    logLeadEvent("warn", "lead_invalid_json", {
+      requestId,
+      durationMs: Date.now() - startedAt,
+    });
+    return NextResponse.json({ ok: false, error: "Richiesta non valida." }, { status: 400 });
+  }
 
   if (payload.website) {
     return NextResponse.json({ ok: true });
@@ -38,6 +56,13 @@ export async function POST(request: Request) {
   const cleanPayload = sanitizeLeadPayload(payload);
 
   if (!cleanPayload.email && !cleanPayload.phone) {
+    logLeadEvent("warn", "lead_rejected", {
+      requestId,
+      reason: "missing_contact",
+      source: cleanPayload.source ?? "unknown",
+      page: getPagePath(cleanPayload.page),
+      durationMs: Date.now() - startedAt,
+    });
     return NextResponse.json(
       { ok: false, error: "Inserisci almeno email o telefono." },
       { status: 400 },
@@ -46,68 +71,123 @@ export async function POST(request: Request) {
 
   const lead = {
     ...cleanPayload,
+    leadId: crypto.randomUUID(),
     createdAt: new Date().toISOString(),
     site: "calcolich.ch",
+  } satisfies LeadRecord;
+
+  const logContext = {
+    leadId: lead.leadId,
+    requestId,
+    source: lead.source ?? "unknown",
+    page: getPagePath(lead.page),
+    packageName: getPackageMetric(lead.packageName),
+    hasEmail: Boolean(lead.email),
+    hasPhone: Boolean(lead.phone),
   };
 
-  if (webhookUrl) {
-    const response = await fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        ...(webhookSecret ? { "x-calcolich-secret": webhookSecret } : {}),
-      },
-      body: JSON.stringify(lead),
-    });
+  logLeadEvent("info", "lead_received", logContext);
 
-    if (!response.ok) {
+  if (webhookUrl) {
+    let response: Response;
+
+    try {
+      response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          ...(webhookSecret ? { "x-calcolich-secret": webhookSecret } : {}),
+        },
+        body: JSON.stringify(lead),
+      });
+    } catch (error) {
+      logLeadEvent("error", "lead_delivery_failed", {
+        ...logContext,
+        channel: "webhook",
+        error: getErrorMessage(error),
+        durationMs: Date.now() - startedAt,
+      });
       return NextResponse.json(
         { ok: false, error: "Invio non riuscito. Riprova tra poco." },
         { status: 502 },
       );
     }
+
+    if (!response.ok) {
+      logLeadEvent("error", "lead_delivery_failed", {
+        ...logContext,
+        channel: "webhook",
+        status: response.status,
+        durationMs: Date.now() - startedAt,
+      });
+      return NextResponse.json(
+        { ok: false, error: "Invio non riuscito. Riprova tra poco." },
+        { status: 502 },
+      );
+    }
+
+    logLeadEvent("info", "lead_delivered", {
+      ...logContext,
+      channel: "webhook",
+      durationMs: Date.now() - startedAt,
+    });
   }
 
   if (!webhookUrl && resendApiKey) {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        authorization: `Bearer ${resendApiKey}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        from: leadsFromEmail,
-        to: [leadsToEmail],
-        reply_to: lead.email ? [lead.email] : undefined,
-        subject: formatLeadSubject(lead),
-        text: formatLeadEmail(lead),
-        html: formatLeadEmailHtml(lead),
-      }),
-    });
+    let response: Response;
+
+    try {
+      response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          authorization: `Bearer ${resendApiKey}`,
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          from: leadsFromEmail,
+          to: [leadsToEmail],
+          reply_to: lead.email ? [lead.email] : undefined,
+          subject: formatLeadSubject(lead),
+          text: formatLeadEmail(lead),
+          html: formatLeadEmailHtml(lead),
+        }),
+      });
+    } catch (error) {
+      logLeadEvent("error", "lead_delivery_failed", {
+        ...logContext,
+        channel: "resend",
+        error: getErrorMessage(error),
+        durationMs: Date.now() - startedAt,
+      });
+      return getEmailFallbackResponse();
+    }
 
     if (!response.ok) {
       const errorText = await response.text();
       const resendMessage = getResendErrorMessage(errorText);
-      console.error("Resend email delivery failed", {
+      logLeadEvent("error", "lead_delivery_failed", {
+        ...logContext,
+        channel: "resend",
         status: response.status,
-        message: resendMessage,
-        error: errorText,
-        from: leadsFromEmail,
-        to: leadsToEmail,
+        error: resendMessage,
+        durationMs: Date.now() - startedAt,
       });
-
-      return NextResponse.json(
-        {
-          ok: true,
-          configured: false,
-          emailFallback: true,
-          error: "Email automatica non disponibile. Usa la bozza email per completare l'invio.",
-        },
-      );
+      return getEmailFallbackResponse();
     }
+
+    logLeadEvent("info", "lead_delivered", {
+      ...logContext,
+      channel: "resend",
+      durationMs: Date.now() - startedAt,
+    });
   }
 
   if (!webhookUrl && !resendApiKey) {
+    logLeadEvent("warn", "lead_delivery_fallback", {
+      ...logContext,
+      reason: "delivery_not_configured",
+      durationMs: Date.now() - startedAt,
+    });
     return NextResponse.json({
       ok: true,
       configured: false,
@@ -120,6 +200,70 @@ export async function POST(request: Request) {
     ok: true,
     configured: true,
   });
+}
+
+function getEmailFallbackResponse() {
+  return NextResponse.json({
+    ok: true,
+    configured: false,
+    emailFallback: true,
+    error: "Email automatica non disponibile. Usa la bozza email per completare l'invio.",
+  });
+}
+
+function logLeadEvent(
+  level: "info" | "warn" | "error",
+  message: string,
+  context: Record<string, unknown>,
+) {
+  const entry = JSON.stringify({ level, message, route: "/api/leads", ...context });
+
+  if (level === "error") {
+    console.error(entry);
+    return;
+  }
+
+  if (level === "warn") {
+    console.warn(entry);
+    return;
+  }
+
+  console.log(entry);
+}
+
+function getPagePath(page?: string) {
+  if (!page) {
+    return "unknown";
+  }
+
+  try {
+    return new URL(page, "https://www.calcolich.ch").pathname;
+  } catch {
+    return page.split("?")[0];
+  }
+}
+
+function getPackageMetric(packageName?: string) {
+  if (!packageName) {
+    return "not_selected";
+  }
+
+  const allowedPackages = [
+    "Starter",
+    "Business",
+    "Premium",
+    "Lead Engine",
+    "Presenza Locale",
+    "Crescita",
+    "Acquisizione",
+    "Non so ancora",
+  ];
+
+  return allowedPackages.find((name) => packageName.startsWith(name)) ?? "other";
+}
+
+function getErrorMessage(error: unknown) {
+  return error instanceof Error ? error.message : String(error);
 }
 
 function sanitizeLeadPayload(payload: LeadPayload): LeadPayload {
@@ -144,19 +288,20 @@ function cleanField(value: unknown, maxLength = 300) {
   return clean || undefined;
 }
 
-function formatLeadSubject(lead: LeadPayload & { createdAt: string; site: string }) {
+function formatLeadSubject(lead: LeadRecord) {
   const source = getLeadSourceLabel(lead.source);
   const contact = lead.name || lead.email || lead.phone || "contatto";
   return `[Calcolich] Nuovo lead ${source} - ${contact}`;
 }
 
-function formatLeadEmail(lead: LeadPayload & { createdAt: string; site: string }) {
+function formatLeadEmail(lead: LeadRecord) {
   const source = getLeadSourceLabel(lead.source);
   const priority = getLeadPriority(lead.source);
 
   return [
     "NUOVO LEAD CALCOLICH",
     "",
+    `ID: ${lead.leadId}`,
     `Priorita: ${priority}`,
     `Fonte: ${source}`,
     `Data: ${formatDate(lead.createdAt)}`,
@@ -176,10 +321,11 @@ function formatLeadEmail(lead: LeadPayload & { createdAt: string; site: string }
   ].join("\n");
 }
 
-function formatLeadEmailHtml(lead: LeadPayload & { createdAt: string; site: string }) {
+function formatLeadEmailHtml(lead: LeadRecord) {
   const source = getLeadSourceLabel(lead.source);
   const priority = getLeadPriority(lead.source);
   const rows = [
+    ["ID", lead.leadId],
     ["Priorita", priority],
     ["Fonte", source],
     ["Data", formatDate(lead.createdAt)],
