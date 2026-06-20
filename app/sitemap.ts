@@ -6,6 +6,7 @@ import { getLocalizedCalculators, locales, localizedAlternates } from "@/lib/i18
 import { servicePages } from "@/lib/service-pages";
 
 const baseUrl = "https://calcolich.ch";
+const contentUpdatedAt = new Date("2026-06-20T00:00:00.000Z");
 
 const routes = Array.from(new Set([
   "",
@@ -39,18 +40,16 @@ const localizedRoutes = locales.flatMap((locale) => [
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   return [
     ...routes.map((route) => ({
       url: `${baseUrl}${route}`,
-      lastModified: now,
+      lastModified: contentUpdatedAt,
       changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
       priority: route === "" ? 1 : 0.8,
     })),
     ...localizedRoutes.map(({ route, alternates }) => ({
       url: `${baseUrl}${route}`,
-      lastModified: now,
+      lastModified: contentUpdatedAt,
       changeFrequency: route.length === 3 ? "weekly" as const : "monthly" as const,
       priority: route.length === 3 ? 0.9 : 0.75,
       alternates: {

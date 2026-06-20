@@ -29,6 +29,7 @@ export default async function Page({ params }: PageProps) {
   const { slug } = await params;
   const page = getServicePage(slug);
   if (!page) notFound();
+  const leadSource = `service-landing:${page.slug}`;
 
   const schemas = [
     {
@@ -49,11 +50,20 @@ export default async function Page({ params }: PageProps) {
         acceptedAnswer: { "@type": "Answer", text: faq.answer },
       })),
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Calcolich", item: "https://calcolich.ch" },
+        { "@type": "ListItem", position: 2, name: "Servizi", item: "https://calcolich.ch/servizi-ai-seo" },
+        { "@type": "ListItem", position: 3, name: page.shortTitle, item: `https://calcolich.ch/servizi/${page.slug}` },
+      ],
+    },
   ];
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
-      <CommercialPageView source={`service-landing:${page.slug}`} />
+      <CommercialPageView source={leadSource} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }} />
       <div className="mx-auto max-w-6xl">
         <Link href="/servizi-ai-seo" className="mb-8 inline-flex text-sm font-black text-emerald-800 hover:text-emerald-950">Tutti i servizi</Link>
@@ -67,7 +77,7 @@ export default async function Page({ params }: PageProps) {
           <div className="border-l-4 border-lime-400 pl-5">
             <p className="text-sm font-bold text-gray-500">A partire da</p>
             <p className="mt-1 text-4xl font-black text-gray-950">{page.priceFrom}</p>
-            <TrackedLink href="#analisi" source={`service-landing:${page.slug}:hero`} className="mt-5 inline-flex rounded-xl bg-gray-950 px-5 py-3 font-black text-white hover:bg-emerald-800">Richiedi analisi gratuita</TrackedLink>
+            <TrackedLink href="#analisi" source={`${leadSource}:hero`} className="mt-5 inline-flex rounded-xl bg-gray-950 px-5 py-3 font-black text-white hover:bg-emerald-800">Richiedi analisi gratuita</TrackedLink>
           </div>
         </section>
 
@@ -100,7 +110,7 @@ export default async function Page({ params }: PageProps) {
             <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Prima analisi gratuita</p>
             <h2 className="mt-2 text-2xl font-black">Parlami del progetto</h2>
             <p className="mt-3 leading-7 text-gray-700">Rispondo entro 24 ore con priorita, fascia di prezzo e primo passo consigliato.</p>
-            <LeadForm source={`service-landing:${page.slug}`} buttonLabel="Richiedi analisi" showName showPhone showMessage />
+            <LeadForm source={leadSource} buttonLabel="Richiedi analisi" showName showPhone showMessage />
           </aside>
         </section>
 

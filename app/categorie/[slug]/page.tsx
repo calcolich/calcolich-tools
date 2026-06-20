@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { calculatorCategories, getCategory, getCategoryCalculators } from "@/lib/categories";
 import { publicCopy } from "@/lib/copy";
 import { getGuidesByCategory } from "@/lib/guides";
+import { TrackedLink } from "@/components/CommercialTracking";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -83,6 +84,20 @@ export default async function CategoryPage({ params }: Props) {
             <div className="mt-6 rounded-2xl bg-gray-950 p-4 text-sm font-semibold leading-6 text-white">
               {tools.length} strumenti disponibili in questa categoria.
             </div>
+            {category.slug === "business-freelance" ? (
+              <div className="mt-6 border border-emerald-200 bg-emerald-50 p-5">
+                <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Per la tua azienda</p>
+                <h2 className="mt-2 text-xl font-black">Un calcolatore puo diventare un canale di acquisizione</h2>
+                <p className="mt-2 leading-7 text-gray-700">Creo strumenti personalizzati con pagina SEO, risultato immediato e modulo lead attribuito.</p>
+                <TrackedLink
+                  href="/servizi/calcolatori-lead-generation?source=category&tool=business-freelance#analisi"
+                  source="category:business-freelance"
+                  className="mt-4 inline-flex rounded-xl bg-gray-950 px-4 py-3 text-sm font-black text-white hover:bg-emerald-800"
+                >
+                  Scopri la soluzione
+                </TrackedLink>
+              </div>
+            ) : null}
             {relatedGuides.length > 0 ? (
               <div className="mt-6">
                 <h2 className="text-xl font-black">Guide collegate</h2>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getAttributedSource } from "@/components/CommercialTracking";
 
 const fallbackEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "calcolich@gmail.com";
 
@@ -37,6 +38,7 @@ export default function LeadForm({
 
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    const attributedSource = getAttributedSource(source);
 
     try {
       const response = await fetch("/api/leads", {
@@ -44,15 +46,15 @@ export default function LeadForm({
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           ...data,
-          source,
+          source: attributedSource,
           page: window.location.href,
         }),
       });
 
       const result = await response.json();
       if (result.emailFallback) {
-        trackLead("lead_fallback", source);
-        openEmailFallback(data, source);
+        trackLead("lead_fallback", attributedSource);
+        openEmailFallback(data, attributedSource);
         form.reset();
         setStatus("success");
         setMessage("Si apre una bozza email: inviala per completare la richiesta.");
@@ -64,8 +66,8 @@ export default function LeadForm({
       }
 
       if (!result.configured) {
-        trackLead("lead_fallback", source);
-        openEmailFallback(data, source);
+        trackLead("lead_fallback", attributedSource);
+        openEmailFallback(data, attributedSource);
         form.reset();
         setStatus("success");
         setMessage("Si apre una bozza email: inviala per completare la richiesta.");
@@ -73,7 +75,7 @@ export default function LeadForm({
       }
 
       form.reset();
-      trackLead("generate_lead", source);
+      trackLead("generate_lead", attributedSource);
       setStatus("success");
       setMessage("Richiesta ricevuta. Ti ricontatto presto.");
     } catch (error) {

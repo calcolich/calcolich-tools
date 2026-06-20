@@ -58,13 +58,8 @@ const packageOptions = [
   "Non so ancora - consigliami",
 ];
 
-type PageProps = {
-  searchParams: Promise<{ source?: string; tool?: string }>;
-};
-
-export default async function Page({ searchParams }: PageProps) {
-  const params = await searchParams;
-  const source = buildLeadSource(params.source, params.tool);
+export default function Page() {
+  const source = "services-ai-seo";
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
@@ -171,9 +166,4 @@ function PriceCard({ name, price, note, items, featured = false }: { name: strin
       </ul>
     </article>
   );
-}
-
-function buildLeadSource(source?: string, tool?: string) {
-  const clean = (value?: string) => value?.replace(/[^a-z0-9-]/gi, "").slice(0, 80);
-  return ["services-ai-seo", clean(source), clean(tool)].filter(Boolean).join(":");
 }

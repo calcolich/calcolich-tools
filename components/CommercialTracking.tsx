@@ -35,7 +35,7 @@ export function TrackedLink({ href, source, className, children }: TrackedLinkPr
 function sendCommercialEvent(event: CommercialEventName, source: string, target?: string) {
   const body = JSON.stringify({
     event,
-    source,
+    source: getAttributedSource(source),
     page: window.location.pathname,
     target,
   });
@@ -54,4 +54,16 @@ function sendCommercialEvent(event: CommercialEventName, source: string, target?
     body,
     keepalive: true,
   });
+}
+
+export function getAttributedSource(source: string) {
+  if (typeof window === "undefined") {
+    return source;
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const clean = (value: string | null) => value?.replace(/[^a-z0-9-]/gi, "").slice(0, 80);
+  return [source, clean(params.get("source")), clean(params.get("tool"))]
+    .filter(Boolean)
+    .join(":");
 }
