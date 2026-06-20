@@ -1,5 +1,5 @@
 import type { Calculator } from "@/lib/calculators";
-import Link from "next/link";
+import { TrackedLink } from "@/components/CommercialTracking";
 
 export default function RevenueCta({ calculator }: { calculator: Calculator }) {
   const businessIntent = calculator.category.includes("Business");
@@ -18,9 +18,13 @@ export default function RevenueCta({ calculator }: { calculator: Calculator }) {
           Creo siti, calcolatori SEO e automazioni semplici per attivita svizzere. Prima analisi gratuita, proposta chiara entro 24 ore.
         </p>
       </div>
-      <Link href={href} className="shrink-0 rounded-xl bg-gray-950 px-5 py-3 text-center font-black text-white transition hover:bg-emerald-800">
+      <TrackedLink
+        href={href}
+        source={`calculator:${calculator.slug}`}
+        className="shrink-0 rounded-xl bg-gray-950 px-5 py-3 text-center font-black text-white transition hover:bg-emerald-800"
+      >
         Richiedi analisi gratuita
-      </Link>
+      </TrackedLink>
     </section>
   );
 }

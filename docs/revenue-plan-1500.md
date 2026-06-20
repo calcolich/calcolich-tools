@@ -43,9 +43,17 @@ al target mensile netto.
 5. Risposta entro 24 ore
 6. Proposta Starter, Business, Lead Engine o piano mensile
 
-Ogni invio del form genera nei log Vercel eventi strutturati `lead_received`,
-`lead_delivered` o `lead_delivery_failed`. I log includono fonte, pagina, pacchetto e
-canale di consegna, ma non contengono email, telefono o messaggio del contatto.
+Le pagine commerciali generano eventi `commercial_page_view` e i pulsanti verso il
+preventivo generano `commercial_cta_click`. Ogni invio del form genera inoltre
+`lead_received`, `lead_delivered` o `lead_delivery_failed`. I log includono fonte,
+pagina, pacchetto e canale di consegna, ma non contengono email, telefono, IP o
+messaggio del contatto.
+
+Metriche del funnel:
+
+- tasso click CTA = `commercial_cta_click / commercial_page_view`
+- tasso lead = `lead_received / commercial_page_view`
+- tasso chiusura = `sales / qualified_leads`
 
 ## Priorita operative
 

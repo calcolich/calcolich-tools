@@ -4,6 +4,7 @@ import { calculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
 import { guides } from "@/lib/guides";
 import { servicePages } from "@/lib/service-pages";
+import { TrackedLink } from "@/components/CommercialTracking";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -49,9 +50,9 @@ export default function Home() {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/servizi-ai-seo" className="rounded-full bg-gray-950 px-6 py-3 font-bold text-white transition hover:bg-gray-800">
+              <TrackedLink href="/servizi-ai-seo" source="homepage:hero" className="rounded-full bg-gray-950 px-6 py-3 font-bold text-white transition hover:bg-gray-800">
                 Richiedi un sito che porta lead
-              </Link>
+              </TrackedLink>
               <Link href="#calcolatori" className="rounded-full border border-gray-300 bg-white px-6 py-3 font-bold text-gray-950 transition hover:border-gray-500">
                 Esplora i calcolatori
               </Link>
@@ -92,15 +93,15 @@ export default function Home() {
               <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Per aziende</p>
               <h2 className="mt-2 text-3xl font-black tracking-tight">Trasforma il sito in uno strumento commerciale</h2>
             </div>
-            <Link href="/servizi-ai-seo" className="rounded-full bg-gray-950 px-5 py-2 text-sm font-black text-white hover:bg-emerald-800">Vedi prezzi e pacchetti</Link>
+            <TrackedLink href="/servizi-ai-seo" source="homepage:services" className="rounded-full bg-gray-950 px-5 py-2 text-sm font-black text-white hover:bg-emerald-800">Vedi prezzi e pacchetti</TrackedLink>
           </div>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {servicePages.map((page) => (
-              <Link key={page.slug} href={`/servizi/${page.slug}`} className="bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+              <TrackedLink key={page.slug} href={`/servizi/${page.slug}`} source={`homepage:service-card:${page.slug}`} className="bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
                 <p className="text-xs font-black uppercase tracking-wide text-emerald-700">{page.eyebrow}</p>
                 <h3 className="mt-2 font-black">{page.shortTitle}</h3>
                 <p className="mt-3 text-sm font-bold text-gray-600">Da {page.priceFrom}</p>
-              </Link>
+              </TrackedLink>
             ))}
           </div>
         </section>

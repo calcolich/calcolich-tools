@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
+import { CommercialPageView, TrackedLink } from "@/components/CommercialTracking";
 import { servicePages } from "@/lib/service-pages";
 import Link from "next/link";
 
@@ -67,6 +68,7 @@ export default async function Page({ searchParams }: PageProps) {
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
+      <CommercialPageView source={source} />
       <div className="mx-auto max-w-6xl">
         <section className="mb-10 grid gap-8 border-b border-gray-200 bg-white px-6 py-10 md:px-8 lg:grid-cols-[1fr_320px] lg:items-end">
           <div>
@@ -83,9 +85,9 @@ export default async function Page({ searchParams }: PageProps) {
               ))}
             </div>
           </div>
-          <a href="#richiedi" className="inline-flex justify-center rounded-xl bg-gray-950 px-6 py-4 font-black text-white transition hover:bg-emerald-800">
+          <TrackedLink href="#richiedi" source={`${source}:hero`} className="inline-flex justify-center rounded-xl bg-gray-950 px-6 py-4 font-black text-white transition hover:bg-emerald-800">
             Richiedi analisi gratuita
-          </a>
+          </TrackedLink>
         </section>
 
         <section>

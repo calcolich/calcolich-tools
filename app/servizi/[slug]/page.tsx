@@ -1,4 +1,5 @@
 import LeadForm from "@/components/LeadForm";
+import { CommercialPageView, TrackedLink } from "@/components/CommercialTracking";
 import { getServicePage, servicePages } from "@/lib/service-pages";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -52,6 +53,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
+      <CommercialPageView source={`service-landing:${page.slug}`} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }} />
       <div className="mx-auto max-w-6xl">
         <Link href="/servizi-ai-seo" className="mb-8 inline-flex text-sm font-black text-emerald-800 hover:text-emerald-950">Tutti i servizi</Link>
@@ -65,7 +67,7 @@ export default async function Page({ params }: PageProps) {
           <div className="border-l-4 border-lime-400 pl-5">
             <p className="text-sm font-bold text-gray-500">A partire da</p>
             <p className="mt-1 text-4xl font-black text-gray-950">{page.priceFrom}</p>
-            <a href="#analisi" className="mt-5 inline-flex rounded-xl bg-gray-950 px-5 py-3 font-black text-white hover:bg-emerald-800">Richiedi analisi gratuita</a>
+            <TrackedLink href="#analisi" source={`service-landing:${page.slug}:hero`} className="mt-5 inline-flex rounded-xl bg-gray-950 px-5 py-3 font-black text-white hover:bg-emerald-800">Richiedi analisi gratuita</TrackedLink>
           </div>
         </section>
 
