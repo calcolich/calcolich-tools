@@ -92,6 +92,17 @@ function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
         { label: "Totale lavorato", value: `${hours} h ${minutes} min` },
       ];
     }
+    case "work-percentage-ch": {
+      const fullTimeHours = number(values, "fullTimeHours");
+      const weeklyHours = number(values, "weeklyHours");
+      const workDays = Math.max(number(values, "workDays"), 1);
+      const employmentRate = fullTimeHours > 0 ? (weeklyHours / fullTimeHours) * 100 : 0;
+      return [
+        { label: "Ore settimanali", value: `${weeklyHours.toFixed(1)} h` },
+        { label: "Media per giorno", value: `${(weeklyHours / workDays).toFixed(2)} h` },
+        { label: "Grado d'occupazione", value: percent(employmentRate) },
+      ];
+    }
     case "salary-net-ch": {
       const gross = number(values, "gross");
       const rate = number(values, "avs") + number(values, "alv") + number(values, "accident") + number(values, "pension") + number(values, "other");

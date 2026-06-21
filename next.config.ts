@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/calcolatore-percentuale-lavoro-svizzera",
-        destination: "/calcolo-percentuale",
+        destination: "/calcolo-percentuale-lavoro-svizzera",
         permanent: true,
       },
       {

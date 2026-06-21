@@ -1,5 +1,6 @@
 export type CalculatorKind =
   | "work-hours"
+  | "work-percentage-ch"
   | "salary-net-ch"
   | "gross-net-ch"
   | "vacation-ch"
@@ -94,6 +95,41 @@ export const calculators: Calculator[] = [
       { question: "Il risultato e valido per la busta paga?", answer: "E una stima pratica. Per la busta paga valgono contratto, regolamenti aziendali e conteggio ufficiale." },
     ],
     relatedSlugs: ["calcolo-straordinari-svizzera", "calcolo-salario-netto-svizzera", "calcolo-ferie-svizzera"],
+  },
+  {
+    slug: "calcolo-percentuale-lavoro-svizzera",
+    kind: "work-percentage-ch",
+    title: "Calcolatore Percentuale Lavoro Svizzera",
+    shortTitle: "Percentuale lavoro",
+    category: "Lavoro Svizzera",
+    metaTitle: "Calcolo Percentuale Lavoro Svizzera | Grado d'occupazione",
+    metaDescription: "Calcola la percentuale di lavoro in Svizzera partendo dalle ore settimanali. Trova subito grado d'occupazione e ore medie al giorno.",
+    intro: "Confronta le tue ore settimanali con un tempo pieno e calcola subito il grado d'occupazione.",
+    cta: "Ricevi strumenti gratuiti per percentuale di lavoro, salario part-time, ferie e ore in Svizzera.",
+    inputs: [
+      { key: "fullTimeHours", label: "Ore settimanali al 100%", defaultValue: "42", step: "0.1", min: "1", max: "60" },
+      { key: "weeklyHours", label: "Ore lavorate a settimana", defaultValue: "33.6", step: "0.1", min: "0", max: "60" },
+      { key: "workDays", label: "Giorni lavorati a settimana", defaultValue: "4", step: "0.5", min: "1", max: "7" },
+    ],
+    article: [
+      "La percentuale di lavoro, chiamata anche grado d'occupazione, indica quanto un impiego part-time rappresenta rispetto all'orario settimanale previsto per un posto al 100 per cento. In Svizzera l'orario completo puo variare in base ad azienda, settore e contratto: per questo il calcolatore permette di inserire direttamente le ore settimanali del proprio tempo pieno.",
+      "La formula e semplice: ore lavorate a settimana divise per le ore previste al 100 per cento, moltiplicate per cento. Se il tempo pieno e di 42 ore e ne lavori 33.6, il grado d'occupazione e dell'80 per cento. Il risultato puo aiutarti a controllare un'offerta, leggere il contratto o confrontare diversi modelli di lavoro.",
+      "Il numero di giorni lavorati non cambia la percentuale contrattuale, ma serve a calcolare la media di ore per giornata. Due persone all'80 per cento possono distribuire le stesse ore in quattro oppure cinque giorni e avere quindi giornate di durata diversa.",
+      "Il calcolo e matematico e non sostituisce il contratto di lavoro. Per salario, ferie, festivi e ore supplementari possono valere regole aziendali o collettive specifiche. Usa il risultato insieme ai calcolatori di salario part-time, ferie e ore lavorate per ottenere una stima piu completa.",
+    ],
+    faqs: [
+      { question: "Come si calcola la percentuale di lavoro?", answer: "Dividi le ore lavorate a settimana per le ore previste al 100% e moltiplica il risultato per 100." },
+      { question: "Quante ore sono un impiego all'80%?", answer: "Dipende dal tempo pieno aziendale. Con 42 ore settimanali al 100%, un impiego all'80% corrisponde a 33.6 ore." },
+      { question: "I giorni lavorati cambiano il grado d'occupazione?", answer: "No. Cambiano la distribuzione delle ore e la durata media delle giornate, non la percentuale complessiva." },
+    ],
+    relatedSlugs: ["calcolo-salario-part-time-svizzera", "calcolo-ore-lavoro", "calcolo-ferie-svizzera"],
+    guideLinks: [
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto Svizzera",
+        description: "Come collegare percentuale di lavoro, salario lordo e netto mensile.",
+      },
+    ],
   },
   {
     slug: "calcolo-salario-netto-svizzera",
