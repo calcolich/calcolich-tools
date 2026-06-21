@@ -4,6 +4,8 @@ import LeadForm from "@/components/LeadForm";
 import RevenueCta from "@/components/RevenueCta";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
+import { localizedAlternates, localizedHref, type Locale } from "@/lib/i18n";
+import { siteUrl } from "@/lib/site-metadata";
 import Link from "next/link";
 
 type CalculatorPageLabels = {
@@ -30,6 +32,7 @@ type CalculatorPageProps = {
   labels?: Partial<CalculatorPageLabels>;
   relatedCalculators?: Calculator[];
   calculatorHref?: (calculator: Calculator) => string;
+  locale?: Locale;
 };
 
 export default function CalculatorPage({
@@ -37,10 +40,15 @@ export default function CalculatorPage({
   backHref = "/",
   labels,
   relatedCalculators,
-  calculatorHref = (tool) => `/${tool.slug}`,
+  calculatorHref = (tool) => localizedHref("it", tool),
+  locale = "it",
 }: CalculatorPageProps) {
   const ui = { ...defaultLabels, ...labels };
   const related = relatedCalculators ?? getRelatedCalculators(calculator);
+  const languageLinks = backHref === "/"
+    ? []
+    : Object.entries(localizedAlternates(locale, calculator.slug).languages)
+        .filter(([language]) => language !== "x-default");
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -55,24 +63,52 @@ export default function CalculatorPage({
   };
   const softwareSchema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": ["WebApplication", "SoftwareApplication"],
     name: publicCopy(calculator.title),
-    applicationCategory: "FinanceApplication",
+    applicationCategory: getApplicationCategory(calculator.category),
     operatingSystem: "Web",
+    inLanguage: locale,
+    url: `${siteUrl}${backHref === "/" ? "" : backHref}/${calculator.slug}`,
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "CHF",
     },
   };
+  const currentUrl = `${siteUrl}${backHref === "/" ? "" : backHref}/${calculator.slug}`;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Calcolich", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: ui.back, item: `${siteUrl}${backHref}` },
+      { "@type": "ListItem", position: 3, name: publicCopy(calculator.title), item: currentUrl },
+    ],
+  };
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, softwareSchema]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbSchema, faqSchema, softwareSchema]) }} />
       <div className="mx-auto max-w-5xl">
-        <Link href={backHref} className="mb-8 inline-flex rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-bold text-gray-700 shadow-sm hover:border-gray-400">
-          {ui.back}
-        </Link>
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+          <Link href={backHref} className="inline-flex rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-bold text-gray-700 shadow-sm hover:border-gray-400">
+            {ui.back}
+          </Link>
+          {languageLinks.length > 0 ? (
+            <nav className="flex items-center gap-1 text-xs font-black uppercase text-gray-600" aria-label="Language versions">
+              {languageLinks.map(([language, href]) => (
+                <Link
+                  key={language}
+                  href={new URL(href).pathname}
+                  hrefLang={language}
+                  className={`rounded-full px-3 py-2 ${language === locale ? "bg-gray-950 text-white" : "bg-white hover:bg-gray-100"}`}
+                >
+                  {language}
+                </Link>
+              ))}
+            </nav>
+          ) : null}
+        </div>
 
         <section className="mb-8 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
           <p className="mb-3 text-xs font-black uppercase tracking-wide text-emerald-700">{publicCopy(calculator.category)}</p>
@@ -146,4 +182,13 @@ export default function CalculatorPage({
       </div>
     </main>
   );
+}
+
+function getApplicationCategory(category: string) {
+  const normalized = category.toLowerCase();
+  if (normalized.includes("business")) return "BusinessApplication";
+  if (normalized.includes("finanza") || normalized.includes("finance") || normalized.includes("trading")) {
+    return "FinanceApplication";
+  }
+  return "UtilitiesApplication";
 }

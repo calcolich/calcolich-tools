@@ -1,10 +1,15 @@
 import { type Calculator, getCalculator } from "@/lib/calculators";
+import { siteUrl } from "@/lib/site-metadata";
 
-export type Locale = "de" | "fr" | "en";
+export type Locale = "de" | "it" | "en" | "fr";
 
 type LocalizedCalculatorContent = Omit<Calculator, "kind">;
 
-export const locales: Locale[] = ["de", "fr", "en"];
+export const locales: Locale[] = ["de", "it", "en", "fr"];
+
+export function hasLocale(locale: string): locale is Locale {
+  return locales.includes(locale as Locale);
+}
 
 export const localeHome = {
   de: {
@@ -22,6 +27,22 @@ export const localeHome = {
     guideSuffix: "praktischer Leitfaden",
     recommendedAd: "Empfohlene Ressource",
     relatedTitle: "Verwandte Rechner",
+  },
+  it: {
+    label: "Italiano",
+    title: "Calcolich Svizzera | Calcolatori stipendio, tasse e budget",
+    description:
+      "Calcolatori gratuiti per stipendio, imposta alla fonte, cassa malati, affitto, budget e business in Svizzera.",
+    eyebrow: "Calcolatori per la Svizzera",
+    heading: "Calcolatori rapidi per stipendio, tasse e vita quotidiana in Svizzera",
+    intro:
+      "Strumenti pratici per lavoro, casa, finanze e attivita indipendente in Svizzera.",
+    back: "Tutti i calcolatori",
+    newsletterTitle: "Newsletter Calcolich",
+    newsletterButton: "Avvisami",
+    guideSuffix: "guida pratica",
+    recommendedAd: "Risorsa consigliata",
+    relatedTitle: "Calcolatori collegati",
   },
   fr: {
     label: "Francais",
@@ -60,55 +81,71 @@ export const localeHome = {
 const translatedSlugs = {
   "calcolo-imposta-alla-fonte-svizzera": {
     de: ["quellensteuer-rechner-schweiz", "Quellensteuer Rechner Schweiz", "Quellensteuer", "Steuern Schweiz"],
+    it: ["calcolatore-imposta-alla-fonte-svizzera", "Calcolatore imposta alla fonte Svizzera", "Imposta alla fonte", "Tasse Svizzera"],
     fr: ["calculateur-impot-a-la-source-suisse", "Calculateur impot a la source Suisse", "Impot source", "Impots Suisse"],
     en: ["withholding-tax-calculator-switzerland", "Withholding Tax Calculator Switzerland", "Withholding tax", "Swiss taxes"],
   },
   "calcolo-cassa-malati-svizzera": {
     de: ["krankenkasse-praemien-rechner-schweiz", "Krankenkasse Praemien Rechner Schweiz", "Krankenkasse", "Versicherung Schweiz"],
+    it: ["calcolatore-cassa-malati-svizzera", "Calcolatore cassa malati Svizzera", "Cassa malati", "Assicurazioni Svizzera"],
     fr: ["calculateur-assurance-maladie-suisse", "Calculateur assurance maladie Suisse", "Assurance maladie", "Assurance Suisse"],
     en: ["health-insurance-premium-calculator-switzerland", "Health Insurance Premium Calculator Switzerland", "Health insurance", "Swiss insurance"],
   },
   "calcolo-affitto-sostenibile-svizzera": {
     de: ["mietbudget-rechner-schweiz", "Mietbudget Rechner Schweiz", "Mietbudget", "Wohnen Schweiz"],
+    it: ["calcolatore-affitto-sostenibile-svizzera", "Calcolatore affitto sostenibile Svizzera", "Affitto sostenibile", "Casa Svizzera"],
     fr: ["calculateur-loyer-abordable-suisse", "Calculateur loyer abordable Suisse", "Loyer abordable", "Logement Suisse"],
     en: ["rent-affordability-calculator-switzerland", "Rent Affordability Calculator Switzerland", "Rent affordability", "Swiss housing"],
   },
   "calcolo-salario-orario-svizzera": {
     de: ["stundenlohn-rechner-schweiz", "Stundenlohn Rechner Schweiz", "Stundenlohn", "Lohn Schweiz"],
+    it: ["calcolatore-salario-orario-svizzera", "Calcolatore salario orario Svizzera", "Salario orario", "Stipendio Svizzera"],
     fr: ["calculateur-salaire-horaire-suisse", "Calculateur salaire horaire Suisse", "Salaire horaire", "Salaire Suisse"],
     en: ["hourly-wage-calculator-switzerland", "Hourly Wage Calculator Switzerland", "Hourly wage", "Swiss salary"],
   },
   "calcolo-salario-part-time-svizzera": {
     de: ["teilzeit-lohn-rechner-schweiz", "Teilzeit Lohn Rechner Schweiz", "Teilzeitlohn", "Lohn Schweiz"],
+    it: ["calcolatore-salario-part-time-svizzera", "Calcolatore salario part-time Svizzera", "Salario part-time", "Stipendio Svizzera"],
     fr: ["calculateur-salaire-temps-partiel-suisse", "Calculateur salaire temps partiel Suisse", "Temps partiel", "Salaire Suisse"],
     en: ["part-time-salary-calculator-switzerland", "Part-Time Salary Calculator Switzerland", "Part-time salary", "Swiss salary"],
   },
   "calcolo-terzo-pilastro-risparmio-fiscale": {
     de: ["saeule-3a-steuerersparnis-rechner", "Saeule 3a Steuerersparnis Rechner", "Saeule 3a", "Vorsorge Schweiz"],
+    it: ["calcolatore-terzo-pilastro-risparmio-fiscale", "Calcolatore risparmio fiscale terzo pilastro", "Terzo pilastro", "Previdenza Svizzera"],
     fr: ["calculateur-troisieme-pilier-economie-impot", "Calculateur troisieme pilier economie d'impot", "Troisieme pilier", "Prevoyance Suisse"],
     en: ["pillar-3a-tax-savings-calculator", "Pillar 3a Tax Savings Calculator", "Pillar 3a", "Swiss pension"],
   },
   "calcolo-budget-mensile": {
     de: ["budget-rechner-schweiz", "Budget Rechner Schweiz", "Budget", "Finanzen Schweiz"],
+    it: ["calcolatore-budget-mensile-svizzera", "Calcolatore budget mensile Svizzera", "Budget mensile", "Finanze Svizzera"],
     fr: ["calculateur-budget-mensuel-suisse", "Calculateur budget mensuel Suisse", "Budget mensuel", "Finances Suisse"],
     en: ["monthly-budget-calculator-switzerland", "Monthly Budget Calculator Switzerland", "Monthly budget", "Swiss personal finance"],
   },
   "calcolo-spese-auto-svizzera": {
     de: ["autokosten-rechner-schweiz", "Autokosten Rechner Schweiz", "Autokosten", "Mobilitaet Schweiz"],
+    it: ["calcolatore-spese-auto-svizzera", "Calcolatore spese auto Svizzera", "Spese auto", "Mobilita Svizzera"],
     fr: ["calculateur-cout-voiture-suisse", "Calculateur cout voiture Suisse", "Cout voiture", "Mobilite Suisse"],
     en: ["car-cost-calculator-switzerland", "Car Cost Calculator Switzerland", "Car cost", "Swiss mobility"],
   },
   "calcolo-fattura-freelance": {
     de: ["freelancer-stundensatz-rechner-schweiz", "Freelancer Stundensatz Rechner Schweiz", "Freelancer Rate", "Business Schweiz"],
+    it: ["calcolatore-tariffa-freelance-svizzera", "Calcolatore tariffa freelance Svizzera", "Tariffa freelance", "Business Svizzera"],
     fr: ["calculateur-tarif-freelance-suisse", "Calculateur tarif freelance Suisse", "Tarif freelance", "Business Suisse"],
     en: ["freelance-rate-calculator-switzerland", "Freelance Rate Calculator Switzerland", "Freelance rate", "Swiss business"],
   },
   "calcolo-prezzo-vendita": {
     de: ["verkaufspreis-rechner", "Verkaufspreis Rechner", "Verkaufspreis", "Business"],
+    it: ["calcolatore-prezzo-vendita", "Calcolatore prezzo di vendita", "Prezzo di vendita", "Business"],
     fr: ["calculateur-prix-de-vente", "Calculateur prix de vente", "Prix de vente", "Business"],
     en: ["selling-price-calculator", "Selling Price Calculator", "Selling price", "Business"],
   },
 } satisfies Record<string, Record<Locale, [string, string, string, string]>>;
+
+export const localizedBaseSlugs = Object.keys(translatedSlugs);
+
+export function hasLocalizedCalculator(slug: string) {
+  return localizedBaseSlugs.includes(slug);
+}
 
 const localeCopy = {
   de: {
@@ -125,6 +162,22 @@ const localeCopy = {
       { question: `Wofuer ist ${title}?`, answer: "Der Rechner liefert eine schnelle Schaetzung auf Basis deiner Eingaben." },
       { question: "Ist das Ergebnis offiziell?", answer: "Nein. Es ist eine Orientierung und ersetzt keine offiziellen Quellen." },
       { question: "Kann ich den Rechner kostenlos nutzen?", answer: "Ja, der Rechner ist kostenlos online nutzbar." },
+    ],
+  },
+  it: {
+    meta: (title: string) => `${title} | Calcolich`,
+    description: (title: string) => `${title}: strumento gratuito con risultato immediato, FAQ e spiegazione pratica.`,
+    intro: (title: string) => `${title} per ottenere rapidamente una stima utile in Svizzera.`,
+    cta: "Ricevi nuovi calcolatori per stipendio, tasse, budget e business in Svizzera.",
+    article: (title: string) => [
+      `${title} aiuta a verificare rapidamente i numeri principali senza rifare manualmente le formule.`,
+      "Il risultato e una stima pratica. Per decisioni ufficiali verifica sempre fonti, contratti e documenti aggiornati.",
+      "Usa i calcolatori collegati per confrontare piu aspetti della stessa decisione.",
+    ],
+    faqs: (title: string) => [
+      { question: `A cosa serve ${title}?`, answer: "Fornisce una stima rapida sulla base dei valori inseriti." },
+      { question: "Il risultato e ufficiale?", answer: "No, e uno strumento informativo e non sostituisce fonti ufficiali." },
+      { question: "Il calcolatore e gratuito?", answer: "Si, e gratuito e utilizzabile online." },
     ],
   },
   fr: {
@@ -204,6 +257,7 @@ const inputLabels: Record<Locale, Record<string, string>> = {
     marginRate: "Zielmarge %",
     vatRate: "MWST %",
   },
+  it: {},
   fr: {
     gross: "Salaire brut mensuel CHF",
     socialRate: "Cotisations sociales %",
@@ -303,21 +357,27 @@ export function getLocalizedRelatedCalculators(locale: Locale, calculator: Calcu
 }
 
 export function localizedHref(locale: Locale, calculator: Calculator) {
-  const baseSlug = getBaseSlug(locale, calculator.slug);
-  const isLocalized = Boolean(baseSlug);
-  return isLocalized ? `/${locale}/${calculator.slug}` : `/${calculator.slug}`;
+  const baseSlug = getBaseSlug(locale, calculator.slug)
+    ?? (localizedContent[locale][calculator.slug] ? calculator.slug : undefined);
+
+  return baseSlug
+    ? `/${locale}/${localizedContent[locale][baseSlug].slug}`
+    : `/${calculator.slug}`;
 }
 
 export function localizedAlternates(locale: Locale, slug?: string) {
   const currentBaseSlug = slug ? getBaseSlug(locale, slug) : undefined;
+  const localizedPath = (targetLocale: Locale) =>
+    `/${targetLocale}${currentBaseSlug ? `/${localizedContent[targetLocale][currentBaseSlug].slug}` : ""}`;
 
   return {
-    canonical: `https://calcolich.ch/${locale}${slug ? `/${slug}` : ""}`,
+    canonical: `${siteUrl}/${locale}${slug ? `/${slug}` : ""}`,
     languages: {
-      de: `https://calcolich.ch/de${currentBaseSlug ? `/${localizedContent.de[currentBaseSlug].slug}` : ""}`,
-      fr: `https://calcolich.ch/fr${currentBaseSlug ? `/${localizedContent.fr[currentBaseSlug].slug}` : ""}`,
-      en: `https://calcolich.ch/en${currentBaseSlug ? `/${localizedContent.en[currentBaseSlug].slug}` : ""}`,
-      "x-default": "https://calcolich.ch",
+      de: `${siteUrl}${localizedPath("de")}`,
+      it: `${siteUrl}${localizedPath("it")}`,
+      en: `${siteUrl}${localizedPath("en")}`,
+      fr: `${siteUrl}${localizedPath("fr")}`,
+      "x-default": `${siteUrl}${localizedPath("de")}`,
     },
   };
 }
@@ -348,6 +408,13 @@ function buildLocalizedContent() {
           const base = getCalculator(baseSlug);
           const [slug, title, shortTitle, category] = translations[locale];
           const copy = localeCopy[locale];
+
+          if (locale === "it" && base) {
+            const baseContent = Object.fromEntries(
+              Object.entries(base).filter(([key]) => key !== "kind"),
+            ) as LocalizedCalculatorContent;
+            return [baseSlug, { ...baseContent, slug }];
+          }
 
           return [
             baseSlug,

@@ -4,13 +4,13 @@ import { getLocalizedStaticParams } from "@/lib/i18n";
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return getLocalizedStaticParams("en");
+  return getLocalizedStaticParams("it");
 }
 
 export function generateMetadata({ params }: Props) {
-  return getLocalizedMetadata("en", params);
+  return getLocalizedMetadata("it", params);
 }
 
 export default function Page({ params }: Props) {
-  return <LocalizedCalculatorRoute locale="en" params={params} />;
+  return <LocalizedCalculatorRoute locale="it" params={params} />;
 }

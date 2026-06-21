@@ -2,11 +2,11 @@ import type { MetadataRoute } from "next";
 import { calculatorCategories } from "@/lib/categories";
 import { calculators } from "@/lib/calculators";
 import { guides } from "@/lib/guides";
-import { getLocalizedCalculators, locales, localizedAlternates } from "@/lib/i18n";
+import { getLocalizedCalculators, hasLocalizedCalculator, locales, localizedAlternates } from "@/lib/i18n";
 import { servicePages } from "@/lib/service-pages";
+import { siteUrl } from "@/lib/site-metadata";
 
-const baseUrl = "https://calcolich.ch";
-const contentUpdatedAt = new Date("2026-06-20T00:00:00.000Z");
+const contentUpdatedAt = new Date("2026-06-21T00:00:00.000Z");
 
 const routes = Array.from(new Set([
   "",
@@ -26,7 +26,9 @@ const routes = Array.from(new Set([
   ...calculatorCategories.map((category) => `/categorie/${category.slug}`),
   ...guides.map((guide) => `/guide/${guide.slug}`),
   ...servicePages.map((page) => `/servizi/${page.slug}`),
-  ...calculators.map((calculator) => `/${calculator.slug}`),
+  ...calculators
+    .filter((calculator) => !hasLocalizedCalculator(calculator.slug))
+    .map((calculator) => `/${calculator.slug}`),
 ]));
 
 const localizedRoutes = locales.flatMap((locale) => [
@@ -43,13 +45,13 @@ const localizedRoutes = locales.flatMap((locale) => [
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...routes.map((route) => ({
-      url: `${baseUrl}${route}`,
+      url: `${siteUrl}${route}`,
       lastModified: contentUpdatedAt,
       changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
       priority: route === "" ? 1 : 0.8,
     })),
     ...localizedRoutes.map(({ route, alternates }) => ({
-      url: `${baseUrl}${route}`,
+      url: `${siteUrl}${route}`,
       lastModified: contentUpdatedAt,
       changeFrequency: route.length === 3 ? "weekly" as const : "monthly" as const,
       priority: route.length === 3 ? 0.9 : 0.75,

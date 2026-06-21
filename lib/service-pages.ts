@@ -35,7 +35,7 @@ export const servicePages: ServicePage[] = [
     ],
     relatedLinks: [
       { href: "/calcolo-costo-orario", label: "Calcolatore costo orario" },
-      { href: "/calcolo-prezzo-vendita", label: "Calcolatore prezzo vendita" },
+      { href: "/it/calcolatore-prezzo-vendita", label: "Calcolatore prezzo vendita" },
       { href: "/calcolo-margine-profitto", label: "Calcolatore margine" },
     ],
     faqs: [
@@ -64,7 +64,7 @@ export const servicePages: ServicePage[] = [
     relatedLinks: [
       { href: "/calcolo-iva-svizzera", label: "Calcolatore IVA Svizzera" },
       { href: "/calcolo-contributi-avs-indipendenti", label: "Contributi AVS indipendenti" },
-      { href: "/calcolo-fattura-freelance", label: "Tariffa freelance" },
+      { href: "/it/calcolatore-tariffa-freelance-svizzera", label: "Tariffa freelance" },
     ],
     faqs: [
       { question: "Il sito puo essere multilingue?", answer: "Si. Italiano, tedesco, francese o inglese possono essere pianificati per priorita e pubblico, evitando traduzioni automatiche non controllate." },
@@ -91,7 +91,7 @@ export const servicePages: ServicePage[] = [
     ],
     relatedLinks: [
       { href: "/calcolo-costo-orario", label: "Calcolatore costo orario" },
-      { href: "/calcolo-prezzo-vendita", label: "Calcolatore prezzo vendita" },
+      { href: "/it/calcolatore-prezzo-vendita", label: "Calcolatore prezzo vendita" },
       { href: "/calcolo-margine-profitto", label: "Calcolatore margine" },
     ],
     faqs: [
@@ -118,7 +118,7 @@ export const servicePages: ServicePage[] = [
       { title: "Misurazione", description: "Attribuiamo ogni richiesta alla pagina, all'oggetto o alla campagna corretta." },
     ],
     relatedLinks: [
-      { href: "/calcolo-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
+      { href: "/it/calcolatore-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
       { href: "/calcolo-roi", label: "Calcolatore ROI" },
       { href: "/calcolo-rata-prestito", label: "Calcolatore rata prestito" },
     ],
@@ -174,8 +174,8 @@ export const servicePages: ServicePage[] = [
       { title: "Crescita", description: "Pubblico, indicizzo e miglioro il tool usando dati reali." },
     ],
     relatedLinks: [
-      { href: "/calcolo-affitto-sostenibile-svizzera", label: "Esempio: affitto sostenibile" },
-      { href: "/calcolo-fattura-freelance", label: "Esempio: tariffa freelance" },
+      { href: "/it/calcolatore-affitto-sostenibile-svizzera", label: "Esempio: affitto sostenibile" },
+      { href: "/it/calcolatore-tariffa-freelance-svizzera", label: "Esempio: tariffa freelance" },
       { href: "/calcolo-rischio-trading", label: "Esempio: rischio trading" },
     ],
     faqs: [

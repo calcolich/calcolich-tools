@@ -57,9 +57,9 @@ export const guides: Guide[] = [
     categoryHref: "/categorie/casa-budget",
     categoryLabel: "Casa e budget",
     calculatorLinks: [
-      { href: "/calcolo-budget-mensile", label: "Calcolatore budget mensile" },
-      { href: "/calcolo-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
-      { href: "/calcolo-cassa-malati-svizzera", label: "Calcolatore cassa malati" },
+      { href: "/it/calcolatore-budget-mensile-svizzera", label: "Calcolatore budget mensile" },
+      { href: "/it/calcolatore-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
+      { href: "/it/calcolatore-cassa-malati-svizzera", label: "Calcolatore cassa malati" },
     ],
     sections: [
       {
@@ -94,8 +94,8 @@ export const guides: Guide[] = [
     categoryHref: "/categorie/business-freelance",
     categoryLabel: "Business e freelance",
     calculatorLinks: [
-      { href: "/calcolo-fattura-freelance", label: "Calcolatore tariffa freelance" },
-      { href: "/calcolo-prezzo-vendita", label: "Calcolatore prezzo vendita" },
+      { href: "/it/calcolatore-tariffa-freelance-svizzera", label: "Calcolatore tariffa freelance" },
+      { href: "/it/calcolatore-prezzo-vendita", label: "Calcolatore prezzo vendita" },
       { href: "/calcolo-break-even", label: "Calcolatore break even" },
     ],
     sections: [
@@ -168,7 +168,7 @@ export const guides: Guide[] = [
     categoryHref: "/categorie/stipendio-lavoro",
     categoryLabel: "Stipendio e lavoro",
     calculatorLinks: [
-      { href: "/calcolo-imposta-alla-fonte-svizzera", label: "Calcolatore imposta alla fonte" },
+      { href: "/it/calcolatore-imposta-alla-fonte-svizzera", label: "Calcolatore imposta alla fonte" },
       { href: "/calcolo-salario-netto-svizzera", label: "Calcolatore stipendio netto" },
       { href: "/calcolo-lordo-netto-svizzera", label: "Calcolatore lordo netto" },
     ],
@@ -205,9 +205,9 @@ export const guides: Guide[] = [
     categoryHref: "/categorie/casa-budget",
     categoryLabel: "Casa e budget",
     calculatorLinks: [
-      { href: "/calcolo-cassa-malati-svizzera", label: "Calcolatore cassa malati" },
-      { href: "/calcolo-budget-mensile", label: "Calcolatore budget mensile" },
-      { href: "/calcolo-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
+      { href: "/it/calcolatore-cassa-malati-svizzera", label: "Calcolatore cassa malati" },
+      { href: "/it/calcolatore-budget-mensile-svizzera", label: "Calcolatore budget mensile" },
+      { href: "/it/calcolatore-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
     ],
     sections: [
       {
@@ -242,8 +242,8 @@ export const guides: Guide[] = [
     categoryHref: "/categorie/casa-budget",
     categoryLabel: "Casa e budget",
     calculatorLinks: [
-      { href: "/calcolo-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
-      { href: "/calcolo-budget-mensile", label: "Calcolatore budget mensile" },
+      { href: "/it/calcolatore-affitto-sostenibile-svizzera", label: "Calcolatore affitto sostenibile" },
+      { href: "/it/calcolatore-budget-mensile-svizzera", label: "Calcolatore budget mensile" },
       { href: "/calcolo-salario-netto-svizzera", label: "Calcolatore stipendio netto" },
     ],
     sections: [
@@ -279,9 +279,9 @@ export const guides: Guide[] = [
     categoryHref: "/categorie/finanza",
     categoryLabel: "Finanza",
     calculatorLinks: [
-      { href: "/calcolo-terzo-pilastro-risparmio-fiscale", label: "Calcolatore terzo pilastro" },
+      { href: "/it/calcolatore-terzo-pilastro-risparmio-fiscale", label: "Calcolatore terzo pilastro" },
       { href: "/calcolo-interessi-composti", label: "Calcolatore interessi composti" },
-      { href: "/calcolo-budget-mensile", label: "Calcolatore budget mensile" },
+      { href: "/it/calcolatore-budget-mensile-svizzera", label: "Calcolatore budget mensile" },
     ],
     sections: [
       {

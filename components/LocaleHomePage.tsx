@@ -13,10 +13,10 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
             Calcolich
           </Link>
           <nav className="flex items-center gap-2 text-sm font-semibold text-gray-600">
-            <Link href="/" className="rounded-full px-3 py-2 hover:bg-gray-100">IT</Link>
             <Link href="/de" className="rounded-full px-3 py-2 hover:bg-gray-100">DE</Link>
-            <Link href="/fr" className="rounded-full px-3 py-2 hover:bg-gray-100">FR</Link>
+            <Link href="/it" className="rounded-full px-3 py-2 hover:bg-gray-100">IT</Link>
             <Link href="/en" className="rounded-full px-3 py-2 hover:bg-gray-100">EN</Link>
+            <Link href="/fr" className="rounded-full px-3 py-2 hover:bg-gray-100">FR</Link>
           </nav>
         </div>
       </section>

@@ -1,6 +1,10 @@
 import Link from "next/link";
 
 const footerLinks = [
+  { href: "/de", label: "DE" },
+  { href: "/it", label: "IT" },
+  { href: "/en", label: "EN" },
+  { href: "/fr", label: "FR" },
   { href: "/categorie/stipendio-lavoro", label: "Lavoro" },
   { href: "/categorie/business-freelance", label: "Business" },
   { href: "/categorie/trading", label: "Trading" },
