@@ -13,11 +13,11 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
   const [values, setValues] = useState<Values>(defaults);
 
   const results = useMemo(
-    () => calculate(calculator.kind, values).map((row, index) => ({
+    () => calculate(calculator, values).map((row, index) => ({
       ...row,
       label: calculator.resultLabels?.[index] ?? row.label,
     })),
-    [calculator.kind, calculator.resultLabels, values],
+    [calculator, values],
   );
 
   return (
@@ -81,8 +81,8 @@ function percent(value: number) {
   return `${value.toFixed(2)}%`;
 }
 
-function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
-  switch (kind) {
+function calculate(calculator: Calculator, values: Values): ResultRow[] {
+  switch (calculator.kind) {
     case "work-hours": {
       const [startH, startM] = (values.start || "00:00").split(":").map(Number);
       const [endH, endM] = (values.end || "00:00").split(":").map(Number);
@@ -148,10 +148,11 @@ function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
     case "vacation-ch": {
       const annualDays = number(values, "daysPerWeek") * number(values, "weeks");
       const prorated = (annualDays * Math.min(number(values, "months"), 12)) / 12;
+      const dayUnit = calculator.locale === "de" ? "Tage" : "giorni";
       return [
-        { label: "Ferie annue", value: `${annualDays.toFixed(1)} giorni` },
+        { label: "Ferie annue", value: `${annualDays.toFixed(1)} ${dayUnit}` },
         { label: "Mesi conteggiati", value: `${Math.min(number(values, "months"), 12)}` },
-        { label: "Ferie maturate", value: `${prorated.toFixed(1)} giorni` },
+        { label: "Ferie maturate", value: `${prorated.toFixed(1)} ${dayUnit}` },
       ];
     }
     case "vat-ch": {
