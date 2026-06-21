@@ -9,9 +9,11 @@ type WindowWithAds = Window & {
 export default function AdSlot({
   slot,
   label = "Annuncio",
+  showPlaceholder = false,
 }: {
   slot?: string;
   label?: string;
+  showPlaceholder?: boolean;
 }) {
   const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
@@ -22,7 +24,14 @@ export default function AdSlot({
     adsWindow.adsbygoogle.push({});
   }, [client, slot]);
 
-  if (!client || !slot) return null;
+  if (!client || !slot) {
+    if (!showPlaceholder) return null;
+    return (
+      <section className="my-8 flex min-h-24 items-center justify-center rounded-2xl border border-dashed border-gray-300 bg-white p-4 text-center">
+        <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">Werbeplatz</p>
+      </section>
+    );
+  }
 
   return (
     <section className="my-8 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">

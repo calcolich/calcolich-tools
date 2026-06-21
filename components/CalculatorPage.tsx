@@ -1,10 +1,11 @@
 import AdSlot from "@/components/AdSlot";
+import CalculatorActions from "@/components/CalculatorActions";
 import CalculatorWidget from "@/components/CalculatorWidget";
 import LeadForm from "@/components/LeadForm";
 import RevenueCta from "@/components/RevenueCta";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
-import { localizedAlternates, localizedHref, type Locale } from "@/lib/i18n";
+import { hasTranslatedLocaleSlug, localizedAlternates, localizedHref, type Locale } from "@/lib/i18n";
 import { siteUrl } from "@/lib/site-metadata";
 import Link from "next/link";
 
@@ -45,7 +46,9 @@ export default function CalculatorPage({
 }: CalculatorPageProps) {
   const ui = { ...defaultLabels, ...labels };
   const related = relatedCalculators ?? getRelatedCalculators(calculator);
-  const languageLinks = backHref === "/"
+  const languageLinks = calculator.isPriority && locale === "de" && !hasTranslatedLocaleSlug(locale, calculator.slug)
+    ? [["de", `${siteUrl}/de/${calculator.slug}`]]
+    : backHref === "/"
     ? []
     : Object.entries(localizedAlternates(locale, calculator.slug).languages)
         .filter(([language]) => language !== "x-default");
@@ -63,7 +66,7 @@ export default function CalculatorPage({
   };
   const softwareSchema = {
     "@context": "https://schema.org",
-    "@type": ["WebApplication", "SoftwareApplication"],
+    "@type": calculator.schemaType ?? ["WebApplication", "SoftwareApplication"],
     name: publicCopy(calculator.title),
     applicationCategory: getApplicationCategory(calculator.category),
     operatingSystem: "Web",
@@ -88,7 +91,16 @@ export default function CalculatorPage({
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbSchema, faqSchema, softwareSchema]) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            breadcrumbSchema,
+            softwareSchema,
+            ...(calculator.faqs.length > 0 ? [faqSchema] : []),
+          ]),
+        }}
+      />
       <div className="mx-auto max-w-5xl">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
           <Link href={backHref} className="inline-flex rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-bold text-gray-700 shadow-sm hover:border-gray-400">
@@ -112,15 +124,28 @@ export default function CalculatorPage({
 
         <section className="mb-8 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
           <p className="mb-3 text-xs font-black uppercase tracking-wide text-emerald-700">{publicCopy(calculator.category)}</p>
-          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-950 md:text-6xl">{publicCopy(calculator.title)}</h1>
+          <h1 className="mb-4 text-4xl font-black tracking-tight text-gray-950 md:text-6xl">{publicCopy(calculator.h1 ?? calculator.title)}</h1>
           <p className="max-w-3xl text-lg leading-8 text-gray-700">{publicCopy(calculator.intro)}</p>
         </section>
 
         <CalculatorWidget calculator={calculator} />
 
+        {calculator.isPriority ? <CalculatorActions calculatorId={calculator.id ?? calculator.slug} /> : null}
+
         {backHref === "/" ? <RevenueCta calculator={calculator} /> : null}
 
-        <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT} />
+        <AdSlot
+          slot={process.env.NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT}
+          label={calculator.locale === "de" ? "Anzeige" : undefined}
+          showPlaceholder={calculator.isPriority}
+        />
+
+        {calculator.isPriority ? (
+          <aside className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Passende Angebote</p>
+            <p className="mt-2 font-bold text-gray-950">Vergleichsangebote und Partnerressourcen werden hier ergänzt, sobald sie redaktionell geprüft sind.</p>
+          </aside>
+        ) : null}
 
         <section className="mt-8 rounded-3xl bg-gray-950 p-6 text-white shadow-sm md:p-8">
           <h2 className="text-2xl font-black">{ui.newsletterTitle}</h2>
@@ -132,10 +157,24 @@ export default function CalculatorPage({
           <article className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="mb-5 text-3xl font-black tracking-tight text-gray-950">{publicCopy(calculator.title)}: {ui.guideSuffix}</h2>
             <div className="space-y-5 text-lg leading-8 text-gray-700">
-              {calculator.article.map((paragraph) => (
+              {(calculator.formula && calculator.example ? calculator.article.slice(2) : calculator.article).map((paragraph) => (
                 <p key={paragraph}>{publicCopy(paragraph)}</p>
               ))}
             </div>
+
+            {calculator.formula ? (
+              <section className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">Formel</h2>
+                <p className="mt-3 text-lg leading-8 text-gray-700">{calculator.formula}</p>
+              </section>
+            ) : null}
+
+            {calculator.example ? (
+              <section className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">Praktisches Beispiel</h2>
+                <p className="mt-3 text-lg leading-8 text-gray-700">{calculator.example}</p>
+              </section>
+            ) : null}
 
             <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT} label={ui.recommendedAd} />
 
@@ -153,15 +192,19 @@ export default function CalculatorPage({
               </section>
             ) : null}
 
-            <h2 className="mt-10 text-3xl font-black tracking-tight text-gray-950">FAQ</h2>
-            <div className="mt-5 space-y-4">
-              {calculator.faqs.map((faq) => (
-                <details key={faq.question} className="rounded-2xl border border-gray-200 p-4">
-                  <summary className="cursor-pointer font-bold text-gray-950">{publicCopy(faq.question)}</summary>
-                  <p className="mt-3 text-gray-700">{publicCopy(faq.answer)}</p>
-                </details>
-              ))}
-            </div>
+            {calculator.faqs.length > 0 ? (
+              <>
+                <h2 className="mt-10 text-3xl font-black tracking-tight text-gray-950">FAQ</h2>
+                <div className="mt-5 space-y-4">
+                  {calculator.faqs.map((faq) => (
+                    <details key={faq.question} className="rounded-2xl border border-gray-200 p-4">
+                      <summary className="cursor-pointer font-bold text-gray-950">{publicCopy(faq.question)}</summary>
+                      <p className="mt-3 text-gray-700">{publicCopy(faq.answer)}</p>
+                    </details>
+                  ))}
+                </div>
+              </>
+            ) : null}
           </article>
 
           <aside className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">

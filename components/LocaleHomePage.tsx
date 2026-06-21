@@ -1,4 +1,5 @@
 import { getLocalizedCalculators, localeHome, type Locale } from "@/lib/i18n";
+import { germanCalculatorCategories } from "@/lib/german-calculators";
 import Link from "next/link";
 
 export default function LocaleHomePage({ locale }: { locale: Locale }) {
@@ -33,6 +34,20 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
             {copy.intro}
           </p>
         </section>
+
+        {locale === "de" ? (
+          <section className="mb-10" aria-labelledby="calculator-categories">
+            <h2 id="calculator-categories" className="mb-4 text-2xl font-black tracking-tight">Rechner nach Kategorie</h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {germanCalculatorCategories.map((category) => (
+                <div key={category.id} className="rounded-2xl border border-gray-200 bg-white p-4">
+                  <h3 className="font-black text-gray-950">{category.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600">{category.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {calculators.map((tool) => (

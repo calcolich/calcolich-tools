@@ -1,4 +1,5 @@
 import { type Calculator, getCalculator } from "@/lib/calculators";
+import { germanPriorityCalculators, getGermanPriorityCalculator } from "@/lib/german-calculators";
 import { siteUrl } from "@/lib/site-metadata";
 
 export type Locale = "de" | "it" | "en" | "fr";
@@ -145,6 +146,10 @@ export const localizedBaseSlugs = Object.keys(translatedSlugs);
 
 export function hasLocalizedCalculator(slug: string) {
   return localizedBaseSlugs.includes(slug);
+}
+
+export function hasTranslatedLocaleSlug(locale: Locale, slug: string) {
+  return Boolean(getBaseSlug(locale, slug));
 }
 
 const localeCopy = {
@@ -333,12 +338,22 @@ const inputLabels: Record<Locale, Record<string, string>> = {
 const localizedContent = buildLocalizedContent();
 
 export function getLocalizedCalculators(locale: Locale) {
-  return Object.keys(localizedContent[locale])
+  const translated = Object.keys(localizedContent[locale])
     .map((baseSlug) => getLocalizedCalculatorByBaseSlug(locale, baseSlug))
     .filter((calculator): calculator is Calculator => Boolean(calculator));
+
+  if (locale !== "de") return translated;
+
+  const merged = new Map(translated.map((calculator) => [calculator.slug, calculator]));
+  germanPriorityCalculators.forEach((calculator) => merged.set(calculator.slug, calculator));
+  return Array.from(merged.values());
 }
 
 export function getLocalizedCalculator(locale: Locale, slug: string) {
+  if (locale === "de") {
+    const priorityCalculator = getGermanPriorityCalculator(slug);
+    if (priorityCalculator) return priorityCalculator;
+  }
   const baseSlug = getBaseSlug(locale, slug);
   return baseSlug ? getLocalizedCalculatorByBaseSlug(locale, baseSlug) : undefined;
 }
@@ -348,6 +363,12 @@ export function getLocalizedStaticParams(locale: Locale) {
 }
 
 export function getLocalizedRelatedCalculators(locale: Locale, calculator: Calculator) {
+  if (locale === "de" && calculator.isPriority) {
+    return calculator.relatedSlugs
+      .map((slug) => getGermanPriorityCalculator(slug) ?? getLocalizedCalculator("de", slug))
+      .filter((item): item is Calculator => Boolean(item));
+  }
+
   const baseSlug = getBaseSlug(locale, calculator.slug);
   const content = baseSlug ? localizedContent[locale][baseSlug] : undefined;
 
@@ -357,6 +378,8 @@ export function getLocalizedRelatedCalculators(locale: Locale, calculator: Calcu
 }
 
 export function localizedHref(locale: Locale, calculator: Calculator) {
+  if (locale === "de" && calculator.isPriority) return `/de/${calculator.slug}`;
+
   const baseSlug = getBaseSlug(locale, calculator.slug)
     ?? (localizedContent[locale][calculator.slug] ? calculator.slug : undefined);
 
@@ -366,6 +389,17 @@ export function localizedHref(locale: Locale, calculator: Calculator) {
 }
 
 export function localizedAlternates(locale: Locale, slug?: string) {
+  if (locale === "de" && slug && getGermanPriorityCalculator(slug) && !hasTranslatedLocaleSlug(locale, slug)) {
+    const url = `${siteUrl}/de/${slug}`;
+    return {
+      canonical: url,
+      languages: {
+        de: url,
+        "x-default": url,
+      },
+    };
+  }
+
   const currentBaseSlug = slug ? getBaseSlug(locale, slug) : undefined;
   const localizedPath = (targetLocale: Locale) =>
     `/${targetLocale}${currentBaseSlug ? `/${localizedContent[targetLocale][currentBaseSlug].slug}` : ""}`;

@@ -12,7 +12,13 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
   );
   const [values, setValues] = useState<Values>(defaults);
 
-  const results = useMemo(() => calculate(calculator.kind, values), [calculator.kind, values]);
+  const results = useMemo(
+    () => calculate(calculator.kind, values).map((row, index) => ({
+      ...row,
+      label: calculator.resultLabels?.[index] ?? row.label,
+    })),
+    [calculator.kind, calculator.resultLabels, values],
+  );
 
   return (
     <section className="rounded-2xl bg-white p-6 shadow">
@@ -90,6 +96,20 @@ function calculate(kind: Calculator["kind"], values: Values): ResultRow[] {
         { label: "Minuti netti", value: `${netMinutes}` },
         { label: "Ore decimali", value: `${(netMinutes / 60).toFixed(2)} h` },
         { label: "Totale lavorato", value: `${hours} h ${minutes} min` },
+      ];
+    }
+    case "working-time": {
+      const [startH, startM] = (values.start || "00:00").split(":").map(Number);
+      const [endH, endM] = (values.end || "00:00").split(":").map(Number);
+      const start = startH * 60 + startM;
+      let end = endH * 60 + endM;
+      if (end < start) end += 24 * 60;
+      const dailyHours = Math.max(end - start - number(values, "breakMinutes"), 0) / 60;
+      const weeklyHours = dailyHours * number(values, "daysPerWeek");
+      return [
+        { label: "Pro Tag", value: `${dailyHours.toFixed(2)} h` },
+        { label: "Pro Woche", value: `${weeklyHours.toFixed(2)} h` },
+        { label: "Pro Monat", value: `${(weeklyHours * 52 / 12).toFixed(2)} h` },
       ];
     }
     case "work-percentage-ch": {

@@ -1,5 +1,6 @@
 export type CalculatorKind =
   | "work-hours"
+  | "working-time"
   | "work-percentage-ch"
   | "salary-net-ch"
   | "gross-net-ch"
@@ -65,6 +66,17 @@ export type Calculator = {
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
   guideLinks?: { href: string; label: string; description: string }[];
+  id?: string;
+  locale?: "de" | "it" | "en" | "fr";
+  h1?: string;
+  formula?: string;
+  example?: string;
+  relatedCalculators?: string[];
+  monetizationType?: "adsense" | "affiliate" | "lead" | "mixed";
+  schemaType?: "WebApplication" | "SoftwareApplication";
+  isPriority?: boolean;
+  searchIntent?: string;
+  resultLabels?: string[];
 };
 
 export const calculators: Calculator[] = [
