@@ -35,6 +35,11 @@ export type CentralizedCalculator = {
   resultLabels: string[];
   cta: string;
   supportingContent: string[];
+  contentSections: {
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }[];
 };
 
 export function toCalculator(data: CentralizedCalculator): Calculator {

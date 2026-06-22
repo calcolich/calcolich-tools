@@ -77,6 +77,11 @@ export type Calculator = {
   isPriority?: boolean;
   searchIntent?: string;
   resultLabels?: string[];
+  contentSections?: {
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }[];
 };
 
 export const calculators: Calculator[] = [

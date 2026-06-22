@@ -157,10 +157,24 @@ export default function CalculatorPage({
           <article className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="mb-5 text-3xl font-black tracking-tight text-gray-950">{publicCopy(calculator.title)}: {ui.guideSuffix}</h2>
             <div className="space-y-5 text-lg leading-8 text-gray-700">
-              {(calculator.formula && calculator.example ? calculator.article.slice(2) : calculator.article).map((paragraph) => (
+              {(calculator.formula && calculator.example && calculator.contentSections ? [] : calculator.article).map((paragraph) => (
                 <p key={paragraph}>{publicCopy(paragraph)}</p>
               ))}
             </div>
+
+            {calculator.contentSections?.map((section) => (
+              <section key={section.heading} className="mt-8">
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">{section.heading}</h2>
+                <div className="mt-3 space-y-4 text-lg leading-8 text-gray-700">
+                  {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  {section.bullets?.length ? (
+                    <ul className="list-disc space-y-2 pl-6">
+                      {section.bullets.map((item) => <li key={item}>{item}</li>)}
+                    </ul>
+                  ) : null}
+                </div>
+              </section>
+            ))}
 
             {calculator.formula ? (
               <section className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-5">
@@ -173,6 +187,15 @@ export default function CalculatorPage({
               <section className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
                 <h2 className="text-2xl font-black tracking-tight text-gray-950">Praktisches Beispiel</h2>
                 <p className="mt-3 text-lg leading-8 text-gray-700">{calculator.example}</p>
+              </section>
+            ) : null}
+
+            {calculator.contentSections && calculator.article.slice(2).length > 0 ? (
+              <section className="mt-8">
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">Wichtige Hinweise</h2>
+                <div className="mt-3 space-y-4 text-lg leading-8 text-gray-700">
+                  {calculator.article.slice(2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                </div>
               </section>
             ) : null}
 

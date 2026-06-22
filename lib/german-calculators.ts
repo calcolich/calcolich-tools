@@ -27,13 +27,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Stundenrechner",
     shortTitle: "Stundenrechner",
     intro: "Berechne die Zeit zwischen Arbeitsbeginn und Feierabend. Pausen werden automatisch von der Anwesenheitszeit abgezogen.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Stundenrechner eignet sich für Angestellte, Schichtarbeitende, Lernende und Selbstständige, die eine einzelne Arbeitsschicht kontrollieren möchten. Er trennt die gesamte Anwesenheitszeit von der effektiven Arbeitszeit und verhindert typische Fehler beim Umrechnen von Minuten in Dezimalstunden.",
+          "Besonders praktisch ist er für Stundenzettel, Einsatzrapporte, Projektabrechnungen oder den Vergleich mit einer Lohnabrechnung. Auch Schichten über Mitternacht lassen sich berechnen, weil eine frühere Endzeit automatisch dem folgenden Kalendertag zugeordnet wird.",
+        ],
+        bullets: [
+          "Arbeitsbeginn, Arbeitsende und unbezahlte Pausen kontrollieren",
+          "Nettozeit als Stunden und Minuten sowie als Dezimalwert erhalten",
+          "Nacht- oder Spätschichten ohne manuelle Tageswechsel berechnen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Die Anwesenheitszeit ist die Zeitspanne zwischen Beginn und Ende. Davon wird die eingegebene Pause abgezogen; erst das Ergebnis ist die Nettoarbeitszeit. Eine Pause zählt nur dann als Arbeitszeit, wenn die beschäftigte Person den Arbeitsplatz nicht verlassen darf. Vertrag, Personalreglement oder Gesamtarbeitsvertrag können zusätzliche Regeln enthalten.",
+          "Nach Artikel 15 des Schweizer Arbeitsgesetzes gelten Mindestpausen: 15 Minuten bei mehr als 5,5 Stunden täglicher Arbeitszeit, 30 Minuten bei mehr als 7 Stunden und 60 Minuten bei mehr als 9 Stunden. Die Pause soll ungefähr in der Mitte der Arbeitszeit liegen. Der Rechner prüft die Dauer mathematisch, ersetzt aber keine arbeitsrechtliche Beurteilung.",
+        ],
+      },
+    ],
     formula: "Die Nettoarbeitszeit ergibt sich aus Endzeit minus Startzeit minus Pause. Endet eine Schicht nach Mitternacht, wird der Tageswechsel automatisch berücksichtigt.",
-    example: "Beispiel: Von 08:00 bis 17:30 liegen 9 Stunden 30 Minuten. Nach Abzug einer Pause von 60 Minuten bleiben 8 Stunden 30 Minuten Nettoarbeitszeit.",
-    supportingContent: ["Der Rechner eignet sich für einzelne Arbeitstage, Schichten und die schnelle Kontrolle eines Stundenzettels. Vertragliche Rundungsregeln werden nicht berücksichtigt."],
+    example: "Beispiel: Ein Turnus von 08:00 bis 17:00 umfasst 9 Stunden Anwesenheit. Nach Abzug einer einstündigen Mittagspause bleiben 8 Stunden effektive Arbeitszeit beziehungsweise 8,00 Dezimalstunden.",
+    supportingContent: [
+      "Rundungen auf fünf, zehn oder fünfzehn Minuten sind betriebliche Regeln und werden nicht automatisch angewendet. Vergleiche das Ergebnis deshalb mit Arbeitsvertrag, Zeiterfassung und Personalreglement.",
+      "Kontrolliere bei Abweichungen zuerst, ob bezahlte Kurzpausen, Umkleidezeit, Bereitschaft oder Wegzeiten im Betrieb als Arbeitszeit gelten. Solche Zeiten lassen sich nicht allgemein aus Start und Ende ableiten. Notiere ausserdem, ob eine Pause tatsächlich bezogen werden konnte. Wenn der Arbeitsplatz während der Pause nicht verlassen werden darf, kann sie nach Arbeitsgesetz als Arbeitszeit gelten. Für Lohnforderungen oder Streitfälle sind vollständige Aufzeichnungen mit Datum und Schicht wichtiger als eine einzelne Schätzung.",
+    ],
     faqs: [
       { question: "Kann der Stundenrechner Pausen abziehen?", answer: "Ja. Trage die gesamte unbezahlte Pause in Minuten ein; sie wird von der Zeitspanne abgezogen." },
       { question: "Funktioniert der Rechner über Mitternacht?", answer: "Ja. Liegt die Endzeit vor der Startzeit, behandelt der Rechner das Ende als Zeitpunkt am Folgetag." },
       { question: "Sind Dezimalstunden und Stunden:Minuten gleich?", answer: "Sie beschreiben dieselbe Dauer. 8 Stunden 30 Minuten entsprechen 8,5 Dezimalstunden." },
+      { question: "Was ist der Unterschied zwischen Anwesenheitszeit und Arbeitszeit?", answer: "Die Anwesenheitszeit umfasst den gesamten Zeitraum im Betrieb. Die Arbeitszeit entsteht nach Abzug nicht bezahlter Pausen." },
     ],
     relatedCalculators: ["arbeitszeitrechner", "lohnrechner-schweiz", "ferienrechner-schweiz"],
     monetizationType: "mixed",
@@ -59,13 +84,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Arbeitszeitrechner",
     shortTitle: "Arbeitszeit",
     intro: "Ermittle deine Nettoarbeitszeit pro Tag und rechne sie auf Woche und durchschnittlichen Monat hoch.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Dieser Arbeitszeitrechner hilft bei regelmässigen Wochenplänen, Teilzeitmodellen und flexiblen Arbeitszeiten. Aus einer typischen Tagesdauer und der Anzahl Arbeitstage entstehen vergleichbare Werte für Woche und durchschnittlichen Monat.",
+          "Er ist nützlich, wenn du dein vertragliches Pensum mit tatsächlich geplanten Stunden vergleichen, ein Gleitzeitmodell vorbereiten oder den ungefähren monatlichen Zeitaufwand einschätzen möchtest. Für wechselnde Tagespläne solltest du zunächst jeden Tag separat berechnen und danach die Tageswerte addieren.",
+        ],
+        bullets: [
+          "Wochenstunden aus täglicher Nettozeit und Arbeitstagen ermitteln",
+          "Teilzeit- und Gleitzeitmodelle miteinander vergleichen",
+          "Monatsstunden als neutralen Durchschnitt für Planung und Budget nutzen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Zuerst wird für einen Arbeitstag die Zeit zwischen Beginn und Ende berechnet. Die unbezahlte Pause wird abgezogen. Anschliessend wird die Nettozeit mit den Arbeitstagen pro Woche multipliziert. Für den Monatsdurchschnitt verwendet der Rechner 52 Wochen geteilt durch 12 Monate; deshalb ist dieser Wert nicht identisch mit jedem einzelnen Kalendermonat.",
+          "Auch bei Gleitzeit gelten die gesetzlichen Mindestpausen: 15 Minuten ab mehr als 5,5 Stunden, 30 Minuten ab mehr als 7 Stunden und 60 Minuten ab mehr als 9 Stunden. Überstunden entstehen erst, wenn die vertraglich oder betrieblich festgelegte Sollzeit überschritten wird. Ein positiver Gleitzeitsaldo ist daher nicht automatisch rechtliche Überzeit.",
+        ],
+      },
+    ],
     formula: "Zuerst wird die tägliche Nettozeit aus Arbeitsende minus Arbeitsbeginn minus Pause berechnet. Die Wochenzeit entspricht der Tageszeit mal Arbeitstage; für den Monatswert wird mit 52/12 Wochen gerechnet.",
-    example: "Beispiel: 8 Stunden 24 Minuten netto an fünf Tagen ergeben 42 Wochenstunden und durchschnittlich rund 182 Monatsstunden.",
-    supportingContent: ["Der Monatswert ist ein rechnerischer Durchschnitt. Feiertage, Ferien, Krankheit und abweichende Schichten verändern die tatsächlich geleisteten Stunden."],
+    example: "Beispiel: Wer an fünf Tagen jeweils 8 Stunden netto arbeitet, erreicht 40 Wochenstunden. Der rechnerische Monatsdurchschnitt beträgt 40 × 52 ÷ 12 = 173,33 Stunden.",
+    supportingContent: [
+      "Feiertage, Ferien, Krankheit, unbezahlter Urlaub und wechselnde Schichten verändern die tatsächlich geleistete Monatszeit. Für einen verbindlichen Saldo ist die betriebliche Zeiterfassung massgebend.",
+      "Ein Monatsdurchschnitt eignet sich vor allem für Planung und Vergleiche, nicht für die Kontrolle eines bestimmten Monats. Wer flexible Anfangs- und Endzeiten hat, sollte jede Tageszeit erfassen und Soll-, Ist- sowie Pausenzeit getrennt führen. Erst danach lässt sich ein Gleitzeit- oder Überstundensaldo zuverlässig bilden. Beachte auch, dass vertragliche Überstunden und gesetzliche Überzeit unterschiedliche Begriffe sind. Für Zuschläge, Kompensation und Höchstgrenzen gelten Vertrag, Gesamtarbeitsvertrag und Arbeitsgesetz.",
+    ],
     faqs: [
       { question: "Wie werden Monatsstunden berechnet?", answer: "Die Wochenstunden werden mit 52 multipliziert und durch 12 geteilt. Dadurch entsteht ein durchschnittlicher Monatswert." },
       { question: "Zählt die Pause zur Arbeitszeit?", answer: "Nur bezahlte Pausen zählen üblicherweise als Arbeitszeit. Hier wird die eingegebene Pause vollständig abgezogen." },
       { question: "Kann ich Teilzeit berechnen?", answer: "Ja. Wähle einfach die tatsächliche Anzahl Arbeitstage und deine täglichen Zeiten." },
+      { question: "Wie werden Überstunden behandelt?", answer: "Der Rechner zeigt Zeitmengen, kennt aber deine vertragliche Sollzeit nicht. Überstunden musst du durch Vergleich mit Vertrag oder Zeitsaldo bestimmen." },
     ],
     relatedCalculators: ["stundenrechner", "lohnrechner-schweiz", "ferienrechner-schweiz"],
     monetizationType: "lead",
@@ -92,13 +142,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Lohnrechner Schweiz",
     shortTitle: "Lohnrechner Schweiz",
     intro: "Schätze deinen monatlichen Nettolohn aus dem Bruttolohn und individuell einstellbaren Abzügen.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Lohnrechner unterstützt dich beim Vergleich von Stellenangeboten, Teilzeitvarianten und Lohnabrechnungen in der Schweiz. Du kannst die wichtigsten Abzüge einzeln anpassen und siehst sofort, wie stark sie den verfügbaren Monatslohn beeinflussen.",
+          "Zusätzlich lässt sich ein Monatslohn in einen rechnerischen Stundenlohn umwandeln. Das ist hilfreich, wenn eine Festanstellung mit einem Stundenlohnangebot verglichen wird oder wenn eine 13. Monatszahlung im Gesamtjahreslohn enthalten ist.",
+        ],
+        bullets: [
+          "Brutto- und Nettolohn eines Angebots plausibilisieren",
+          "Zwölf Monatslöhne mit einem Modell inklusive 13. Monatslohn vergleichen",
+          "Ferienentschädigung bei unregelmässigem Stundenlohn nachvollziehen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Für den Nettolohn addiert der Rechner AHV/IV/EO, ALV, Nichtberufsunfall, Pensionskasse und weitere eingegebene Abzüge. Der Gesamtprozentsatz wird mit dem Bruttolohn multipliziert und vom Brutto abgezogen. Individuelle Pensionskassen- und Versicherungsbeiträge können deutlich abweichen.",
+          "Der rechnerische Stundenlohn ohne 13. Monatslohn lautet Monatslohn × 12 ÷ Jahresarbeitsstunden. Mit 13. Monatslohn wird stattdessen mit 13 multipliziert. Bei unregelmässiger Teilzeitarbeit werden häufig Ferienzuschläge separat ausgewiesen: 8,33 % für vier, 10,64 % für fünf und 13,04 % für sechs Ferienwochen. Sie dürfen nicht bloss pauschal als im Lohn enthalten bezeichnet werden.",
+        ],
+      },
+    ],
     formula: "Alle eingegebenen Abzugssätze werden addiert und auf den Bruttolohn angewendet. Nettolohn = Bruttolohn minus geschätzte Abzüge.",
-    example: "Beispiel: Bei CHF 6'500 Bruttolohn und insgesamt 14,6 Prozent Abzügen werden CHF 949 abgezogen. Der geschätzte Nettolohn beträgt CHF 5'551.",
-    supportingContent: ["Der tatsächliche Nettolohn hängt unter anderem von Alter, Pensionskasse, Unfallversicherung, Kanton und Quellensteuer ab. Nutze Werte aus deiner Lohnabrechnung für eine bessere Schätzung."],
+    example: "Beispiel Stundenlohn: CHF 7'000 Monatslohn bei 42 Wochenstunden entsprechen ohne 13. Monatslohn rund CHF 38.46 pro Stunde. Mit 13 Monatslöhnen beträgt der rechnerische Stundenlohn CHF 7'000 × 13 ÷ (42 × 52) = CHF 41.67.",
+    supportingContent: [
+      "Der tatsächliche Nettolohn hängt unter anderem von Alter, Pensionskasse, Unfallversicherung, Kanton und Quellensteuer ab. Nutze Werte aus deiner Lohnabrechnung für eine bessere Schätzung.",
+      "Vergleiche Stellenangebote möglichst auf Jahresbasis. Kläre, ob der angegebene Lohn zwölf oder dreizehn Mal bezahlt wird, ob Bonus und Zulagen garantiert sind und wie hoch der Arbeitgeberbeitrag an die Pensionskasse ausfällt. Ein höherer Bruttolohn kann durch andere Vorsorge- oder Versicherungsbedingungen relativiert werden. Für den persönlichen Haushaltsplan gehören zudem Krankenkassenprämien und die ordentliche Steuerrechnung dazu, auch wenn diese Positionen nicht direkt vom Monatslohn abgezogen werden. Halte dafür Jahreslohn, Arbeitszeit und Ferienanspruch in derselben Vergleichstabelle fest.",
+    ],
     faqs: [
       { question: "Ist die Quellensteuer enthalten?", answer: "Du kannst sie zusammen mit weiteren individuellen Abzügen im letzten Feld eintragen." },
       { question: "Warum ist der Nettolohn nur eine Schätzung?", answer: "Pensionskasse, Versicherungen und Steuern unterscheiden sich nach Person, Arbeitgeber und Kanton." },
       { question: "Kann ich einen Jahreslohn eingeben?", answer: "Dieser Rechner arbeitet mit Monatslohn. Teile den Jahreslohn je nach Vertrag durch zwölf oder dreizehn Monatslöhne." },
+      { question: "Ist die Ferienentschädigung immer zusätzlich geschuldet?", answer: "Bei Monatslohn werden Ferien normalerweise bezahlt bezogen. Bei unregelmässigem Stundenlohn kann ein separat ausgewiesener Zuschlag zulässig sein." },
     ],
     relatedCalculators: ["brutto-netto-rechner-schweiz", "arbeitszeitrechner", "budget-rechner-schweiz"],
     monetizationType: "mixed",
@@ -127,13 +202,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Brutto-Netto-Rechner Schweiz",
     shortTitle: "Brutto-Netto",
     intro: "Rechne einen Schweizer Bruttolohn in einen geschätzten Nettolohn um oder ermittle den nötigen Bruttolohn für dein Nettoziel.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Brutto-Netto-Rechner ist für eine schnelle Lohnschätzung gedacht, wenn du den ungefähren Gesamtanteil deiner Abzüge kennst. Er eignet sich für Budgetplanung, Lohnverhandlungen und den Vergleich eines gewünschten Nettolohns mit dem dafür nötigen Bruttolohn.",
+          "Für eine erste Simulation genügt ein pauschaler Abzugssatz. Sobald eine konkrete Lohnabrechnung vorliegt, solltest du den dort ausgewiesenen Anteil verwenden oder im detaillierten Lohnrechner einzelne Positionen erfassen.",
+        ],
+        bullets: [
+          "Bruttolohn in einen geschätzten Nettolohn umrechnen",
+          "Erforderliches Brutto für ein persönliches Nettoziel bestimmen",
+          "Auswirkungen eines höheren Pensionskassen- oder Steuerabzugs vergleichen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Arbeitnehmende tragen derzeit 5,3 % für AHV/IV/EO. Für die Arbeitslosenversicherung werden 1,1 % bis zum versicherten Jahreslohn von CHF 148'200 abgezogen. Hinzu kommen je nach Arbeitsverhältnis Nichtberufsunfallversicherung, berufliche Vorsorge und weitere betriebliche Abzüge.",
+          "Krankenkassenprämien werden in der Schweiz normalerweise nicht vom Lohn abgezogen. Einkommenssteuern hängen von Kanton, Gemeinde, Zivilstand, Kindern, Konfession und Einkommen ab; bei quellensteuerpflichtigen Personen erscheinen sie dagegen direkt auf der Abrechnung. Deshalb bleibt eine pauschale Nettozahl immer eine Annäherung.",
+        ],
+      },
+    ],
     formula: "Bei Brutto zu Netto wird der Abzugssatz vom Bruttolohn abgezogen. Bei Netto zu Brutto wird der Nettobetrag durch 1 minus Abzugssatz geteilt.",
-    example: "Beispiel: CHF 7'000 brutto bei 15 Prozent Abzügen ergeben CHF 5'950 netto. Für CHF 6'000 netto wären bei gleichem Satz rund CHF 7'058.82 brutto nötig.",
-    supportingContent: ["Der pauschale Abzugssatz vereinfacht die Rechnung. Für eine detailliertere Schätzung kannst du den Schweizer Lohnrechner mit einzelnen Abzugspositionen verwenden."],
+    example: "Beispiel: Bei CHF 6'000 Bruttolohn und angenommenen Gesamtabzügen von 14,6 % entstehen CHF 876 Abzüge. Der geschätzte Nettolohn beträgt CHF 5'124. Persönliche Steuern und Krankenkasse müssen separat budgetiert werden, sofern sie nicht bereits im Abzugssatz enthalten sind.",
+    supportingContent: [
+      "Der pauschale Abzugssatz vereinfacht die Rechnung. Für eine detailliertere Schätzung kannst du den Schweizer Lohnrechner mit einzelnen Abzugspositionen verwenden.",
+      "Für einen realistischen Vergleich sollten wiederkehrende und einmalige Zahlungen getrennt betrachtet werden. Spesenersatz ist nicht dasselbe wie Lohn, ein Bonus kann freiwillig sein und ein 13. Monatslohn wird häufig anteilig ausbezahlt. Prüfe ausserdem, ob der Nettobetrag vor oder nach Quellensteuer gemeint ist. Bei ordentlicher Besteuerung bleibt die Steuerrechnung ausserhalb der Lohnabrechnung und muss im Budget zusätzlich reserviert werden. Der Rechner liefert deshalb keine verbindliche Auszahlungsabrechnung.",
+    ],
     faqs: [
       { question: "Welchen Abzugssatz soll ich verwenden?", answer: "Am besten übernimmst du den Gesamtanteil aus einer aktuellen Lohnabrechnung. Ohne Referenz ist der Wert nur eine Annahme." },
       { question: "Sind Steuern im Ergebnis enthalten?", answer: "Nur wenn du sie in den pauschalen Abzugssatz einrechnest. Ordentlich veranlagte Einkommenssteuern stehen meist nicht auf der Lohnabrechnung." },
       { question: "Funktioniert die Rückrechnung von Netto zu Brutto?", answer: "Ja. Wähle den entsprechenden Modus und gib Nettobetrag sowie geschätzten Abzugssatz ein." },
+      { question: "Wie beeinflussen Kinder und Zivilstand das Netto?", answer: "Sie verändern vor allem die Steuerbelastung. Bei Quellensteuer wirken sie direkt im Tarif, bei ordentlicher Veranlagung später in der Steuerrechnung." },
     ],
     relatedCalculators: ["lohnrechner-schweiz", "stundenrechner", "budget-rechner-schweiz"],
     monetizationType: "mixed",
@@ -159,13 +259,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Mehrwertsteuer-Rechner Schweiz",
     shortTitle: "MWST-Rechner",
     intro: "Berechne Nettobetrag, Mehrwertsteuer und Bruttobetrag für Schweizer Rechnungen und Preise.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Mehrwertsteuer-Rechner hilft Selbstständigen, Unternehmen und Kundinnen, Netto-, Steuer- und Bruttopreise auseinanderzuhalten. Er eignet sich für Offerten, Rechnungen, Preislisten, Buchhaltungskontrollen und die Prüfung eines bereits inklusive MWST angegebenen Betrags.",
+          "Vor jeder Berechnung muss der richtige Satz gewählt werden. Entscheidend ist die Art der Leistung, nicht die Branche allein. Bei gemischten Leistungen oder grenzüberschreitenden Sachverhalten kann eine fachliche Abklärung nötig sein.",
+        ],
+        bullets: [
+          "MWST auf einen Nettopreis aufschlagen",
+          "Steuer und Nettowert aus einem Bruttopreis herausrechnen",
+          "Normalsatz, reduzierten Satz und Beherbergungssatz vergleichen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "In der Schweiz gelten aktuell 8,1 % als Normalsatz für steuerbare Leistungen ohne Sonderregel, 2,6 % als reduzierter Satz unter anderem für viele Lebensmittel, Medikamente und Bücher sowie 3,8 % als Sondersatz für Beherbergungsleistungen. Restaurantleistungen fallen grundsätzlich nicht einfach unter den reduzierten Lebensmittelsatz.",
+          "Beim Aufschlagen wird der Nettobetrag mit dem Satz multipliziert und die Steuer addiert. Beim Herausrechnen darf der Bruttopreis nicht bloss mit 8,1 % multipliziert werden: Der Nettobetrag entsteht durch Division durch 1,081. Vorsteuerabzug ist nur möglich, wenn die gesetzlichen Voraussetzungen erfüllt sind und ein korrektes Belegdokument vorliegt.",
+        ],
+      },
+    ],
     formula: "Beim Aufschlagen gilt: MWST = Nettobetrag × Steuersatz. Beim Herausrechnen gilt: Nettobetrag = Bruttobetrag ÷ (1 + Steuersatz).",
-    example: "Beispiel: CHF 1'000 netto zu 8,1 Prozent ergeben CHF 81 MWST und CHF 1'081 brutto. Aus CHF 1'081 brutto werden wieder CHF 1'000 netto herausgerechnet.",
-    supportingContent: ["Prüfe vor der Rechnung, welcher Steuersatz für deine Leistung gilt. Der Rechner erstellt keine steuerliche Beurteilung und ersetzt keine Buchhaltungssoftware."],
+    example: "Beispiel: Ein Bruttopreis von CHF 108.10 zum Normalsatz von 8,1 % wird durch 1,081 geteilt. Das ergibt CHF 100.00 netto und CHF 8.10 Mehrwertsteuer.",
+    supportingContent: [
+      "Prüfe vor der Rechnung, welcher Steuersatz für deine Leistung gilt. Der Rechner erstellt keine steuerliche Beurteilung und ersetzt keine Buchhaltungssoftware.",
+      "Rundungsdifferenzen von wenigen Rappen können entstehen, je nachdem ob die Steuer pro Position oder auf dem Rechnungstotal berechnet wird. Bewahre bei geschäftlichen Vorgängen Rechnung, Leistungsdatum und angewendeten Satz nachvollziehbar auf. Für Auslandsgeschäfte, Plattformverkäufe, Bezugssteuer oder Einfuhrsteuer gelten zusätzliche Regeln. Auch die Berechtigung zum Vorsteuerabzug hängt von der unternehmerischen Verwendung und einem ordnungsgemässen Beleg ab; der ausgewiesene Steuerbetrag allein genügt nicht immer. Bei Unsicherheit helfen die aktuellen MWST-Infos der Eidgenössischen Steuerverwaltung oder eine Fachperson, bevor eine Rechnung definitiv versendet wird. So vermeidest du spätere Korrekturen.",
+    ],
     faqs: [
       { question: "Kann ich die MWST aus einem Bruttobetrag herausrechnen?", answer: "Ja. Wähle den Modus 'MWST herausrechnen' und gib den Gesamtbetrag ein." },
       { question: "Kann ich einen reduzierten Satz verwenden?", answer: "Ja. Der Prozentsatz ist frei editierbar, damit du den für deine Leistung geltenden Satz eintragen kannst." },
       { question: "Warum ist Herausrechnen nicht einfach Betrag mal Prozentsatz?", answer: "Weil der Bruttobetrag die Steuer bereits enthält. Deshalb wird durch 1 plus Steuersatz geteilt." },
+      { question: "Gelten bei Importen dieselben Regeln?", answer: "Bei Einfuhren kann Einfuhrsteuer anfallen; Bemessungsgrundlage und Verfahren unterscheiden sich von einer normalen Inlandrechnung." },
     ],
     relatedCalculators: ["prozentrechner", "zinsrechner", "budget-rechner-schweiz"],
     monetizationType: "affiliate",
@@ -191,13 +316,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Prozentrechner",
     shortTitle: "Prozentrechner",
     intro: "Finde heraus, wie viel ein bestimmter Prozentsatz von einem Wert ausmacht.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Prozentrechner beantwortet alltägliche Fragen zu Rabatten, Preisaufschlägen, Gebühren, Provisionen, Budgetanteilen und Veränderungen. Er eignet sich für private Einkäufe ebenso wie für Offerten, Kalkulationen oder die Kontrolle einer Rechnung.",
+          "Du kannst damit einen Prozentwert bestimmen und das Ergebnis anschliessend für einen neuen Preis verwenden. Für komplexere Veränderungen ist wichtig, zwischen Prozentpunkten und Prozent sowie zwischen einer einmaligen und einer mehrfachen Veränderung zu unterscheiden.",
+        ],
+        bullets: [
+          "Rabatt oder Mehrwertsteuer eines Betrags berechnen",
+          "Anteil einer Ausgabe am gesamten Budget bestimmen",
+          "Erhöhung und Senkung eines Ausgangswerts nachvollziehen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Prozentwert entsteht aus Grundwert × Prozentsatz ÷ 100. Wenn der Prozentsatz aus Teil und Ganzem gesucht ist, lautet die Formel Teil ÷ Ganzes × 100. Ein neuer Wert nach einer Erhöhung wird mit 1 + Prozentsatz/100 multipliziert; bei einer Senkung wird der Prozentsatz abgezogen.",
+          "Aufeinanderfolgende Prozentänderungen werden nicht einfach addiert. Steigt ein Wert zuerst um 10 % und sinkt danach um 10 %, liegt er unter dem Ausgangswert, weil die zweite Änderung auf einer anderen Basis berechnet wird. Ebenso erfordert die Rückkehr nach einem Verlust von 20 % eine Erhöhung um 25 %.",
+        ],
+      },
+    ],
     formula: "Prozentwert = Grundwert × Prozentsatz ÷ 100. Der Grundwert entspricht dabei immer 100 Prozent.",
-    example: "Beispiel: 18 Prozent von CHF 2'500 sind CHF 450, denn 2'500 × 18 ÷ 100 = 450.",
-    supportingContent: ["Der Rechner eignet sich für Rabatte, Budgetanteile, Gebühren, Provisionen und viele alltägliche Prozentfragen."],
+    example: "Beispiel: Bei einem Preis von CHF 120 und 15 % Rabatt beträgt der Nachlass CHF 18. Der neue Preis ist CHF 120 × (1 - 0,15) = CHF 102.",
+    supportingContent: [
+      "Achte bei Vergleichen darauf, dass beide Prozentangaben dieselbe Bezugsgrösse verwenden. Prozentpunkte beschreiben die Differenz zweier Prozentsätze, nicht die relative Veränderung.",
+      "Bei Preisvergleichen lohnt es sich, zuerst den absoluten Betrag und danach die Prozentangabe zu prüfen. Ein Rabatt von 20 % auf einen bereits reduzierten Preis ist nicht dasselbe wie 40 % auf den ursprünglichen Preis. Auch bei Statistiken kann die Wahl des Ausgangswerts das Ergebnis stark verändern. Dokumentiere deshalb Grundwert, Teilwert und Rechenschritt. So bleibt nachvollziehbar, ob du einen Anteil, eine Veränderungsrate oder den neuen Endwert berechnet hast. Runde Geldbeträge erst am Ende der Rechnung auf Rappen. Das reduziert unnötige Rundungsfehler.",
+    ],
     faqs: [
       { question: "Wie berechnet man einen Prozentsatz von einem Betrag?", answer: "Multipliziere den Betrag mit dem Prozentsatz und teile das Ergebnis durch 100." },
       { question: "Was ist der Grundwert?", answer: "Der Grundwert ist der vollständige Ausgangswert und entspricht 100 Prozent." },
       { question: "Kann ich Dezimalwerte eingeben?", answer: "Ja. Sowohl Grundwert als auch Prozentsatz dürfen Dezimalstellen enthalten." },
+      { question: "Warum heben sich plus 10 % und minus 10 % nicht auf?", answer: "Die zweite Änderung wird auf dem bereits veränderten Wert berechnet. Dadurch bleibt am Ende ein Minus von 1 %." },
     ],
     relatedCalculators: ["mehrwertsteuer-rechner-schweiz", "zinsrechner", "kreditrechner"],
     monetizationType: "adsense",
@@ -222,13 +372,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Zinsrechner",
     shortTitle: "Zinsrechner",
     intro: "Berechne, wie sich Startkapital und monatliche Einzahlungen bei einem konstanten Jahreszins entwickeln können.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Zinsrechner dient zur Planung von Sparkapital, Rücklagen und langfristigen Sparplänen. Er zeigt, welchen Anteil eigene Einzahlungen und welchen Anteil rechnerische Zinsen am Endkapital haben können.",
+          "Das Werkzeug ist besonders nützlich, um Laufzeiten, Monatsraten und angenommene Zinssätze zu vergleichen. Es ist keine Anlageprognose: Renditen können schwanken, und ein höherer erwarteter Ertrag ist häufig mit einem höheren Risiko verbunden.",
+        ],
+        bullets: [
+          "Einmalanlage und monatlichen Sparplan gemeinsam simulieren",
+          "Wirkung einer längeren Laufzeit auf den Zinseszins vergleichen",
+          "Unterschied zwischen Einzahlungen und rechnerischem Ertrag sehen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Beim einfachen Zins wird der Ertrag nur auf das Anfangskapital berechnet. Beim Zinseszins werden bereits gutgeschriebene Zinsen erneut verzinst. Für eine jährliche Verzinsung ohne weitere Einzahlungen gilt Kₙ = K₀ × (1 + p/100)ⁿ, wobei K₀ das Startkapital, p der Jahreszins und n die Anzahl Jahre ist.",
+          "Dieser Rechner verwendet monatliche Perioden und fügt die Sparrate nach jeder Verzinsung hinzu. Eine jährliche statt monatliche Gutschrift führt bei gleichem Nominalzins zu einem leicht anderen Ergebnis. Bankgebühren, Wertschwankungen, Inflation und Schweizer Steuern auf Zinserträge sind in der Simulation nicht enthalten.",
+        ],
+      },
+    ],
     formula: "Der Rechner verzinst das vorhandene Kapital monatlich und addiert danach die Monatsrate. Der jährliche Zinssatz wird dafür durch zwölf geteilt.",
-    example: "Beispiel: CHF 10'000 Startkapital plus CHF 300 monatlich wachsen bei 3 Prozent über zehn Jahre auf einen höheren Endwert als die Summe aller Einzahlungen, weil Erträge wieder mitverzinst werden.",
-    supportingContent: ["Die Rechnung ist eine Modellannahme mit konstantem Zinssatz. Gebühren, Steuern, Kursschwankungen und wechselnde Renditen sind nicht enthalten."],
+    example: "Beispiel ohne Sparrate: CHF 10'000 zu 2 % pro Jahr wachsen bei jährlicher Verzinsung während fünf Jahren auf CHF 10'000 × 1,02⁵ = rund CHF 11'040.81. Davon sind etwa CHF 1'040.81 Zinseszins-Ertrag.",
+    supportingContent: [
+      "Die Rechnung ist eine Modellannahme mit konstantem Zinssatz. Gebühren, Steuern, Kursschwankungen und wechselnde Renditen sind nicht enthalten.",
+      "Nutze für vorsichtige Planung mehrere Szenarien, zum Beispiel einen tiefen, mittleren und höheren Zinssatz. Vergleiche nicht nur den Endbetrag, sondern auch die Kaufkraft nach Inflation und die Verfügbarkeit des Geldes. Bei Wertschriften ist ein gleichmässiger Jahreszins eine Vereinfachung, weil positive und negative Jahre auftreten können. Zinserträge und Vermögen können steuerlich relevant sein. Für Anlageentscheidungen sind Risikotoleranz, Zeithorizont, Diversifikation und Kosten ebenso wichtig wie die mathematische Rendite. Prüfe zusätzlich, ob Einzahlungen am Monatsanfang oder Monatsende erfolgen, denn auch dieser Zeitpunkt verändert das Ergebnis leicht. Wiederhole den Vergleich regelmässig.",
+    ],
     faqs: [
       { question: "Was bedeutet Zinseszins?", answer: "Erträge werden dem Kapital zugerechnet und in den folgenden Perioden ebenfalls verzinst." },
       { question: "Sind Gebühren und Steuern enthalten?", answer: "Nein. Der Rechner zeigt eine vereinfachte Bruttoentwicklung ohne Kosten und Steuern." },
       { question: "Ist der angezeigte Endwert garantiert?", answer: "Nein. Er ist eine mathematische Simulation mit konstantem Zinssatz, keine Renditegarantie." },
+      { question: "Müssen Zinserträge versteuert werden?", answer: "Zinserträge gehören in der Schweiz grundsätzlich zum steuerbaren Einkommen. Die konkrete Belastung hängt von der persönlichen Situation ab." },
     ],
     relatedCalculators: ["kreditrechner", "prozentrechner", "budget-rechner-schweiz"],
     monetizationType: "affiliate",
@@ -255,13 +430,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Kreditrechner",
     shortTitle: "Kreditrechner",
     intro: "Berechne die konstante Monatsrate eines Kredits und vergleiche Gesamtzahlung und Zinskosten.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Kreditrechner hilft vor einer Finanzierung zu prüfen, ob eine Monatsrate ins Budget passt. Er zeigt nicht nur die Rate, sondern auch die Summe aller Zahlungen und damit die rechnerischen Zinskosten über die gesamte Laufzeit.",
+          "Nutze ihn, um verschiedene Laufzeiten oder Zinssätze zu vergleichen. Eine tiefere Rate wirkt bequem, kann aber durch eine längere Laufzeit zu höheren Gesamtkosten führen. Für einen Angebotsvergleich ist der effektive Jahreszins wichtiger als ein isolierter Werbezins.",
+        ],
+        bullets: [
+          "Monatsrate für Konsumkredit oder andere Ratenfinanzierung schätzen",
+          "Kurze und lange Laufzeiten gegenüberstellen",
+          "Gesamtkosten vor Vertragsabschluss sichtbar machen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Für eine konstante Annuität gilt R = S₀ × ((1+i)ⁿ × i) ÷ ((1+i)ⁿ - 1). R ist die Monatsrate, S₀ die anfängliche Kreditsumme, i der monatliche Zinssatz und n die Zahl der Monatsraten. Der monatliche Satz entsteht aus dem Jahreszins geteilt durch zwölf.",
+          "Jede Rate enthält Zins und Tilgung. Zu Beginn ist der Zinsanteil höher, später nimmt der Tilgungsanteil zu. Bearbeitungsgebühren, Restschuldversicherungen, Verzugszinsen oder Kosten für eine vorzeitige Ablösung sind nicht automatisch enthalten und müssen anhand des konkreten Vertrags geprüft werden.",
+        ],
+      },
+    ],
     formula: "Bei einem Annuitätendarlehen wird die Monatsrate aus Kreditsumme, monatlichem Zinssatz und Anzahl Raten berechnet. Bei null Prozent wird die Summe gleichmässig aufgeteilt.",
-    example: "Beispiel: Ein Kredit über CHF 25'000 mit 5,9 Prozent Jahreszins und 48 Monaten erzeugt eine feste Monatsrate; die Differenz zwischen allen Raten und CHF 25'000 sind die Zinskosten.",
-    supportingContent: ["Anbieter können zusätzlich Gebühren, Versicherungen oder abweichende Berechnungsmethoden verwenden. Vergleiche deshalb immer den effektiven Jahreszins und das verbindliche Angebot."],
+    example: "Beispiel: Ein Kredit von CHF 30'000 zu 4 % Jahreszins über 60 Monate ergibt mit der Annuitätenformel eine Rate von rund CHF 552.50. Insgesamt werden ungefähr CHF 33'150 bezahlt; rund CHF 3'150 davon sind Zinsen.",
+    supportingContent: [
+      "Anbieter können zusätzlich Gebühren, Versicherungen oder abweichende Berechnungsmethoden verwenden. Vergleiche deshalb immer den effektiven Jahreszins und das verbindliche Angebot.",
+      "Prüfe vor Vertragsabschluss, ob die Rate auch bei unerwarteten Ausgaben tragbar bleibt. Eine Reserve verhindert, dass kleine Störungen sofort zu Zahlungsverzug führen. Vergleiche Angebote mit identischer Kreditsumme und Laufzeit und lies die Bedingungen für Sondertilgung oder vorzeitige Rückzahlung. Ein tiefer Monatsbetrag ist kein ausreichendes Qualitätsmerkmal. Entscheidend sind Gesamtzahlung, effektiver Jahreszins, Gebühren und Flexibilität. Der Rechner ersetzt weder die Kreditfähigkeitsprüfung noch das verbindliche Angebot eines Finanzinstituts. Plane die Rate stets zusammen mit deinen übrigen Fixkosten.",
+    ],
     faqs: [
       { question: "Was zeigt die Monatsrate?", answer: "Sie zeigt die rechnerisch konstante Rate aus Tilgung und Zins für die gewählte Laufzeit." },
       { question: "Was passiert bei längerer Laufzeit?", answer: "Die Monatsrate sinkt meist, während die gesamten Zinskosten in der Regel steigen." },
       { question: "Sind Kreditgebühren enthalten?", answer: "Nein. Der Rechner berücksichtigt nur Kreditsumme, Laufzeit und eingegebenen Zinssatz." },
+      { question: "Was ist der Unterschied zwischen festem und variablem Zins?", answer: "Ein fester Satz bleibt für die vereinbarte Periode konstant. Ein variabler Satz kann sich ändern und damit auch Rate oder Laufzeit beeinflussen." },
     ],
     relatedCalculators: ["zinsrechner", "prozentrechner", "budget-rechner-schweiz"],
     monetizationType: "affiliate",
@@ -287,13 +487,38 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Budget-Rechner Schweiz",
     shortTitle: "Budget-Rechner",
     intro: "Stelle dein monatliches Einkommen den wichtigsten Fixkosten gegenüber und ermittle freien Betrag und Sparquote.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Budget-Rechner schafft einen schnellen Überblick über Einkommen, Fixkosten und frei verfügbaren Betrag. Er eignet sich für den ersten eigenen Haushalt, einen Umzug, eine Lohnveränderung oder die Vorbereitung eines Spar- und Schuldenplans.",
+          "Ein Budget ist besonders aussagekräftig, wenn auch unregelmässige Ausgaben berücksichtigt werden. Jahresprämien, Steuern, Reparaturen und Ferien sollten auf einen Monatswert umgerechnet werden, damit der scheinbar freie Betrag nicht zu hoch ausfällt.",
+        ],
+        bullets: [
+          "Miete, Nebenkosten, Strom und Telekommunikation erfassen",
+          "Lebensmittel, Versicherungen, Auto oder öffentlichen Verkehr einplanen",
+          "Freizeit, Rücklagen, Steuern und Schuldenraten berücksichtigen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner addiert Wohnen, Krankenkasse und weitere Ausgaben und zieht sie vom Nettoeinkommen ab. Der verbleibende Betrag wird als rechnerische Sparquote ins Verhältnis zum Einkommen gesetzt. Ein negativer Saldo zeigt, dass die eingegebenen Ausgaben das verfügbare Einkommen übersteigen.",
+          "Als Orientierung teilt die 50-30-20-Regel das Netto in 50 % notwendige Ausgaben, 30 % Wünsche und 20 % Sparen oder Schuldentilgung. Häufig wird zudem empfohlen, die Wohnkosten ungefähr unter einem Drittel des Nettoeinkommens zu halten. Beides sind Richtwerte: In Regionen mit hohen Mieten, bei Familien oder tiefem Einkommen muss die Aufteilung realistisch angepasst werden.",
+        ],
+      },
+    ],
     formula: "Gesamtausgaben = Wohnen + Krankenkasse + weitere Ausgaben. Der Saldo ist Einkommen minus Gesamtausgaben; die Sparquote entspricht Saldo geteilt durch Einkommen mal 100.",
-    example: "Beispiel: Bei CHF 5'500 Einkommen und CHF 4'200 Gesamtausgaben bleiben CHF 1'300. Das entspricht einer rechnerischen Sparquote von rund 23,64 Prozent.",
-    supportingContent: ["Nutze bei den weiteren Ausgaben möglichst einen realistischen Monatsdurchschnitt für Lebensmittel, Mobilität, Versicherungen, Freizeit und unregelmässige Jahresrechnungen."],
+    example: "Beispiel nach 50-30-20: Bei CHF 5'000 netto entfallen als Orientierung CHF 2'500 auf notwendige Ausgaben, CHF 1'500 auf Wünsche und CHF 1'000 auf Sparen oder zusätzliche Schuldentilgung.",
+    supportingContent: [
+      "Nutze bei den weiteren Ausgaben möglichst einen realistischen Monatsdurchschnitt für Lebensmittel, Mobilität, Versicherungen, Freizeit und unregelmässige Jahresrechnungen.",
+      "Ein brauchbares Budget wird regelmässig mit den tatsächlichen Kontobewegungen verglichen. Plane neben Fixkosten auch Rückstellungen für Franchise und Selbstbehalt, Fahrzeugservice, Zahnarzt, Geschenke oder Ersatzanschaffungen ein. Eine Notfallreserve sollte getrennt vom Ferien- oder Konsumbudget geführt werden. Wenn der Saldo negativ bleibt, priorisiere zuerst Wohnen, Gesundheit, Lebensmittel und vertragliche Verpflichtungen. Danach können variable Wünsche reduziert oder Zahlungspläne frühzeitig mit Gläubigern besprochen werden. Aktualisiere die Zahlen mindestens bei jeder grösseren Vertrags- oder Lohnänderung.",
+    ],
     faqs: [
       { question: "Welche Ausgaben gehören ins Monatsbudget?", answer: "Neben Wohnen und Krankenkasse gehören auch Lebensmittel, Mobilität, Versicherungen, Steuern, Freizeit und Rückstellungen dazu." },
       { question: "Was bedeutet eine negative Sparquote?", answer: "Dann liegen die eingegebenen Ausgaben über dem Einkommen. Das Budget weist ein monatliches Defizit aus." },
       { question: "Wie berücksichtige ich Jahresrechnungen?", answer: "Teile erwartete Jahreskosten durch zwölf und addiere den Betrag zu den weiteren monatlichen Ausgaben." },
+      { question: "Wie passe ich 50-30-20 bei Schulden an?", answer: "Reduziere zuerst den Anteil für Wünsche und verwende einen grösseren Teil für Mindestzahlungen, Tilgung und eine kleine Notfallreserve." },
     ],
     relatedCalculators: ["lohnrechner-schweiz", "kreditrechner", "zinsrechner"],
     monetizationType: "lead",
@@ -320,13 +545,39 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     h1: "Ferienrechner Schweiz",
     shortTitle: "Ferienrechner",
     intro: "Berechne deinen jährlichen Ferienanspruch und den anteiligen Anspruch für eine bestimmte Anzahl Beschäftigungsmonate.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Ferienrechner hilft beim Eintritt oder Austritt während des Jahres, bei Teilzeit und beim Vergleich des eigenen Saldos mit der Personalabrechnung. Er wandelt Ferienwochen in Arbeitstage um und berechnet einen zeitanteiligen Anspruch für die eingegebenen Beschäftigungsmonate.",
+          "Entscheidend sind die vertraglichen Arbeitstage, nicht einfach der Beschäftigungsgrad in Prozent. Wer 60 % an drei vollen Tagen arbeitet, erhält bei fünf Ferienwochen 15 Ferientage; damit können ebenfalls fünf vollständige Arbeitswochen frei genommen werden.",
+        ],
+        bullets: [
+          "Jahresanspruch aus Arbeitstagen und Ferienwochen bestimmen",
+          "Anteiliges Guthaben bei Eintritt oder Austritt berechnen",
+          "Teilzeitmodelle mit unterschiedlich verteilten Arbeitstagen vergleichen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Nach Artikel 329a OR beträgt der Mindestanspruch bis zum vollendeten 20. Altersjahr fünf Wochen, danach vier Wochen pro Dienstjahr. Mindestens zwei Ferienwochen müssen zusammenhängen. Verträge und Gesamtarbeitsverträge dürfen einen höheren Anspruch vorsehen.",
+          "Der Rechner multipliziert Arbeitstage pro Woche mit Ferienwochen. Für einen Teil des Jahres wird dieser Wert mit den Beschäftigungsmonaten geteilt durch zwölf multipliziert. Ferien sollen grundsätzlich tatsächlich bezogen und während des laufenden Arbeitsverhältnisses nicht durch Geld ersetzt werden; bei unregelmässiger Teilzeit und am Ende eines Arbeitsverhältnisses bestehen begrenzte Ausnahmen.",
+        ],
+      },
+    ],
     formula: "Ferientage pro Jahr = Arbeitstage pro Woche × Ferienwochen. Der anteilige Anspruch entspricht den Jahrestagen × Beschäftigungsmonate ÷ 12.",
-    example: "Beispiel: Fünf Arbeitstage und vier Ferienwochen ergeben 20 Ferientage pro Jahr. Nach neun Beschäftigungsmonaten sind rechnerisch 15 Tage entstanden.",
-    supportingContent: ["Der Rechner zeigt einen mathematischen Anspruch. Arbeitsvertrag, Eintritts- und Austrittsdatum, unbezahlter Urlaub sowie Rundungsregeln können den offiziellen Saldo beeinflussen."],
+    example: "Beispiel: Ein 60-%-Pensum verteilt auf drei Arbeitstage pro Woche mit fünf Ferienwochen ergibt 3 × 5 = 15 Ferientage pro Jahr. Nach sechs Beschäftigungsmonaten beträgt der rechnerische Anspruch 7,5 Tage.",
+    supportingContent: [
+      "Der Rechner zeigt einen mathematischen Anspruch. Arbeitsvertrag, Eintritts- und Austrittsdatum, unbezahlter Urlaub sowie Rundungsregeln können den offiziellen Saldo beeinflussen.",
+      "Vom berechneten Anspruch müssen bereits bezogene Tage und genehmigte Überträge abgezogen werden. Bei Krankheit während geplanter Ferien ist entscheidend, ob der Erholungszweck tatsächlich verhindert war; ein ärztlicher Nachweis kann erforderlich sein. Längere Abwesenheiten können unter bestimmten Voraussetzungen zu einer Kürzung führen. Ferienzeitpunkt und Übertrag werden mit dem Arbeitgeber abgestimmt. Bei Beendigung des Arbeitsverhältnisses sollen Restferien grundsätzlich bezogen werden, soweit dies während der Kündigungsfrist möglich und zumutbar ist.",
+    ],
     faqs: [
       { question: "Wie viele Ferientage ergeben vier Ferienwochen?", answer: "Bei fünf Arbeitstagen pro Woche sind es 20 Tage; bei vier Arbeitstagen sind es 16 Tage." },
       { question: "Werden angebrochene Monate berücksichtigt?", answer: "Der Rechner arbeitet mit der eingegebenen Anzahl Monate. Für genaue Tagesabrechnungen gelten die Regeln des Arbeitgebers." },
       { question: "Gilt das Ergebnis als offizieller Feriensaldo?", answer: "Nein. Bereits bezogene Ferien, Überträge und vertragliche Regeln müssen zusätzlich berücksichtigt werden." },
+      { question: "Verfallen nicht bezogene Ferien?", answer: "Ferienansprüche verjähren grundsätzlich nach fünf Jahren. Die Frist beginnt nach Ablauf des Jahres, für das die Ferien bestimmt waren." },
+      { question: "Was passiert bei Krankheit während der Ferien?", answer: "Wenn Krankheit oder Unfall den Erholungszweck verhindert, können die betroffenen Tage mit entsprechendem Nachweis nachgewährt werden." },
     ],
     relatedCalculators: ["stundenrechner", "arbeitszeitrechner", "lohnrechner-schweiz"],
     monetizationType: "lead",
