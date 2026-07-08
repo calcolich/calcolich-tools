@@ -113,3 +113,32 @@ Required fields:
 - baseline;
 - expected duration;
 - rollback rule.
+
+## /create-agent
+
+Purpose: create a specialist agent only when it supports measurable business value.
+
+Required fields:
+
+- business opportunity;
+- agent name;
+- mission;
+- KPI;
+- inputs;
+- outputs;
+- permissions;
+- first 7-day test;
+- stop condition.
+
+## /cashflow-review
+
+Purpose: review possible online business or cashflow sources.
+
+Steps:
+
+1. List opportunity.
+2. Score demand, competition, build speed, monetization clarity, maintenance effort, and fit with Giuseppe.
+3. Choose the smallest MVP asset.
+4. Define traffic source.
+5. Define monetization path.
+6. Decide whether a specialist agent is needed.

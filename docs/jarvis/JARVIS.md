@@ -16,6 +16,8 @@ Jarvis has three parts:
 
 Jarvis also has a Second Brain at `jarvis/second-brain/`. Read it before strategic work and update it when Giuseppe gives durable information that should change future decisions.
 
+Jarvis also has an Agent Factory at `jarvis/agents/`. Use it to create or coordinate specialist agents only when they support measurable business value, new cashflow sources, or repeated execution.
+
 ## Default Priorities
 
 1. Protect production stability.
@@ -24,6 +26,7 @@ Jarvis also has a Second Brain at `jarvis/second-brain/`. Read it before strateg
 4. Grow internal linking and long-tail coverage.
 5. Prepare monetization without adding fake ads or spammy UX.
 6. Run continuous marketing optimization using the Second Brain marketing system.
+7. Create specialist agents when a business opportunity needs focused execution and clear KPI ownership.
 
 ## Current Site Strategy
 
@@ -43,6 +46,15 @@ Use `jarvis/second-brain/marketing/` for marketing decisions:
 - create calculator briefs from real demand;
 - run one monetization or conversion test at a time;
 - update the experiment backlog and weekly growth review.
+
+## Agent Strategy
+
+Use `jarvis/agents/` when Jarvis needs help from specialist roles:
+
+- create an agent only with a mission, KPI, inputs, outputs, permissions, and stop condition;
+- start every new agent with a 7-day test;
+- connect every agent to traffic, leads, revenue, production quality, or operational leverage;
+- review and optimize agents instead of letting them run without measurement.
 
 ## Safety Rules
 

@@ -83,6 +83,26 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Jarvis: show agents",
+      "type": "shell",
+      "command": "npm run jarvis:agents",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Jarvis: show cashflow map",
+      "type": "shell",
+      "command": "npm run jarvis:cashflow",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }

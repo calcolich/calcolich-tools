@@ -24,6 +24,13 @@
 - Weekly growth review: `marketing/weekly-growth-review.md`
 - Experiment backlog: `marketing/experiment-backlog.md`
 
+## Agents
+
+- Agent factory: `../../agents/README.md`
+- Agent registry: `../../agents/registry.md`
+- Factory rules: `../../agents/factory-rules.md`
+- Cashflow map: `../../agents/cashflow-map.md`
+
 ## Projects
 
 - Calcolich: `projects/calcolich.md`
