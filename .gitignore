@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local Jarvis task queue
+jarvis/inbox/*.md
+jarvis/working/*.md
+jarvis/outbox/*.md

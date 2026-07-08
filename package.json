@@ -7,6 +7,8 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
+    "jarvis:task": "node scripts/jarvis-task.mjs",
+    "jarvis:inbox": "find jarvis/inbox -type f -name '*.md' -maxdepth 1 | sort",
     "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },
   "dependencies": {

@@ -43,7 +43,16 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Jarvis: show inbox",
+      "type": "shell",
+      "command": "npm run jarvis:inbox",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }
-
