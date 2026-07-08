@@ -26,6 +26,7 @@ export type CentralizedCalculator = {
   example: string;
   faqs: { question: string; answer: string }[];
   relatedCalculators: string[];
+  guideLinks?: { href: string; label: string; description: string }[];
   monetizationType: MonetizationType;
   schemaType: CalculatorSchemaType;
   isPriority: boolean;

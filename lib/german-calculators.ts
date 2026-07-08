@@ -61,6 +61,18 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Was ist der Unterschied zwischen Anwesenheitszeit und Arbeitszeit?", answer: "Die Anwesenheitszeit umfasst den gesamten Zeitraum im Betrieb. Die Arbeitszeit entsteht nach Abzug nicht bezahlter Pausen." },
     ],
     relatedCalculators: ["arbeitszeitrechner", "lohnrechner-schweiz", "ferienrechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Pausenregelung und Arbeitszeit",
+        description: "Gesetzliche Mindestpausen, Arbeitszeit und Anwesenheitszeit in der Schweiz erklaert.",
+      },
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Stundenlohn berechnen",
+        description: "Formeln, 13. Monatslohn und Ferienzuschlag fuer den Vergleich von Lohnmodellen.",
+      },
+    ],
     monetizationType: "mixed",
     schemaType: "WebApplication",
     isPriority: true,
@@ -118,6 +130,18 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Wie werden Überstunden behandelt?", answer: "Der Rechner zeigt Zeitmengen, kennt aber deine vertragliche Sollzeit nicht. Überstunden musst du durch Vergleich mit Vertrag oder Zeitsaldo bestimmen." },
     ],
     relatedCalculators: ["stundenrechner", "lohnrechner-schweiz", "ferienrechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Pausenregelung und Arbeitszeit",
+        description: "Wann Pausen vorgeschrieben sind und wie Nettoarbeitszeit richtig dokumentiert wird.",
+      },
+      {
+        href: "/de/ratgeber/ferienanspruch-teilzeit-schweiz",
+        label: "Ferienanspruch bei Teilzeit",
+        description: "Wie Ferienwochen bei Teilzeit in persoenliche Arbeitstage umgerechnet werden.",
+      },
+    ],
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,
@@ -176,6 +200,18 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Ist die Ferienentschädigung immer zusätzlich geschuldet?", answer: "Bei Monatslohn werden Ferien normalerweise bezahlt bezogen. Bei unregelmässigem Stundenlohn kann ein separat ausgewiesener Zuschlag zulässig sein." },
     ],
     relatedCalculators: ["brutto-netto-rechner-schweiz", "arbeitszeitrechner", "budget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Stundenlohn berechnen",
+        description: "Monatslohn, 13. Monatslohn und Jahresarbeitszeit sauber vergleichen.",
+      },
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Pausenregelung und Arbeitszeit",
+        description: "Arbeitszeit und Pausen als Grundlage fuer realistische Lohnvergleiche.",
+      },
+    ],
     monetizationType: "mixed",
     schemaType: "WebApplication",
     isPriority: true,
@@ -236,6 +272,13 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Wie beeinflussen Kinder und Zivilstand das Netto?", answer: "Sie verändern vor allem die Steuerbelastung. Bei Quellensteuer wirken sie direkt im Tarif, bei ordentlicher Veranlagung später in der Steuerrechnung." },
     ],
     relatedCalculators: ["lohnrechner-schweiz", "stundenrechner", "budget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Stundenlohn berechnen",
+        description: "Brutto, Netto und Stundenlohn mit und ohne 13. Monatslohn einordnen.",
+      },
+    ],
     monetizationType: "mixed",
     schemaType: "WebApplication",
     isPriority: true,
@@ -293,6 +336,13 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Gelten bei Importen dieselben Regeln?", answer: "Bei Einfuhren kann Einfuhrsteuer anfallen; Bemessungsgrundlage und Verfahren unterscheiden sich von einer normalen Inlandrechnung." },
     ],
     relatedCalculators: ["prozentrechner", "zinsrechner", "budget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/mehrwertsteuer-schweiz-2026",
+        label: "Mehrwertsteuer Schweiz 2026",
+        description: "MWST-Saetze, Netto-Brutto-Formeln, Vorsteuer und Beispiele fuer Schweizer Rechnungen.",
+      },
+    ],
     monetizationType: "affiliate",
     schemaType: "WebApplication",
     isPriority: true,
@@ -350,6 +400,13 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Warum heben sich plus 10 % und minus 10 % nicht auf?", answer: "Die zweite Änderung wird auf dem bereits veränderten Wert berechnet. Dadurch bleibt am Ende ein Minus von 1 %." },
     ],
     relatedCalculators: ["mehrwertsteuer-rechner-schweiz", "zinsrechner", "kreditrechner"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/mehrwertsteuer-schweiz-2026",
+        label: "Mehrwertsteuer Schweiz 2026",
+        description: "Wie Prozentrechnung bei MWST, Brutto- und Nettobetraegen korrekt angewendet wird.",
+      },
+    ],
     monetizationType: "adsense",
     schemaType: "WebApplication",
     isPriority: true,
@@ -521,6 +578,18 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Wie passe ich 50-30-20 bei Schulden an?", answer: "Reduziere zuerst den Anteil für Wünsche und verwende einen grösseren Teil für Mindestzahlungen, Tilgung und eine kleine Notfallreserve." },
     ],
     relatedCalculators: ["lohnrechner-schweiz", "kreditrechner", "zinsrechner"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/mehrwertsteuer-schweiz-2026",
+        label: "Mehrwertsteuer Schweiz 2026",
+        description: "MWST-Betraege im Budget und in Schweizer Rechnungen besser einordnen.",
+      },
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Stundenlohn berechnen",
+        description: "Lohnmodelle als Grundlage fuer ein realistisches Monatsbudget vergleichen.",
+      },
+    ],
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,
@@ -580,6 +649,18 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Was passiert bei Krankheit während der Ferien?", answer: "Wenn Krankheit oder Unfall den Erholungszweck verhindert, können die betroffenen Tage mit entsprechendem Nachweis nachgewährt werden." },
     ],
     relatedCalculators: ["stundenrechner", "arbeitszeitrechner", "lohnrechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/ferienanspruch-teilzeit-schweiz",
+        label: "Ferienanspruch bei Teilzeit",
+        description: "Gesetzliches Minimum, Teilzeitberechnung, zwei zusammenhaengende Wochen und Krankheit.",
+      },
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Pausenregelung und Arbeitszeit",
+        description: "Arbeitszeit, Pausen und Ferienplanung gemeinsam nachvollziehen.",
+      },
+    ],
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,

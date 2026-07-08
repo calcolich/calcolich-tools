@@ -14,6 +14,7 @@ type CalculatorPageLabels = {
   newsletterTitle: string;
   newsletterButton: string;
   guideSuffix: string;
+  guideLinksTitle: string;
   recommendedAd: string;
   relatedTitle: string;
 };
@@ -23,6 +24,7 @@ const defaultLabels: CalculatorPageLabels = {
   newsletterTitle: "Newsletter Calcolich",
   newsletterButton: "Avvisami",
   guideSuffix: "guida pratica",
+  guideLinksTitle: "Guide collegate",
   recommendedAd: "Risorsa consigliata",
   relatedTitle: "Strumenti collegati",
 };
@@ -203,7 +205,7 @@ export default function CalculatorPage({
 
             {calculator.guideLinks ? (
               <section className="mt-10 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
-                <h2 className="text-2xl font-black tracking-tight text-gray-950">Guide collegate</h2>
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.guideLinksTitle}</h2>
                 <div className="mt-4 grid gap-3">
                   {calculator.guideLinks.map((guide) => (
                     <Link key={guide.href} href={guide.href} className="block rounded-2xl border border-emerald-100 bg-white p-4 transition hover:border-emerald-300">
