@@ -53,6 +53,16 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Jarvis: show second brain",
+      "type": "shell",
+      "command": "npm run jarvis:brain",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }

@@ -44,3 +44,4 @@ next-env.d.ts
 jarvis/inbox/*.md
 jarvis/working/*.md
 jarvis/outbox/*.md
+jarvis/second-brain/inbox/*.md

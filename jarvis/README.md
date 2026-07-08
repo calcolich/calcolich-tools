@@ -10,6 +10,7 @@ Giuseppe can communicate tasks to Jarvis in plain language. Jarvis or Codex then
 - `working/`: tasks currently being handled.
 - `outbox/`: completed task reports.
 - `memory/`: reusable facts, decisions, and project notes.
+- `second-brain/`: durable structured memory for Giuseppe, Calcolich, decisions, ideas, and lessons.
 
 ## Create A Task
 
@@ -29,6 +30,7 @@ Jarvis can execute broad tasks, but it must respect project safety:
 - verify code before publishing;
 - avoid destructive actions unless the target is explicit;
 - do not touch `README 2.md`;
+- do not store secrets or sensitive personal data in the Second Brain;
 - ask for credentials or paid-account actions only when needed.
 
 ## Task Lifecycle
@@ -36,4 +38,3 @@ Jarvis can execute broad tasks, but it must respect project safety:
 1. `inbox`: task received.
 2. `working`: task accepted and being executed.
 3. `outbox`: task completed with a short report.
-

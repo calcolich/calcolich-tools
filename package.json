@@ -9,6 +9,8 @@
     "lint": "eslint",
     "jarvis:task": "node scripts/jarvis-task.mjs",
     "jarvis:inbox": "find jarvis/inbox -type f -name '*.md' -maxdepth 1 | sort",
+    "jarvis:brain": "sed -n '1,220p' jarvis/second-brain/00-index.md",
+    "jarvis:remember": "node scripts/jarvis-remember.mjs",
     "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },
   "dependencies": {
