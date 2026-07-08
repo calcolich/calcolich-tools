@@ -63,6 +63,26 @@
         "reveal": "always",
         "panel": "dedicated"
       }
+    },
+    {
+      "label": "Jarvis: show marketing system",
+      "type": "shell",
+      "command": "npm run jarvis:marketing",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Jarvis: show KPI scorecard",
+      "type": "shell",
+      "command": "npm run jarvis:kpis",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
     }
   ]
 }

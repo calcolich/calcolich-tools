@@ -86,3 +86,30 @@ Output:
 - URLs to inspect.
 - Work block proposal.
 
+## /growth-review
+
+Purpose: run a weekly marketing and optimization review.
+
+Steps:
+
+1. Review Search Console data.
+2. Identify pages with impressions but low CTR.
+3. Identify pages ranking 8-20.
+4. Identify queries without matching pages.
+5. Pick one page improvement.
+6. Pick one new content or calculator opportunity.
+7. Update the weekly growth review.
+
+## /experiment-brief
+
+Purpose: define one optimization test.
+
+Required fields:
+
+- hypothesis;
+- target page or cluster;
+- change;
+- success metric;
+- baseline;
+- expected duration;
+- rollback rule.

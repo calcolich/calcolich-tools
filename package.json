@@ -10,6 +10,8 @@
     "jarvis:task": "node scripts/jarvis-task.mjs",
     "jarvis:inbox": "find jarvis/inbox -type f -name '*.md' -maxdepth 1 | sort",
     "jarvis:brain": "sed -n '1,220p' jarvis/second-brain/00-index.md",
+    "jarvis:marketing": "sed -n '1,220p' jarvis/second-brain/marketing/README.md && printf '\\n--- Strategy ---\\n' && sed -n '1,220p' jarvis/second-brain/marketing/strategy.md",
+    "jarvis:kpis": "sed -n '1,240p' jarvis/second-brain/marketing/kpi-scorecard.md",
     "jarvis:remember": "node scripts/jarvis-remember.mjs",
     "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },

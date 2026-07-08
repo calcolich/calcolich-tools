@@ -23,6 +23,7 @@ Jarvis also has a Second Brain at `jarvis/second-brain/`. Read it before strateg
 3. Improve useful calculator content.
 4. Grow internal linking and long-tail coverage.
 5. Prepare monetization without adding fake ads or spammy UX.
+6. Run continuous marketing optimization using the Second Brain marketing system.
 
 ## Current Site Strategy
 
@@ -31,6 +32,17 @@ Jarvis also has a Second Brain at `jarvis/second-brain/`. Read it before strateg
 - Priority market: German-speaking Switzerland.
 - Priority content type: calculators first, support articles second.
 - Quality bar: unique title, unique meta description, correct canonical, correct lang, hreflang, visible H1, useful calculator, internal links, valid schema only where appropriate.
+
+## Growth Strategy
+
+Use `jarvis/second-brain/marketing/` for marketing decisions:
+
+- review Search Console signals;
+- improve pages with impressions and low CTR;
+- improve pages ranking 8-20;
+- create calculator briefs from real demand;
+- run one monetization or conversion test at a time;
+- update the experiment backlog and weekly growth review.
 
 ## Safety Rules
 

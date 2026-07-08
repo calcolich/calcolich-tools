@@ -12,6 +12,18 @@
 - Revenue model: `business/revenue-model.md`
 - Offers: `business/offers.md`
 
+## Marketing
+
+- Marketing system: `marketing/README.md`
+- Strategy: `marketing/strategy.md`
+- SEO machine: `marketing/seo-machine.md`
+- Conversion optimization: `marketing/conversion-optimization.md`
+- Monetization map: `marketing/monetization-map.md`
+- KPI scorecard: `marketing/kpi-scorecard.md`
+- Content clusters: `marketing/content-clusters.md`
+- Weekly growth review: `marketing/weekly-growth-review.md`
+- Experiment backlog: `marketing/experiment-backlog.md`
+
 ## Projects
 
 - Calcolich: `projects/calcolich.md`
@@ -39,4 +51,3 @@
 2. Read the relevant project note.
 3. Read decisions and lessons before changing strategy.
 4. Update memory only when the information is durable and useful.
-
