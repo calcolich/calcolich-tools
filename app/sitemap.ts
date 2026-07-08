@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { germanLongTailArticles } from "@/content/de/ratgeber";
 import { calculatorCategories } from "@/lib/categories";
 import { calculators } from "@/lib/calculators";
 import { guides } from "@/lib/guides";
@@ -42,6 +43,11 @@ const localizedRoutes = locales.flatMap((locale) => [
   })),
 ]);
 
+const germanRatgeberRoutes = [
+  "/de/ratgeber",
+  ...germanLongTailArticles.map((article) => `/de/ratgeber/${article.slug}`),
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...routes.map((route) => ({
@@ -58,6 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: alternates,
       },
+    })),
+    ...germanRatgeberRoutes.map((route) => ({
+      url: `${siteUrl}${route}`,
+      lastModified: contentUpdatedAt,
+      changeFrequency: "monthly" as const,
+      priority: route === "/de/ratgeber" ? 0.75 : 0.7,
     })),
   ];
 }

@@ -1,0 +1,24 @@
+import { ferienanspruchTeilzeitSchweiz } from "./ferienanspruch-teilzeit-schweiz";
+import { mehrwertsteuerSchweiz2026 } from "./mehrwertsteuer-schweiz-2026";
+import { pausenregelungArbeitszeitSchweiz } from "./pausenregelung-arbeitszeit-schweiz";
+import { stundenlohnBerechnenSchweiz } from "./stundenlohn-berechnen-schweiz";
+import type { GermanLongTailArticle } from "./types";
+
+export type { GermanLongTailArticle };
+
+export const germanLongTailArticles: GermanLongTailArticle[] = [
+  mehrwertsteuerSchweiz2026,
+  stundenlohnBerechnenSchweiz,
+  ferienanspruchTeilzeitSchweiz,
+  pausenregelungArbeitszeitSchweiz,
+];
+
+export function getGermanLongTailArticle(slug: string) {
+  return germanLongTailArticles.find((article) => article.slug === slug);
+}
+
+export function getRelatedGermanLongTailArticles(article: GermanLongTailArticle) {
+  return article.relatedArticleSlugs
+    .map((slug) => getGermanLongTailArticle(slug))
+    .filter((related): related is GermanLongTailArticle => Boolean(related));
+}

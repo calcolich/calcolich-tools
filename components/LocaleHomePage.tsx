@@ -1,5 +1,6 @@
 import { getLocalizedCalculators, localeHome, type Locale } from "@/lib/i18n";
 import { germanCalculatorCategories } from "@/lib/german-calculators";
+import { germanLongTailArticles } from "@/content/de/ratgeber";
 import Link from "next/link";
 
 export default function LocaleHomePage({ locale }: { locale: Locale }) {
@@ -36,17 +37,36 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
         </section>
 
         {locale === "de" ? (
-          <section className="mb-10" aria-labelledby="calculator-categories">
-            <h2 id="calculator-categories" className="mb-4 text-2xl font-black tracking-tight">Rechner nach Kategorie</h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {germanCalculatorCategories.map((category) => (
-                <div key={category.id} className="rounded-2xl border border-gray-200 bg-white p-4">
-                  <h3 className="font-black text-gray-950">{category.title}</h3>
-                  <p className="mt-1 text-sm leading-6 text-gray-600">{category.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          <>
+            <section className="mb-10" aria-labelledby="calculator-categories">
+              <h2 id="calculator-categories" className="mb-4 text-2xl font-black tracking-tight">Rechner nach Kategorie</h2>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {germanCalculatorCategories.map((category) => (
+                  <div key={category.id} className="rounded-2xl border border-gray-200 bg-white p-4">
+                    <h3 className="font-black text-gray-950">{category.title}</h3>
+                    <p className="mt-1 text-sm leading-6 text-gray-600">{category.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="mb-10" aria-labelledby="german-guides">
+              <div className="mb-4 flex items-end justify-between gap-4">
+                <h2 id="german-guides" className="text-2xl font-black tracking-tight">Neue Ratgeber</h2>
+                <Link href="/de/ratgeber" className="text-sm font-black text-emerald-800 hover:text-emerald-950">
+                  Alle Ratgeber
+                </Link>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2">
+                {germanLongTailArticles.map((article) => (
+                  <Link key={article.slug} href={`/de/ratgeber/${article.slug}`} className="rounded-2xl border border-gray-200 bg-white p-4 hover:border-gray-300">
+                    <h3 className="font-black text-gray-950">{article.title}</h3>
+                    <p className="mt-1 text-sm leading-6 text-gray-600">{article.metaDescription}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </>
         ) : null}
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
