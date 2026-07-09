@@ -53,6 +53,7 @@
 
 - Sources: `sources/trusted-sources.md`
 - YouTube source note: `sources/youtube-maaker-ki-mitarbeiter.md`
+- YouTube Jarvis short note: `sources/youtube-maaker-jarvis-short.md`
 
 ## How Jarvis Should Use This
 
