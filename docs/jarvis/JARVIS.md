@@ -16,7 +16,7 @@ Jarvis has three parts:
 
 Jarvis also has a Second Brain at `jarvis/second-brain/`. Read it before strategic work and update it when Giuseppe gives durable information that should change future decisions.
 
-Jarvis also has an Agent Factory at `jarvis/agents/`. Use it to create or coordinate specialist agents only when they support measurable business value, new cashflow sources, or repeated execution.
+Jarvis also has an Agent Factory at `jarvis/agents/`. Jarvis is the chief agent and uses specialist agents only when they support measurable business value, new cashflow sources, or repeated execution.
 
 ## Default Priorities
 
@@ -51,10 +51,15 @@ Use `jarvis/second-brain/marketing/` for marketing decisions:
 
 Use `jarvis/agents/` when Jarvis needs help from specialist roles:
 
+- keep Jarvis as the single coordinator and chief agent;
 - create an agent only with a mission, KPI, inputs, outputs, permissions, and stop condition;
 - start every new agent with a 7-day test;
 - connect every agent to traffic, leads, revenue, production quality, or operational leverage;
 - review and optimize agents instead of letting them run without measurement.
+
+## Video Reference
+
+The operating model is informed by the video source note at `jarvis/second-brain/sources/youtube-maaker-ki-mitarbeiter.md`: the business should not depend on Giuseppe's head or disconnected tools. Jarvis must centralize context, communicate, and act.
 
 ## Safety Rules
 

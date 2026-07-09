@@ -14,6 +14,7 @@
     "jarvis:kpis": "sed -n '1,240p' jarvis/second-brain/marketing/kpi-scorecard.md",
     "jarvis:agents": "sed -n '1,220p' jarvis/agents/README.md && printf '\\n--- Registry ---\\n' && sed -n '1,260p' jarvis/agents/registry.md",
     "jarvis:cashflow": "sed -n '1,240p' jarvis/agents/cashflow-map.md",
+    "jarvis:platform": "PORT=8097 node ../../outputs/jarvis-platform-server.mjs",
     "jarvis:remember": "node scripts/jarvis-remember.mjs",
     "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },

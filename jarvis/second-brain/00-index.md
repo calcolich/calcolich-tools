@@ -30,6 +30,7 @@
 - Agent registry: `../../agents/registry.md`
 - Factory rules: `../../agents/factory-rules.md`
 - Cashflow map: `../../agents/cashflow-map.md`
+- Chief agent model: `../../agents/chief-agent-operating-model.md`
 
 ## Projects
 
@@ -51,6 +52,7 @@
 ## Trusted Sources
 
 - Sources: `sources/trusted-sources.md`
+- YouTube source note: `sources/youtube-maaker-ki-mitarbeiter.md`
 
 ## How Jarvis Should Use This
 

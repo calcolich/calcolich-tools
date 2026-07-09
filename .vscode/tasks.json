@@ -55,6 +55,17 @@
       }
     },
     {
+      "label": "Jarvis: launch platform",
+      "type": "shell",
+      "command": "npm run jarvis:platform",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
       "label": "Jarvis: show second brain",
       "type": "shell",
       "command": "npm run jarvis:brain",
