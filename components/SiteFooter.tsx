@@ -2,6 +2,10 @@ import Link from "next/link";
 
 const footerLinks = [
   { href: "/de", label: "DE" },
+  { href: "/de/ratgeber", label: "Ratgeber DE" },
+  { href: "/de/arbeitszeitrechner", label: "Arbeitszeit" },
+  { href: "/de/ueberstundenrechner-schweiz", label: "Überstunden" },
+  { href: "/de/ferienrechner-schweiz", label: "Ferien" },
   { href: "/it", label: "IT" },
   { href: "/en", label: "EN" },
   { href: "/fr", label: "FR" },
@@ -27,6 +31,9 @@ export default function SiteFooter() {
           <p className="font-black text-gray-950">Calcolich</p>
           <p className="mt-1 max-w-xl leading-6">
             Calcolatori online gratuiti per lavoro, business, finanza, casa e trading. I risultati sono stime informative.
+          </p>
+          <p className="mt-2 text-xs font-semibold text-gray-500">
+            Editore: Calcolich · Contatto: calcolich@gmail.com · Ultimo aggiornamento contenuti: 12 luglio 2026
           </p>
         </div>
         <nav className="flex flex-wrap gap-3 font-semibold" aria-label="Link legali e informativi">

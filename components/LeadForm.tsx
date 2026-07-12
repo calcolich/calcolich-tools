@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { getAttributedSource } from "@/components/CommercialTracking";
+import { sendAnalyticsEvent } from "@/lib/analytics-events";
 
 const fallbackEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "calcolich@gmail.com";
 
@@ -43,6 +44,7 @@ export default function LeadForm({
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     const attributedSource = getAttributedSource(source);
+    sendAnalyticsEvent("lead_submit", { source: attributedSource });
 
     try {
       const response = await fetch("/api/leads", {

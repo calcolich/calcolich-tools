@@ -31,6 +31,8 @@ export type CentralizedCalculator = {
   schemaType: CalculatorSchemaType;
   isPriority: boolean;
   searchIntent: string;
+  updatedAt?: string;
+  sources?: { label: string; href: string }[];
   shortTitle: string;
   inputs: CalculatorInput[];
   resultLabels: string[];

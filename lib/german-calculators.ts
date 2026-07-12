@@ -15,6 +15,17 @@ export const germanCalculatorCategories: LocalizedCalculatorCategory[] = [
   { id: "de-time-date", locale: "de", slug: "zeit-datum", title: "Zeit & Datum", description: "Arbeitsstunden, Ferien und Zeiträume berechnen." },
 ];
 
+const swissWorkSources = [
+  { label: "SECO: Arbeit und Gesundheit - Arbeits- und Ruhezeiten", href: "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitsbedingungen/Arbeitnehmerschutz/Arbeits-und-Ruhezeiten.html" },
+  { label: "Fedlex: Arbeitsgesetz, Art. 15 Pausen", href: "https://www.fedlex.admin.ch/eli/cc/1966/57_57_57/de#art_15" },
+  { label: "Fedlex: Obligationenrecht, Art. 321c Überstundenarbeit", href: "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_321_c" },
+];
+
+const swissVacationSources = [
+  { label: "Fedlex: Obligationenrecht, Art. 329a Ferien", href: "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_329_a" },
+  { label: "SECO: Ferien und Feiertage", href: "https://www.seco.admin.ch/seco/de/home/Arbeit/Personenfreizugigkeit_Arbeitsbeziehungen/Arbeitsrecht/FAQ_zum_privaten_Arbeitsrecht/ferien_und_feiertage.html" },
+];
+
 export const germanPriorityCalculatorData: CentralizedCalculator[] = [
   {
     id: "de-hours",
@@ -128,6 +139,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Zählt die Pause zur Arbeitszeit?", answer: "Nur bezahlte Pausen zählen üblicherweise als Arbeitszeit. Hier wird die eingegebene Pause vollständig abgezogen." },
       { question: "Kann ich Teilzeit berechnen?", answer: "Ja. Wähle einfach die tatsächliche Anzahl Arbeitstage und deine täglichen Zeiten." },
       { question: "Wie werden Überstunden behandelt?", answer: "Der Rechner zeigt Zeitmengen, kennt aber deine vertragliche Sollzeit nicht. Überstunden musst du durch Vergleich mit Vertrag oder Zeitsaldo bestimmen." },
+      { question: "Ist der Monatswert für die Lohnabrechnung verbindlich?", answer: "Nein. Der Monatswert ist ein Durchschnitt über 52 Wochen und ersetzt nicht die betriebliche Zeiterfassung oder eine konkrete Monatsabrechnung." },
     ],
     relatedCalculators: ["stundenrechner", "lohnrechner-schweiz", "ferienrechner-schweiz"],
     guideLinks: [
@@ -146,6 +158,8 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     schemaType: "WebApplication",
     isPriority: true,
     searchIntent: "Arbeitszeit pro Tag, Woche und Monat ausrechnen",
+    updatedAt: "12. Juli 2026",
+    sources: swissWorkSources,
     inputs: [
       { key: "start", label: "Arbeitsbeginn", type: "time", defaultValue: "08:00" },
       { key: "end", label: "Arbeitsende", type: "time", defaultValue: "17:24" },
@@ -154,6 +168,79 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     ],
     resultLabels: ["Pro Tag", "Pro Woche", "Pro Monat"],
     cta: "Praktische Vorlagen und neue Arbeitsrechner per E-Mail erhalten.",
+  },
+  {
+    id: "de-overtime-ch",
+    locale: "de",
+    slug: "ueberstundenrechner-schweiz",
+    kind: "overtime-ch",
+    category: "Arbeit & Lohn",
+    title: "Überstundenrechner Schweiz: Stunden und Zuschlag berechnen | Calcolich",
+    metaDescription: "Überstunden in der Schweiz berechnen: Ist-Zeit, Soll-Zeit, Stundenlohn und Zuschlag eingeben und Auszahlung schätzen.",
+    h1: "Überstundenrechner Schweiz",
+    shortTitle: "Überstundenrechner",
+    intro: "Berechne, wie viele Überstunden über deiner Sollzeit liegen und welche Auszahlung sich bei einem gewählten Zuschlag ergibt.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Rechner hilft, Wochen- oder Monatsstunden mit der vereinbarten Sollzeit zu vergleichen. So erkennst du, ob aus deiner Zeiterfassung ein positiver Überstundensaldo entsteht.",
+          "Die Auszahlung ist bewusst als Schätzung aufgebaut. Ob Überstunden kompensiert, mit Normallohn oder mit Zuschlag bezahlt werden, hängt von Arbeitsvertrag, Reglement, Gesamtarbeitsvertrag und der konkreten Anordnung ab.",
+        ],
+        bullets: [
+          "Ist-Stunden und Soll-Stunden neutral vergleichen",
+          "Auszahlung mit 0 %, 25 % oder eigenem Zuschlag simulieren",
+          "Zeitkompensation und Auszahlung besser vorbereiten",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Überstunden sind die Stunden über der vertraglich vereinbarten Arbeitszeit. Gesetzliche Überzeit ist ein eigener Begriff und betrifft Überschreitungen der Höchstarbeitszeit nach Arbeitsgesetz.",
+          "Der Rechner zieht die Sollzeit von der tatsächlichen Arbeitszeit ab. Der positive Saldo wird mit dem Stundenlohn und dem gewählten Zuschlag multipliziert. Ein negativer Saldo wird als null Überstunden angezeigt.",
+        ],
+      },
+    ],
+    formula: "Überstunden = Ist-Stunden minus Soll-Stunden. Geschätzte Auszahlung = Überstunden × Stundenlohn × (1 + Zuschlag in Prozent).",
+    example: "Beispiel: 46 Ist-Stunden bei 42 Soll-Stunden ergeben 4 Überstunden. Bei CHF 35 Stundenlohn und 25 % Zuschlag ergibt sich CHF 175 geschätzte Auszahlung.",
+    supportingContent: [
+      "Der Rechner unterscheidet nicht automatisch zwischen vertraglichen Überstunden und gesetzlicher Überzeit. Prüfe deshalb Vertrag, Personalreglement und allfälligen Gesamtarbeitsvertrag.",
+      "Für eine belastbare Forderung brauchst du Datum, Beginn, Ende, Pause, Anordnung oder Genehmigung und den Bezug von Kompensation. Die Berechnung ist eine Orientierung und keine Rechtsberatung.",
+    ],
+    faqs: [
+      { question: "Sind Überstunden immer mit 25 % Zuschlag zu bezahlen?", answer: "Nein. Nach OR kann ein Zuschlag relevant sein, vertragliche Regelungen können die Kompensation oder Vergütung aber genauer festlegen." },
+      { question: "Was ist der Unterschied zwischen Überstunden und Überzeit?", answer: "Überstunden überschreiten die vertragliche Sollzeit. Überzeit betrifft die gesetzliche Höchstarbeitszeit nach Arbeitsgesetz." },
+      { question: "Kann ich den Zuschlag auf 0 % setzen?", answer: "Ja. Nutze 0 %, wenn du nur den Grundlohn oder eine reine Zeitkompensation vergleichen möchtest." },
+      { question: "Zählen Pausen zu Überstunden?", answer: "Unbezahlte Pausen werden normalerweise nicht als Arbeitszeit gezählt. Erfasst werden sollte die Nettoarbeitszeit." },
+      { question: "Ist das Ergebnis rechtlich verbindlich?", answer: "Nein. Es ist eine rechnerische Schätzung und muss mit Vertrag, Reglement und Zeiterfassung abgeglichen werden." },
+    ],
+    relatedCalculators: ["arbeitszeitrechner", "stundenrechner", "stundenlohn-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/ueberstunden-schweiz-berechnen",
+        label: "Überstunden in der Schweiz berechnen",
+        description: "Unterschied zwischen Überstunden, Überzeit, Kompensation und Auszahlung.",
+      },
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Arbeitszeit und Pausenregelung",
+        description: "Warum Nettoarbeitszeit und Pausen fuer den Überstundensaldo wichtig sind.",
+      },
+    ],
+    monetizationType: "mixed",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Überstunden in der Schweiz berechnen und Auszahlung schaetzen",
+    updatedAt: "12. Juli 2026",
+    sources: swissWorkSources,
+    inputs: [
+      { key: "actualHours", label: "Ist-Stunden", defaultValue: "46", step: "0.25", min: "0" },
+      { key: "targetHours", label: "Soll-Stunden", defaultValue: "42", step: "0.25", min: "0" },
+      { key: "hourlyWage", label: "Stundenlohn (CHF)", defaultValue: "35", step: "0.05", min: "0" },
+      { key: "supplementRate", label: "Zuschlag (%)", defaultValue: "25", step: "1", min: "0" },
+    ],
+    resultLabels: ["Überstunden", "Zuschlag", "Auszahlung geschätzt"],
+    cta: "Neue Arbeitszeit- und Lohnrechner für die Schweiz per E-Mail erhalten.",
   },
   {
     id: "de-salary-ch",
@@ -604,6 +691,154 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     cta: "Die kommende Budgetvorlage und neue Schweizer Rechner per E-Mail erhalten.",
   },
   {
+    id: "de-working-days-ch",
+    locale: "de",
+    slug: "arbeitstage-rechner-schweiz",
+    kind: "working-days-ch",
+    category: "Zeit & Datum",
+    title: "Arbeitstage-Rechner Schweiz: Arbeitstage einfach berechnen | Calcolich",
+    metaDescription: "Arbeitstage in der Schweiz schätzen: Kalendertage, Wochenenden, Feiertage und Ferien abziehen und Netto-Arbeitstage erhalten.",
+    h1: "Arbeitstage-Rechner Schweiz",
+    shortTitle: "Arbeitstage-Rechner",
+    intro: "Schätze Arbeitstage für einen Zeitraum, indem du Wochenenden, Feiertage und geplante Ferientage von den Kalendertagen abziehst.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Arbeitstage-Rechner eignet sich für Einsatzplanung, Projektbudget, Ferienplanung und grobe Monatsvergleiche. Er ist bewusst transparent: Du gibst die Kalendertage und die Abzüge selbst ein.",
+          "In der Schweiz unterscheiden sich Feiertage je nach Kanton und teilweise Gemeinde. Deshalb ist ein fixer nationaler Arbeitstagewert oft zu ungenau, wenn du Lohn, Fristen oder Ressourcen planst.",
+        ],
+        bullets: [
+          "Projekt- und Einsatzzeiträume grob planen",
+          "Kantonale Feiertage manuell berücksichtigen",
+          "Ferien oder unbezahlte Abwesenheiten abziehen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Ausgangspunkt sind alle Kalendertage des betrachteten Zeitraums. Davon ziehst du Wochenendtage, kantonale Feiertage und geplante Ferientage ab.",
+          "Das Ergebnis ist eine rechnerische Nettozahl. Für verbindliche Fristen, Lohnabrechnungen und Schichtpläne können Vertragsregeln, kantonale Feiertage und betriebliche Arbeitstage abweichen.",
+        ],
+      },
+    ],
+    formula: "Arbeitstage = Kalendertage minus Wochenendtage minus Feiertage minus Ferientage.",
+    example: "Beispiel: Ein Monat mit 31 Kalendertagen, 8 Wochenendtagen, 1 kantonalem Feiertag und 2 Ferientagen ergibt 20 Arbeitstage.",
+    supportingContent: [
+      "Nutze für Feiertage die Regelung deines Arbeitskantons oder deines Betriebs. Einige Feiertage gelten nicht in allen Kantonen gleich.",
+      "Der Rechner ist für Planung gedacht. Für arbeitsrechtliche oder behördliche Fristen solltest du die zuständige Stelle oder die konkreten Fristenregeln prüfen.",
+    ],
+    faqs: [
+      { question: "Sind Schweizer Feiertage automatisch enthalten?", answer: "Nein. Feiertage sind kantonal unterschiedlich und werden deshalb als eigenes Eingabefeld geführt." },
+      { question: "Kann ich Ferien abziehen?", answer: "Ja. Trage geplante Ferientage separat ein, damit sie vom Arbeitstagewert abgezogen werden." },
+      { question: "Funktioniert der Rechner für Teilzeit?", answer: "Ja, wenn du die Abzüge passend zu deinen effektiven Arbeitstagen eingibst. Bei Teilzeit sind Arbeitstage nicht identisch mit Beschäftigungsgrad." },
+      { question: "Kann ich damit Projektaufwand planen?", answer: "Ja, für eine grobe Ressourcenplanung. Für verbindliche Termine solltest du interne Kalender und Feiertage prüfen." },
+      { question: "Ist das Ergebnis offiziell?", answer: "Nein. Es ist eine transparente Schätzung auf Basis deiner Eingaben." },
+    ],
+    relatedCalculators: ["arbeitszeitrechner", "ferienrechner-schweiz", "stundenrechner"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/ferienanspruch-teilzeit-schweiz",
+        label: "Ferienanspruch bei Teilzeit",
+        description: "Warum Arbeitstage und Ferienwochen bei Teilzeit sauber umgerechnet werden muessen.",
+      },
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Arbeitszeit und Pausenregelung",
+        description: "Arbeitszeit, Pausen und Arbeitstage gemeinsam planen.",
+      },
+    ],
+    monetizationType: "adsense",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Arbeitstage in der Schweiz mit Feiertagen und Ferien berechnen",
+    updatedAt: "12. Juli 2026",
+    sources: [
+      { label: "ch.ch: Feiertage in der Schweiz", href: "https://www.ch.ch/de/arbeit/arbeitszeit/feiertage/" },
+      ...swissVacationSources,
+    ],
+    inputs: [
+      { key: "calendarDays", label: "Kalendertage", defaultValue: "31", min: "0" },
+      { key: "weekendDays", label: "Wochenendtage", defaultValue: "8", min: "0" },
+      { key: "publicHolidays", label: "Feiertage", defaultValue: "1", min: "0" },
+      { key: "vacationDays", label: "Ferientage", defaultValue: "0", min: "0" },
+    ],
+    resultLabels: ["Kalendertage", "Abzüge", "Arbeitstage"],
+    cta: "Neue Kalender-, Arbeitszeit- und Ferienrechner per E-Mail erhalten.",
+  },
+  {
+    id: "de-hourly-wage-ch",
+    locale: "de",
+    slug: "stundenlohn-rechner-schweiz",
+    kind: "hourly-wage-ch",
+    category: "Arbeit & Lohn",
+    title: "Stundenlohnrechner Schweiz: Monatslohn in Stundenlohn umrechnen | Calcolich",
+    metaDescription: "Stundenlohn in der Schweiz aus Monatslohn, Wochenstunden und bezahlten Wochen berechnen. Mit Beispiel und Formel.",
+    h1: "Stundenlohnrechner Schweiz",
+    shortTitle: "Stundenlohnrechner",
+    intro: "Rechne einen Monatslohn in einen geschätzten Stundenlohn um und vergleiche Lohnmodelle auf derselben Basis.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Stundenlohnrechner hilft beim Vergleich von Monatslohn, Teilzeit, Stundenlohnangeboten und Nebenjobs. Ein Stundenwert macht sichtbar, wie stark Wochenarbeitszeit und bezahlte Wochen den Vergleich verändern.",
+          "In der Schweiz werden Löhne oft als Monatslohn angegeben. Für Jobs mit Stundenlohn, unregelmässigen Einsätzen oder 13. Monatslohn ist der Jahresvergleich meist klarer als der Blick auf eine einzelne Monatszahl.",
+        ],
+        bullets: [
+          "Monatslohn in Stundenlohn umrechnen",
+          "Stellenangebote mit unterschiedlicher Wochenarbeitszeit vergleichen",
+          "Grundlage für Überstunden- oder Ferienzuschläge vorbereiten",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner multipliziert den Monatslohn mit zwölf und teilt den Jahreslohn durch die jährlichen Arbeitsstunden. Die jährlichen Arbeitsstunden entstehen aus Wochenstunden mal bezahlten Wochen pro Jahr.",
+          "Wenn ein 13. Monatslohn bezahlt wird, solltest du entweder den durchschnittlichen Monatslohn erhöhen oder den Jahreslohn separat prüfen. Ferienzuschläge bei unregelmässigem Stundenlohn müssen transparent ausgewiesen werden.",
+        ],
+      },
+    ],
+    formula: "Stundenlohn = Monatslohn × 12 ÷ (Wochenstunden × bezahlte Wochen pro Jahr).",
+    example: "Beispiel: CHF 6'300 Monatslohn bei 42 Wochenstunden und 52 bezahlten Wochen ergibt CHF 6'300 × 12 ÷ (42 × 52) = CHF 34.62 pro Stunde.",
+    supportingContent: [
+      "Der berechnete Wert ist brutto oder netto je nachdem, welchen Monatslohn du eingibst. Für einen fairen Vergleich sollten alle Angebote auf derselben Basis stehen.",
+      "Berücksichtige zusätzlich 13. Monatslohn, Ferienentschädigung, Zulagen, Pensionskasse und Versicherungsabzüge. Der Rechner ersetzt keine Lohnabrechnung.",
+    ],
+    faqs: [
+      { question: "Ist der berechnete Stundenlohn brutto oder netto?", answer: "Er entspricht der Art des eingegebenen Monatslohns. Bruttolohn ergibt Bruttostundenlohn, Nettolohn ergibt Nettostundenlohn." },
+      { question: "Wie berücksichtige ich den 13. Monatslohn?", answer: "Rechne den 13. Monatslohn in den Jahreslohn ein oder erhöhe den durchschnittlichen Monatslohn entsprechend." },
+      { question: "Welche Wochenzahl soll ich verwenden?", answer: "Für eine einfache Jahresbetrachtung sind 52 bezahlte Wochen üblich. Bei unbezahlten Wochen kannst du den Wert reduzieren." },
+      { question: "Kann ich Teilzeit vergleichen?", answer: "Ja. Trage die effektiven Wochenstunden deines Teilzeitpensums ein." },
+      { question: "Sind Ferienzuschläge enthalten?", answer: "Nein. Ferienzuschläge müssen separat geprüft und bei Stundenlohn transparent ausgewiesen werden." },
+    ],
+    relatedCalculators: ["lohnrechner-schweiz", "arbeitszeitrechner", "ueberstundenrechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Stundenlohn berechnen",
+        description: "Monatslohn, Jahreslohn, 13. Monatslohn und Ferienzuschlag richtig einordnen.",
+      },
+      {
+        href: "/de/ratgeber/ueberstunden-schweiz-berechnen",
+        label: "Überstunden berechnen",
+        description: "Wie der Stundenlohn in die Auszahlung von Überstunden einfliesst.",
+      },
+    ],
+    monetizationType: "mixed",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Stundenlohn in der Schweiz aus Monatslohn berechnen",
+    updatedAt: "12. Juli 2026",
+    sources: swissVacationSources,
+    inputs: [
+      { key: "monthlySalary", label: "Monatslohn (CHF)", defaultValue: "6300", min: "0" },
+      { key: "hoursPerWeek", label: "Wochenstunden", defaultValue: "42", step: "0.1", min: "1" },
+      { key: "weeksPerYear", label: "Bezahlte Wochen pro Jahr", defaultValue: "52", step: "0.1", min: "1" },
+    ],
+    resultLabels: ["Jahreslohn", "Jahresstunden", "Stundenlohn"],
+    cta: "Neue Lohn- und Arbeitszeitrechner für die Schweiz per E-Mail erhalten.",
+  },
+  {
     id: "de-vacation-ch",
     locale: "de",
     slug: "ferienrechner-schweiz",
@@ -665,6 +900,8 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     schemaType: "WebApplication",
     isPriority: true,
     searchIntent: "Ferienanspruch in der Schweiz anteilig berechnen",
+    updatedAt: "12. Juli 2026",
+    sources: swissVacationSources,
     inputs: [
       { key: "daysPerWeek", label: "Arbeitstage pro Woche", defaultValue: "5", step: "0.5", min: "1", max: "7" },
       { key: "weeks", label: "Ferienwochen pro Jahr", defaultValue: "4", step: "0.5", min: "1", max: "10" },

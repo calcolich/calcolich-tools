@@ -1,7 +1,6 @@
 import Script from "next/script";
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
 export default function MarketingScripts() {
   return (
@@ -21,16 +20,6 @@ export default function MarketingScripts() {
             `}
           </Script>
         </>
-      ) : null}
-
-      {adsenseClientId ? (
-        <Script
-          id="google-adsense"
-          async
-          strategy="afterInteractive"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-          crossOrigin="anonymous"
-        />
       ) : null}
     </>
   );

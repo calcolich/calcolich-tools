@@ -7,7 +7,7 @@ import { getLocalizedCalculators, hasLocalizedCalculator, locales, localizedAlte
 import { servicePages } from "@/lib/service-pages";
 import { siteUrl } from "@/lib/site-metadata";
 
-const contentUpdatedAt = new Date("2026-06-21T00:00:00.000Z");
+const contentUpdatedAt = new Date("2026-07-12T00:00:00.000Z");
 
 const routes = Array.from(new Set([
   "",

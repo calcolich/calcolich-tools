@@ -51,16 +51,12 @@ https://calcolich.ch/sitemap.xml
 calcolich.ch
 ```
 
-3. Copia Publisher ID:
-
-```text
-ca-pub-XXXXXXXXXXXXXXXX
-```
+3. Copia il Publisher ID dall'account AdSense approvato.
 
 4. Inserisci su Vercel:
 
 ```text
-NEXT_PUBLIC_ADSENSE_CLIENT_ID
+NEXT_PUBLIC_ADSENSE_CLIENT
 ```
 
 5. Dopo approvazione, crea due annunci display responsive:
@@ -81,7 +77,7 @@ https://calcolich.ch/ads.txt
 ```text
 NEXT_PUBLIC_GA_MEASUREMENT_ID
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-NEXT_PUBLIC_ADSENSE_CLIENT_ID
+NEXT_PUBLIC_ADSENSE_CLIENT
 NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT
 NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT
 NEXT_PUBLIC_CONTACT_EMAIL

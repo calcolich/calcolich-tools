@@ -111,9 +111,9 @@ Venerdi:
 
 ```text
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-XXXXXXXXXXXXXXXX
-NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT=1234567890
-NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=1234567890
+NEXT_PUBLIC_ADSENSE_CLIENT=
+NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT=
+NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=
 NEXT_PUBLIC_CONTACT_EMAIL=calcolich@gmail.com
 LEADS_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-url
 LEADS_WEBHOOK_SECRET=change-this-secret
@@ -158,7 +158,7 @@ Prima fase:
 
 - attivare account AdSense con `calcolich@gmail.com`
 - aggiungere `calcolich.ch`
-- inserire `NEXT_PUBLIC_ADSENSE_CLIENT_ID`
+- inserire `NEXT_PUBLIC_ADSENSE_CLIENT`
 - aspettare approvazione Google
 
 Seconda fase:

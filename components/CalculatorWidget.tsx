@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Calculator } from "@/lib/calculators";
+import { sendAnalyticsEvent } from "@/lib/analytics-events";
 
 type Values = Record<string, string>;
 type ResultRow = { label: string; value: string };
@@ -11,6 +12,7 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
     calculator.inputs.map((input) => [input.key, input.defaultValue]),
   );
   const [values, setValues] = useState<Values>(defaults);
+  const [started, setStarted] = useState(false);
 
   const results = useMemo(
     () => calculate(calculator, values).map((row, index) => ({
@@ -29,7 +31,10 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
             {input.type === "select" ? (
               <select
                 value={values[input.key] ?? input.defaultValue}
-                onChange={(event) => setValues((current) => ({ ...current, [input.key]: event.target.value }))}
+                onChange={(event) => {
+                  trackCalculatorStart();
+                  setValues((current) => ({ ...current, [input.key]: event.target.value }));
+                }}
                 className="w-full rounded-xl border border-gray-300 bg-white p-4"
               >
                 {input.options?.map((option) => (
@@ -46,7 +51,10 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
                 step={input.step}
                 placeholder={input.placeholder}
                 value={values[input.key] ?? input.defaultValue}
-                onChange={(event) => setValues((current) => ({ ...current, [input.key]: event.target.value }))}
+                onChange={(event) => {
+                  trackCalculatorStart();
+                  setValues((current) => ({ ...current, [input.key]: event.target.value }));
+                }}
                 className="w-full rounded-xl border border-gray-300 p-4"
               />
             )}
@@ -65,8 +73,27 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
           </div>
         ))}
       </div>
+      <button
+        type="button"
+        onClick={() => sendAnalyticsEvent("calculator_complete", {
+          calculatorId: calculator.id ?? calculator.slug,
+          source: calculator.slug,
+        })}
+        className="mt-5 rounded-xl bg-gray-950 px-5 py-3 font-bold text-white"
+      >
+        Ergebnis geprüft
+      </button>
     </section>
   );
+
+  function trackCalculatorStart() {
+    if (started) return;
+    setStarted(true);
+    sendAnalyticsEvent("calculator_start", {
+      calculatorId: calculator.id ?? calculator.slug,
+      source: calculator.slug,
+    });
+  }
 }
 
 function number(values: Values, key: string) {
@@ -110,6 +137,31 @@ function calculate(calculator: Calculator, values: Values): ResultRow[] {
         { label: "Pro Tag", value: `${dailyHours.toFixed(2)} h` },
         { label: "Pro Woche", value: `${weeklyHours.toFixed(2)} h` },
         { label: "Pro Monat", value: `${(weeklyHours * 52 / 12).toFixed(2)} h` },
+      ];
+    }
+    case "overtime-ch": {
+      const actualHours = number(values, "actualHours");
+      const targetHours = number(values, "targetHours");
+      const hourlyWage = number(values, "hourlyWage");
+      const supplementRate = number(values, "supplementRate") / 100;
+      const overtimeHours = Math.max(actualHours - targetHours, 0);
+      const compensation = overtimeHours * hourlyWage * (1 + supplementRate);
+      return [
+        { label: "Ueberstunden", value: `${overtimeHours.toFixed(2)} h` },
+        { label: "Zuschlag", value: `${(supplementRate * 100).toFixed(0)}%` },
+        { label: "Auszahlung geschaetzt", value: money(compensation) },
+      ];
+    }
+    case "working-days-ch": {
+      const calendarDays = number(values, "calendarDays");
+      const weekendDays = number(values, "weekendDays");
+      const publicHolidays = number(values, "publicHolidays");
+      const vacationDays = number(values, "vacationDays");
+      const workdays = Math.max(calendarDays - weekendDays - publicHolidays - vacationDays, 0);
+      return [
+        { label: "Kalendertage", value: `${calendarDays.toFixed(0)}` },
+        { label: "Abzuege", value: `${(weekendDays + publicHolidays + vacationDays).toFixed(0)}` },
+        { label: "Arbeitstage", value: `${workdays.toFixed(0)}` },
       ];
     }
     case "work-percentage-ch": {

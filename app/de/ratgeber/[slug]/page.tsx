@@ -65,6 +65,7 @@ export default async function GermanGuideArticlePage({ params }: Props) {
       "@type": "Organization",
       name: "Calcolich",
     },
+    dateModified: article.updatedAt,
     mainEntityOfPage: articleUrl,
   };
   const faqSchema = {
@@ -126,6 +127,9 @@ export default async function GermanGuideArticlePage({ params }: Props) {
           <p className="mb-3 text-xs font-black uppercase tracking-wide text-emerald-700">Ratgeber Schweiz</p>
           <h1 className="text-4xl font-black tracking-tight md:text-6xl">{article.title}</h1>
           <div className="mt-5 space-y-4 text-lg leading-8 text-gray-700">
+            <p className="text-base font-semibold text-gray-600">
+              Redaktion: Calcolich · {article.updatedAt ? `Zuletzt aktualisiert: ${article.updatedAt}` : "Regelmässig redaktionell geprüft"}
+            </p>
             {article.intro.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}

@@ -3,6 +3,7 @@ import CalculatorActions from "@/components/CalculatorActions";
 import CalculatorWidget from "@/components/CalculatorWidget";
 import LeadForm from "@/components/LeadForm";
 import RevenueCta from "@/components/RevenueCta";
+import TrackedInternalLink from "@/components/TrackedInternalLink";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
 import { hasTranslatedLocaleSlug, localizedAlternates, localizedHref, type Locale } from "@/lib/i18n";
@@ -74,6 +75,17 @@ export default function CalculatorPage({
     operatingSystem: "Web",
     inLanguage: locale,
     url: `${siteUrl}${backHref === "/" ? "" : backHref}/${calculator.slug}`,
+    dateModified: calculator.updatedAt,
+    author: {
+      "@type": "Organization",
+      name: "Calcolich",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Calcolich",
+      url: siteUrl,
+    },
     offers: {
       "@type": "Offer",
       price: "0",
@@ -111,14 +123,17 @@ export default function CalculatorPage({
           {languageLinks.length > 0 ? (
             <nav className="flex items-center gap-1 text-xs font-black uppercase text-gray-600" aria-label="Language versions">
               {languageLinks.map(([language, href]) => (
-                <Link
+                <TrackedInternalLink
                   key={language}
                   href={new URL(href).pathname}
                   hrefLang={language}
+                  event="language_change"
+                  source={calculator.slug}
+                  target={language}
                   className={`rounded-full px-3 py-2 ${language === locale ? "bg-gray-950 text-white" : "bg-white hover:bg-gray-100"}`}
                 >
                   {language}
-                </Link>
+                </TrackedInternalLink>
               ))}
             </nav>
           ) : null}
@@ -135,12 +150,6 @@ export default function CalculatorPage({
         {calculator.isPriority ? <CalculatorActions calculatorId={calculator.id ?? calculator.slug} /> : null}
 
         {backHref === "/" ? <RevenueCta calculator={calculator} /> : null}
-
-        <AdSlot
-          slot={process.env.NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT}
-          label={calculator.locale === "de" ? "Anzeige" : undefined}
-          showPlaceholder={calculator.isPriority}
-        />
 
         {calculator.isPriority ? (
           <aside className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
@@ -192,6 +201,13 @@ export default function CalculatorPage({
               </section>
             ) : null}
 
+            <section className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+              <h2 className="text-2xl font-black tracking-tight text-gray-950">Hinweis zur Nutzung</h2>
+              <p className="mt-3 text-lg leading-8 text-gray-700">
+                Die Ergebnisse sind indikative Berechnungen auf Basis deiner Eingaben. Sie ersetzen keine verbindliche Lohnabrechnung, Rechtsberatung oder Auskunft einer offiziellen Stelle.
+              </p>
+            </section>
+
             {calculator.contentSections && calculator.article.slice(2).length > 0 ? (
               <section className="mt-8">
                 <h2 className="text-2xl font-black tracking-tight text-gray-950">Wichtige Hinweise</h2>
@@ -208,10 +224,16 @@ export default function CalculatorPage({
                 <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.guideLinksTitle}</h2>
                 <div className="mt-4 grid gap-3">
                   {calculator.guideLinks.map((guide) => (
-                    <Link key={guide.href} href={guide.href} className="block rounded-2xl border border-emerald-100 bg-white p-4 transition hover:border-emerald-300">
+                    <TrackedInternalLink
+                      key={guide.href}
+                      href={guide.href}
+                      event="guide_click"
+                      source={calculator.slug}
+                      className="block rounded-2xl border border-emerald-100 bg-white p-4 transition hover:border-emerald-300"
+                    >
                       <span className="font-black text-emerald-800">{guide.label}</span>
                       <span className="mt-1 block text-base leading-7 text-gray-700">{guide.description}</span>
-                    </Link>
+                    </TrackedInternalLink>
                   ))}
                 </div>
               </section>
@@ -230,19 +252,40 @@ export default function CalculatorPage({
                 </div>
               </>
             ) : null}
+
+            {calculator.sources?.length || calculator.updatedAt ? (
+              <section className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">Quellen und Aktualisierung</h2>
+                {calculator.updatedAt ? (
+                  <p className="mt-3 text-base font-semibold text-gray-700">Zuletzt aktualisiert: {calculator.updatedAt}</p>
+                ) : null}
+                {calculator.sources?.length ? (
+                  <div className="mt-4 space-y-2">
+                    {calculator.sources.map((source) => (
+                      <a key={source.href} href={source.href} className="block font-semibold text-emerald-800 hover:text-emerald-950" rel="noreferrer" target="_blank">
+                        {source.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
+              </section>
+            ) : null}
           </article>
 
           <aside className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="mb-4 text-xl font-black">{ui.relatedTitle}</h2>
             <div className="space-y-3">
               {related.map((tool) => (
-                <Link
+                <TrackedInternalLink
                   key={tool.slug}
                   href={calculatorHref(tool)}
+                  event="related_calculator_click"
+                  source={calculator.slug}
+                  target={tool.slug}
                   className="block rounded-2xl border border-gray-200 p-4 font-bold text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50"
                 >
                   {publicCopy(tool.shortTitle)}
-                </Link>
+                </TrackedInternalLink>
               ))}
             </div>
           </aside>

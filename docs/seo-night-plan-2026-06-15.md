@@ -6,8 +6,8 @@
 - Progetto Vercel live: `calcolich-tools`
 - Search Console: proprieta `sc-domain:calcolich.ch` attiva
 - Sitemap inviata: `https://calcolich.ch/sitemap.xml`
-- AdSense: configurato con `ca-pub-4502757971319425`
-- ads.txt live: `google.com, pub-4502757971319425, DIRECT, f08c47fec0942fa0`
+- AdSense: configurazione publisher rimossa dalla documentazione; usare solo variabili ambiente.
+- ads.txt live: generato dalla variabile `NEXT_PUBLIC_ADSENSE_CLIENT` quando configurata.
 
 ## Interventi fatti stanotte
 

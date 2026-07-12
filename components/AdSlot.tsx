@@ -15,7 +15,7 @@ export default function AdSlot({
   label?: string;
   showPlaceholder?: boolean;
 }) {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
   useEffect(() => {
     if (!client || !slot) return;

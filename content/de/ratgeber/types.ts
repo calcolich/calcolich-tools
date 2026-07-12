@@ -5,6 +5,7 @@ export type GermanLongTailArticle = {
   title: string;
   metaTitle: string;
   metaDescription: string;
+  updatedAt?: string;
   targetKeywords: string[];
   intro: string[];
   sections: {

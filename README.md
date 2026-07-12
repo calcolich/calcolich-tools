@@ -139,9 +139,9 @@ Aggiungi:
 
 ```text
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-XXXXXXXXXXXXXXXX
-NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT=1234567890
-NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=1234567890
+NEXT_PUBLIC_ADSENSE_CLIENT=
+NEXT_PUBLIC_ADSENSE_CALCULATOR_SLOT=
+NEXT_PUBLIC_ADSENSE_ARTICLE_SLOT=
 NEXT_PUBLIC_CONTACT_EMAIL=calcolich@gmail.com
 LEADS_WEBHOOK_URL=https://hook.eu1.make.com/your-webhook-url
 LEADS_WEBHOOK_SECRET=change-this-secret
@@ -152,7 +152,7 @@ LEADS_FROM_EMAIL=onboarding@resend.dev
 
 Poi fai un nuovo deploy.
 
-Quando `NEXT_PUBLIC_ADSENSE_CLIENT_ID` e presente, il sito genera anche:
+Quando `NEXT_PUBLIC_ADSENSE_CLIENT` e presente, il sito genera anche:
 
 ```text
 https://calcolich.ch/ads.txt

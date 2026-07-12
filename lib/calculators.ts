@@ -1,6 +1,8 @@
 export type CalculatorKind =
   | "work-hours"
   | "working-time"
+  | "overtime-ch"
+  | "working-days-ch"
   | "work-percentage-ch"
   | "salary-net-ch"
   | "gross-net-ch"
@@ -76,6 +78,8 @@ export type Calculator = {
   schemaType?: "WebApplication" | "SoftwareApplication";
   isPriority?: boolean;
   searchIntent?: string;
+  updatedAt?: string;
+  sources?: { label: string; href: string }[];
   resultLabels?: string[];
   contentSections?: {
     heading: string;

@@ -1,12 +1,22 @@
 import { NextResponse } from "next/server";
 
-const allowedEvents = new Set(["commercial_page_view", "commercial_cta_click"]);
+const allowedEvents = new Set([
+  "commercial_page_view",
+  "commercial_cta_click",
+  "calculator_start",
+  "calculator_complete",
+  "language_change",
+  "related_calculator_click",
+  "guide_click",
+  "lead_submit",
+]);
 
 type EventPayload = {
   event?: string;
   source?: string;
   page?: string;
   target?: string;
+  calculatorId?: string;
 };
 
 export async function POST(request: Request) {
@@ -34,6 +44,7 @@ export async function POST(request: Request) {
     source: cleanField(payload.source, 120) ?? "unknown",
     page: getPath(payload.page),
     target: getPath(payload.target),
+    calculatorId: cleanField(payload.calculatorId, 120),
     requestId,
     isBot: /bot|crawler|spider|slurp|headless/i.test(userAgent),
     durationMs: Date.now() - startedAt,

@@ -2,6 +2,7 @@ import { ferienanspruchTeilzeitSchweiz } from "./ferienanspruch-teilzeit-schweiz
 import { mehrwertsteuerSchweiz2026 } from "./mehrwertsteuer-schweiz-2026";
 import { pausenregelungArbeitszeitSchweiz } from "./pausenregelung-arbeitszeit-schweiz";
 import { stundenlohnBerechnenSchweiz } from "./stundenlohn-berechnen-schweiz";
+import { ueberstundenSchweizBerechnen } from "./ueberstunden-schweiz-berechnen";
 import type { GermanLongTailArticle } from "./types";
 
 export type { GermanLongTailArticle };
@@ -9,6 +10,7 @@ export type { GermanLongTailArticle };
 export const germanLongTailArticles: GermanLongTailArticle[] = [
   mehrwertsteuerSchweiz2026,
   stundenlohnBerechnenSchweiz,
+  ueberstundenSchweizBerechnen,
   ferienanspruchTeilzeitSchweiz,
   pausenregelungArbeitszeitSchweiz,
 ];
