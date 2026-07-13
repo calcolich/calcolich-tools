@@ -63,7 +63,7 @@ export const servicePages: ServicePage[] = [
     ],
     relatedLinks: [
       { href: "/calcolo-iva-svizzera", label: "Calcolatore IVA Svizzera" },
-      { href: "/calcolo-contributi-avs-indipendenti", label: "Contributi AVS indipendenti" },
+      { href: "/it/calcolatore-contributi-avs-indipendenti", label: "Contributi AVS indipendenti" },
       { href: "/it/calcolatore-tariffa-freelance-svizzera", label: "Tariffa freelance" },
     ],
     faqs: [

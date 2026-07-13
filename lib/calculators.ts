@@ -1218,6 +1218,8 @@ export const calculators: Calculator[] = [
       "Il valore e utile quando vuoi capire se la tua spesa sanitaria e fuori scala rispetto al reddito, prima di chiedere una verifica formale al cantone competente.",
       "Usa il risultato insieme al budget mensile, al salario netto e all'affitto sostenibile per capire quanto margine reale ti resta ogni mese.",
     ],
+    formula: "Riduzione potenziale = premio annuo cassa malati - (reddito annuo × quota sostenibile). Il risultato non sostituisce la verifica cantonale.",
+    example: "Esempio: con CHF 45'000 di reddito, CHF 5'400 di premio annuo e quota sostenibile dell'8%, il modello mostra una riduzione potenziale di CHF 1'800.",
     faqs: [
       { question: "La riduzione premi e uguale in tutti i cantoni?", answer: "No. Ogni cantone applica regole, soglie e procedure proprie." },
       { question: "Il risultato e ufficiale?", answer: "No. E una stima indicativa da confrontare con la procedura del cantone competente." },
@@ -1265,6 +1267,8 @@ export const calculators: Calculator[] = [
       "L'uso pratico e chiaro per famiglie e genitori che vogliono capire quanto incide un importo mensile riconosciuto dal cantone sul budget complessivo.",
       "Collega il risultato al salario netto, al budget mensile e all'imposta alla fonte per vedere il quadro familiare completo.",
     ],
+    formula: "Importo annuo = (assegno per figlio × numero di figli + assegno di formazione × numero di figli in formazione) × mesi di diritto.",
+    example: "Esempio: 2 figli con CHF 250 di assegno per figlio e 1 figlio in formazione con CHF 300 producono CHF 800 al mese e CHF 9'600 in 12 mesi.",
     faqs: [
       { question: "Gli importi sono uguali in tutta la Svizzera?", answer: "No. Gli importi minimi sono regolati a livello federale, ma l'applicazione pratica dipende dal cantone." },
       { question: "Il risultato include nati e adozioni?", answer: "No. Questo calcolatore stima solo assegni mensili per figlio e in formazione." },
@@ -1601,6 +1605,8 @@ export const calculators: Calculator[] = [
       "Le casse di compensazione possono applicare anche contributi cantonali, come quelli per gli assegni familiari, che non sono inclusi in questa stima. Per questo il risultato e utile per il budget, ma non sostituisce la decisione ufficiale della cassa.",
       "Collega questa stima al calcolatore tariffa freelance: inserendo i contributi nei costi annui puoi determinare una tariffa oraria piu realistica e proteggere il margine dell'attivita.",
     ],
+    formula: "Contributi stimati = reddito netto annuo × aliquota AVS/AI/IPG. Se il risultato e sotto il minimo, si usa il contributo minimo, poi si aggiungono le spese amministrative.",
+    example: "Esempio: CHF 90'000 di reddito netto con aliquota del 9,8% generano CHF 8'820 di contributi; con spese amministrative del 4% il totale sale a CHF 9'172.80.",
     faqs: [
       { question: "Quale aliquota devo inserire?", answer: "Per redditi elevati puoi partire dal 10%. Per redditi inferiori usa l'aliquota della scala contributiva ufficiale o quella comunicata dalla cassa." },
       { question: "Il calcolo include gli assegni familiari?", answer: "No. I contributi cantonali e altre voci specifiche non sono inclusi e possono aumentare il totale." },
@@ -1703,6 +1709,8 @@ export const calculators: Calculator[] = [
       "Per il 2026 il guadagno massimo assicurato e 148'200 franchi annui, equivalente a 12'350 franchi mensili. Il calcolatore limita automaticamente il reddito a questa soglia e usa i giorni indennizzabili inseriti per stimare il pagamento lordo del mese.",
       "Dal risultato vengono normalmente dedotti contributi sociali, assicurazione infortuni, eventuale previdenza professionale e imposta alla fonte. Il conteggio definitivo dipende dalla cassa di disoccupazione e dal numero effettivo di giorni lavorativi del mese.",
     ],
+    formula: "Taggeld = guadagno assicurato ÷ 21,7 × aliquota di indennita. L'indennita mensile lorda = taggeld × giorni indennizzabili.",
+    example: "Esempio: CHF 6'500 di guadagno assicurato con aliquota del 70% danno un taggeld di circa CHF 209.91. Su 21,7 giorni il mese vale circa CHF 4'556 lordi.",
     faqs: [
       { question: "Quando si applica l'80 per cento?", answer: "Di regola con figli a carico sotto i 25 anni, guadagno assicurato fino a CHF 3'797 o rendita AI di almeno il 40%." },
       { question: "Qual e il guadagno massimo assicurato?", answer: "Per il 2026 e CHF 148'200 annui, pari a CHF 12'350 mensili." },

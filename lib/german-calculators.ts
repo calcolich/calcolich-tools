@@ -587,6 +587,13 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Brauche ich einen Antrag?", answer: "In vielen Kantonen ja. Das Ergebnis zeigt dir nur den möglichen Spielraum." },
     ],
     relatedCalculators: ["krankenkasse-praemien-rechner-schweiz", "budget-rechner-schweiz", "mietbudget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/mehrwertsteuer-schweiz-2026",
+        label: "Budget und Fixkosten einordnen",
+        description: "Wie du hohe Fixkosten in der Schweiz sauber ins Monatsbudget einbaust.",
+      },
+    ],
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,
@@ -647,6 +654,13 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Brauche ich mehrere Eingaben pro Kind?", answer: "Nur wenn Kinder und Ausbildungszulagen unterschiedlich behandelt werden sollen." },
     ],
     relatedCalculators: ["budget-rechner-schweiz", "brutto-netto-rechner-schweiz", "praemienverbilligung-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Lohn als Basis verstehen",
+        description: "Warum Lohn, Teilzeit und Familienzulagen im gleichen Haushaltsbild landen sollten.",
+      },
+    ],
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,
