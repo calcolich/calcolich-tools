@@ -1,0 +1,290 @@
+{
+  "stamp": "2026-07-13",
+  "seo": {
+    "name": "SEO Agent",
+    "summary": "Ho verificato copertura keyword, pagine senza metadata evidente, titoli duplicati e livello di collegamento interno.",
+    "missingMetadata": [],
+    "duplicateTitles": [],
+    "keywordCoverage": [
+      {
+        "keyword": "Prämienverbilligung-Rechner Schweiz",
+        "locale": "de",
+        "intent": "Verstehen, ob die Krankenkassenprämie im Verhältnis zum Einkommen entlastet werden kann.",
+        "target": "/de/praemienverbilligung-rechner-schweiz",
+        "priority": "bassa",
+        "occurrences": 7,
+        "status": "coperta"
+      },
+      {
+        "keyword": "Familienzulagen-Rechner Schweiz",
+        "locale": "de",
+        "intent": "Kinderzulage und Ausbildungszulage auf Jahresbasis berechnen.",
+        "target": "/de/familienzulagen-rechner-schweiz",
+        "priority": "bassa",
+        "occurrences": 6,
+        "status": "coperta"
+      },
+      {
+        "keyword": "AHV-Beiträge Selbstständige Rechner",
+        "locale": "de",
+        "intent": "Beiträge von Selbstständigen in die Preis- und Cashflow-Kalkulation einbauen.",
+        "target": "/de/ahv-beitraege-selbststaendige-rechner",
+        "priority": "bassa",
+        "occurrences": 6,
+        "status": "coperta"
+      },
+      {
+        "keyword": "Arbeitslosenentschädigung-Rechner Schweiz",
+        "locale": "de",
+        "intent": "Taggeldhöhe nach Jobverlust grob abschätzen und Budget anpassen.",
+        "target": "/de/arbeitslosenentschaedigung-rechner-schweiz",
+        "priority": "bassa",
+        "occurrences": 6,
+        "status": "coperta"
+      }
+    ],
+    "isolatedPages": [],
+    "recommendations": []
+  },
+  "content": {
+    "name": "Content & Data Agent",
+    "summary": "Ho controllato i blocchi editoriali e i marcatori di dati per le pagine DE e IT prioritarie.",
+    "findings": [],
+    "updates": [],
+    "recommendations": []
+  },
+  "monetization": {
+    "name": "Monetization Agent",
+    "summary": "Ho valutato lead, affiliazioni, AdSense e servizi con priorità alle pagine già vicine a un intento economico forte.",
+    "opportunities": [
+      {
+        "slug": "praemienverbilligung-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "familienzulagen-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "ahv-beitraege-selbststaendige-rechner",
+        "model": "mixed",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-3 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "arbeitslosenentschaedigung-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "quellensteuer-rechner-schweiz",
+        "model": "mixed",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-3 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "hypotheken-tragbarkeit-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "saeule-3a-steuerersparnis-rechner",
+        "model": "affiliate",
+        "status": "presente",
+        "potential": "media",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      }
+    ],
+    "topOpportunities": [
+      {
+        "slug": "praemienverbilligung-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "familienzulagen-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "ahv-beitraege-selbststaendige-rechner",
+        "model": "mixed",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-3 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "arbeitslosenentschaedigung-rechner-schweiz",
+        "model": "lead",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-2 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      },
+      {
+        "slug": "quellensteuer-rechner-schweiz",
+        "model": "mixed",
+        "status": "presente",
+        "potential": "alta",
+        "difficulty": "media",
+        "risk": "basso",
+        "time": "1-3 giorni",
+        "readiness": {
+          "cta": true,
+          "guideLinks": true,
+          "sources": false,
+          "monetizationType": true
+        }
+      }
+    ],
+    "recommendations": [
+      "Rafforzare CTA e modulo contatto su praemienverbilligung-rechner-schweiz.",
+      "Rafforzare CTA e modulo contatto su familienzulagen-rechner-schweiz.",
+      "Usare ahv-beitraege-selbststaendige-rechner come pagina di traffico e presidio AdSense futuro.",
+      "Rafforzare CTA e modulo contatto su arbeitslosenentschaedigung-rechner-schweiz.",
+      "Usare quellensteuer-rechner-schweiz come pagina di traffico e presidio AdSense futuro."
+    ]
+  },
+  "quality": {
+    "name": "Quality Agent",
+    "summary": "Ho eseguito lint, build e controlli statici su titoli, route e link interni generati.",
+    "lint": {
+      "ok": true,
+      "status": 0,
+      "stdout": "\n> calcolich-tools@0.1.0 lint\n> eslint\n\n",
+      "stderr": ""
+    },
+    "build": {
+      "ok": true,
+      "status": 0,
+      "stdout": "\n> calcolich-tools@0.1.0 build\n> next build --webpack\n\n▲ Next.js 16.2.6 (webpack)\n- Environments: .env.local\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 1713ms\n  Running TypeScript ...\n  Finished TypeScript in 1381ms ...\n  Collecting page data using 7 workers ...\n  Generating static pages using 7 workers (0/149) ...\n  Generating static pages using 7 workers (37/149) \r\n  Generating static pages using 7 workers (74/149) \r\n  Generating static pages using 7 workers (111/149) \r\n✓ Generating static pages using 7 workers (149/149) in 398ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n├ ● /[slug]\n│ ├ /calcolo-ore-lavoro\n│ ├ /calcolo-percentuale-lavoro-svizzera\n│ ├ /calcolo-salario-netto-svizzera\n│ └ [+24 more paths]\n├ ƒ /ads.txt\n├ ƒ /api/events\n├ ƒ /api/leads\n├ ○ /audit-sito-gratuito-ticino\n├ ○ /calcolo-giorni-lavorativi-svizzera\n├ ○ /calcolo-straordinari-svizzera\n├ ○ /calcolo-tredicesima-svizzera\n├ ● /categorie/[slug]\n│ ├ /categorie/stipendio-lavoro\n│ ├ /categorie/casa-budget\n│ ├ /categorie/business-freelance\n│ └ [+2 more paths]\n├ ○ /chi-siamo\n├ ○ /contatti\n├ ○ /cookie\n├ ○ /de\n├ ● /de/[slug]\n│ ├ /de/quellensteuer-rechner-schweiz\n│ ├ /de/krankenkasse-praemien-rechner-schweiz\n│ ├ /de/praemienverbilligung-rechner-schweiz\n│ └ [+23 more paths]\n├ ○ /de/ratgeber\n├ ● /de/ratgeber/[slug]\n│ ├ /de/ratgeber/mehrwertsteuer-schweiz-2026\n│ ├ /de/ratgeber/stundenlohn-berechnen-schweiz\n│ ├ /de/ratgeber/ueberstunden-schweiz-berechnen\n│ └ [+2 more paths]\n├ ○ /disclaimer\n├ ○ /en\n├ ● /en/[slug]\n│ ├ /en/withholding-tax-calculator-switzerland\n│ ├ /en/health-insurance-premium-calculator-switzerland\n│ ├ /en/health-insurance-premium-subsidy-calculator-switzerland\n│ └ [+12 more paths]\n├ ○ /fr\n├ ● /fr/[slug]\n│ ├ /fr/calculateur-impot-a-la-source-suisse\n│ ├ /fr/calculateur-assurance-maladie-suisse\n│ ├ /fr/calculateur-reduction-primes-assurance-maladie-suisse\n│ └ [+12 more paths]\n├ ○ /guide\n├ ● /guide/[slug]\n│ ├ /guide/stipendio-netto-svizzera\n│ ├ /guide/costo-vita-svizzera\n│ ├ /guide/freelance-svizzera\n│ └ [+5 more paths]\n├ ○ /it\n├ ● /it/[slug]\n│ ├ /it/calcolatore-imposta-alla-fonte-svizzera\n│ ├ /it/calcolatore-cassa-malati-svizzera\n│ ├ /it/calcolatore-riduzione-premi-cassa-malati-svizzera\n│ └ [+12 more paths]\n├ ○ /piano-cashflow-online\n├ ○ /privacy\n├ ○ /robots.txt\n├ ○ /scorporo-iva-svizzera\n├ ○ /servizi-ai-seo\n├ ● /servizi/[slug]\n│ ├ /servizi/siti-web-artigiani-ticino\n│ ├ /servizi/siti-web-fiduciarie-ticino\n│ ├ /servizi/siti-web-imprese-pulizie-ticino\n│ └ [+3 more paths]\n└ ○ /sitemap.xml\n\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses generateStaticParams)\nƒ  (Dynamic)  server-rendered on demand\n\n",
+      "stderr": ""
+    },
+    "routeCount": 145,
+    "duplicateTitles": [],
+    "brokenLinks": [],
+    "checks": {
+      "sitemap": true,
+      "robots": true,
+      "localizedRoutes": true
+    },
+    "recommendations": []
+  },
+  "summary": {
+    "createdOrImproved": [],
+    "problems": [],
+    "opportunities": [
+      "praemienverbilligung-rechner-schweiz (lead) -> potenziale alta, difficolta media, rischio basso, tempo 1-2 giorni",
+      "familienzulagen-rechner-schweiz (lead) -> potenziale alta, difficolta media, rischio basso, tempo 1-2 giorni",
+      "ahv-beitraege-selbststaendige-rechner (mixed) -> potenziale alta, difficolta media, rischio basso, tempo 1-3 giorni",
+      "arbeitslosenentschaedigung-rechner-schweiz (lead) -> potenziale alta, difficolta media, rischio basso, tempo 1-2 giorni",
+      "quellensteuer-rechner-schweiz (mixed) -> potenziale alta, difficolta media, rischio basso, tempo 1-3 giorni"
+    ],
+    "nextAction": "Presidiare subito praemienverbilligung-rechner-schweiz con CTA, guida collegata e monitoraggio lead.",
+    "impact": "Medio-alto: il sito ha piu superfici monetizzabili e SEO da presidiare.",
+    "progress": "Traiettoria buona: i cluster ad alto intento ci sono, il passo successivo e aumentare traffico e conversione."
+  }
+}

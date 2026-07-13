@@ -1,0 +1,83 @@
+{
+  "seo": {
+    "keywords": [
+      {
+        "keyword": "Prämienverbilligung-Rechner Schweiz",
+        "locale": "de",
+        "intent": "Verstehen, ob die Krankenkassenprämie im Verhältnis zum Einkommen entlastet werden kann.",
+        "target": "/de/praemienverbilligung-rechner-schweiz",
+        "priority": "high"
+      },
+      {
+        "keyword": "Familienzulagen-Rechner Schweiz",
+        "locale": "de",
+        "intent": "Kinderzulage und Ausbildungszulage auf Jahresbasis berechnen.",
+        "target": "/de/familienzulagen-rechner-schweiz",
+        "priority": "high"
+      },
+      {
+        "keyword": "AHV-Beiträge Selbstständige Rechner",
+        "locale": "de",
+        "intent": "Beiträge von Selbstständigen in die Preis- und Cashflow-Kalkulation einbauen.",
+        "target": "/de/ahv-beitraege-selbststaendige-rechner",
+        "priority": "high"
+      },
+      {
+        "keyword": "Arbeitslosenentschädigung-Rechner Schweiz",
+        "locale": "de",
+        "intent": "Taggeldhöhe nach Jobverlust grob abschätzen und Budget anpassen.",
+        "target": "/de/arbeitslosenentschaedigung-rechner-schweiz",
+        "priority": "high"
+      }
+    ]
+  },
+  "content": {
+    "watchlist": [
+      {
+        "file": "lib/german-calculators.ts",
+        "slugs": [
+          "praemienverbilligung-rechner-schweiz",
+          "familienzulagen-rechner-schweiz",
+          "ahv-beitraege-selbststaendige-rechner",
+          "arbeitslosenentschaedigung-rechner-schweiz"
+        ],
+        "requiredMarkers": ["updatedAt:", "sources:", "formula:", "example:", "faqs:", "guideLinks:"]
+      },
+      {
+        "file": "lib/calculators.ts",
+        "slugs": [
+          "calcolo-riduzione-premi-cassa-malati-svizzera",
+          "calcolo-assegni-familiari-svizzera",
+          "calcolo-contributi-avs-indipendenti",
+          "calcolo-indennita-disoccupazione-svizzera"
+        ],
+        "requiredMarkers": ["updatedAt:", "sources:", "formula:", "example:", "faqs:", "guideLinks:"]
+      }
+    ]
+  },
+  "monetization": {
+    "targets": [
+      { "slug": "praemienverbilligung-rechner-schweiz", "model": "lead" },
+      { "slug": "familienzulagen-rechner-schweiz", "model": "lead" },
+      { "slug": "ahv-beitraege-selbststaendige-rechner", "model": "mixed" },
+      { "slug": "arbeitslosenentschaedigung-rechner-schweiz", "model": "lead" },
+      { "slug": "quellensteuer-rechner-schweiz", "model": "mixed" },
+      { "slug": "saeule-3a-steuerersparnis-rechner", "model": "affiliate" },
+      { "slug": "hypotheken-tragbarkeit-rechner-schweiz", "model": "lead" }
+    ]
+  },
+  "quality": {
+    "routeFiles": [
+      "app/de/page.tsx",
+      "app/it/page.tsx",
+      "app/en/page.tsx",
+      "app/fr/page.tsx",
+      "app/de/[slug]/page.tsx",
+      "app/it/[slug]/page.tsx",
+      "app/en/[slug]/page.tsx",
+      "app/fr/[slug]/page.tsx",
+      "app/sitemap.ts",
+      "app/robots.ts"
+    ]
+  }
+}

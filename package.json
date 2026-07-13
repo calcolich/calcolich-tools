@@ -16,6 +16,7 @@
     "jarvis:cashflow": "sed -n '1,240p' jarvis/agents/cashflow-map.md",
     "jarvis:platform": "PORT=8097 node ../../outputs/jarvis-platform-server.mjs",
     "jarvis:remember": "node scripts/jarvis-remember.mjs",
+    "agents:daily": "node scripts/agents/run-daily-report.mjs",
     "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },
   "dependencies": {

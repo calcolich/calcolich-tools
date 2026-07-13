@@ -64,3 +64,12 @@ This registry tracks agents Jarvis can create, coordinate, or recommend.
 - Outputs: strategy briefs, risk plans, test checklists.
 - KPI: verified backtests, risk controls, implementation readiness.
 - Status: planned.
+
+### Calcolich Growth Agent Stack
+
+- SEO Agent: finds Swiss high-intent keywords, missing pages, weak metadata, duplicate titles, and isolated content.
+- Content & Data Agent: checks formulas, thresholds, dates, official sources, and update cadence for DE and IT pages.
+- Monetization Agent: ranks AdSense, affiliate, lead generation, and service opportunities against the CHF 1,500/month target.
+- Quality Agent: runs lint, build, schema, sitemap, robots, translations, and link checks without risky automatic edits.
+- Daily Report Agent: aggregates the other agents and writes the evening report into `reports/`.
+- Status: active locally, lightweight, file-based.
