@@ -6,6 +6,12 @@ import Link from "next/link";
 export default function LocaleHomePage({ locale }: { locale: Locale }) {
   const copy = localeHome[locale];
   const calculators = getLocalizedCalculators(locale);
+  const priorityGermanLinks = [
+    { href: "/de/quellensteuer-rechner-schweiz", label: "Quellensteuer", text: "Nettolohn mit kantonalem Quellensteuersatz schaetzen." },
+    { href: "/de/brutto-netto-rechner-schweiz", label: "Brutto-Netto", text: "Bruttolohn und Nettolohn fuer die Schweiz vergleichen." },
+    { href: "/de/saeule-3a-steuerersparnis-rechner", label: "Saeule 3a", text: "Steuerersparnis mit Grenzsteuersatz einschaetzen." },
+    { href: "/de/hypotheken-tragbarkeit-rechner-schweiz", label: "Hypothek", text: "Tragbarkeit vor dem Bankgespraech pruefen." },
+  ];
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] text-gray-950">
@@ -38,6 +44,21 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
 
         {locale === "de" ? (
           <>
+            <section className="mb-10 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8" aria-labelledby="swiss-seo-hub">
+              <h2 id="swiss-seo-hub" className="text-2xl font-black tracking-tight">Haeufig gesuchte Schweizer Rechner</h2>
+              <p className="mt-3 max-w-3xl text-lg leading-8 text-gray-700">
+                Starte mit den Rechnern, die fuer Lohnabrechnung, Steuerplanung, Vorsorge und Wohneigentum in der Schweiz am haeufigsten zusammenhaengen. Jede Seite zeigt Formel, Beispiel, Quellen und verwandte Tools.
+              </p>
+              <div className="mt-5 grid gap-3 md:grid-cols-2">
+                {priorityGermanLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="rounded-2xl border border-emerald-100 bg-emerald-50 p-4 hover:border-emerald-300">
+                    <span className="font-black text-emerald-900">{item.label}</span>
+                    <span className="mt-1 block text-sm leading-6 text-gray-700">{item.text}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+
             <section className="mb-10" aria-labelledby="calculator-categories">
               <h2 id="calculator-categories" className="mb-4 text-2xl font-black tracking-tight">Rechner nach Kategorie</h2>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -64,6 +85,24 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
                     <p className="mt-1 text-sm leading-6 text-gray-600">{article.metaDescription}</p>
                   </Link>
                 ))}
+              </div>
+            </section>
+
+            <section className="mb-10 grid gap-4 md:grid-cols-3" aria-label="Schweizer Themencluster">
+              <div className="rounded-2xl border border-gray-200 bg-white p-5">
+                <h2 className="text-xl font-black">Arbeit und Lohn</h2>
+                <p className="mt-2 text-sm leading-6 text-gray-600">Arbeitszeit, Ueberstunden, Ferien, Stundenlohn und Nettolohn zusammen betrachten.</p>
+                <Link href="/de/arbeitszeitrechner" className="mt-3 inline-flex text-sm font-black text-emerald-800">Arbeitszeit berechnen</Link>
+              </div>
+              <div className="rounded-2xl border border-gray-200 bg-white p-5">
+                <h2 className="text-xl font-black">Steuern und Vorsorge</h2>
+                <p className="mt-2 text-sm leading-6 text-gray-600">Quellensteuer, MWST und Saeule 3a mit Schweizer Regeln und CHF-Beispielen pruefen.</p>
+                <Link href="/de/quellensteuer-rechner-schweiz" className="mt-3 inline-flex text-sm font-black text-emerald-800">Steuern schaetzen</Link>
+              </div>
+              <div className="rounded-2xl border border-gray-200 bg-white p-5">
+                <h2 className="text-xl font-black">Wohnen und Budget</h2>
+                <p className="mt-2 text-sm leading-6 text-gray-600">Miete, Haushaltsbudget und Hypotheken-Tragbarkeit als monatlichen Cashflow lesen.</p>
+                <Link href="/de/hypotheken-tragbarkeit-rechner-schweiz" className="mt-3 inline-flex text-sm font-black text-emerald-800">Hypothek pruefen</Link>
               </div>
             </section>
           </>

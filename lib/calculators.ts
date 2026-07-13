@@ -10,6 +10,7 @@ export type CalculatorKind =
   | "vat-ch"
   | "compound-interest"
   | "mortgage-ch"
+  | "mortgage-affordability-ch"
   | "trading-risk"
   | "forex-lot-size"
   | "drawdown"
@@ -347,6 +348,38 @@ export const calculators: Calculator[] = [
       { question: "Posso confrontare tassi diversi?", answer: "Si, cambia il tasso annuo per vedere come varia rata e costo totale." },
     ],
     relatedSlugs: ["calcolo-interessi-composti", "calcolo-salario-netto-svizzera", "calcolo-lordo-netto-svizzera"],
+  },
+  {
+    slug: "calcolo-sostenibilita-ipoteca-svizzera",
+    kind: "mortgage-affordability-ch",
+    title: "Calcolatore sostenibilita ipoteca Svizzera",
+    shortTitle: "Sostenibilita ipoteca",
+    category: "Casa Svizzera",
+    metaTitle: "Calcolo sostenibilita ipoteca Svizzera | Calcolich",
+    metaDescription: "Stima la sostenibilita di un'ipoteca in Svizzera con reddito lordo, prezzo immobile, capitale proprio, tasso teorico e costi accessori.",
+    intro: "Verifica se i costi teorici di un'ipoteca restano entro una quota sostenibile del reddito lordo.",
+    cta: "Ricevi nuovi calcolatori per casa, budget e finanza in Svizzera.",
+    inputs: [
+      { key: "grossIncome", label: "Reddito lordo annuo (CHF)", defaultValue: "150000", min: "0" },
+      { key: "propertyPrice", label: "Prezzo immobile (CHF)", defaultValue: "850000", min: "0" },
+      { key: "equity", label: "Capitale proprio (CHF)", defaultValue: "180000", min: "0" },
+      { key: "imputedRate", label: "Tasso teorico (%)", defaultValue: "5", step: "0.1", min: "0" },
+      { key: "ancillaryRate", label: "Manutenzione e costi accessori (%)", defaultValue: "1", step: "0.1", min: "0" },
+      { key: "maxShare", label: "Quota massima reddito (%)", defaultValue: "33", step: "1", min: "1", max: "80" },
+    ],
+    article: [
+      "La sostenibilita ipotecaria e uno dei controlli centrali prima di comprare casa in Svizzera. Le banche non guardano solo il tasso effettivo del momento, ma spesso simulano un tasso teorico piu prudente.",
+      "Il calcolatore stima debito ipotecario, costi annui teorici e quota del reddito lordo. Se la quota supera il limite impostato, il finanziamento potrebbe risultare difficile o richiedere piu capitale proprio.",
+      "Il risultato e indicativo: ogni banca applica criteri propri e puo considerare ammortamento, secondo pilastro, eta, oggetto, sostenibilita a lungo termine e situazione familiare.",
+    ],
+    faqs: [
+      { question: "Che tasso devo usare?", answer: "Molte simulazioni usano un tasso teorico prudente, ad esempio 5%, ma la banca decide il criterio effettivo." },
+      { question: "Il capitale proprio minimo e sempre 20%?", answer: "Spesso si parte da almeno 20%, ma provenienza dei fondi e regole bancarie contano." },
+      { question: "Il risultato garantisce l'approvazione?", answer: "No. E una stima per preparare una valutazione, non una decisione di credito." },
+      { question: "Sono inclusi ammortamenti e imposte?", answer: "No. Il modello include interessi teorici e costi accessori stimati; altri costi vanno valutati separatamente." },
+      { question: "Perche si usa il reddito lordo?", answer: "La sostenibilita bancaria viene spesso confrontata con il reddito lordo annuo del nucleo." },
+    ],
+    relatedSlugs: ["calcolo-mutuo-svizzera", "calcolo-affitto-sostenibile-svizzera", "calcolo-budget-mensile"],
   },
   {
     slug: "calcolo-rischio-trading",

@@ -244,6 +244,22 @@ function calculate(calculator: Calculator, values: Values): ResultRow[] {
         { label: "Interessi totali", value: money(payment * months - principal) },
       ];
     }
+    case "mortgage-affordability-ch": {
+      const grossIncome = number(values, "grossIncome");
+      const propertyPrice = number(values, "propertyPrice");
+      const equity = number(values, "equity");
+      const mortgageDebt = Math.max(propertyPrice - equity, 0);
+      const interestCost = (mortgageDebt * number(values, "imputedRate")) / 100;
+      const ancillaryCost = (propertyPrice * number(values, "ancillaryRate")) / 100;
+      const annualCost = interestCost + ancillaryCost;
+      const affordability = grossIncome > 0 ? (annualCost / grossIncome) * 100 : 0;
+      const limit = (grossIncome * number(values, "maxShare")) / 100;
+      return [
+        { label: "Ipoteca stimata", value: money(mortgageDebt) },
+        { label: "Costi teorici annui", value: money(annualCost) },
+        { label: "Quota reddito", value: `${affordability.toFixed(2)}% / ${money(limit)}` },
+      ];
+    }
     case "trading-risk":
     case "forex-lot-size": {
       const riskMoney = (number(values, "account") * number(values, "riskPercent")) / 100;

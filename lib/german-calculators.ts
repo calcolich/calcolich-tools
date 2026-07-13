@@ -26,6 +26,21 @@ const swissVacationSources = [
   { label: "SECO: Ferien und Feiertage", href: "https://www.seco.admin.ch/seco/de/home/Arbeit/Personenfreizugigkeit_Arbeitsbeziehungen/Arbeitsrecht/FAQ_zum_privaten_Arbeitsrecht/ferien_und_feiertage.html" },
 ];
 
+const swissTaxSources = [
+  { label: "ESTV: Quellensteuer", href: "https://www.estv.admin.ch/estv/de/home/direkte-bundessteuer/quellensteuer.html" },
+  { label: "ch.ch: Steuern bezahlen", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
+];
+
+const swissPensionSources = [
+  { label: "Bundesamt fuer Sozialversicherungen: Saeule 3a", href: "https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/bv/grundlagen-und-gesetze/saeule-3a.html" },
+  { label: "ESTV: Direkte Bundessteuer", href: "https://www.estv.admin.ch/estv/de/home/direkte-bundessteuer.html" },
+];
+
+const swissMortgageSources = [
+  { label: "FINMA: Hypotheken", href: "https://www.finma.ch/de/dokumentation/dossier/dossier-hypotheken/" },
+  { label: "ch.ch: Wohneigentum finanzieren", href: "https://www.ch.ch/de/wohnen/wohneigentum/" },
+];
+
 export const germanPriorityCalculatorData: CentralizedCalculator[] = [
   {
     id: "de-hours",
@@ -379,6 +394,73 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     cta: "Lohnrechner und Checklisten für die Schweiz per E-Mail erhalten.",
   },
   {
+    id: "de-withholding-tax-ch",
+    locale: "de",
+    slug: "quellensteuer-rechner-schweiz",
+    kind: "withholding-tax-ch",
+    category: "Steuern & Mehrwertsteuer",
+    title: "Quellensteuer-Rechner Schweiz: Abzug und Nettolohn schätzen | Calcolich",
+    metaDescription: "Schweizer Quellensteuer aus Monatslohn, Sozialabgaben und kantonalem Steuersatz schätzen. Mit Formel, Beispiel, FAQ und Quellen.",
+    h1: "Quellensteuer-Rechner Schweiz",
+    shortTitle: "Quellensteuer-Rechner",
+    intro: "Schätze, wie sich Quellensteuer und Sozialabgaben auf deinen monatlichen Nettolohn in der Schweiz auswirken.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Quellensteuer-Rechner ist für Personen gedacht, bei denen die Steuer direkt vom Lohn abgezogen wird. Das betrifft häufig Grenzgänger, ausländische Arbeitnehmende ohne Niederlassungsbewilligung C und Personen mit kantonalem Quellensteuertarif.",
+          "Die genaue Quellensteuer hängt von Kanton, Zivilstand, Kindern, Konfession, Pensum und Tarifcode ab. Deshalb arbeitet dieser Rechner bewusst mit einem manuell eingegebenen Steuersatz und zeigt transparent, wie sich der Satz auf den Nettolohn auswirkt.",
+        ],
+        bullets: [
+          "Monatslohn mit Sozialabgaben und Quellensteuer plausibilisieren",
+          "Kantonale Tarifwerte als Prozentsatz einsetzen",
+          "Lohnangebot oder erste Abrechnung vorbereiten",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner zieht zuerst einen geschätzten Anteil für Sozialabgaben ab und berechnet zusätzlich die Quellensteuer auf dem Bruttolohn. Beide Werte werden vom Bruttolohn abgezogen.",
+          "In der Realität können Abzüge anders gruppiert sein und Quellensteuertarife werden kantonal festgelegt. Verwende daher Werte aus der Lohnabrechnung oder aus der kantonalen Tabelle, wenn du eine genaue Plausibilisierung brauchst.",
+        ],
+      },
+    ],
+    formula: "Nettolohn geschätzt = Bruttolohn - Sozialabgaben - Quellensteuer. Sozialabgaben und Quellensteuer werden als Prozent des Bruttolohns gerechnet.",
+    example: "Beispiel: Bei CHF 6'500 Bruttolohn, 6,4 % Sozialabgaben und 8,5 % Quellensteuer entstehen CHF 416 Sozialabgaben und CHF 552.50 Quellensteuer. Der geschätzte Nettolohn beträgt CHF 5'531.50.",
+    supportingContent: [
+      "Der Rechner ist keine kantonale Tarifabfrage. Er hilft, eine bekannte oder angenommene Quellensteuerquote auf den Lohn anzuwenden.",
+      "Prüfe bei Abweichungen zuerst Tarifcode, Kanton, Gemeinde, Beschäftigungsgrad, Kinderabzüge und ob eine nachträgliche ordentliche Veranlagung relevant sein kann.",
+    ],
+    faqs: [
+      { question: "Welchen Quellensteuersatz soll ich eingeben?", answer: "Nutze den Satz aus der Lohnabrechnung oder der kantonalen Quellensteuertabelle für deinen Tarifcode." },
+      { question: "Gilt der Rechner für alle Kantone?", answer: "Ja als Rechenmodell. Die kantonalen Steuersätze musst du selbst korrekt einsetzen." },
+      { question: "Sind AHV und ALV enthalten?", answer: "Sie werden über das Feld Sozialabgaben pauschal berücksichtigt. Für Details nutze zusätzlich den Lohnrechner." },
+      { question: "Ist das Ergebnis verbindlich?", answer: "Nein. Verbindlich sind Lohnabrechnung, kantonale Regeln und Steuerbehörden." },
+      { question: "Warum wird die Steuer vom Bruttolohn gerechnet?", answer: "Der Rechner verwendet ein einfaches Modell. Effektive kantonale Tarife können anders strukturiert sein." },
+    ],
+    relatedCalculators: ["lohnrechner-schweiz", "brutto-netto-rechner-schweiz", "budget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Lohnmodelle vergleichen",
+        description: "Stundenlohn, Monatslohn und Jahreslohn als Grundlage fuer Steuer- und Budgetvergleiche.",
+      },
+    ],
+    monetizationType: "mixed",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Quellensteuer und Nettolohn in der Schweiz schaetzen",
+    updatedAt: "12. Juli 2026",
+    sources: swissTaxSources,
+    inputs: [
+      { key: "gross", label: "Bruttolohn pro Monat (CHF)", defaultValue: "6500", min: "0" },
+      { key: "socialRate", label: "Sozialabgaben (%)", defaultValue: "6.4", step: "0.1", min: "0" },
+      { key: "taxRate", label: "Quellensteuer (%)", defaultValue: "8.5", step: "0.1", min: "0" },
+    ],
+    resultLabels: ["Sozialabgaben", "Quellensteuer", "Nettolohn geschätzt"],
+    cta: "Neue Schweizer Steuer- und Lohnrechner per E-Mail erhalten.",
+  },
+  {
     id: "de-vat-ch",
     locale: "de",
     slug: "mehrwertsteuer-rechner-schweiz",
@@ -564,6 +646,73 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     cta: "Neue Spar- und Finanzrechner sowie Vorlagen per E-Mail erhalten.",
   },
   {
+    id: "de-pillar3a-tax",
+    locale: "de",
+    slug: "saeule-3a-steuerersparnis-rechner",
+    kind: "pillar3a-tax-ch",
+    category: "Finanzen",
+    title: "Säule-3a-Steuerersparnis-Rechner Schweiz | Calcolich",
+    metaDescription: "Steuerersparnis durch Säule-3a-Einzahlung in der Schweiz schätzen. Mit Grenzsteuersatz, Beispiel, FAQ und Quellen.",
+    h1: "Säule-3a-Steuerersparnis-Rechner",
+    shortTitle: "Säule 3a",
+    intro: "Schätze, wie viel Steuern du durch eine Einzahlung in die Säule 3a sparen kannst.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Rechner hilft bei der Entscheidung, ob und in welcher Höhe eine Einzahlung in die gebundene Vorsorge 3a steuerlich interessant ist. Besonders nützlich ist er gegen Jahresende, bei Lohnänderungen oder beim Vergleich von Spar- und Investitionsvarianten.",
+          "Die tatsächliche Entlastung hängt vom Grenzsteuersatz ab. Dieser wird durch Einkommen, Kanton, Gemeinde, Zivilstand, Kirchensteuer und weitere Abzüge beeinflusst.",
+        ],
+        bullets: [
+          "Jährliche Steuerersparnis grob einschätzen",
+          "Mehrere Jahre Einzahlung simulieren",
+          "3a-Entscheidung mit Budget und Zinseszins vergleichen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner multipliziert die geplante Einzahlung mit dem geschätzten Grenzsteuersatz. Das Ergebnis zeigt die mögliche Steuerersparnis für ein Jahr und hochgerechnet über die gewählte Anzahl Jahre.",
+          "Nicht berücksichtigt sind Rendite, Gebühren, spätere Besteuerung beim Bezug, Sperrfristen und individuelle Limiten. Für verbindliche Planung müssen die aktuellen Höchstbeträge und die persönliche Steuerrechnung geprüft werden.",
+        ],
+      },
+    ],
+    formula: "Steuerersparnis pro Jahr = Einzahlung in die Säule 3a × geschätzter Grenzsteuersatz.",
+    example: "Beispiel: Eine Einzahlung von CHF 7'056 bei einem Grenzsteuersatz von 24 % ergibt eine geschätzte Steuerersparnis von CHF 1'693.44 im Jahr.",
+    supportingContent: [
+      "Der Grenzsteuersatz ist nicht der Durchschnittssteuersatz. Er beschreibt, wie stark ein zusätzlicher abzugsfähiger Franken die Steuerrechnung ungefähr senkt.",
+      "Prüfe die aktuellen 3a-Maximalbeträge, deine Vorsorgesituation und den Kanton. Ein 3a-Konto oder 3a-Depot sollte nicht nur wegen der Steuerersparnis gewählt werden.",
+    ],
+    faqs: [
+      { question: "Ist die Steuerersparnis garantiert?", answer: "Nein. Sie hängt von deiner persönlichen Steuerrechnung und dem anwendbaren Grenzsteuersatz ab." },
+      { question: "Welchen Grenzsteuersatz soll ich eingeben?", answer: "Nutze eine Schätzung aus einem kantonalen Steuerrechner oder aus einer Steuerberatung." },
+      { question: "Berücksichtigt der Rechner Rendite?", answer: "Nein. Für Kapitalwachstum nutze zusätzlich den Zinsrechner." },
+      { question: "Gilt der Rechner für Selbstständige?", answer: "Ja als Schätzung, aber die zulässigen Maximalbeträge unterscheiden sich je nach Anschluss an eine Pensionskasse." },
+      { question: "Wird die Auszahlung besteuert?", answer: "Ja, der Bezug wird separat besteuert. Das ist in dieser einfachen Steuerersparnis nicht enthalten." },
+    ],
+    relatedCalculators: ["zinsrechner", "budget-rechner-schweiz", "quellensteuer-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Lohn als Grundlage",
+        description: "Warum Jahreslohn und Arbeitszeit fuer Steuer- und Vorsorgeplanung zusammengehoeren.",
+      },
+    ],
+    monetizationType: "affiliate",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Steuerersparnis durch Saeule 3a in der Schweiz berechnen",
+    updatedAt: "12. Juli 2026",
+    sources: swissPensionSources,
+    inputs: [
+      { key: "contribution", label: "3a-Einzahlung (CHF)", defaultValue: "7056", min: "0" },
+      { key: "marginalTaxRate", label: "Geschätzter Grenzsteuersatz (%)", defaultValue: "24", step: "0.1", min: "0", max: "60" },
+      { key: "years", label: "Anzahl Jahre", defaultValue: "10", min: "1" },
+    ],
+    resultLabels: ["Steuerersparnis pro Jahr", "Einzahlungen total", "Steuerersparnis total"],
+    cta: "Neue Schweizer Finanz- und Vorsorgerechner per E-Mail erhalten.",
+  },
+  {
     id: "de-loan",
     locale: "de",
     slug: "kreditrechner",
@@ -619,6 +768,76 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     ],
     resultLabels: ["Monatsrate", "Gesamtzahlung", "Zinskosten"],
     cta: "Checklisten für Budget und Finanzentscheidungen per E-Mail erhalten.",
+  },
+  {
+    id: "de-mortgage-affordability",
+    locale: "de",
+    slug: "hypotheken-tragbarkeit-rechner-schweiz",
+    kind: "mortgage-affordability-ch",
+    category: "Finanzen",
+    title: "Hypotheken-Tragbarkeit-Rechner Schweiz | Calcolich",
+    metaDescription: "Tragbarkeit einer Hypothek in der Schweiz mit Einkommen, Kaufpreis, Eigenmitteln, kalkulatorischem Zinssatz und Nebenkosten schätzen.",
+    h1: "Hypotheken-Tragbarkeit-Rechner Schweiz",
+    shortTitle: "Hypotheken-Tragbarkeit",
+    intro: "Prüfe, ob die theoretischen Kosten einer Hypothek im Verhältnis zu deinem Bruttoeinkommen tragbar wirken.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Der Tragbarkeit-Rechner hilft vor Besichtigung, Kaufangebot oder Bankgespräch. Er zeigt, wie stark ein Immobilienkauf das Bruttoeinkommen belasten würde.",
+          "Schweizer Banken rechnen oft nicht nur mit dem aktuellen Marktzins, sondern mit einem kalkulatorischen Zinssatz und zusätzlichen Kosten für Unterhalt und Nebenkosten. Dadurch soll die Finanzierung auch bei höheren Zinsen tragbar bleiben.",
+        ],
+        bullets: [
+          "Kaufpreis und Eigenmittel grob prüfen",
+          "Kalkulatorische Jahreskosten simulieren",
+          "Belastung mit einem Grenzwert wie 33 % vergleichen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner zieht die Eigenmittel vom Kaufpreis ab und erhält so eine geschätzte Hypothek. Darauf werden kalkulatorische Zinsen berechnet. Zusätzlich werden Unterhalt und Nebenkosten als Prozent des Kaufpreises addiert.",
+          "Die Summe dieser Jahreskosten wird dem Bruttoeinkommen gegenübergestellt. Eine Quote über dem gewählten Grenzwert ist ein Hinweis, dass mehr Eigenmittel, ein tieferer Kaufpreis oder eine genauere Bankprüfung nötig sein können.",
+        ],
+      },
+    ],
+    formula: "Tragbarkeit = (Hypothek × kalkulatorischer Zinssatz + Kaufpreis × Nebenkostenquote) ÷ Bruttoeinkommen × 100.",
+    example: "Beispiel: CHF 850'000 Kaufpreis, CHF 180'000 Eigenmittel und 5 % kalkulatorischer Zins ergeben CHF 670'000 Hypothek. Mit 1 % Nebenkosten entstehen CHF 42'000 theoretische Jahreskosten.",
+    supportingContent: [
+      "Der Rechner berücksichtigt keine Amortisation, keine Objektbewertung und keine bankinternen Ausnahmen. Er ist ein Vorab-Check, keine Finanzierungszusage.",
+      "Für eine verbindliche Beurteilung prüfen Banken Einkommen, Eigenmittel, Objekt, Alter, Pensionskasse, bestehende Schulden und langfristige Tragbarkeit.",
+    ],
+    faqs: [
+      { question: "Warum wird ein kalkulatorischer Zinssatz verwendet?", answer: "Damit die Finanzierung auch bei höheren Zinsen tragbar bleibt. Der Satz ist eine konservative Simulation." },
+      { question: "Ist 33 % eine fixe Grenze?", answer: "Nein. Ein Drittel des Bruttoeinkommens ist eine verbreitete Orientierung, Banken können eigene Regeln anwenden." },
+      { question: "Sind Amortisationen enthalten?", answer: "Nein. Der Rechner zeigt Zinsen und Nebenkosten. Amortisation muss separat berücksichtigt werden." },
+      { question: "Wie viel Eigenkapital brauche ich?", answer: "Häufig werden mindestens 20 % erwartet, aber Herkunft und Zusammensetzung der Eigenmittel sind wichtig." },
+      { question: "Ersetzt das eine Bankofferte?", answer: "Nein. Es ist eine erste Plausibilisierung vor einer professionellen Finanzierungsprüfung." },
+    ],
+    relatedCalculators: ["budget-rechner-schweiz", "zinsrechner", "mietbudget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+        label: "Einkommen und Arbeitszeit verstehen",
+        description: "Arbeitszeit und Lohn sauber einordnen, bevor langfristige Wohnkosten geplant werden.",
+      },
+    ],
+    monetizationType: "lead",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Tragbarkeit einer Schweizer Hypothek vor dem Bankgespraech pruefen",
+    updatedAt: "12. Juli 2026",
+    sources: swissMortgageSources,
+    inputs: [
+      { key: "grossIncome", label: "Bruttoeinkommen pro Jahr (CHF)", defaultValue: "150000", min: "0" },
+      { key: "propertyPrice", label: "Kaufpreis Immobilie (CHF)", defaultValue: "850000", min: "0" },
+      { key: "equity", label: "Eigenmittel (CHF)", defaultValue: "180000", min: "0" },
+      { key: "imputedRate", label: "Kalkulatorischer Zinssatz (%)", defaultValue: "5", step: "0.1", min: "0" },
+      { key: "ancillaryRate", label: "Unterhalt und Nebenkosten (%)", defaultValue: "1", step: "0.1", min: "0" },
+      { key: "maxShare", label: "Maximaler Einkommensanteil (%)", defaultValue: "33", step: "1", min: "1", max: "80" },
+    ],
+    resultLabels: ["Hypothek geschätzt", "Theoretische Jahreskosten", "Tragbarkeit"],
+    cta: "Neue Rechner fuer Wohnen, Hypothek und Schweizer Budget per E-Mail erhalten.",
   },
   {
     id: "de-budget-ch",
