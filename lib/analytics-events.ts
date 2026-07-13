@@ -4,7 +4,8 @@ export type AnalyticsEventName =
   | "language_change"
   | "related_calculator_click"
   | "guide_click"
-  | "lead_submit";
+  | "lead_submit"
+  | "cta_click";
 
 type AnalyticsEventPayload = {
   source?: string;

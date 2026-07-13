@@ -438,6 +438,18 @@ function calculate(calculator: Calculator, values: Values): ResultRow[] {
         { label: "Costo annuo stimato", value: money(total) },
       ];
     }
+    case "premium-subsidy-ch": {
+      const annualIncome = number(values, "annualIncome");
+      const annualPremium = number(values, "annualPremium");
+      const maxShare = number(values, "maxShare") / 100;
+      const affordableShare = annualIncome * maxShare;
+      const subsidy = Math.max(annualPremium - affordableShare, 0);
+      return [
+        { label: "Premi annui", value: money(annualPremium) },
+        { label: "Quota sostenibile", value: money(affordableShare) },
+        { label: "Riduzione stimata", value: money(subsidy) },
+      ];
+    }
     case "rent-affordability-ch": {
       const netIncome = number(values, "netIncome");
       const maxHousing = (netIncome * number(values, "rentRate")) / 100;
@@ -537,6 +549,19 @@ function calculate(calculator: Calculator, values: Values): ResultRow[] {
         { label: "AVS/AI/IPG stimati", value: money(contribution) },
         { label: "Spese amministrative", value: money(adminCosts) },
         { label: "Totale annuo stimato", value: money(contribution + adminCosts) },
+      ];
+    }
+    case "family-allowances-ch": {
+      const childAllowance = number(values, "childAllowance");
+      const educationAllowance = number(values, "educationAllowance");
+      const childCount = number(values, "childCount");
+      const trainingCount = number(values, "trainingCount");
+      const months = Math.min(Math.max(number(values, "months"), 1), 12);
+      const monthlyTotal = (childAllowance * childCount) + (educationAllowance * trainingCount);
+      return [
+        { label: "Importo mensile", value: money(monthlyTotal) },
+        { label: "Mesi di diritto", value: `${months}` },
+        { label: "Importo annuo", value: money(monthlyTotal * months) },
       ];
     }
     case "maternity-allowance-ch": {

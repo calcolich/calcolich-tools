@@ -9,6 +9,7 @@ const allowedEvents = new Set([
   "related_calculator_click",
   "guide_click",
   "lead_submit",
+  "cta_click",
 ]);
 
 type EventPayload = {

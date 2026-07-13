@@ -28,6 +28,7 @@ export type CalculatorKind =
   | "annual-monthly"
   | "withholding-tax-ch"
   | "health-insurance-ch"
+  | "premium-subsidy-ch"
   | "rent-affordability-ch"
   | "hourly-wage-ch"
   | "part-time-salary-ch"
@@ -38,6 +39,7 @@ export type CalculatorKind =
   | "selling-price"
   | "ahv-13th-pension-ch"
   | "self-employed-ahv-ch"
+  | "family-allowances-ch"
   | "maternity-allowance-ch"
   | "unemployment-benefit-ch"
   | "ahv-pension-gap-ch";
@@ -1196,6 +1198,98 @@ export const calculators: Calculator[] = [
     ],
   },
   {
+    slug: "calcolo-riduzione-premi-cassa-malati-svizzera",
+    kind: "premium-subsidy-ch",
+    title: "Calcolatore Riduzione Premi Cassa Malati Svizzera",
+    shortTitle: "Riduzione premi",
+    category: "Assicurazioni Svizzera",
+    metaTitle: "Calcolo Riduzione Premi Cassa Malati Svizzera | Calcolich",
+    metaDescription: "Stima la riduzione premi della cassa malati in Svizzera partendo da reddito annuo, premio annuo e quota massima sostenibile.",
+    intro: "Stima una riduzione indicativa dei premi cassa malati confrontando il costo annuo con la quota sostenibile del reddito.",
+    cta: "Ricevi strumenti utili per budget, assicurazioni e trasferimento in Svizzera.",
+    inputs: [
+      { key: "annualIncome", label: "Reddito annuo CHF", defaultValue: "65000", min: "0" },
+      { key: "annualPremium", label: "Premio annuo cassa malati CHF", defaultValue: "4800", min: "0" },
+      { key: "maxShare", label: "Quota massima sostenibile %", defaultValue: "10", step: "0.1", min: "0", max: "100" },
+    ],
+    article: [
+      "La riduzione premi della cassa malati e una misura cantonale pensata per alleggerire il peso dei premi obbligatori quando il reddito del nucleo familiare e modesto. Il diritto e le modalita cambiano da cantone a cantone, quindi un calcolatore puo solo fornire una stima operativa.",
+      "Questo strumento confronta il premio annuo con una quota massima sostenibile del reddito. La differenza indica una riduzione potenziale, se la situazione del nucleo familiare rientra nelle regole applicabili.",
+      "Il valore e utile quando vuoi capire se la tua spesa sanitaria e fuori scala rispetto al reddito, prima di chiedere una verifica formale al cantone competente.",
+      "Usa il risultato insieme al budget mensile, al salario netto e all'affitto sostenibile per capire quanto margine reale ti resta ogni mese.",
+    ],
+    faqs: [
+      { question: "La riduzione premi e uguale in tutti i cantoni?", answer: "No. Ogni cantone applica regole, soglie e procedure proprie." },
+      { question: "Il risultato e ufficiale?", answer: "No. E una stima indicativa da confrontare con la procedura del cantone competente." },
+      { question: "Cosa devo inserire nel premio annuo?", answer: "L'importo totale annuo dei premi della base assicurativa che vuoi confrontare." },
+    ],
+    relatedSlugs: ["calcolo-cassa-malati-svizzera", "calcolo-budget-mensile", "calcolo-affitto-sostenibile-svizzera"],
+    guideLinks: [
+      {
+        href: "/guide/cassa-malati-svizzera",
+        label: "Guida cassa malati Svizzera",
+        description: "Premi, franchigia e costo annuo letti insieme prima di richiedere una verifica cantonale.",
+      },
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita",
+        description: "Come integrare la cassa malati nel budget mensile svizzero.",
+      },
+    ],
+    updatedAt: "13 luglio 2026",
+    sources: [
+      { label: "BAG: riduzione dei premi", href: "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-versicherte-mit-wohnsitz-in-der-schweiz/praemienverbilligung.html" },
+    ],
+    monetizationType: "lead",
+  },
+  {
+    slug: "calcolo-assegni-familiari-svizzera",
+    kind: "family-allowances-ch",
+    title: "Calcolatore Assegni Familiari Svizzera",
+    shortTitle: "Assegni familiari",
+    category: "Famiglia Svizzera",
+    metaTitle: "Calcolo Assegni Familiari Svizzera | Calcolich",
+    metaDescription: "Calcola gli assegni familiari in Svizzera usando importo mensile per figlio, assegno formazione e numero di mesi.",
+    intro: "Calcola l'importo annuo degli assegni familiari partendo dagli importi mensili riconosciuti nel tuo cantone.",
+    cta: "Ricevi strumenti per famiglia, lavoro e budget in Svizzera.",
+    inputs: [
+      { key: "childAllowance", label: "Assegno per figlio mensile CHF", defaultValue: "250", min: "0" },
+      { key: "educationAllowance", label: "Assegno di formazione mensile CHF", defaultValue: "300", min: "0" },
+      { key: "childCount", label: "Numero di figli con assegno per figlio", defaultValue: "2", min: "0" },
+      { key: "trainingCount", label: "Numero di figli in formazione", defaultValue: "1", min: "0" },
+      { key: "months", label: "Mesi di diritto", defaultValue: "12", min: "1", max: "12" },
+    ],
+    article: [
+      "Gli assegni familiari in Svizzera dipendono dal cantone di attivita e dal tipo di assegno. In generale ci sono un assegno per figlio e un assegno di formazione, ma gli importi minimi e le condizioni pratiche possono variare.",
+      "Questo calcolatore somma gli importi mensili, li moltiplica per il numero di figli o giovani in formazione e poi li proietta sui mesi di diritto inseriti. E utile per stimare il sostegno annuo prima di leggere una decisione ufficiale o una busta paga.",
+      "L'uso pratico e chiaro per famiglie e genitori che vogliono capire quanto incide un importo mensile riconosciuto dal cantone sul budget complessivo.",
+      "Collega il risultato al salario netto, al budget mensile e all'imposta alla fonte per vedere il quadro familiare completo.",
+    ],
+    faqs: [
+      { question: "Gli importi sono uguali in tutta la Svizzera?", answer: "No. Gli importi minimi sono regolati a livello federale, ma l'applicazione pratica dipende dal cantone." },
+      { question: "Il risultato include nati e adozioni?", answer: "No. Questo calcolatore stima solo assegni mensili per figlio e in formazione." },
+      { question: "Posso usare valori diversi per ogni cantone?", answer: "Si. Inserisci gli importi del tuo cantone per ottenere una stima piu vicina al tuo caso." },
+    ],
+    relatedSlugs: ["calcolo-budget-mensile", "calcolo-salario-netto-svizzera", "calcolo-imposta-alla-fonte-svizzera"],
+    guideLinks: [
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita",
+        description: "Come gli assegni familiari entrano nel budget mensile e nelle spese di casa.",
+      },
+      {
+        href: "/guide/stipendio-netto-svizzera",
+        label: "Guida stipendio netto",
+        description: "Come leggere salario, deduzioni e sostegno familiare insieme.",
+      },
+    ],
+    updatedAt: "13 luglio 2026",
+    sources: [
+      { label: "BSV: Familienzulagen", href: "https://www.bsv.admin.ch/de/familienzulagen-gesetze-und-verordnungen" },
+    ],
+    monetizationType: "lead",
+  },
+  {
     slug: "calcolo-affitto-sostenibile-svizzera",
     kind: "rent-affordability-ch",
     title: "Calcolatore Affitto Sostenibile Svizzera",
@@ -1525,6 +1619,10 @@ export const calculators: Calculator[] = [
         description: "Tariffa, costi, margini e sostenibilita di un'attivita indipendente.",
       },
     ],
+    updatedAt: "13 luglio 2026",
+    sources: [
+      { label: "ahv-iv.ch: contributi degli indipendenti", href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti" },
+    ],
   },
   {
     slug: "calcolo-indennita-maternita-svizzera",
@@ -1622,6 +1720,10 @@ export const calculators: Calculator[] = [
         label: "Guida costo della vita",
         description: "Come rivedere budget, affitto e spese quando cambia il reddito disponibile.",
       },
+    ],
+    updatedAt: "13 luglio 2026",
+    sources: [
+      { label: "arbeit.swiss: prestazioni dell'assicurazione", href: "https://www.arbeit.swiss/it/persone-in-cerca-dimpiego/prestazioni-dellassicurazione" },
     ],
   },
   {

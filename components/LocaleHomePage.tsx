@@ -11,6 +11,10 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
     { href: "/de/brutto-netto-rechner-schweiz", label: "Brutto-Netto", text: "Bruttolohn und Nettolohn fuer die Schweiz vergleichen." },
     { href: "/de/saeule-3a-steuerersparnis-rechner", label: "Saeule 3a", text: "Steuerersparnis mit Grenzsteuersatz einschaetzen." },
     { href: "/de/hypotheken-tragbarkeit-rechner-schweiz", label: "Hypothek", text: "Tragbarkeit vor dem Bankgespraech pruefen." },
+    { href: "/de/praemienverbilligung-rechner-schweiz", label: "Praemienverbilligung", text: "Krankenkassenpraemien und tragbaren Anteil gegeneinander stellen." },
+    { href: "/de/familienzulagen-rechner-schweiz", label: "Familienzulagen", text: "Kinderzulagen und Ausbildungszulagen auf Jahresbasis berechnen." },
+    { href: "/de/ahv-beitraege-selbststaendige-rechner", label: "AHV Selbststaendige", text: "Beitraege fuer selbststaendige Einkommen in die Kalkulation nehmen." },
+    { href: "/de/arbeitslosenentschaedigung-rechner-schweiz", label: "Arbeitslosenentschaedigung", text: "Taggeld grob schaetzen und das Monatsbudget vorbereiten." },
   ];
 
   return (

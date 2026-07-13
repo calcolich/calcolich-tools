@@ -1,6 +1,7 @@
 import AdSlot from "@/components/AdSlot";
 import CalculatorActions from "@/components/CalculatorActions";
 import CalculatorWidget from "@/components/CalculatorWidget";
+import ConsultationCta from "@/components/ConsultationCta";
 import LeadForm from "@/components/LeadForm";
 import RevenueCta from "@/components/RevenueCta";
 import TrackedInternalLink from "@/components/TrackedInternalLink";
@@ -146,6 +147,8 @@ export default function CalculatorPage({
         </section>
 
         <CalculatorWidget calculator={calculator} />
+
+        {calculator.isPriority ? <ConsultationCta calculator={calculator} locale={locale} /> : null}
 
         {calculator.isPriority ? <CalculatorActions calculatorId={calculator.id ?? calculator.slug} /> : null}
 

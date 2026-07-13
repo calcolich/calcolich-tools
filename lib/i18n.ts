@@ -17,11 +17,11 @@ export const localeHome = {
     label: "Deutsch",
     title: "Calcolich Schweiz | Rechner fuer Lohn, Steuern, Vorsorge und Budget",
     description:
-      "Kostenlose Schweizer Rechner fuer Lohn, Quellensteuer, MWST, Saeule 3a, Hypothek, Krankenkasse, Miete und Budget.",
+      "Kostenlose Schweizer Rechner fuer Lohn, Quellensteuer, MWST, Saeule 3a, Hypothek, Krankenkasse, Familienzulagen, Arbeitslosenentschaedigung und Budget.",
     eyebrow: "Kostenlose Rechner fuer die Schweiz",
-    heading: "Schweizer Rechner fuer Lohn, Steuern, Vorsorge und Wohnen",
+    heading: "Schweizer Rechner fuer Lohn, Steuern, Vorsorge, Familie und Wohnen",
     intro:
-      "Berechne typische Schweizer Fragen mit CHF, kantonalen Steuern, Arbeitszeit, Sozialabgaben, MWST, Saeule 3a und Wohnkosten. Die Ergebnisse sind transparent erklaert und bleiben indikative Rechenhilfen.",
+      "Berechne typische Schweizer Fragen mit CHF, kantonalen Steuern, Arbeitszeit, Sozialabgaben, MWST, Saeule 3a, Krankenkasse, Familienzulagen, Arbeitslosenentschaedigung und Wohnkosten. Die Ergebnisse sind transparent erklaert und bleiben indikative Rechenhilfen.",
     back: "Alle Rechner",
     newsletterTitle: "Calcolich Newsletter",
     newsletterButton: "Benachrichtigen",
@@ -96,6 +96,18 @@ const translatedSlugs = {
     fr: ["calculateur-assurance-maladie-suisse", "Calculateur assurance maladie Suisse", "Assurance maladie", "Assurance Suisse"],
     en: ["health-insurance-premium-calculator-switzerland", "Health Insurance Premium Calculator Switzerland", "Health insurance", "Swiss insurance"],
   },
+  "calcolo-riduzione-premi-cassa-malati-svizzera": {
+    de: ["praemienverbilligung-rechner-schweiz", "Prämienverbilligung Rechner Schweiz", "Prämienverbilligung", "Versicherung Schweiz"],
+    it: ["calcolatore-riduzione-premi-cassa-malati-svizzera", "Calcolatore riduzione premi cassa malati Svizzera", "Riduzione premi", "Assicurazioni Svizzera"],
+    fr: ["calculateur-reduction-primes-assurance-maladie-suisse", "Calculateur reduction primes assurance maladie Suisse", "Reduction primes", "Assurance Suisse"],
+    en: ["health-insurance-premium-subsidy-calculator-switzerland", "Health Insurance Premium Subsidy Calculator Switzerland", "Premium subsidy", "Swiss insurance"],
+  },
+  "calcolo-assegni-familiari-svizzera": {
+    de: ["familienzulagen-rechner-schweiz", "Familienzulagen Rechner Schweiz", "Familienzulagen", "Familie Schweiz"],
+    it: ["calcolatore-assegni-familiari-svizzera", "Calcolatore assegni familiari Svizzera", "Assegni familiari", "Famiglia Svizzera"],
+    fr: ["calculateur-allocations-familiales-suisse", "Calculateur allocations familiales Suisse", "Allocations familiales", "Famille Suisse"],
+    en: ["family-allowances-calculator-switzerland", "Family Allowances Calculator Switzerland", "Family allowances", "Swiss family"],
+  },
   "calcolo-affitto-sostenibile-svizzera": {
     de: ["mietbudget-rechner-schweiz", "Mietbudget Rechner Schweiz", "Mietbudget", "Wohnen Schweiz"],
     it: ["calcolatore-affitto-sostenibile-svizzera", "Calcolatore affitto sostenibile Svizzera", "Affitto sostenibile", "Casa Svizzera"],
@@ -114,6 +126,12 @@ const translatedSlugs = {
     fr: ["calculateur-salaire-horaire-suisse", "Calculateur salaire horaire Suisse", "Salaire horaire", "Salaire Suisse"],
     en: ["hourly-wage-calculator-switzerland", "Hourly Wage Calculator Switzerland", "Hourly wage", "Swiss salary"],
   },
+  "calcolo-contributi-avs-indipendenti": {
+    de: ["ahv-beitraege-selbststaendige-rechner", "AHV Beitraege Selbststaendige Rechner", "AHV Selbstständige", "Business Schweiz"],
+    it: ["calcolatore-contributi-avs-indipendenti", "Calcolatore contributi AVS indipendenti", "AVS indipendenti", "Business Svizzera"],
+    fr: ["calculateur-cotisations-avs-independants-suisse", "Calculateur cotisations AVS independants Suisse", "AVS independants", "Business Suisse"],
+    en: ["self-employed-ahv-contributions-calculator-switzerland", "Self-Employed AHV Contributions Calculator Switzerland", "Self-employed AHV", "Swiss business"],
+  },
   "calcolo-salario-part-time-svizzera": {
     de: ["teilzeit-lohn-rechner-schweiz", "Teilzeit Lohn Rechner Schweiz", "Teilzeitlohn", "Lohn Schweiz"],
     it: ["calcolatore-salario-part-time-svizzera", "Calcolatore salario part-time Svizzera", "Salario part-time", "Stipendio Svizzera"],
@@ -131,6 +149,12 @@ const translatedSlugs = {
     it: ["calcolatore-budget-mensile-svizzera", "Calcolatore budget mensile Svizzera", "Budget mensile", "Finanze Svizzera"],
     fr: ["calculateur-budget-mensuel-suisse", "Calculateur budget mensuel Suisse", "Budget mensuel", "Finances Suisse"],
     en: ["monthly-budget-calculator-switzerland", "Monthly Budget Calculator Switzerland", "Monthly budget", "Swiss personal finance"],
+  },
+  "calcolo-indennita-disoccupazione-svizzera": {
+    de: ["arbeitslosenentschaedigung-rechner-schweiz", "Arbeitslosenentschaedigung Rechner Schweiz", "Arbeitslosenentschädigung", "Arbeit Schweiz"],
+    it: ["calcolatore-indennita-disoccupazione-svizzera", "Calcolatore indennita disoccupazione Svizzera", "Indennita disoccupazione", "Lavoro Svizzera"],
+    fr: ["calculateur-indemnites-chomage-suisse", "Calculateur indemnites chomage Suisse", "Indemnites chomage", "Travail Suisse"],
+    en: ["unemployment-benefit-calculator-switzerland", "Unemployment Benefit Calculator Switzerland", "Unemployment benefit", "Swiss work"],
   },
   "calcolo-spese-auto-svizzera": {
     de: ["autokosten-rechner-schweiz", "Autokosten Rechner Schweiz", "Autokosten", "Mobilitaet Schweiz"],
@@ -277,6 +301,13 @@ const inputLabels: Record<Locale, Record<string, string>> = {
     cost: "Kosten CHF",
     marginRate: "Zielmarge %",
     vatRate: "MWST %",
+    annualIncome: "Jahreseinkommen CHF",
+    annualPremium: "Jahrespraemie CHF",
+    childAllowance: "Kinderzulage pro Monat CHF",
+    educationAllowance: "Ausbildungszulage pro Monat CHF",
+    childCount: "Anzahl Kinder",
+    trainingCount: "Anzahl Kinder in Ausbildung",
+    months: "Monate",
   },
   it: {},
   fr: {
@@ -319,6 +350,13 @@ const inputLabels: Record<Locale, Record<string, string>> = {
     cost: "Cout CHF",
     marginRate: "Marge souhaitee %",
     vatRate: "TVA %",
+    annualIncome: "Revenu annuel CHF",
+    annualPremium: "Prime annuelle CHF",
+    childAllowance: "Allocation pour enfant par mois CHF",
+    educationAllowance: "Allocation de formation par mois CHF",
+    childCount: "Nombre d'enfants",
+    trainingCount: "Nombre d'enfants en formation",
+    months: "Mois",
   },
   en: {
     gross: "Monthly gross salary CHF",
@@ -360,6 +398,13 @@ const inputLabels: Record<Locale, Record<string, string>> = {
     cost: "Cost CHF",
     marginRate: "Target margin %",
     vatRate: "VAT %",
+    annualIncome: "Annual income CHF",
+    annualPremium: "Annual premium CHF",
+    childAllowance: "Child allowance per month CHF",
+    educationAllowance: "Education allowance per month CHF",
+    childCount: "Number of children",
+    trainingCount: "Number of children in education",
+    months: "Months",
   },
 };
 

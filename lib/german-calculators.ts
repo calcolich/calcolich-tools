@@ -41,6 +41,23 @@ const swissMortgageSources = [
   { label: "ch.ch: Wohneigentum finanzieren", href: "https://www.ch.ch/de/wohnen/wohneigentum/" },
 ];
 
+const swissHealthSubsidySources = [
+  { label: "BAG: Prämienverbilligung", href: "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-versicherte-mit-wohnsitz-in-der-schweiz/praemienverbilligung.html" },
+];
+
+const swissFamilySources = [
+  { label: "BSV: Familienzulagen", href: "https://www.bsv.admin.ch/de/familienzulagen-gesetze-und-verordnungen" },
+];
+
+const swissAhvSources = [
+  { label: "ahv-iv.ch: Beiträge der Selbstständigen", href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti" },
+];
+
+const swissUnemploymentSources = [
+  { label: "arbeit.swiss: Leistungen der Arbeitslosenversicherung", href: "https://www.arbeit.swiss/it/persone-in-cerca-dimpiego/prestazioni-dellassicurazione" },
+  { label: "SECO: Arbeitslosenversicherung", href: "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitslosenversicherung.html" },
+];
+
 export const germanPriorityCalculatorData: CentralizedCalculator[] = [
   {
     id: "de-hours",
@@ -523,6 +540,272 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     ],
     resultLabels: ["Nettobetrag", "Mehrwertsteuer", "Bruttobetrag"],
     cta: "Neue Rechner für MWST, Preise und Selbstständige per E-Mail erhalten.",
+  },
+  {
+    id: "de-premium-subsidy-ch",
+    locale: "de",
+    slug: "praemienverbilligung-rechner-schweiz",
+    kind: "premium-subsidy-ch",
+    category: "Gesundheit",
+    title: "Prämienverbilligung-Rechner Schweiz | Calcolich",
+    metaDescription: "Prämienverbilligung in der Schweiz als grobe Orientierung berechnen. Jahresprämie, Einkommen und tragbaren Anteil vergleichen.",
+    h1: "Prämienverbilligung-Rechner Schweiz",
+    shortTitle: "Prämienverbilligung",
+    intro: "Prüfe, ob deine Krankenkassenprämien im Verhältnis zum Einkommen hoch wirken und wie gross eine mögliche Entlastung ungefähr ausfallen könnte.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Die Prämienverbilligung ist in der Schweiz kantonal geregelt. Der Rechner hilft dir, vor einer formellen Abklärung zu verstehen, wie gross die Lücke zwischen Jahresprämie und tragbarem Anteil sein kann.",
+          "Besonders nützlich ist er für Haushalte mit knappem Budget, Familien mit mehreren Prämienpositionen und Personen, die nach einem Umzug oder Jobwechsel ihre Fixkosten neu prüfen.",
+        ],
+        bullets: [
+          "Jahresprämie und tragbaren Einkommensanteil gegenüberstellen",
+          "Mögliche Entlastung vor einer kantonalen Abklärung abschätzen",
+          "Krankenkasse, Budget und Wohnen gemeinsam betrachten",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner multipliziert das Jahreseinkommen mit einem tragbaren Prozentsatz und vergleicht das Resultat mit der Jahresprämie. Liegt die Prämie darüber, erscheint die Differenz als mögliche Verbilligung.",
+          "Das ist keine kantonale Anspruchsprüfung. Jede Kantonslösung verwendet eigene Schwellen, Haushaltsdefinitionen und Formulare. Deshalb ist das Ergebnis eine Orientierung und kein Ersatz für die offizielle Prüfung.",
+        ],
+      },
+    ],
+    formula: "Mögliche Prämienverbilligung = Jahresprämie minus tragbarer Einkommensanteil. Ist der Anteil höher als die Prämie, ergibt sich kein Anspruch in diesem Modell.",
+    example: "Beispiel: Bei CHF 45'000 Einkommen, CHF 5'400 Jahresprämie und 8 % tragbarem Anteil ergibt sich ein tragbarer Betrag von CHF 3'600. Die modellierte Entlastung beträgt CHF 1'800.",
+    supportingContent: [
+      "Der tatsächliche Anspruch kann höher, tiefer oder null sein, je nach Kanton, Einkommen, Vermögen, Haushalt und Antragspflicht.",
+      "Nutze das Ergebnis zusammen mit Budget-Rechner und Affordability-Checks, damit die Krankenkasse nicht isoliert betrachtet wird.",
+    ],
+    faqs: [
+      { question: "Ist die Prämienverbilligung in allen Kantonen gleich?", answer: "Nein. Zuständigkeit, Schwellen und Abläufe sind kantonal unterschiedlich." },
+      { question: "Ist das Ergebnis verbindlich?", answer: "Nein. Es ist nur eine Orientierung vor der offiziellen Abklärung." },
+      { question: "Was ist die wichtigste Eingabe?", answer: "Die Jahresprämie und ein realistisch geschätzter tragbarer Einkommensanteil." },
+      { question: "Kann ich Kinder oder mehrere Personen berücksichtigen?", answer: "Ja, indem du die gesamte Haushaltsprämie und das Haushaltseinkommen als Gesamtwert einsetzt." },
+      { question: "Brauche ich einen Antrag?", answer: "In vielen Kantonen ja. Das Ergebnis zeigt dir nur den möglichen Spielraum." },
+    ],
+    relatedCalculators: ["krankenkasse-praemien-rechner-schweiz", "budget-rechner-schweiz", "mietbudget-rechner-schweiz"],
+    monetizationType: "lead",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Praemienverbilligung in der Schweiz grob abschaetzen",
+    updatedAt: "13. Juli 2026",
+    sources: swissHealthSubsidySources,
+    inputs: [
+      { key: "annualIncome", label: "Jahreseinkommen (CHF)", defaultValue: "45000", min: "0" },
+      { key: "annualPremium", label: "Jahresprämie (CHF)", defaultValue: "5400", min: "0" },
+      { key: "maxShare", label: "Tragbarer Einkommensanteil (%)", defaultValue: "8", step: "0.1", min: "0", max: "100" },
+    ],
+    resultLabels: ["Jahresprämien", "Tragbarer Anteil", "Prämienverbilligung"],
+    cta: "Neue Gesundheits-, Budget- und Schweizer Rechner per E-Mail erhalten.",
+  },
+  {
+    id: "de-family-allowances-ch",
+    locale: "de",
+    slug: "familienzulagen-rechner-schweiz",
+    kind: "family-allowances-ch",
+    category: "Familie",
+    title: "Familienzulagen-Rechner Schweiz | Calcolich",
+    metaDescription: "Familienzulagen in der Schweiz aus Kinderzulage, Ausbildungszulage und Anzahl der Anspruchsmonate berechnen.",
+    h1: "Familienzulagen-Rechner Schweiz",
+    shortTitle: "Familienzulagen",
+    intro: "Berechne den Jahresbetrag von Kinder- und Ausbildungszulagen mit den kantonalen Monatswerten, die in deinem Fall gelten.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Familienzulagen sind kantonal geprägt. Der Rechner hilft dir, die monatlichen Beträge auf ein Jahr hochzurechnen und damit den realen Beitrag zum Haushaltsbudget besser zu verstehen.",
+          "Besonders praktisch ist er bei mehreren Kindern, bei Ausbildungssituationen, bei Teilzeit und wenn zwei Erwerbssituationen miteinander verglichen werden sollen.",
+        ],
+        bullets: [
+          "Kinderzulage und Ausbildungszulage getrennt betrachten",
+          "Monatswerte auf den Anspruchszeitraum hochrechnen",
+          "Familienbudget mit realistischen Jahreswerten planen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner multipliziert die monatliche Zulage pro Kind mit der Anzahl Kinder und die Ausbildungszulage mit der Anzahl Kinder in Ausbildung. Danach wird das Ergebnis mit den Monaten des Anspruchs multipliziert.",
+          "Die offiziellen Ansätze sind nicht in jedem Kanton gleich. Für eine verbindliche Beurteilung musst du die Zuständigkeit des Erwerbskantons und die dortigen Regelsätze prüfen.",
+        ],
+      },
+    ],
+    formula: "Jahresanspruch = (Kinderzulage × Anzahl Kinder + Ausbildungszulage × Anzahl Kinder in Ausbildung) × Anspruchsmonate.",
+    example: "Beispiel: 2 Kinder mit CHF 250 Kinderzulage und 1 Kind in Ausbildung mit CHF 300 Ausbildungszulage ergeben monatlich CHF 800. Über 12 Monate sind das CHF 9'600.",
+    supportingContent: [
+      "Anspruch, Höhe und Finanzierung unterscheiden sich nach Kanton und Beschäftigungssituation. Der Rechner ist eine Budgethilfe, keine Anspruchsprüfung.",
+      "Prüfe zusätzlich, ob du als Arbeitnehmender, Selbstständiger oder Nichterwerbstätiger unterschiedliche Regeln beachten musst.",
+    ],
+    faqs: [
+      { question: "Sind Familienzulagen überall gleich hoch?", answer: "Nein. Die kantonalen Ansätze und Regeln unterscheiden sich." },
+      { question: "Was ist der Unterschied zwischen Kinder- und Ausbildungszulage?", answer: "Die Ausbildungszulage gilt für ältere Kinder in Ausbildung und ist normalerweise höher." },
+      { question: "Kann ich Teilzeit abbilden?", answer: "Ja, indem du die korrekten Monatswerte und Anspruchsmonate eingibst." },
+      { question: "Ist das eine Anspruchsprüfung?", answer: "Nein. Der Rechner rechnet nur die Beträge hoch." },
+      { question: "Brauche ich mehrere Eingaben pro Kind?", answer: "Nur wenn Kinder und Ausbildungszulagen unterschiedlich behandelt werden sollen." },
+    ],
+    relatedCalculators: ["budget-rechner-schweiz", "brutto-netto-rechner-schweiz", "praemienverbilligung-rechner-schweiz"],
+    monetizationType: "lead",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Familienzulagen in der Schweiz berechnen",
+    updatedAt: "13. Juli 2026",
+    sources: swissFamilySources,
+    inputs: [
+      { key: "childAllowance", label: "Kinderzulage pro Monat (CHF)", defaultValue: "250", min: "0" },
+      { key: "educationAllowance", label: "Ausbildungszulage pro Monat (CHF)", defaultValue: "300", min: "0" },
+      { key: "childCount", label: "Kinder mit Kinderzulage", defaultValue: "2", min: "0" },
+      { key: "trainingCount", label: "Kinder in Ausbildung", defaultValue: "1", min: "0" },
+      { key: "months", label: "Anspruchsmonate", defaultValue: "12", min: "1", max: "12" },
+    ],
+    resultLabels: ["Monatsbetrag", "Anspruchsmonate", "Jahresbetrag"],
+    cta: "Neue Familien-, Lohn- und Budgetrechner per E-Mail erhalten.",
+  },
+  {
+    id: "de-self-employed-ahv",
+    locale: "de",
+    slug: "ahv-beitraege-selbststaendige-rechner",
+    kind: "self-employed-ahv-ch",
+    category: "Arbeit & Lohn",
+    title: "AHV-Beiträge Selbstständige Rechner | Calcolich",
+    metaDescription: "AHV-, IV- und EO-Beiträge für Selbstständige in der Schweiz anhand von Einkommen, Satz und Verwaltungskosten schätzen.",
+    h1: "AHV-Beiträge Selbstständige Rechner",
+    shortTitle: "AHV Selbstständige",
+    intro: "Schätze die jährlichen Sozialbeiträge als Selbstständige oder Selbstständiger und setze sie direkt in deine Kalkulation ein.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Selbstständige tragen die AHV-, IV- und EO-Beiträge grundsätzlich selbst. Der Rechner hilft dir, diese Fixkosten bereits vor der Preisgestaltung in die Kalkulation einzubauen.",
+          "Besonders relevant ist er für Freelancer, Berater, Agenturen und kleine Betriebe, die ihr Jahreseinkommen, ihre Kosten und ihre Tarife sauber planen wollen.",
+        ],
+        bullets: [
+          "Beitragsschätzung vor der Tarifkalkulation",
+          "Mindestbeitrag und Verwaltungskosten berücksichtigen",
+          "Tarif, Kosten und Nettogewinn gemeinsam beurteilen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner multipliziert das Einkommen mit dem Beitragssatz und vergleicht das Resultat mit einem Mindestbeitrag. Anschliessend werden die Verwaltungskosten ergänzt.",
+          "Bei tieferen Einkommen gilt eine offizielle Skala. Die exakte Beitragshöhe legt die zuständige Ausgleichskasse fest; der Rechner ist deshalb eine wirtschaftliche Vorstufe, keine verbindliche Veranlagung.",
+        ],
+      },
+    ],
+    formula: "AHV/IV/EO = Einkommen × Beitragssatz. Wenn das Resultat unter dem Mindestbeitrag liegt, wird mindestens der Mindestbeitrag verwendet.",
+    example: "Beispiel: CHF 90'000 Einkommen bei 9,8 % Beitragssatz ergeben CHF 8'820 AHV/IV/EO. Mit 4 % Verwaltungskosten liegen die Gesamtkosten bei CHF 9'172.80.",
+    supportingContent: [
+      "Für tiefe Einkommen gilt eine offizielle Beitragsskala. Der Rechner nutzt den eingegebenen Satz, damit du schnell eine belastbare Budgetschätzung erhältst.",
+      "Vergiss bei selbstständiger Tätigkeit nicht, auch Krankenkasse, Steuern und Rücklagen einzuplanen. Der Sozialbeitrag ist nur eine von mehreren Pflichtgrössen.",
+    ],
+    faqs: [
+      { question: "Ist der Satz bei allen Selbstständigen gleich?", answer: "Nein. Es gibt eine offizielle Skala und Beiträge hängen vom Einkommen ab." },
+      { question: "Sind Verwaltungskosten enthalten?", answer: "Ja, sie werden als eigener Aufschlag geschätzt." },
+      { question: "Ist das Ergebnis verbindlich?", answer: "Nein. Massgebend bleibt die Ausgleichskasse." },
+      { question: "Kann ich den Mindestbeitrag sehen?", answer: "Ja, du kannst ihn als eigene Untergrenze im Rechner eintragen." },
+      { question: "Hilft das bei der Preisgestaltung?", answer: "Ja, weil du den Pflichtbeitrag direkt in deine Tarife einrechnen kannst." },
+    ],
+    relatedCalculators: ["freelancer-stundensatz-rechner-schweiz", "budget-rechner-schweiz", "quellensteuer-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Stundenlohn berechnen",
+        description: "Wie du aus Stunden, Tarif und Kosten ein tragfähiges Einkommen planst.",
+      },
+    ],
+    monetizationType: "mixed",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "AHV-Beiträge fuer Selbststaendige in der Schweiz schaetzen",
+    updatedAt: "13. Juli 2026",
+    sources: swissAhvSources,
+    inputs: [
+      { key: "netIncome", label: "Nettoeinkommen pro Jahr (CHF)", defaultValue: "90000", min: "0" },
+      { key: "contributionRate", label: "AHV/IV/EO Beitragssatz (%)", defaultValue: "9.8", step: "0.001", min: "0", max: "10" },
+      { key: "adminRate", label: "Verwaltungskosten (%)", defaultValue: "4", step: "0.1", min: "0", max: "5" },
+      { key: "minimumContribution", label: "Mindestbeitrag (CHF)", defaultValue: "529.20", step: "0.05", min: "0" },
+    ],
+    resultLabels: ["AHV/IV/EO", "Verwaltungskosten", "Gesamtkosten"],
+    cta: "Neue Rechner für Selbstständige, Tarife und Budget per E-Mail erhalten.",
+  },
+  {
+    id: "de-unemployment-benefit-ch",
+    locale: "de",
+    slug: "arbeitslosenentschaedigung-rechner-schweiz",
+    kind: "unemployment-benefit-ch",
+    category: "Arbeit & Lohn",
+    title: "Arbeitslosenentschädigung-Rechner Schweiz | Calcolich",
+    metaDescription: "Arbeitslosenentschädigung in der Schweiz anhand von versichertem Verdienst, Anspruchssatz und Taggeldern schätzen.",
+    h1: "Arbeitslosenentschädigung-Rechner Schweiz",
+    shortTitle: "Arbeitslosenentschädigung",
+    intro: "Schätze die monatliche Arbeitslosenentschädigung aus dem versicherten Verdienst und dem anwendbaren Anspruchssatz.",
+    contentSections: [
+      {
+        heading: "Wann ist dieser Rechner nützlich?",
+        paragraphs: [
+          "Die Arbeitslosenentschädigung wird in Taggeldern ausbezahlt. Der Rechner hilft dir, vor einer Anmeldung beim RAV oder einer Kasse zu verstehen, welche Grössenordnung deine Leistungen haben könnten.",
+          "Wichtig ist der Unterschied zwischen versichertem Verdienst, Anspruchssatz und den Tagen, die im Monat tatsächlich entschädigt werden.",
+        ],
+        bullets: [
+          "Taggeldhöhe grob abschätzen",
+          "70 % und 80 % Anspruchssatz vergleichen",
+          "Budget an ein tieferes Monatseinkommen anpassen",
+        ],
+      },
+      {
+        heading: "So funktioniert die Berechnung",
+        paragraphs: [
+          "Der Rechner begrenzt den versicherten Verdienst auf den gesetzlichen Höchstwert und multipliziert ihn mit dem Anspruchssatz. Daraus entsteht ein Taggeld, das mit den entschädigten Tagen des Monats hochgerechnet wird.",
+          "Abzüge für Sozialversicherungen, Unfall, Vorsorge und Steuern werden hier nicht automatisch berücksichtigt. Das Ergebnis ist deshalb eine Bruttoschätzung.",
+        ],
+      },
+    ],
+    formula: "Taggeld = versicherter Verdienst ÷ 21,7 × Anspruchssatz. Monatsleistung = Taggeld × entschädigte Tage.",
+    example: "Beispiel: CHF 6'500 versicherter Verdienst bei 70 % Anspruch ergeben rund CHF 209.91 pro Tag. Bei 21,7 Tagen im Monat liegt die Bruttoschätzung bei rund CHF 4'556.",
+    supportingContent: [
+      "Der tatsächliche Anspruch hängt von Beitragszeit, Vermittlungsfähigkeit, Alter und weiteren Bedingungen ab.",
+      "Plane dein Budget nicht nur mit dem Taggeld, sondern auch mit Ausgaben wie Krankenkasse, Miete und laufenden Fixkosten.",
+    ],
+    faqs: [
+      { question: "Ist der Anspruch immer 70 %?", answer: "Nein. In gewissen Fällen gelten 80 %." },
+      { question: "Ist das Ergebnis netto?", answer: "Nein. Es ist eine Bruttoschätzung vor weiteren Abzügen." },
+      { question: "Wird der Höchstlohn berücksichtigt?", answer: "Ja, der versicherte Verdienst wird im Modell gedeckelt." },
+      { question: "Kann ich damit mein Monatsbudget planen?", answer: "Ja, genau dafür ist die Schätzung nützlich." },
+      { question: "Ersetzt der Rechner die Kasse?", answer: "Nein. Massgebend ist die Verfügung der zuständigen Stelle." },
+    ],
+    relatedCalculators: ["lohnrechner-schweiz", "budget-rechner-schweiz", "mietbudget-rechner-schweiz"],
+    guideLinks: [
+      {
+        href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        label: "Lohn als Basis verstehen",
+        description: "Warum Monatslohn, Stundenlohn und Jahreslohn im Vergleich wichtig sind.",
+      },
+    ],
+    monetizationType: "lead",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Arbeitslosenentschaedigung in der Schweiz schaetzen",
+    updatedAt: "13. Juli 2026",
+    sources: swissUnemploymentSources,
+    inputs: [
+      { key: "insuredIncome", label: "Versicherter Verdienst pro Monat (CHF)", defaultValue: "6500", min: "0" },
+      {
+        key: "compensationRate",
+        label: "Anspruchssatz",
+        type: "select",
+        defaultValue: "70",
+        options: [
+          { label: "70 % - ordentlicher Satz", value: "70" },
+          { label: "80 % - Kinder / tiefes Einkommen / IV", value: "80" },
+        ],
+      },
+      { key: "payableDays", label: "Entschädigte Tage im Monat", defaultValue: "21.7", step: "0.1", min: "1", max: "23" },
+    ],
+    resultLabels: ["Versicherter Verdienst", "Taggeld", "Monatsleistung"],
+    cta: "Neue Lohn-, Budget- und Arbeitslosigkeitsrechner per E-Mail erhalten.",
   },
   {
     id: "de-percentage",
