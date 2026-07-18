@@ -46,3 +46,7 @@ jarvis/inbox/*.md
 jarvis/working/*.md
 jarvis/outbox/*.md
 jarvis/second-brain/inbox/*.md
+
+# generated daily reports
+reports/*.md
+reports/*.json
