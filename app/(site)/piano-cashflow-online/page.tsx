@@ -68,6 +68,25 @@ export default function Page() {
           ))}
         </section>
 
+        <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 shadow">
+          <h2 className="text-3xl font-bold text-gray-950">Percorso consigliato</h2>
+          <p className="mt-3 max-w-3xl text-gray-700">
+            Questa pagina funziona come ponte verso i servizi commerciali di Calcolich e verso il contatto diretto.
+            Chi arriva qui di solito ha gia un intento operativo, quindi il passo successivo deve essere chiaro e breve.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link href="/servizi-ai-seo" className="rounded-full bg-gray-950 px-4 py-2 font-bold text-white">
+              Servizi AI/SEO
+            </Link>
+            <Link href="/audit-sito-gratuito-ticino" className="rounded-full border border-gray-200 px-4 py-2 font-bold text-gray-800">
+              Audit gratuito
+            </Link>
+            <Link href="/contatti" className="rounded-full border border-gray-200 px-4 py-2 font-bold text-gray-800">
+              Contatti
+            </Link>
+          </div>
+        </section>
+
         <section className="mt-10 rounded-2xl bg-black p-6 text-white shadow">
           <h2 className="text-3xl font-bold">Prossima priorita</h2>
           <p className="mt-3 max-w-3xl text-gray-200">

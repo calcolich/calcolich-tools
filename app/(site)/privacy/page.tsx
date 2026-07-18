@@ -4,6 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy policy | Calcolich",
   description: "Privacy policy di Calcolich: dati inseriti nei calcolatori, dati tecnici, annunci e servizi di terze parti.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: "https://www.calcolich.ch/privacy",
   },

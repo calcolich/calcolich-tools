@@ -4,6 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cookie policy | Calcolich",
   description: "Cookie policy di Calcolich: cookie tecnici, annunci Google AdSense e gestione dal browser.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: "https://www.calcolich.ch/cookie",
   },

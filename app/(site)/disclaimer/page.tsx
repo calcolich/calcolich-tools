@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer | Calcolich",
   description: "Disclaimer di Calcolich: i calcolatori forniscono stime informative e non sostituiscono consulenze professionali.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: "https://www.calcolich.ch/disclaimer",
   },

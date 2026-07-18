@@ -16,6 +16,13 @@ export default function Page() {
     <ToolPage
       title="Calcolo Straordinari"
       intro="Inserisci ore previste, ore lavorate, tariffa oraria e supplemento per stimare il valore degli straordinari."
+      relatedTools={[
+        { href: "/calcolo-ore-lavoro", title: "Calcolo ore lavoro" },
+        { href: "/calcolo-salario-netto-svizzera", title: "Calcolo salario netto" },
+        { href: "/calcolo-giorni-lavorativi-svizzera", title: "Calcolo giorni lavorativi" },
+        { href: "/calcolo-tredicesima-svizzera", title: "Calcolo tredicesima" },
+        { href: "/categorie/stipendio-lavoro", title: "Hub lavoro e stipendio" },
+      ]}
       explanation={
         <div className="space-y-5 text-gray-700">
           <h2 className="text-2xl font-bold text-gray-950">Come viene stimato l&apos;importo</h2>
