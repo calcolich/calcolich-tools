@@ -1,3 +1,4 @@
+import { praemienverbilligungSchweiz } from "./praemienverbilligung-schweiz";
 import { ferienanspruchTeilzeitSchweiz } from "./ferienanspruch-teilzeit-schweiz";
 import { mehrwertsteuerSchweiz2026 } from "./mehrwertsteuer-schweiz-2026";
 import { pausenregelungArbeitszeitSchweiz } from "./pausenregelung-arbeitszeit-schweiz";
@@ -8,6 +9,7 @@ import type { GermanLongTailArticle } from "./types";
 export type { GermanLongTailArticle };
 
 export const germanLongTailArticles: GermanLongTailArticle[] = [
+  praemienverbilligungSchweiz,
   mehrwertsteuerSchweiz2026,
   stundenlohnBerechnenSchweiz,
   ueberstundenSchweizBerechnen,

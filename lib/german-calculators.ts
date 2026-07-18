@@ -589,9 +589,9 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     relatedCalculators: ["krankenkasse-praemien-rechner-schweiz", "budget-rechner-schweiz", "mietbudget-rechner-schweiz"],
     guideLinks: [
       {
-        href: "/de/ratgeber/mehrwertsteuer-schweiz-2026",
-        label: "Budget und Fixkosten einordnen",
-        description: "Wie du hohe Fixkosten in der Schweiz sauber ins Monatsbudget einbaust.",
+        href: "/de/ratgeber/praemienverbilligung-schweiz",
+        label: "Prämienverbilligung in der Schweiz verstehen",
+        description: "Kantonale Unterschiede, Unterlagen und die richtige Einordnung der Entlastung.",
       },
     ],
     monetizationType: "lead",
