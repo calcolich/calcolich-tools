@@ -17,4 +17,5 @@ export type GermanLongTailArticle = {
   internalLinks: { href: string; label: string }[];
   relatedArticleSlugs: string[];
   sources: { label: string; href: string }[];
+  alternates?: Partial<Record<"it", string>>;
 };

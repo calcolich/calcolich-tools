@@ -104,8 +104,23 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-5">
                 <h2 className="text-xl font-black">Steuern und Vorsorge</h2>
-                <p className="mt-2 text-sm leading-6 text-gray-600">Quellensteuer, MWST und Saeule 3a mit Schweizer Regeln und CHF-Beispielen pruefen.</p>
-                <Link href="/de/quellensteuer-rechner-schweiz" className="mt-3 inline-flex text-sm font-black text-emerald-800">Steuern schaetzen</Link>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn und die steuerliche Wirkung klarer werden.
+                </p>
+                <div className="mt-3 flex flex-col gap-2">
+                  <Link href="/de/quellensteuer-rechner-schweiz" className="inline-flex text-sm font-black text-emerald-800">
+                    Quellensteuer schaetzen
+                  </Link>
+                  <Link href="/de/ratgeber/quellensteuer-schweiz-2026" className="inline-flex text-sm font-black text-emerald-800">
+                    Quellensteuer 2026 verstehen
+                  </Link>
+                  <Link href="/de/brutto-netto-rechner-schweiz" className="inline-flex text-sm font-black text-emerald-800">
+                    Brutto-Netto vergleichen
+                  </Link>
+                  <Link href="/de/lohnrechner-schweiz" className="inline-flex text-sm font-black text-emerald-800">
+                    Lohnrechner nutzen
+                  </Link>
+                </div>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-5">
                 <h2 className="text-xl font-black">Wohnen und Budget</h2>

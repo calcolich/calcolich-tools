@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { getAttributedSource } from "@/components/CommercialTracking";
 import { sendAnalyticsEvent } from "@/lib/analytics-events";
 
@@ -35,6 +35,13 @@ export default function LeadForm({
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const startedRef = useRef(false);
+
+  function markStarted() {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    sendAnalyticsEvent("lead_form_started", { source });
+  }
 
   async function submitLead(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -44,8 +51,7 @@ export default function LeadForm({
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     const attributedSource = getAttributedSource(source);
-    sendAnalyticsEvent("lead_submit", { source: attributedSource });
-
+    sendAnalyticsEvent("lead_form_submitted", { source: attributedSource });
     try {
       const response = await fetch("/api/leads", {
         method: "POST",
@@ -98,7 +104,12 @@ export default function LeadForm({
     : "rounded-xl bg-black px-6 py-4 font-bold text-white";
 
   return (
-    <form onSubmit={submitLead} className={showMessage ? "mt-5 space-y-4" : "mt-5 grid gap-3 md:grid-cols-[1fr_auto]"}>
+    <form
+      onSubmit={submitLead}
+      onFocusCapture={markStarted}
+      onChangeCapture={markStarted}
+      className={showMessage ? "mt-5 space-y-4" : "mt-5 grid gap-3 md:grid-cols-[1fr_auto]"}
+    >
       <input className="hidden" name="website" tabIndex={-1} autoComplete="off" />
 
       {showName ? <input className={inputClass} name="name" placeholder="Nome" autoComplete="name" /> : null}

@@ -68,7 +68,34 @@ export default function ConsultationCta({
   calculator: Calculator;
   locale: Locale;
 }) {
-  const ui = copy[locale];
+  const taxCaseCopy: Partial<Record<Locale, ConsultationCopy>> | null =
+    calculator.slug === "quellensteuer-rechner-schweiz" || calculator.slug === "calcolatore-imposta-alla-fonte-svizzera"
+      ? {
+          de: {
+            eyebrow: "Steuerfall prüfen",
+            title: "Möchtest du deine Quellensteuer sauber einordnen?",
+            description:
+              "Nutze die Schätzung für den ersten Vergleich und sende danach eine konkrete Anfrage, wenn du den Fall mit einer sauberen Prüfung oder einer Beratung einordnen willst.",
+            button: "Steuerfall prüfen lassen",
+            partnerEyebrow: "Partnerbereich reserviert",
+            partnerTitle: "Platz fuer kuenftige Partner",
+            partnerDescription:
+              "Der Bereich bleibt fuer spaetere Kooperationen mit praxistauglichen Anbietern vorbereitet, ohne den Rechner mit Werbung zu ueberladen.",
+          },
+          it: {
+            eyebrow: "Verifica fiscale",
+            title: "Vuoi inquadrare meglio la tua imposta alla fonte?",
+            description:
+              "Usa la stima per un primo confronto e poi invia una richiesta concreta se vuoi verificare il caso con un controllo ordinato o una consulenza mirata.",
+            button: "Verifica il caso fiscale",
+            partnerEyebrow: "Spazio partner riservato",
+            partnerTitle: "Pronto per future collaborazioni",
+            partnerDescription:
+              "L'area resta predisposta per partner utili e coerenti, senza trasformare il calcolatore in una pagina piena di promozioni invasive.",
+          },
+        }
+      : null;
+  const ui = taxCaseCopy?.[locale] ?? copy[locale];
 
   return (
     <section className="mt-6 grid gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm md:grid-cols-[1fr_280px] md:p-6">
@@ -78,7 +105,7 @@ export default function ConsultationCta({
         <p className="mt-2 max-w-2xl leading-7 text-gray-700">{ui.description}</p>
         <TrackedInternalLink
           href={`/contatti?source=calculator-cta&tool=${encodeURIComponent(calculator.slug)}#lead`}
-          event="cta_click"
+          event="tax_help_cta_clicked"
           source={calculator.slug}
           target="contatti"
           className="mt-4 inline-flex rounded-xl bg-gray-950 px-5 py-3 font-bold text-white transition hover:bg-emerald-800"

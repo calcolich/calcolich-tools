@@ -4,12 +4,20 @@ const allowedEvents = new Set([
   "commercial_page_view",
   "commercial_cta_click",
   "calculator_start",
+  "calculator_started",
   "calculator_complete",
+  "calculator_completed",
   "language_change",
   "related_calculator_click",
+  "related_calculator_clicked",
   "guide_click",
+  "guide_opened",
+  "official_source_clicked",
   "lead_submit",
+  "lead_form_started",
+  "lead_form_submitted",
   "cta_click",
+  "tax_help_cta_clicked",
 ]);
 
 type EventPayload = {

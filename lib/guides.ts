@@ -8,6 +8,11 @@ export type Guide = {
   categoryLabel: string;
   calculatorLinks: { href: string; label: string }[];
   sections: { heading: string; body: string[] }[];
+  updatedAt?: string;
+  faqs?: { question: string; answer: string }[];
+  sources?: { label: string; href: string }[];
+  internalLinks?: { href: string; label: string }[];
+  alternates?: Partial<Record<"de", string>>;
 };
 
 export const guides: Guide[] = [
@@ -167,6 +172,7 @@ export const guides: Guide[] = [
     metaDescription: "Guida all'imposta alla fonte in Svizzera: come stimarla sul salario mensile e collegarla a stipendio netto e lordo netto.",
     categoryHref: "/categorie/stipendio-lavoro",
     categoryLabel: "Stipendio e lavoro",
+    updatedAt: "25 luglio 2026",
     calculatorLinks: [
       { href: "/it/calcolatore-imposta-alla-fonte-svizzera", label: "Calcolatore imposta alla fonte" },
       { href: "/calcolo-salario-netto-svizzera", label: "Calcolatore stipendio netto" },
@@ -194,7 +200,51 @@ export const guides: Guide[] = [
           "Il risultato serve per orientarsi e fare domande migliori a datore di lavoro, fiduciario o ufficio competente.",
         ],
       },
+      {
+        heading: "Quando serve la verifica ufficiale",
+        body: [
+          "Se cambiano cantone, datore di lavoro, stato civile o situazione familiare, la stima va ricontrollata. Le tabelle ufficiali e la busta paga restano il riferimento per un caso concreto.",
+          "Per casi transfrontalieri o situazioni particolari conviene verificare prima la documentazione della Confederazione e poi confrontare il risultato con la propria posizione lavorativa.",
+        ],
+      },
     ],
+    faqs: [
+      {
+        question: "A cosa serve questa guida?",
+        answer: "Serve a capire quando l'imposta alla fonte incide sul netto e quali calcolatori usare per una prima stima.",
+      },
+      {
+        question: "Posso usarla per confrontare due offerte?",
+        answer: "Si, soprattutto se vuoi mettere a confronto il netto mensile stimato e la trattenuta fiscale.",
+      },
+      {
+        question: "La guida sostituisce una consulenza fiscale?",
+        answer: "No. È una guida pratica e orientativa, non una verifica ufficiale.",
+      },
+      {
+        question: "Cosa devo controllare prima di fidarmi del risultato?",
+        answer: "Controlla cantone, status, busta paga e la compatibilità della tua situazione con le tabelle ufficiali.",
+      },
+      {
+        question: "Serve anche per il budget familiare?",
+        answer: "Si, perché la trattenuta influisce direttamente sul netto disponibile ogni mese.",
+      },
+    ],
+    internalLinks: [
+      { href: "/it/calcolatore-imposta-alla-fonte-svizzera", label: "Calcolatore imposta alla fonte" },
+      { href: "/calcolo-salario-netto-svizzera", label: "Calcolatore stipendio netto" },
+      { href: "/calcolo-lordo-netto-svizzera", label: "Calcolatore lordo netto" },
+      { href: "/it/calcolatore-assegni-familiari-svizzera", label: "Calcolatore assegni familiari" },
+      { href: "/it/calcolatore-riduzione-premi-cassa-malati-svizzera", label: "Calcolatore riduzione premi" },
+    ],
+    sources: [
+      { label: "ESTV: Quellensteuer", href: "https://www.estv.admin.ch/de/quellensteuer" },
+      { label: "ESTV: Quellensteuertarife für übrige Einkünfte", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
+      { label: "ch.ch: Steuern bezahlen", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
+    ],
+    alternates: {
+      de: "/de/ratgeber/quellensteuer-schweiz-2026",
+    },
   },
   {
     slug: "cassa-malati-svizzera",

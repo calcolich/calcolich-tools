@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ConsultationCta from "@/components/ConsultationCta";
 import {
   germanLongTailArticles,
   getGermanLongTailArticle,
   getRelatedGermanLongTailArticles,
 } from "@/content/de/ratgeber";
+import GuideViewTracker from "@/components/GuideViewTracker";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
+import TrackedInternalLink from "@/components/TrackedInternalLink";
 import { siteUrl } from "@/lib/site-metadata";
 
 type Props = {
@@ -29,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: article.metaDescription,
     alternates: {
       canonical: `${siteUrl}/de/ratgeber/${article.slug}`,
+      languages: article.alternates,
     },
     openGraph: {
       type: "article",
@@ -51,6 +56,12 @@ export default async function GermanGuideArticlePage({ params }: Props) {
 
   const relatedArticles = getRelatedGermanLongTailArticles(article);
   const articleUrl = `${siteUrl}/de/ratgeber/${article.slug}`;
+  const consultationCalculator =
+    article.slug === "quellensteuer-schweiz-2026"
+      ? ({
+          slug: "quellensteuer-rechner-schweiz",
+        } as const)
+      : null;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -107,6 +118,7 @@ export default async function GermanGuideArticlePage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
+      <GuideViewTracker slug={article.slug} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -161,12 +173,25 @@ export default async function GermanGuideArticlePage({ params }: Props) {
             <h2 className="text-2xl font-black">Passende Rechner</h2>
             <div className="mt-4 flex flex-wrap gap-3">
               {article.internalLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="rounded-full bg-white px-4 py-2 text-sm font-black text-gray-950 hover:bg-emerald-100">
+                <TrackedInternalLink
+                  key={link.href}
+                  href={link.href}
+                  event="related_calculator_clicked"
+                  source={article.slug}
+                  target={link.href}
+                  className="rounded-full bg-white px-4 py-2 text-sm font-black text-gray-950 hover:bg-emerald-100"
+                >
                   {link.label}
-                </Link>
+                </TrackedInternalLink>
               ))}
             </div>
           </section>
+
+          {consultationCalculator ? (
+            <div className="mt-10">
+              <ConsultationCta calculator={consultationCalculator as never} locale="de" />
+            </div>
+          ) : null}
 
           <section className="mt-10">
             <h2 className="text-3xl font-black tracking-tight">Häufige Fragen</h2>
@@ -185,9 +210,16 @@ export default async function GermanGuideArticlePage({ params }: Props) {
               <h2 className="text-xl font-black">Quellen</h2>
               <div className="mt-3 space-y-2">
                 {article.sources.map((source) => (
-                  <a key={source.href} href={source.href} className="block font-semibold text-emerald-800 hover:text-emerald-950" rel="noreferrer" target="_blank">
+                  <TrackedExternalLink
+                    key={source.href}
+                    href={source.href}
+                    event="official_source_clicked"
+                    source={article.slug}
+                    target={source.href}
+                    className="block font-semibold text-emerald-800 hover:text-emerald-950"
+                  >
                     {source.label}
-                  </a>
+                  </TrackedExternalLink>
                 ))}
               </div>
             </div>

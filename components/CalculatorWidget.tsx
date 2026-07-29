@@ -75,7 +75,7 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
       </div>
       <button
         type="button"
-        onClick={() => sendAnalyticsEvent("calculator_complete", {
+        onClick={() => sendAnalyticsEvent("calculator_completed", {
           calculatorId: calculator.id ?? calculator.slug,
           source: calculator.slug,
         })}
@@ -89,7 +89,7 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
   function trackCalculatorStart() {
     if (started) return;
     setStarted(true);
-    sendAnalyticsEvent("calculator_start", {
+    sendAnalyticsEvent("calculator_started", {
       calculatorId: calculator.id ?? calculator.slug,
       source: calculator.slug,
     });

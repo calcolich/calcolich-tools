@@ -27,8 +27,10 @@ const swissVacationSources = [
 ];
 
 const swissTaxSources = [
-  { label: "ESTV: Quellensteuer", href: "https://www.estv.admin.ch/estv/de/home/direkte-bundessteuer/quellensteuer.html" },
+  { label: "ESTV: Schweizerische Quellensteuer QST", href: "https://www.estv.admin.ch/de/quellensteuer" },
+  { label: "ESTV: Quellensteuertarife für übrige Einkünfte", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
   { label: "ch.ch: Steuern bezahlen", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
+  { label: "ESTV: Quellensteuer nach DBA", href: "https://www.estv.admin.ch/de/quellensteuer-nach-dba" },
 ];
 
 const swissPensionSources = [
@@ -103,7 +105,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Sind Dezimalstunden und Stunden:Minuten gleich?", answer: "Sie beschreiben dieselbe Dauer. 8 Stunden 30 Minuten entsprechen 8,5 Dezimalstunden." },
       { question: "Was ist der Unterschied zwischen Anwesenheitszeit und Arbeitszeit?", answer: "Die Anwesenheitszeit umfasst den gesamten Zeitraum im Betrieb. Die Arbeitszeit entsteht nach Abzug nicht bezahlter Pausen." },
     ],
-    relatedCalculators: ["arbeitszeitrechner", "lohnrechner-schweiz", "ferienrechner-schweiz"],
+    relatedCalculators: ["arbeitszeitrechner", "quellensteuer-rechner-schweiz", "lohnrechner-schweiz", "ferienrechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
@@ -114,6 +116,11 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
         label: "Stundenlohn berechnen",
         description: "Formeln, 13. Monatslohn und Ferienzuschlag fuer den Vergleich von Lohnmodellen.",
+      },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Quellensteuer Schweiz 2026",
+        description: "Welche Steuerfaktoren den Nettovergleich beim Stundenlohn mitbestimmen.",
       },
     ],
     monetizationType: "mixed",
@@ -246,7 +253,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Zählen Pausen zu Überstunden?", answer: "Unbezahlte Pausen werden normalerweise nicht als Arbeitszeit gezählt. Erfasst werden sollte die Nettoarbeitszeit." },
       { question: "Ist das Ergebnis rechtlich verbindlich?", answer: "Nein. Es ist eine rechnerische Schätzung und muss mit Vertrag, Reglement und Zeiterfassung abgeglichen werden." },
     ],
-    relatedCalculators: ["arbeitszeitrechner", "stundenrechner", "stundenlohn-rechner-schweiz"],
+    relatedCalculators: ["arbeitszeitrechner", "quellensteuer-rechner-schweiz", "stundenrechner", "stundenlohn-rechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/ueberstunden-schweiz-berechnen",
@@ -257,6 +264,11 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
         href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
         label: "Arbeitszeit und Pausenregelung",
         description: "Warum Nettoarbeitszeit und Pausen fuer den Überstundensaldo wichtig sind.",
+      },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Quellensteuer Schweiz 2026",
+        description: "Steuerliche Abzüge mitdenken, wenn Überstunden in Geld umgerechnet werden.",
       },
     ],
     monetizationType: "mixed",
@@ -318,12 +330,17 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Kann ich einen Jahreslohn eingeben?", answer: "Dieser Rechner arbeitet mit Monatslohn. Teile den Jahreslohn je nach Vertrag durch zwölf oder dreizehn Monatslöhne." },
       { question: "Ist die Ferienentschädigung immer zusätzlich geschuldet?", answer: "Bei Monatslohn werden Ferien normalerweise bezahlt bezogen. Bei unregelmässigem Stundenlohn kann ein separat ausgewiesener Zuschlag zulässig sein." },
     ],
-    relatedCalculators: ["brutto-netto-rechner-schweiz", "arbeitszeitrechner", "budget-rechner-schweiz"],
+    relatedCalculators: ["brutto-netto-rechner-schweiz", "quellensteuer-rechner-schweiz", "arbeitszeitrechner", "budget-rechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
         label: "Stundenlohn berechnen",
         description: "Monatslohn, 13. Monatslohn und Jahresarbeitszeit sauber vergleichen.",
+      },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Quellensteuer Schweiz 2026",
+        description: "Tarif, Zivilstand und Kanton als Einflussfaktoren für den Nettovergleich.",
       },
       {
         href: "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
@@ -390,12 +407,17 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Funktioniert die Rückrechnung von Netto zu Brutto?", answer: "Ja. Wähle den entsprechenden Modus und gib Nettobetrag sowie geschätzten Abzugssatz ein." },
       { question: "Wie beeinflussen Kinder und Zivilstand das Netto?", answer: "Sie verändern vor allem die Steuerbelastung. Bei Quellensteuer wirken sie direkt im Tarif, bei ordentlicher Veranlagung später in der Steuerrechnung." },
     ],
-    relatedCalculators: ["lohnrechner-schweiz", "stundenrechner", "budget-rechner-schweiz"],
+    relatedCalculators: ["lohnrechner-schweiz", "quellensteuer-rechner-schweiz", "stundenrechner", "budget-rechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
         label: "Stundenlohn berechnen",
         description: "Brutto, Netto und Stundenlohn mit und ohne 13. Monatslohn einordnen.",
+      },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Quellensteuer Schweiz 2026",
+        description: "Wie steuerliche Abzüge den Nettolohn auf der Rechnung verändern.",
       },
     ],
     monetizationType: "mixed",
@@ -416,17 +438,17 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     slug: "quellensteuer-rechner-schweiz",
     kind: "withholding-tax-ch",
     category: "Steuern & Mehrwertsteuer",
-    title: "Quellensteuer-Rechner Schweiz: Abzug und Nettolohn schätzen | Calcolich",
-    metaDescription: "Schweizer Quellensteuer aus Monatslohn, Sozialabgaben und kantonalem Steuersatz schätzen. Mit Formel, Beispiel, FAQ und Quellen.",
+    title: "Quellensteuer-Rechner Schweiz 2026: Abzug und Nettolohn schätzen | Calcolich",
+    metaDescription: "Schweizer Quellensteuer aus Monatslohn, Sozialabgaben und kantonalem Steuersatz vorsichtig schätzen. Mit Formel, Beispiel, FAQ, Quellen und offizieller Prüfung.",
     h1: "Quellensteuer-Rechner Schweiz",
     shortTitle: "Quellensteuer-Rechner",
-    intro: "Schätze, wie sich Quellensteuer und Sozialabgaben auf deinen monatlichen Nettolohn in der Schweiz auswirken.",
+    intro: "Schätze vorsichtig, wie sich Quellensteuer, Sozialabgaben und kantonale Faktoren auf deinen monatlichen Nettolohn in der Schweiz auswirken.",
     contentSections: [
       {
         heading: "Wann ist dieser Rechner nützlich?",
         paragraphs: [
           "Der Quellensteuer-Rechner ist für Personen gedacht, bei denen die Steuer direkt vom Lohn abgezogen wird. Das betrifft häufig Grenzgänger, ausländische Arbeitnehmende ohne Niederlassungsbewilligung C und Personen mit kantonalem Quellensteuertarif.",
-          "Die genaue Quellensteuer hängt von Kanton, Zivilstand, Kindern, Konfession, Pensum und Tarifcode ab. Deshalb arbeitet dieser Rechner bewusst mit einem manuell eingegebenen Steuersatz und zeigt transparent, wie sich der Satz auf den Nettolohn auswirkt.",
+          "Die genaue Quellensteuer hängt von Kanton, Zivilstand, Kindern, Pensum, Tarifcode und in manchen Fällen weiteren Merkmalen ab. Deshalb arbeitet dieser Rechner bewusst mit einem manuell eingegebenen Steuersatz und zeigt transparent, wie sich der Satz auf den Nettolohn auswirkt.",
         ],
         bullets: [
           "Monatslohn mit Sozialabgaben und Quellensteuer plausibilisieren",
@@ -441,12 +463,27 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
           "In der Realität können Abzüge anders gruppiert sein und Quellensteuertarife werden kantonal festgelegt. Verwende daher Werte aus der Lohnabrechnung oder aus der kantonalen Tabelle, wenn du eine genaue Plausibilisierung brauchst.",
         ],
       },
+      {
+        heading: "Welche Angaben den Tarif beeinflussen",
+        paragraphs: [
+          "Für eine offizielle Einordnung sind vor allem Kanton, Wohn- oder Arbeitskanton, Zivilstand, Kinder, Beschäftigungsgrad und der konkrete Tarifcode wichtig. Bei bestimmten Fällen können auch Grenzgänger- oder DBA-Fragen relevant sein.",
+          "Der Rechner fragt diese Faktoren nicht einzeln ab, damit er keine falsche Präzision vorgaukelt. Er bleibt bewusst ein Orientierungsinstrument für den ersten Vergleich mit dem Nettolohn.",
+        ],
+      },
+      {
+        heading: "Wann du die offizielle Stelle prüfen solltest",
+        paragraphs: [
+          "Wenn du gerade den Kanton wechselst, einen neuen Arbeitgeber hast oder die Lohnabrechnung nicht mit der Schätzung übereinstimmt, solltest du die kantonale Quelle prüfen. Das gilt auch bei ungewöhnlichen Konstellationen oder bei einer möglichen nachträglichen ordentlichen Veranlagung.",
+          "Die Zahlen auf dieser Seite sind eine vorsichtige Arbeitsgrundlage. Für den verbindlichen Fall brauchst du die amtliche Tarifinformation und die konkrete Lohnabrechnung.",
+        ],
+      },
     ],
     formula: "Nettolohn geschätzt = Bruttolohn - Sozialabgaben - Quellensteuer. Sozialabgaben und Quellensteuer werden als Prozent des Bruttolohns gerechnet.",
     example: "Beispiel: Bei CHF 6'500 Bruttolohn, 6,4 % Sozialabgaben und 8,5 % Quellensteuer entstehen CHF 416 Sozialabgaben und CHF 552.50 Quellensteuer. Der geschätzte Nettolohn beträgt CHF 5'531.50.",
     supportingContent: [
       "Der Rechner ist keine kantonale Tarifabfrage. Er hilft, eine bekannte oder angenommene Quellensteuerquote auf den Lohn anzuwenden.",
       "Prüfe bei Abweichungen zuerst Tarifcode, Kanton, Gemeinde, Beschäftigungsgrad, Kinderabzüge und ob eine nachträgliche ordentliche Veranlagung relevant sein kann.",
+      "Bei Quellensteuer wird der Bruttolohn oft auf einer anderen Grundlage beurteilt als bei einem einfachen Netto-Rechner. Deshalb ist es sinnvoll, den Wert zusätzlich mit Brutto-Netto und Lohnrechner abzugleichen.",
     ],
     faqs: [
       { question: "Welchen Quellensteuersatz soll ich eingeben?", answer: "Nutze den Satz aus der Lohnabrechnung oder der kantonalen Quellensteuertabelle für deinen Tarifcode." },
@@ -454,9 +491,23 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Sind AHV und ALV enthalten?", answer: "Sie werden über das Feld Sozialabgaben pauschal berücksichtigt. Für Details nutze zusätzlich den Lohnrechner." },
       { question: "Ist das Ergebnis verbindlich?", answer: "Nein. Verbindlich sind Lohnabrechnung, kantonale Regeln und Steuerbehörden." },
       { question: "Warum wird die Steuer vom Bruttolohn gerechnet?", answer: "Der Rechner verwendet ein einfaches Modell. Effektive kantonale Tarife können anders strukturiert sein." },
+      { question: "Kann ich damit Grenzgängerfälle prüfen?", answer: "Nur als grobe Orientierung. Für Grenzgänger und DBA-Fälle sind die offiziellen Regeln massgebend." },
     ],
-    relatedCalculators: ["lohnrechner-schweiz", "brutto-netto-rechner-schweiz", "budget-rechner-schweiz"],
+    relatedCalculators: [
+      "lohnrechner-schweiz",
+      "brutto-netto-rechner-schweiz",
+      "stundenlohn-rechner-schweiz",
+      "ueberstundenrechner-schweiz",
+      "ahv-beitraege-selbststaendige-rechner",
+      "familienzulagen-rechner-schweiz",
+      "praemienverbilligung-rechner-schweiz",
+    ],
     guideLinks: [
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Quellensteuer Schweiz 2026",
+        description: "Tarife, Einflussfaktoren, Sonderfälle und die Grenze zwischen Schätzung und offizieller Prüfung.",
+      },
       {
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
         label: "Lohnmodelle vergleichen",
@@ -467,7 +518,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     schemaType: "WebApplication",
     isPriority: true,
     searchIntent: "Quellensteuer und Nettolohn in der Schweiz schaetzen",
-    updatedAt: "12. Juli 2026",
+    updatedAt: "25. Juli 2026",
     sources: swissTaxSources,
     inputs: [
       { key: "gross", label: "Bruttolohn pro Monat (CHF)", defaultValue: "6500", min: "0" },
@@ -653,7 +704,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Ist das eine Anspruchsprüfung?", answer: "Nein. Der Rechner rechnet nur die Beträge hoch." },
       { question: "Brauche ich mehrere Eingaben pro Kind?", answer: "Nur wenn Kinder und Ausbildungszulagen unterschiedlich behandelt werden sollen." },
     ],
-    relatedCalculators: ["budget-rechner-schweiz", "brutto-netto-rechner-schweiz", "praemienverbilligung-rechner-schweiz"],
+    relatedCalculators: ["budget-rechner-schweiz", "brutto-netto-rechner-schweiz", "quellensteuer-rechner-schweiz", "praemienverbilligung-rechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
@@ -1327,12 +1378,17 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Kann ich Teilzeit vergleichen?", answer: "Ja. Trage die effektiven Wochenstunden deines Teilzeitpensums ein." },
       { question: "Sind Ferienzuschläge enthalten?", answer: "Nein. Ferienzuschläge müssen separat geprüft und bei Stundenlohn transparent ausgewiesen werden." },
     ],
-    relatedCalculators: ["lohnrechner-schweiz", "arbeitszeitrechner", "ueberstundenrechner-schweiz"],
+    relatedCalculators: ["lohnrechner-schweiz", "quellensteuer-rechner-schweiz", "arbeitszeitrechner", "ueberstundenrechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
         label: "Stundenlohn berechnen",
         description: "Monatslohn, Jahreslohn, 13. Monatslohn und Ferienzuschlag richtig einordnen.",
+      },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Quellensteuer Schweiz 2026",
+        description: "Steuerfaktoren mitdenken, wenn du Stundenlohn und Nettolohn vergleichst.",
       },
       {
         href: "/de/ratgeber/ueberstunden-schweiz-berechnen",

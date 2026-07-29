@@ -4,6 +4,7 @@ import CalculatorWidget from "@/components/CalculatorWidget";
 import ConsultationCta from "@/components/ConsultationCta";
 import LeadForm from "@/components/LeadForm";
 import RevenueCta from "@/components/RevenueCta";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import TrackedInternalLink from "@/components/TrackedInternalLink";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
@@ -264,10 +265,17 @@ export default function CalculatorPage({
                 ) : null}
                 {calculator.sources?.length ? (
                   <div className="mt-4 space-y-2">
-                    {calculator.sources.map((source) => (
-                      <a key={source.href} href={source.href} className="block font-semibold text-emerald-800 hover:text-emerald-950" rel="noreferrer" target="_blank">
+                {calculator.sources.map((source) => (
+                      <TrackedExternalLink
+                        key={source.href}
+                        href={source.href}
+                        event="official_source_clicked"
+                        source={calculator.slug}
+                        target={source.href}
+                        className="block font-semibold text-emerald-800 hover:text-emerald-950"
+                      >
                         {source.label}
-                      </a>
+                      </TrackedExternalLink>
                     ))}
                   </div>
                 ) : null}
@@ -282,7 +290,7 @@ export default function CalculatorPage({
                 <TrackedInternalLink
                   key={tool.slug}
                   href={calculatorHref(tool)}
-                  event="related_calculator_click"
+                  event="related_calculator_clicked"
                   source={calculator.slug}
                   target={tool.slug}
                   className="block rounded-2xl border border-gray-200 p-4 font-bold text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50"

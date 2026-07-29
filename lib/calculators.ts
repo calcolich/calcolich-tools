@@ -184,7 +184,7 @@ export const calculators: Calculator[] = [
       { question: "Perche il netto cambia da persona a persona?", answer: "Dipende da cantone, eta, cassa pensione, assicurazioni, imposte e situazione personale." },
       { question: "Posso usare il risultato per negoziare?", answer: "Si, come stima iniziale. Per decisioni finali verifica sempre la busta paga o un calcolo professionale." },
     ],
-    relatedSlugs: ["calcolo-lordo-netto-svizzera", "calcolo-tredicesima-svizzera", "calcolo-ferie-svizzera"],
+    relatedSlugs: ["calcolo-lordo-netto-svizzera", "calcolo-tredicesima-svizzera", "calcolo-ferie-svizzera", "calcolo-imposta-alla-fonte-svizzera"],
     guideLinks: [
       {
         href: "/guide/stipendio-netto-svizzera",
@@ -224,7 +224,7 @@ export const calculators: Calculator[] = [
       { question: "Il lordo netto e uguale in tutti i cantoni?", answer: "No, soprattutto se entra in gioco l'imposta alla fonte o la fiscalita personale." },
       { question: "Posso calcolare il lordo partendo dal netto desiderato?", answer: "Si, scegli la modalita da netto a lordo e inserisci il netto che vuoi ottenere." },
     ],
-    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-tredicesima-svizzera", "calcolo-ore-lavoro"],
+    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-tredicesima-svizzera", "calcolo-ore-lavoro", "calcolo-imposta-alla-fonte-svizzera"],
     guideLinks: [
       {
         href: "/guide/stipendio-netto-svizzera",
@@ -1120,12 +1120,12 @@ export const calculators: Calculator[] = [
   {
     slug: "calcolo-imposta-alla-fonte-svizzera",
     kind: "withholding-tax-ch",
-    title: "Calcolatore Imposta alla Fonte Svizzera",
+    title: "Calcolatore Imposta alla Fonte Svizzera 2026",
     shortTitle: "Imposta alla fonte",
     category: "Tasse Svizzera",
     metaTitle: "Calcolo Imposta alla Fonte Svizzera | Calcolich",
-    metaDescription: "Stima imposta alla fonte, salario netto e trattenuta mensile partendo da lordo, cantone e aliquota.",
-    intro: "Stima rapidamente quanta imposta alla fonte puo incidere sul salario mensile in Svizzera.",
+    metaDescription: "Stima prudente dell'imposta alla fonte in Svizzera: salario netto, trattenuta mensile, limiti cantonali e verifica ufficiale.",
+    intro: "Stima con prudenza quanto l'imposta alla fonte puo incidere sul salario mensile in Svizzera, senza simulare precisione falsa.",
     cta: "Ricevi nuovi strumenti per capire salario netto, imposte e lavoro in Svizzera.",
     inputs: [
       { key: "gross", label: "Salario lordo mensile CHF", defaultValue: "6500", min: "0" },
@@ -1134,16 +1134,23 @@ export const calculators: Calculator[] = [
     ],
     article: [
       "L'imposta alla fonte e una delle ricerche piu importanti per chi lavora in Svizzera con permesso, trasferimento recente o situazione fiscale non ancora ordinaria. Questo calcolatore aiuta a stimare l'effetto della trattenuta mensile partendo dal salario lordo, dalle deduzioni sociali e da una aliquota indicativa.",
-      "Il risultato non sostituisce le tabelle ufficiali cantonali, ma rende immediata la differenza tra lordo, contributi e netto stimato. Per un calcolo piu preciso bisogna verificare cantone, stato civile, figli, confessione, permesso e tariffa applicabile.",
+      "Il risultato non sostituisce le tabelle ufficiali cantonali, ma rende immediata la differenza tra lordo, contributi e netto stimato. Per un calcolo piu preciso bisogna verificare cantone, stato civile, figli, permesso e tariffa applicabile.",
       "La pagina e pensata anche per chi cerca in tedesco o inglese termini come Quellensteuer Rechner Schweiz o withholding tax calculator Switzerland. Il focus resta pratico: capire subito se una offerta salariale e sostenibile.",
-      "Usa questo strumento insieme al calcolatore stipendio netto, lordo netto e budget mensile per valutare il cashflow reale prima di trasferirti o accettare una nuova posizione.",
+      "Usa questo strumento insieme al calcolatore stipendio netto, lordo netto, assegni familiari e riduzione premi per valutare il cashflow reale prima di trasferirti o accettare una nuova posizione.",
     ],
     faqs: [
       { question: "Il calcolo usa le tabelle cantonali ufficiali?", answer: "No, usa una aliquota inserita dall'utente. Per il valore ufficiale bisogna consultare le tabelle del cantone." },
       { question: "A chi serve l'imposta alla fonte?", answer: "Di solito riguarda lavoratori stranieri o situazioni specifiche. Le regole cambiano in base a permesso, cantone e situazione personale." },
       { question: "Posso usarlo per confrontare offerte di lavoro?", answer: "Si, come stima iniziale del netto mensile dopo deduzioni e imposta alla fonte." },
+      { question: "Serve anche per il budget familiare?", answer: "Si, perché la trattenuta fiscale cambia il netto disponibile ogni mese." },
     ],
-    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-lordo-netto-svizzera", "calcolo-budget-mensile"],
+    relatedSlugs: [
+      "calcolo-salario-netto-svizzera",
+      "calcolo-lordo-netto-svizzera",
+      "calcolo-assegni-familiari-svizzera",
+      "calcolo-riduzione-premi-cassa-malati-svizzera",
+      "calcolo-budget-mensile",
+    ],
     guideLinks: [
       {
         href: "/guide/imposta-alla-fonte-svizzera",
@@ -1155,6 +1162,17 @@ export const calculators: Calculator[] = [
         label: "Guida stipendio netto",
         description: "Come leggere deduzioni e netto disponibile prima di una decisione salariale.",
       },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Guida Quellensteuer Schweiz 2026",
+        description: "Versione tedesca con tariffa, differenze cantonali e verifica ufficiale.",
+      },
+    ],
+    updatedAt: "25 luglio 2026",
+    sources: [
+      { label: "ESTV: Schweizerische Quellensteuer QST", href: "https://www.estv.admin.ch/de/quellensteuer" },
+      { label: "ESTV: Quellensteuertarife für übrige Einkünfte", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
+      { label: "ch.ch: Steuern bezahlen", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
     ],
   },
   {
