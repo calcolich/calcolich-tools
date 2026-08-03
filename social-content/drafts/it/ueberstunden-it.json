@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Calcolatore straordinari Svizzera: checklist visiva",
           "caption": "Calcolatore straordinari Svizzera: salva questa check-list prima di fare il confronto.\n\nStraordinari, ore lavorate e salario da leggere insieme. La guida collegata chiarisce il contesto.\n\n#Straordinari #Lavoro #Svizzera #Ore #Stipendio",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Calcolatore straordinari Svizzera: il dettaglio conta",
           "caption": "Calcolatore straordinari Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nStraordinari, ore lavorate e salario da leggere insieme.\n\n#Straordinari #Lavoro #Svizzera #Ore #Stipendio",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Calcolatore straordinari Svizzera: confronta prima di agire",
           "caption": "Calcolatore straordinari Svizzera: fai il confronto prima di agire, non dopo.\n\nStraordinari, ore lavorate e salario da leggere insieme.\n\nCalcola gli straordinari",
           "slides": [
             {

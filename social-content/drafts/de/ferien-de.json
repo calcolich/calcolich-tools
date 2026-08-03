@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Ferienrechner: checklist visiva",
           "caption": "Ferienrechner: salva questa check-list prima di fare il confronto.\n\nFerientage, Teilzeit und Jahresanspruch klarer einordnen. La guida collegata chiarisce il contesto.\n\n#Ferien #Arbeitsrecht #Schweiz #Lohn #Teilzeit",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Ferienrechner: il dettaglio conta",
           "caption": "Ferienrechner: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nFerientage, Teilzeit und Jahresanspruch klarer einordnen.\n\n#Ferien #Arbeitsrecht #Schweiz #Lohn #Teilzeit",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Ferienrechner: confronta prima di agire",
           "caption": "Ferienrechner: fai il confronto prima di agire, non dopo.\n\nFerientage, Teilzeit und Jahresanspruch klarer einordnen.\n\nFerien berechnen",
           "slides": [
             {

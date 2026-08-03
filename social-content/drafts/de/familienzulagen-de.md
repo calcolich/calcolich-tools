@@ -56,7 +56,7 @@
 - CTA: Usa Familienzulagen-Rechner Schweiz
 ## Instagram
 
-### undefined
+### Familienzulagen: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. La guida c
 #Familienzulagen #Schweiz #Familie #Budget #Kinder
 - Slide: 1. Il tema — Familienzulagen | 2. Perché conta — Familien, Eltern und Arbeitnehmende mit Kindern | 3. Cosa cambiare — Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Familienzulagen berechnen | 6. Passo successivo — Budget mit Kindern prüfen
 - CTA: Familienzulagen berechnen
-### undefined
+### Familienzulagen: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.
 #Familienzulagen #Schweiz #Familie #Budget #Kinder
 - Slide: 1. Problema — Un numero da solo non basta per familienzulagen. | 2. Contesto — Familien, Eltern und Arbeitnehmende mit Kindern | 3. Strumento — Familienzulagen-Rechner Schweiz | 4. Guida — Prämienverbilligung Schweiz | 5. CTA — Familienzulagen berechnen
 - CTA: Budget mit Kindern prüfen
-### undefined
+### Familienzulagen: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=ig_3

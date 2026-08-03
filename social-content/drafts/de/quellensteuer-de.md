@@ -56,7 +56,7 @@
 - CTA: Usa Quellensteuer-Rechner Schweiz
 ## Instagram
 
-### undefined
+### Quellensteuer: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn
 #Quellensteuer #Schweiz #Lohn #Netto #Steuern
 - Slide: 1. Il tema — Quellensteuer | 2. Perché conta — Arbeitnehmende in der Schweiz mit Quellensteuer | 3. Cosa cambiare — Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Quellensteuer kostenlos berechnen | 6. Passo successivo — Steuerfall prüfen lassen
 - CTA: Quellensteuer kostenlos berechnen
-### undefined
+### Quellensteuer: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn
 #Quellensteuer #Schweiz #Lohn #Netto #Steuern
 - Slide: 1. Problema — Un numero da solo non basta per quellensteuer. | 2. Contesto — Arbeitnehmende in der Schweiz mit Quellensteuer | 3. Strumento — Quellensteuer-Rechner Schweiz | 4. Guida — Quellensteuer Schweiz 2026 | 5. CTA — Quellensteuer kostenlos berechnen
 - CTA: Steuerfall prüfen lassen
-### undefined
+### Quellensteuer: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=ig_3

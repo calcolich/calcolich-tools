@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Brutto-Netto: checklist visiva",
           "caption": "Brutto-Netto: salva questa check-list prima di fare il confronto.\n\nBruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen. La guida collegata chiarisce il contesto.\n\n#BruttoNetto #Schweiz #Lohn #Budget #Netto",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Brutto-Netto: il dettaglio conta",
           "caption": "Brutto-Netto: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nBruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.\n\n#BruttoNetto #Schweiz #Lohn #Budget #Netto",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Brutto-Netto: confronta prima di agire",
           "caption": "Brutto-Netto: fai il confronto prima di agire, non dopo.\n\nBruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.\n\nBrutto und Netto vergleichen",
           "slides": [
             {

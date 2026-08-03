@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Familienzulagen: checklist visiva",
           "caption": "Familienzulagen: salva questa check-list prima di fare il confronto.\n\nKinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. La guida collegata chiarisce il contesto.\n\n#Familienzulagen #Schweiz #Familie #Budget #Kinder",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Familienzulagen: il dettaglio conta",
           "caption": "Familienzulagen: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nKinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.\n\n#Familienzulagen #Schweiz #Familie #Budget #Kinder",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Familienzulagen: confronta prima di agire",
           "caption": "Familienzulagen: fai il confronto prima di agire, non dopo.\n\nKinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.\n\nFamilienzulagen berechnen",
           "slides": [
             {

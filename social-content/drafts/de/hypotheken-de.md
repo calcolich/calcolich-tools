@@ -56,7 +56,7 @@
 - CTA: Usa Hypotheken-Tragbarkeit-Rechner Schweiz
 ## Instagram
 
-### undefined
+### Hypotheken-Tragbarkeit: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/hypotheken-tragbarkeit-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=hypotheken_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Tragbarkeit, Einkommen und Wohnkosten sauber einordnen. La guida collegata chiar
 #Hypothek #Schweiz #Tragbarkeit #Immobilien #Budget
 - Slide: 1. Il tema — Hypotheken-Tragbarkeit | 2. Perché conta — Kaufinteressierte, die Tragbarkeit und Budget prüfen | 3. Cosa cambiare — Tragbarkeit, Einkommen und Wohnkosten sauber einordnen. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Tragbarkeit prüfen | 6. Passo successivo — Finanzierung besser verstehen
 - CTA: Tragbarkeit prüfen
-### undefined
+### Hypotheken-Tragbarkeit: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/hypotheken-tragbarkeit-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=hypotheken_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Tragbarkeit, Einkommen und Wohnkosten sauber einordnen.
 #Hypothek #Schweiz #Tragbarkeit #Immobilien #Budget
 - Slide: 1. Problema — Un numero da solo non basta per hypotheken-tragbarkeit. | 2. Contesto — Kaufinteressierte, die Tragbarkeit und Budget prüfen | 3. Strumento — Hypotheken-Tragbarkeit-Rechner Schweiz | 4. Guida — Costo della vita in Svizzera | 5. CTA — Tragbarkeit prüfen
 - CTA: Finanzierung besser verstehen
-### undefined
+### Hypotheken-Tragbarkeit: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/hypotheken-tragbarkeit-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=hypotheken_2026&utm_content=ig_3

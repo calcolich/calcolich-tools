@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Prämienverbilligung: checklist visiva",
           "caption": "Prämienverbilligung: salva questa check-list prima di fare il confronto.\n\nKrankenkassenprämie, Budget und kantonale Unterschiede gemeinsam lesen. La guida collegata chiarisce il contesto.\n\n#Prämienverbilligung #Schweiz #Krankenkasse #Budget #Haushalt",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Prämienverbilligung: il dettaglio conta",
           "caption": "Prämienverbilligung: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nKrankenkassenprämie, Budget und kantonale Unterschiede gemeinsam lesen.\n\n#Prämienverbilligung #Schweiz #Krankenkasse #Budget #Haushalt",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Prämienverbilligung: confronta prima di agire",
           "caption": "Prämienverbilligung: fai il confronto prima di agire, non dopo.\n\nKrankenkassenprämie, Budget und kantonale Unterschiede gemeinsam lesen.\n\nPrämienverbilligung berechnen",
           "slides": [
             {

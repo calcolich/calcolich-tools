@@ -56,7 +56,7 @@
 - CTA: Usa Prämienverbilligung-Rechner Schweiz
 ## Instagram
 
-### undefined
+### Prämienverbilligung: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/praemienverbilligung-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=praemienverbilligung_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Krankenkassenprämie, Budget und kantonale Unterschiede gemeinsam lesen. La guid
 #Prämienverbilligung #Schweiz #Krankenkasse #Budget #Haushalt
 - Slide: 1. Il tema — Prämienverbilligung | 2. Perché conta — Haushalte, die Krankenkassenprämien besser einordnen wollen | 3. Cosa cambiare — Krankenkassenprämie, Budget und kantonale Unterschiede gemeinsam lesen. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Prämienverbilligung berechnen | 6. Passo successivo — Anspruch besser verstehen
 - CTA: Prämienverbilligung berechnen
-### undefined
+### Prämienverbilligung: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/praemienverbilligung-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=praemienverbilligung_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Krankenkassenprämie, Budget und kantonale Unterschiede gemeinsam lesen.
 #Prämienverbilligung #Schweiz #Krankenkasse #Budget #Haushalt
 - Slide: 1. Problema — Un numero da solo non basta per prämienverbilligung. | 2. Contesto — Haushalte, die Krankenkassenprämien besser einordnen wollen | 3. Strumento — Prämienverbilligung-Rechner Schweiz | 4. Guida — Prämienverbilligung Schweiz | 5. CTA — Prämienverbilligung berechnen
 - CTA: Anspruch besser verstehen
-### undefined
+### Prämienverbilligung: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/praemienverbilligung-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=praemienverbilligung_2026&utm_content=ig_3

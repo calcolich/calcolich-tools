@@ -56,7 +56,7 @@
 - CTA: Usa Brutto-Netto-Rechner Schweiz
 ## Instagram
 
-### undefined
+### Brutto-Netto: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen. La guida col
 #BruttoNetto #Schweiz #Lohn #Budget #Netto
 - Slide: 1. Il tema — Brutto-Netto | 2. Perché conta — Personen, die Lohnangebote und Netto vergleichen wollen | 3. Cosa cambiare — Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Brutto und Netto vergleichen | 6. Passo successivo — Lohn sauber einordnen
 - CTA: Brutto und Netto vergleichen
-### undefined
+### Brutto-Netto: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.
 #BruttoNetto #Schweiz #Lohn #Budget #Netto
 - Slide: 1. Problema — Un numero da solo non basta per brutto-netto. | 2. Contesto — Personen, die Lohnangebote und Netto vergleichen wollen | 3. Strumento — Brutto-Netto-Rechner Schweiz | 4. Guida — Stipendio netto in Svizzera | 5. CTA — Brutto und Netto vergleichen
 - CTA: Lohn sauber einordnen
-### undefined
+### Brutto-Netto: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=ig_3

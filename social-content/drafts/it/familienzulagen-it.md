@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore assegni familiari Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore assegni familiari Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-assegni-familiari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=assegni_familiari_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Assegni familiari e budget familiare spiegati in modo pratico. La guida collegat
 #AssegniFamiliari #Famiglia #Svizzera #Budget #Figli
 - Slide: 1. Il tema — Calcolatore assegni familiari Svizzera | 2. Perché conta — Famiglie e genitori con figli in Svizzera | 3. Cosa cambiare — Assegni familiari e budget familiare spiegati in modo pratico. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Calcola gli assegni familiari | 6. Passo successivo — Rivedi il budget familiare
 - CTA: Calcola gli assegni familiari
-### undefined
+### Calcolatore assegni familiari Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-assegni-familiari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=assegni_familiari_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Assegni familiari e budget familiare spiegati in modo pratico.
 #AssegniFamiliari #Famiglia #Svizzera #Budget #Figli
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore assegni familiari svizzera. | 2. Contesto — Famiglie e genitori con figli in Svizzera | 3. Strumento — Calcolatore assegni familiari Svizzera | 4. Guida — Costo della vita in Svizzera | 5. CTA — Calcola gli assegni familiari
 - CTA: Rivedi il budget familiare
-### undefined
+### Calcolatore assegni familiari Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-assegni-familiari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=assegni_familiari_2026&utm_content=ig_3

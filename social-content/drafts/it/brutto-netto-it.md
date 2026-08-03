@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore lordo netto Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore lordo netto Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false prec
 #LordoNetto #Stipendio #Svizzera #Budget #Netto
 - Slide: 1. Il tema — Calcolatore lordo netto Svizzera | 2. Perché conta — Chi deve confrontare il salario lordo con il netto | 3. Cosa cambiare — Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Confronta lordo e netto | 6. Passo successivo — Capisci il salario mensile
 - CTA: Confronta lordo e netto
-### undefined
+### Calcolatore lordo netto Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false prec
 #LordoNetto #Stipendio #Svizzera #Budget #Netto
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore lordo netto svizzera. | 2. Contesto — Chi deve confrontare il salario lordo con il netto | 3. Strumento — Calcolatore lordo netto Svizzera | 4. Guida — Stipendio netto in Svizzera | 5. CTA — Confronta lordo e netto
 - CTA: Capisci il salario mensile
-### undefined
+### Calcolatore lordo netto Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=ig_3

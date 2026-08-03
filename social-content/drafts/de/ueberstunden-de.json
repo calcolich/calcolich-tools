@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Überstunden: checklist visiva",
           "caption": "Überstunden: salva questa check-list prima di fare il confronto.\n\nMehrarbeit, Pause und Stundenkonto zusammen betrachten. La guida collegata chiarisce il contesto.\n\n#Überstunden #Arbeitszeit #Schweiz #Lohn #Stunden",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Überstunden: il dettaglio conta",
           "caption": "Überstunden: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nMehrarbeit, Pause und Stundenkonto zusammen betrachten.\n\n#Überstunden #Arbeitszeit #Schweiz #Lohn #Stunden",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Überstunden: confronta prima di agire",
           "caption": "Überstunden: fai il confronto prima di agire, non dopo.\n\nMehrarbeit, Pause und Stundenkonto zusammen betrachten.\n\nÜberstunden berechnen",
           "slides": [
             {

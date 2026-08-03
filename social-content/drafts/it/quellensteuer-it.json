@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Calcolatore imposta alla fonte Svizzera: checklist visiva",
           "caption": "Calcolatore imposta alla fonte Svizzera: salva questa check-list prima di fare il confronto.\n\nStipendio lordo, netto e imposta alla fonte letti insieme per capire meglio il salario mensile. La guida collegata chiarisce il contesto.\n\n#TasseSvizzera #LavoroSvizzera #Stipendio #Netto #ImpostaAllaFonte",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Calcolatore imposta alla fonte Svizzera: il dettaglio conta",
           "caption": "Calcolatore imposta alla fonte Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nStipendio lordo, netto e imposta alla fonte letti insieme per capire meglio il salario mensile.\n\n#TasseSvizzera #LavoroSvizzera #Stipendio #Netto #ImpostaAllaFonte",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Calcolatore imposta alla fonte Svizzera: confronta prima di agire",
           "caption": "Calcolatore imposta alla fonte Svizzera: fai il confronto prima di agire, non dopo.\n\nStipendio lordo, netto e imposta alla fonte letti insieme per capire meglio il salario mensile.\n\nCalcola l'imposta alla fonte",
           "slides": [
             {

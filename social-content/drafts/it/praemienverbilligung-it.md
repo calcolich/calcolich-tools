@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore riduzione premi cassa malati Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore riduzione premi cassa malati Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Premio mensile, budget e differenze cantonali letti in modo pratico. Parti dalla
 #CassaMalati #Svizzera #Budget #Premi #Famiglia
 - Slide: 1. Il tema — Calcolatore riduzione premi cassa malati Svizzera | 2. Perché conta — Famiglie e persone che vogliono orientarsi sui premi della cassa malati | 3. Cosa cambiare — Premio mensile, budget e differenze cantonali letti in modo pratico. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Calcola la riduzione premi | 6. Passo successivo — Controlla il tuo caso
 - CTA: Calcola la riduzione premi
-### undefined
+### Calcolatore riduzione premi cassa malati Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Premio mensile, budget e differenze cantonali letti in modo pratico.
 #CassaMalati #Svizzera #Budget #Premi #Famiglia
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore riduzione premi cassa malati svizzera. | 2. Contesto — Famiglie e persone che vogliono orientarsi sui premi della cassa malati | 3. Strumento — Calcolatore riduzione premi cassa malati Svizzera | 4. Guida — Approfondimento collegato | 5. CTA — Calcola la riduzione premi
 - CTA: Controlla il tuo caso
-### undefined
+### Calcolatore riduzione premi cassa malati Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=ig_3

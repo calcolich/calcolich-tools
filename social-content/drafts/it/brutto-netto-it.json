@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Calcolatore lordo netto Svizzera: checklist visiva",
           "caption": "Calcolatore lordo netto Svizzera: salva questa check-list prima di fare il confronto.\n\nSalario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni. La guida collegata chiarisce il contesto.\n\n#LordoNetto #Stipendio #Svizzera #Budget #Netto",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Calcolatore lordo netto Svizzera: il dettaglio conta",
           "caption": "Calcolatore lordo netto Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nSalario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.\n\n#LordoNetto #Stipendio #Svizzera #Budget #Netto",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Calcolatore lordo netto Svizzera: confronta prima di agire",
           "caption": "Calcolatore lordo netto Svizzera: fai il confronto prima di agire, non dopo.\n\nSalario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.\n\nConfronta lordo e netto",
           "slides": [
             {

@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore ferie Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore ferie Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-ferie-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferie_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Ferie e lavoro a tempo parziale letti senza formule inutili. La guida collegata 
 #Ferie #Lavoro #Svizzera #ParteTime #Pausa
 - Slide: 1. Il tema — Calcolatore ferie Svizzera | 2. Perché conta — Chi vuole calcolare le ferie in modo semplice | 3. Cosa cambiare — Ferie e lavoro a tempo parziale letti senza formule inutili. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Calcola le ferie | 6. Passo successivo — Capisci il diritto alle ferie
 - CTA: Calcola le ferie
-### undefined
+### Calcolatore ferie Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-ferie-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferie_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Ferie e lavoro a tempo parziale letti senza formule inutili.
 #Ferie #Lavoro #Svizzera #ParteTime #Pausa
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore ferie svizzera. | 2. Contesto — Chi vuole calcolare le ferie in modo semplice | 3. Strumento — Calcolatore ferie Svizzera | 4. Guida — Costo della vita in Svizzera | 5. CTA — Calcola le ferie
 - CTA: Capisci il diritto alle ferie
-### undefined
+### Calcolatore ferie Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-ferie-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferie_2026&utm_content=ig_3

@@ -56,7 +56,7 @@
 - CTA: Usa Überstunden-Rechner Schweiz
 ## Instagram
 
-### undefined
+### Überstunden: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Mehrarbeit, Pause und Stundenkonto zusammen betrachten. La guida collegata chiar
 #Überstunden #Arbeitszeit #Schweiz #Lohn #Stunden
 - Slide: 1. Il tema — Überstunden | 2. Perché conta — Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit | 3. Cosa cambiare — Mehrarbeit, Pause und Stundenkonto zusammen betrachten. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Überstunden berechnen | 6. Passo successivo — Arbeitszeit besser prüfen
 - CTA: Überstunden berechnen
-### undefined
+### Überstunden: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Mehrarbeit, Pause und Stundenkonto zusammen betrachten.
 #Überstunden #Arbeitszeit #Schweiz #Lohn #Stunden
 - Slide: 1. Problema — Un numero da solo non basta per überstunden. | 2. Contesto — Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit | 3. Strumento — Überstunden-Rechner Schweiz | 4. Guida — Arbeitszeit und Pausenregelung in der Schweiz | 5. CTA — Überstunden berechnen
 - CTA: Arbeitszeit besser prüfen
-### undefined
+### Überstunden: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=ig_3

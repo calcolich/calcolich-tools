@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore imposta alla fonte Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore imposta alla fonte Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-imposta-alla-fonte-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=imposta_alla_fonte_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Stipendio lordo, netto e imposta alla fonte letti insieme per capire meglio il s
 #TasseSvizzera #LavoroSvizzera #Stipendio #Netto #ImpostaAllaFonte
 - Slide: 1. Il tema — Calcolatore imposta alla fonte Svizzera | 2. Perché conta — Lavoratori in Svizzera con imposta alla fonte | 3. Cosa cambiare — Stipendio lordo, netto e imposta alla fonte letti insieme per capire meglio il salario mensile. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Calcola l'imposta alla fonte | 6. Passo successivo — Verifica il caso fiscale
 - CTA: Calcola l'imposta alla fonte
-### undefined
+### Calcolatore imposta alla fonte Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-imposta-alla-fonte-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=imposta_alla_fonte_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Stipendio lordo, netto e imposta alla fonte letti insieme per capire meglio il s
 #TasseSvizzera #LavoroSvizzera #Stipendio #Netto #ImpostaAllaFonte
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore imposta alla fonte svizzera. | 2. Contesto — Lavoratori in Svizzera con imposta alla fonte | 3. Strumento — Calcolatore imposta alla fonte Svizzera | 4. Guida — Imposta alla fonte in Svizzera | 5. CTA — Calcola l'imposta alla fonte
 - CTA: Verifica il caso fiscale
-### undefined
+### Calcolatore imposta alla fonte Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-imposta-alla-fonte-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=imposta_alla_fonte_2026&utm_content=ig_3

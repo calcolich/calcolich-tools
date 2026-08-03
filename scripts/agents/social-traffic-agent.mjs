@@ -343,6 +343,7 @@ function buildInstagramIdeas(target, channel) {
   return [
     {
       variant: "ig_1",
+      title: `${topic}: checklist visiva`,
       caption: `${topic}: salva questa check-list prima di fare il confronto.\n\n${target.promote} ${target.guideHref ? "La guida collegata chiarisce il contesto." : "Parti dalla pagina dedicata e leggi il risultato con calma."}\n\n${target.hashtags.join(" ")}`,
       slides: [
         { title: "1. Il tema", text: topic },
@@ -359,6 +360,7 @@ function buildInstagramIdeas(target, channel) {
     },
     {
       variant: "ig_2",
+      title: `${topic}: il dettaglio conta`,
       caption: `${topic}: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\n${target.promote}\n\n${target.hashtags.join(" ")}`,
       slides: [
         { title: "1. Problema", text: `Un numero da solo non basta per ${topic.toLowerCase()}.` },
@@ -374,6 +376,7 @@ function buildInstagramIdeas(target, channel) {
     },
     {
       variant: "ig_3",
+      title: `${topic}: confronta prima di agire`,
       caption: `${topic}: fai il confronto prima di agire, non dopo.\n\n${target.promote}\n\n${target.ctaLabel}`,
       slides: [
         { title: "1. Prima", text: "Capire il caso reale." },

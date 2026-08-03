@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore straordinari Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore straordinari Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Straordinari, ore lavorate e salario da leggere insieme. La guida collegata chia
 #Straordinari #Lavoro #Svizzera #Ore #Stipendio
 - Slide: 1. Il tema — Calcolatore straordinari Svizzera | 2. Perché conta — Chi vuole controllare ore extra e tempo di lavoro | 3. Cosa cambiare — Straordinari, ore lavorate e salario da leggere insieme. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Calcola gli straordinari | 6. Passo successivo — Controlla le ore di lavoro
 - CTA: Calcola gli straordinari
-### undefined
+### Calcolatore straordinari Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Straordinari, ore lavorate e salario da leggere insieme.
 #Straordinari #Lavoro #Svizzera #Ore #Stipendio
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore straordinari svizzera. | 2. Contesto — Chi vuole controllare ore extra e tempo di lavoro | 3. Strumento — Calcolatore straordinari Svizzera | 4. Guida — Stipendio netto in Svizzera | 5. CTA — Calcola gli straordinari
 - CTA: Controlla le ore di lavoro
-### undefined
+### Calcolatore straordinari Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=ig_3

@@ -56,7 +56,7 @@
 - CTA: Usa Calcolatore sostenibilità ipoteca Svizzera
 ## Instagram
 
-### undefined
+### Calcolatore sostenibilità ipoteca Svizzera: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Reddito, costi di casa e sostenibilità letti in modo prudente. La guida collega
 #Ipoteca #Casa #Svizzera #Budget #Mutuo
 - Slide: 1. Il tema — Calcolatore sostenibilità ipoteca Svizzera | 2. Perché conta — Chi valuta un acquisto casa e vuole capire la sostenibilità | 3. Cosa cambiare — Reddito, costi di casa e sostenibilità letti in modo prudente. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Verifica la sostenibilità | 6. Passo successivo — Capisci il mutuo
 - CTA: Verifica la sostenibilità
-### undefined
+### Calcolatore sostenibilità ipoteca Svizzera: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Reddito, costi di casa e sostenibilità letti in modo prudente.
 #Ipoteca #Casa #Svizzera #Budget #Mutuo
 - Slide: 1. Problema — Un numero da solo non basta per calcolatore sostenibilità ipoteca svizzera. | 2. Contesto — Chi valuta un acquisto casa e vuole capire la sostenibilità | 3. Strumento — Calcolatore sostenibilità ipoteca Svizzera | 4. Guida — Costo della vita in Svizzera | 5. CTA — Verifica la sostenibilità
 - CTA: Capisci il mutuo
-### undefined
+### Calcolatore sostenibilità ipoteca Svizzera: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=ig_3

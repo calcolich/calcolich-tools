@@ -103,6 +103,7 @@
       "items": [
         {
           "variant": "ig_1",
+          "title": "Quellensteuer: checklist visiva",
           "caption": "Quellensteuer: salva questa check-list prima di fare il confronto.\n\nQuellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird. La guida collegata chiarisce il contesto.\n\n#Quellensteuer #Schweiz #Lohn #Netto #Steuern",
           "slides": [
             {
@@ -144,6 +145,7 @@
         },
         {
           "variant": "ig_2",
+          "title": "Quellensteuer: il dettaglio conta",
           "caption": "Quellensteuer: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nQuellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird.\n\n#Quellensteuer #Schweiz #Lohn #Netto #Steuern",
           "slides": [
             {
@@ -181,6 +183,7 @@
         },
         {
           "variant": "ig_3",
+          "title": "Quellensteuer: confronta prima di agire",
           "caption": "Quellensteuer: fai il confronto prima di agire, non dopo.\n\nQuellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird.\n\nQuellensteuer kostenlos berechnen",
           "slides": [
             {

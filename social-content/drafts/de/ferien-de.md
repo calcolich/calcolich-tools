@@ -56,7 +56,7 @@
 - CTA: Usa Ferienrechner Schweiz
 ## Instagram
 
-### undefined
+### Ferienrechner: checklist visiva
 - Variante: ig_1
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/ferienrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferien_2026&utm_content=ig_1
@@ -67,7 +67,7 @@ Ferientage, Teilzeit und Jahresanspruch klarer einordnen. La guida collegata chi
 #Ferien #Arbeitsrecht #Schweiz #Lohn #Teilzeit
 - Slide: 1. Il tema — Ferienrechner | 2. Perché conta — Arbeitnehmende mit Monats- oder Stundenlohn | 3. Cosa cambiare — Ferientage, Teilzeit und Jahresanspruch klarer einordnen. | 4. Cosa non promette — Una stima non sostituisce fonti ufficiali o casi reali. | 5. Dove andare — Ferien berechnen | 6. Passo successivo — Ferienanspruch verstehen
 - CTA: Ferien berechnen
-### undefined
+### Ferienrechner: il dettaglio conta
 - Variante: ig_2
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/ferienrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferien_2026&utm_content=ig_2
@@ -78,7 +78,7 @@ Ferientage, Teilzeit und Jahresanspruch klarer einordnen.
 #Ferien #Arbeitsrecht #Schweiz #Lohn #Teilzeit
 - Slide: 1. Problema — Un numero da solo non basta per ferienrechner. | 2. Contesto — Arbeitnehmende mit Monats- oder Stundenlohn | 3. Strumento — Ferienrechner Schweiz | 4. Guida — Ferienanspruch bei Teilzeit in der Schweiz | 5. CTA — Ferien berechnen
 - CTA: Ferienanspruch verstehen
-### undefined
+### Ferienrechner: confronta prima di agire
 - Variante: ig_3
 - Stato: bozza
 - UTM: https://www.calcolich.ch/de/ferienrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferien_2026&utm_content=ig_3
