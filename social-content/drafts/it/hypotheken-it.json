@@ -1,0 +1,466 @@
+{
+  "id": "hypotheken-it",
+  "locale": "it",
+  "pageHref": "/it/calcolatore-sostenibilita-ipoteca-svizzera",
+  "title": "Calcolatore sostenibilità ipoteca Svizzera",
+  "guideHref": "/guide/costo-vita-svizzera",
+  "guideTitle": "Costo della vita in Svizzera",
+  "keyword": "Calcolatore sostenibilità ipoteca Svizzera",
+  "campaign": "ipoteca_2026",
+  "audience": "Chi valuta un acquisto casa e vuole capire la sostenibilità",
+  "ctaLabel": "Verifica la sostenibilità",
+  "secondaryCta": "Capisci il mutuo",
+  "tone": "consulenziale",
+  "hashtags": [
+    "#Ipoteca",
+    "#Casa",
+    "#Svizzera",
+    "#Budget",
+    "#Mutuo"
+  ],
+  "promote": "Reddito, costi di casa e sostenibilità letti in modo prudente.",
+  "status": "bozza",
+  "priority": "media",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera: il primo numero non basta",
+          "body": "Reddito, costi di casa e sostenibilità letti in modo prudente. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera: cosa vale davvero la pena controllare",
+          "body": "Chi valuta un acquisto casa e vuole capire la sostenibilità. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Capisci il mutuo",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Calcolatore sostenibilità ipoteca Svizzera",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera: un confronto utile prima della decisione",
+          "body": "Chi valuta un acquisto casa e vuole capire la sostenibilità. Reddito, costi di casa e sostenibilità letti in modo prudente. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_2",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Calcolatore sostenibilità ipoteca Svizzera è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Capisci il mutuo",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_3",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Reddito, costi di casa e sostenibilità letti in modo prudente.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Calcolatore sostenibilità ipoteca Svizzera",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Calcolatore sostenibilità ipoteca Svizzera: salva questa check-list prima di fare il confronto.\n\nReddito, costi di casa e sostenibilità letti in modo prudente. La guida collegata chiarisce il contesto.\n\n#Ipoteca #Casa #Svizzera #Budget #Mutuo",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Calcolatore sostenibilità ipoteca Svizzera"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Chi valuta un acquisto casa e vuole capire la sostenibilità"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Reddito, costi di casa e sostenibilità letti in modo prudente."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Verifica la sostenibilità"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Capisci il mutuo"
+            }
+          ],
+          "cta": "Verifica la sostenibilità",
+          "hashtags": [
+            "#Ipoteca",
+            "#Casa",
+            "#Svizzera",
+            "#Budget",
+            "#Mutuo"
+          ],
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Calcolatore sostenibilità ipoteca Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nReddito, costi di casa e sostenibilità letti in modo prudente.\n\n#Ipoteca #Casa #Svizzera #Budget #Mutuo",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per calcolatore sostenibilità ipoteca svizzera."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Chi valuta un acquisto casa e vuole capire la sostenibilità"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Calcolatore sostenibilità ipoteca Svizzera"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Costo della vita in Svizzera"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Verifica la sostenibilità"
+            }
+          ],
+          "cta": "Capisci il mutuo",
+          "hashtags": [
+            "#Ipoteca",
+            "#Casa",
+            "#Svizzera",
+            "#Budget",
+            "#Mutuo"
+          ],
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Calcolatore sostenibilità ipoteca Svizzera: fai il confronto prima di agire, non dopo.\n\nReddito, costi di casa e sostenibilità letti in modo prudente.\n\nVerifica la sostenibilità",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Verifica la sostenibilità"
+            }
+          ],
+          "cta": "Verifica la sostenibilità",
+          "hashtags": [
+            "#Ipoteca",
+            "#Casa",
+            "#Svizzera",
+            "#Budget",
+            "#Mutuo"
+          ],
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 1",
+          "hook": "Calcolatore sostenibilità ipoteca Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Calcolatore sostenibilità ipoteca Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=tt_1",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore sostenibilità ipoteca svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore sostenibilità ipoteca svizzera, guarda prima questo. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=tt_2",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=tt_3",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 4",
+          "hook": "Per calcolatore sostenibilità ipoteca svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Per calcolatore sostenibilità ipoteca svizzera, il contesto cambia il risultato. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=tt_4",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=tt_5",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 1",
+          "hook": "Calcolatore sostenibilità ipoteca Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Calcolatore sostenibilità ipoteca Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=yt_1",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore sostenibilità ipoteca svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore sostenibilità ipoteca svizzera, guarda prima questo. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=yt_2",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=yt_3",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 4",
+          "hook": "Per calcolatore sostenibilità ipoteca svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Per calcolatore sostenibilità ipoteca svizzera, il contesto cambia il risultato. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=yt_4",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Calcolatore sostenibilità ipoteca Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore sostenibilità ipoteca Svizzera.",
+            "Scene 3: evidenzia Reddito, costi di casa e sostenibilità letti in modo prudente..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Verifica la sostenibilità."
+          ],
+          "overlayText": [
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Calcolatore sostenibilità ipoteca Svizzera",
+            "Verifica la sostenibilità"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che reddito, costi di casa e sostenibilità letti in modo prudente.. Mostra perché chi valuta un acquisto casa e vuole capire la sostenibilità dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Verifica la sostenibilità.",
+          "cta": "Verifica la sostenibilità",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-sostenibilita-ipoteca-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=ipoteca_2026&utm_content=yt_5",
+          "description": "Calcolatore sostenibilità ipoteca Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    }
+  ]
+}

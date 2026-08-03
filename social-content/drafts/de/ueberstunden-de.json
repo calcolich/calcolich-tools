@@ -1,0 +1,466 @@
+{
+  "id": "ueberstunden-de",
+  "locale": "de",
+  "pageHref": "/de/ueberstundenrechner-schweiz",
+  "title": "Überstunden-Rechner Schweiz",
+  "guideHref": "/de/ratgeber/pausenregelung-arbeitszeit-schweiz",
+  "guideTitle": "Arbeitszeit und Pausenregelung in der Schweiz",
+  "keyword": "Überstunden-Rechner Schweiz",
+  "campaign": "ueberstunden_2026",
+  "audience": "Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit",
+  "ctaLabel": "Überstunden berechnen",
+  "secondaryCta": "Arbeitszeit besser prüfen",
+  "tone": "praxisnah",
+  "hashtags": [
+    "#Überstunden",
+    "#Arbeitszeit",
+    "#Schweiz",
+    "#Lohn",
+    "#Stunden"
+  ],
+  "promote": "Mehrarbeit, Pause und Stundenkonto zusammen betrachten.",
+  "status": "bozza",
+  "priority": "media",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Überstunden: il primo numero non basta",
+          "body": "Mehrarbeit, Pause und Stundenkonto zusammen betrachten. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Überstunden: cosa vale davvero la pena controllare",
+          "body": "Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Arbeitszeit besser prüfen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Überstunden: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Überstunden-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Überstunden: un confronto utile prima della decisione",
+          "body": "Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit. Mehrarbeit, Pause und Stundenkonto zusammen betrachten. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_2",
+          "title": "Überstunden: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Überstunden-Rechner Schweiz è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Arbeitszeit besser prüfen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_3",
+          "title": "Überstunden: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Mehrarbeit, Pause und Stundenkonto zusammen betrachten.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Überstunden-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Überstunden: salva questa check-list prima di fare il confronto.\n\nMehrarbeit, Pause und Stundenkonto zusammen betrachten. La guida collegata chiarisce il contesto.\n\n#Überstunden #Arbeitszeit #Schweiz #Lohn #Stunden",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Überstunden"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Mehrarbeit, Pause und Stundenkonto zusammen betrachten."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Überstunden berechnen"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Arbeitszeit besser prüfen"
+            }
+          ],
+          "cta": "Überstunden berechnen",
+          "hashtags": [
+            "#Überstunden",
+            "#Arbeitszeit",
+            "#Schweiz",
+            "#Lohn",
+            "#Stunden"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Überstunden: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nMehrarbeit, Pause und Stundenkonto zusammen betrachten.\n\n#Überstunden #Arbeitszeit #Schweiz #Lohn #Stunden",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per überstunden."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Beschäftigte mit Stunden- oder Monatslohn und Mehrarbeit"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Überstunden-Rechner Schweiz"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Arbeitszeit und Pausenregelung in der Schweiz"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Überstunden berechnen"
+            }
+          ],
+          "cta": "Arbeitszeit besser prüfen",
+          "hashtags": [
+            "#Überstunden",
+            "#Arbeitszeit",
+            "#Schweiz",
+            "#Lohn",
+            "#Stunden"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Überstunden: fai il confronto prima di agire, non dopo.\n\nMehrarbeit, Pause und Stundenkonto zusammen betrachten.\n\nÜberstunden berechnen",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Überstunden berechnen"
+            }
+          ],
+          "cta": "Überstunden berechnen",
+          "hashtags": [
+            "#Überstunden",
+            "#Arbeitszeit",
+            "#Schweiz",
+            "#Lohn",
+            "#Stunden"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Überstunden 1",
+          "hook": "Überstunden: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Überstunden: non partire dal numero sbagliato. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=tt_1",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Überstunden 2",
+          "hook": "Se il tuo caso riguarda überstunden, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Se il tuo caso riguarda überstunden, guarda prima questo. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=tt_2",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Überstunden 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=tt_3",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Überstunden 4",
+          "hook": "Per überstunden, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Per überstunden, il contesto cambia il risultato. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=tt_4",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Überstunden 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=tt_5",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Überstunden 1",
+          "hook": "Überstunden: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Überstunden: non partire dal numero sbagliato. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=yt_1",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Überstunden 2",
+          "hook": "Se il tuo caso riguarda überstunden, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Se il tuo caso riguarda überstunden, guarda prima questo. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=yt_2",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Überstunden 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=yt_3",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Überstunden 4",
+          "hook": "Per überstunden, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Per überstunden, il contesto cambia il risultato. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=yt_4",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Überstunden 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Überstunden-Rechner Schweiz.",
+            "Scene 3: evidenzia Mehrarbeit, Pause und Stundenkonto zusammen betrachten..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Überstunden berechnen."
+          ],
+          "overlayText": [
+            "Überstunden",
+            "Überstunden-Rechner Schweiz",
+            "Überstunden berechnen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che mehrarbeit, pause und stundenkonto zusammen betrachten.. Mostra perché beschäftigte mit stunden- oder monatslohn und mehrarbeit dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Überstunden berechnen.",
+          "cta": "Überstunden berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=yt_5",
+          "description": "Überstunden: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    }
+  ]
+}

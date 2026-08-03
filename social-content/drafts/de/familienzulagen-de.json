@@ -1,0 +1,466 @@
+{
+  "id": "familienzulagen-de",
+  "locale": "de",
+  "pageHref": "/de/familienzulagen-rechner-schweiz",
+  "title": "Familienzulagen-Rechner Schweiz",
+  "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
+  "guideTitle": "Prämienverbilligung Schweiz",
+  "keyword": "Familienzulagen-Rechner Schweiz",
+  "campaign": "familienzulagen_2026",
+  "audience": "Familien, Eltern und Arbeitnehmende mit Kindern",
+  "ctaLabel": "Familienzulagen berechnen",
+  "secondaryCta": "Budget mit Kindern prüfen",
+  "tone": "familiennah",
+  "hashtags": [
+    "#Familienzulagen",
+    "#Schweiz",
+    "#Familie",
+    "#Budget",
+    "#Kinder"
+  ],
+  "promote": "Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.",
+  "status": "bozza",
+  "priority": "media",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Familienzulagen: il primo numero non basta",
+          "body": "Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Familienzulagen: cosa vale davvero la pena controllare",
+          "body": "Familien, Eltern und Arbeitnehmende mit Kindern. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Budget mit Kindern prüfen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Familienzulagen: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Familienzulagen-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Familienzulagen: un confronto utile prima della decisione",
+          "body": "Familien, Eltern und Arbeitnehmende mit Kindern. Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_2",
+          "title": "Familienzulagen: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Familienzulagen-Rechner Schweiz è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Budget mit Kindern prüfen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_3",
+          "title": "Familienzulagen: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Familienzulagen-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Familienzulagen: salva questa check-list prima di fare il confronto.\n\nKinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. La guida collegata chiarisce il contesto.\n\n#Familienzulagen #Schweiz #Familie #Budget #Kinder",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Familienzulagen"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Familien, Eltern und Arbeitnehmende mit Kindern"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Familienzulagen berechnen"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Budget mit Kindern prüfen"
+            }
+          ],
+          "cta": "Familienzulagen berechnen",
+          "hashtags": [
+            "#Familienzulagen",
+            "#Schweiz",
+            "#Familie",
+            "#Budget",
+            "#Kinder"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Familienzulagen: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nKinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.\n\n#Familienzulagen #Schweiz #Familie #Budget #Kinder",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per familienzulagen."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Familien, Eltern und Arbeitnehmende mit Kindern"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Familienzulagen-Rechner Schweiz"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Prämienverbilligung Schweiz"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Familienzulagen berechnen"
+            }
+          ],
+          "cta": "Budget mit Kindern prüfen",
+          "hashtags": [
+            "#Familienzulagen",
+            "#Schweiz",
+            "#Familie",
+            "#Budget",
+            "#Kinder"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Familienzulagen: fai il confronto prima di agire, non dopo.\n\nKinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.\n\nFamilienzulagen berechnen",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Familienzulagen berechnen"
+            }
+          ],
+          "cta": "Familienzulagen berechnen",
+          "hashtags": [
+            "#Familienzulagen",
+            "#Schweiz",
+            "#Familie",
+            "#Budget",
+            "#Kinder"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Familienzulagen 1",
+          "hook": "Familienzulagen: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Familienzulagen: non partire dal numero sbagliato. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=tt_1",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Familienzulagen 2",
+          "hook": "Se il tuo caso riguarda familienzulagen, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Se il tuo caso riguarda familienzulagen, guarda prima questo. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=tt_2",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Familienzulagen 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=tt_3",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Familienzulagen 4",
+          "hook": "Per familienzulagen, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Per familienzulagen, il contesto cambia il risultato. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=tt_4",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Familienzulagen 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=tt_5",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Familienzulagen 1",
+          "hook": "Familienzulagen: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Familienzulagen: non partire dal numero sbagliato. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=yt_1",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Familienzulagen 2",
+          "hook": "Se il tuo caso riguarda familienzulagen, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Se il tuo caso riguarda familienzulagen, guarda prima questo. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=yt_2",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Familienzulagen 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=yt_3",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Familienzulagen 4",
+          "hook": "Per familienzulagen, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Per familienzulagen, il contesto cambia il risultato. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=yt_4",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Familienzulagen 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Familienzulagen-Rechner Schweiz.",
+            "Scene 3: evidenzia Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Familienzulagen berechnen."
+          ],
+          "overlayText": [
+            "Familienzulagen",
+            "Familienzulagen-Rechner Schweiz",
+            "Familienzulagen berechnen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che kinderzulagen, ausbildungszulagen und familienbudget zusammen denken.. Mostra perché familien, eltern und arbeitnehmende mit kindern dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Familienzulagen berechnen.",
+          "cta": "Familienzulagen berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=yt_5",
+          "description": "Familienzulagen: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    }
+  ]
+}

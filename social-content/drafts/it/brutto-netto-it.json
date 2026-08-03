@@ -1,0 +1,466 @@
+{
+  "id": "brutto-netto-it",
+  "locale": "it",
+  "pageHref": "/calcolo-lordo-netto-svizzera",
+  "title": "Calcolatore lordo netto Svizzera",
+  "guideHref": "/guide/stipendio-netto-svizzera",
+  "guideTitle": "Stipendio netto in Svizzera",
+  "keyword": "Calcolatore lordo netto Svizzera",
+  "campaign": "lordo_netto_2026",
+  "audience": "Chi deve confrontare il salario lordo con il netto",
+  "ctaLabel": "Confronta lordo e netto",
+  "secondaryCta": "Capisci il salario mensile",
+  "tone": "analitico",
+  "hashtags": [
+    "#LordoNetto",
+    "#Stipendio",
+    "#Svizzera",
+    "#Budget",
+    "#Netto"
+  ],
+  "promote": "Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.",
+  "status": "bozza",
+  "priority": "media",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Calcolatore lordo netto Svizzera: il primo numero non basta",
+          "body": "Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Calcolatore lordo netto Svizzera: cosa vale davvero la pena controllare",
+          "body": "Chi deve confrontare il salario lordo con il netto. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Capisci il salario mensile",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Calcolatore lordo netto Svizzera: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Calcolatore lordo netto Svizzera",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Calcolatore lordo netto Svizzera: un confronto utile prima della decisione",
+          "body": "Chi deve confrontare il salario lordo con il netto. Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_2",
+          "title": "Calcolatore lordo netto Svizzera: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Calcolatore lordo netto Svizzera è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Capisci il salario mensile",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_3",
+          "title": "Calcolatore lordo netto Svizzera: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Calcolatore lordo netto Svizzera",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Calcolatore lordo netto Svizzera: salva questa check-list prima di fare il confronto.\n\nSalario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni. La guida collegata chiarisce il contesto.\n\n#LordoNetto #Stipendio #Svizzera #Budget #Netto",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Calcolatore lordo netto Svizzera"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Chi deve confrontare il salario lordo con il netto"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Confronta lordo e netto"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Capisci il salario mensile"
+            }
+          ],
+          "cta": "Confronta lordo e netto",
+          "hashtags": [
+            "#LordoNetto",
+            "#Stipendio",
+            "#Svizzera",
+            "#Budget",
+            "#Netto"
+          ],
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Calcolatore lordo netto Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nSalario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.\n\n#LordoNetto #Stipendio #Svizzera #Budget #Netto",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per calcolatore lordo netto svizzera."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Chi deve confrontare il salario lordo con il netto"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Calcolatore lordo netto Svizzera"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Stipendio netto in Svizzera"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Confronta lordo e netto"
+            }
+          ],
+          "cta": "Capisci il salario mensile",
+          "hashtags": [
+            "#LordoNetto",
+            "#Stipendio",
+            "#Svizzera",
+            "#Budget",
+            "#Netto"
+          ],
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Calcolatore lordo netto Svizzera: fai il confronto prima di agire, non dopo.\n\nSalario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.\n\nConfronta lordo e netto",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Confronta lordo e netto"
+            }
+          ],
+          "cta": "Confronta lordo e netto",
+          "hashtags": [
+            "#LordoNetto",
+            "#Stipendio",
+            "#Svizzera",
+            "#Budget",
+            "#Netto"
+          ],
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Calcolatore lordo netto Svizzera 1",
+          "hook": "Calcolatore lordo netto Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Calcolatore lordo netto Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=tt_1",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Calcolatore lordo netto Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore lordo netto svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore lordo netto svizzera, guarda prima questo. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=tt_2",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Calcolatore lordo netto Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=tt_3",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Calcolatore lordo netto Svizzera 4",
+          "hook": "Per calcolatore lordo netto svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Per calcolatore lordo netto svizzera, il contesto cambia il risultato. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=tt_4",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Calcolatore lordo netto Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=tt_5",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Calcolatore lordo netto Svizzera 1",
+          "hook": "Calcolatore lordo netto Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Calcolatore lordo netto Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=yt_1",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Calcolatore lordo netto Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore lordo netto svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore lordo netto svizzera, guarda prima questo. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=yt_2",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Calcolatore lordo netto Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=yt_3",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Calcolatore lordo netto Svizzera 4",
+          "hook": "Per calcolatore lordo netto svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Per calcolatore lordo netto svizzera, il contesto cambia il risultato. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=yt_4",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Calcolatore lordo netto Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore lordo netto Svizzera.",
+            "Scene 3: evidenzia Salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Confronta lordo e netto."
+          ],
+          "overlayText": [
+            "Calcolatore lordo netto Svizzera",
+            "Calcolatore lordo netto Svizzera",
+            "Confronta lordo e netto"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che salario lordo e netto letti con deduzioni e imposta alla fonte, senza false precisioni.. Mostra perché chi deve confrontare il salario lordo con il netto dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Confronta lordo e netto.",
+          "cta": "Confronta lordo e netto",
+          "utmUrl": "https://www.calcolich.ch/calcolo-lordo-netto-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=lordo_netto_2026&utm_content=yt_5",
+          "description": "Calcolatore lordo netto Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    }
+  ]
+}

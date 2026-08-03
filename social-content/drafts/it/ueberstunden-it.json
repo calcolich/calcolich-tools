@@ -1,0 +1,466 @@
+{
+  "id": "ueberstunden-it",
+  "locale": "it",
+  "pageHref": "/calcolo-straordinari-svizzera",
+  "title": "Calcolatore straordinari Svizzera",
+  "guideHref": "/guide/stipendio-netto-svizzera",
+  "guideTitle": "Stipendio netto in Svizzera",
+  "keyword": "Calcolatore straordinari Svizzera",
+  "campaign": "straordinari_2026",
+  "audience": "Chi vuole controllare ore extra e tempo di lavoro",
+  "ctaLabel": "Calcola gli straordinari",
+  "secondaryCta": "Controlla le ore di lavoro",
+  "tone": "pratico",
+  "hashtags": [
+    "#Straordinari",
+    "#Lavoro",
+    "#Svizzera",
+    "#Ore",
+    "#Stipendio"
+  ],
+  "promote": "Straordinari, ore lavorate e salario da leggere insieme.",
+  "status": "bozza",
+  "priority": "media",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Calcolatore straordinari Svizzera: il primo numero non basta",
+          "body": "Straordinari, ore lavorate e salario da leggere insieme. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Calcolatore straordinari Svizzera: cosa vale davvero la pena controllare",
+          "body": "Chi vuole controllare ore extra e tempo di lavoro. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Controlla le ore di lavoro",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Calcolatore straordinari Svizzera: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Calcolatore straordinari Svizzera",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Calcolatore straordinari Svizzera: un confronto utile prima della decisione",
+          "body": "Chi vuole controllare ore extra e tempo di lavoro. Straordinari, ore lavorate e salario da leggere insieme. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_2",
+          "title": "Calcolatore straordinari Svizzera: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Calcolatore straordinari Svizzera è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Controlla le ore di lavoro",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_3",
+          "title": "Calcolatore straordinari Svizzera: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Straordinari, ore lavorate e salario da leggere insieme.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Calcolatore straordinari Svizzera",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Calcolatore straordinari Svizzera: salva questa check-list prima di fare il confronto.\n\nStraordinari, ore lavorate e salario da leggere insieme. La guida collegata chiarisce il contesto.\n\n#Straordinari #Lavoro #Svizzera #Ore #Stipendio",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Calcolatore straordinari Svizzera"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Chi vuole controllare ore extra e tempo di lavoro"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Straordinari, ore lavorate e salario da leggere insieme."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Calcola gli straordinari"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Controlla le ore di lavoro"
+            }
+          ],
+          "cta": "Calcola gli straordinari",
+          "hashtags": [
+            "#Straordinari",
+            "#Lavoro",
+            "#Svizzera",
+            "#Ore",
+            "#Stipendio"
+          ],
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Calcolatore straordinari Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nStraordinari, ore lavorate e salario da leggere insieme.\n\n#Straordinari #Lavoro #Svizzera #Ore #Stipendio",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per calcolatore straordinari svizzera."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Chi vuole controllare ore extra e tempo di lavoro"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Calcolatore straordinari Svizzera"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Stipendio netto in Svizzera"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Calcola gli straordinari"
+            }
+          ],
+          "cta": "Controlla le ore di lavoro",
+          "hashtags": [
+            "#Straordinari",
+            "#Lavoro",
+            "#Svizzera",
+            "#Ore",
+            "#Stipendio"
+          ],
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Calcolatore straordinari Svizzera: fai il confronto prima di agire, non dopo.\n\nStraordinari, ore lavorate e salario da leggere insieme.\n\nCalcola gli straordinari",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Calcola gli straordinari"
+            }
+          ],
+          "cta": "Calcola gli straordinari",
+          "hashtags": [
+            "#Straordinari",
+            "#Lavoro",
+            "#Svizzera",
+            "#Ore",
+            "#Stipendio"
+          ],
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Calcolatore straordinari Svizzera 1",
+          "hook": "Calcolatore straordinari Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Calcolatore straordinari Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=tt_1",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Calcolatore straordinari Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore straordinari svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore straordinari svizzera, guarda prima questo. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=tt_2",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Calcolatore straordinari Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=tt_3",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Calcolatore straordinari Svizzera 4",
+          "hook": "Per calcolatore straordinari svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Per calcolatore straordinari svizzera, il contesto cambia il risultato. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=tt_4",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Calcolatore straordinari Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=tt_5",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Calcolatore straordinari Svizzera 1",
+          "hook": "Calcolatore straordinari Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Calcolatore straordinari Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=yt_1",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Calcolatore straordinari Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore straordinari svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore straordinari svizzera, guarda prima questo. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=yt_2",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Calcolatore straordinari Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=yt_3",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Calcolatore straordinari Svizzera 4",
+          "hook": "Per calcolatore straordinari svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Per calcolatore straordinari svizzera, il contesto cambia il risultato. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=yt_4",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Calcolatore straordinari Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore straordinari Svizzera.",
+            "Scene 3: evidenzia Straordinari, ore lavorate e salario da leggere insieme..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola gli straordinari."
+          ],
+          "overlayText": [
+            "Calcolatore straordinari Svizzera",
+            "Calcolatore straordinari Svizzera",
+            "Calcola gli straordinari"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che straordinari, ore lavorate e salario da leggere insieme.. Mostra perché chi vuole controllare ore extra e tempo di lavoro dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Calcola gli straordinari.",
+          "cta": "Calcola gli straordinari",
+          "utmUrl": "https://www.calcolich.ch/calcolo-straordinari-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=straordinari_2026&utm_content=yt_5",
+          "description": "Calcolatore straordinari Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    }
+  ]
+}

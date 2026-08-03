@@ -50,3 +50,6 @@ jarvis/second-brain/inbox/*.md
 # generated daily reports
 reports/*.md
 reports/*.json
+
+# generated social reports
+social-content/reports/

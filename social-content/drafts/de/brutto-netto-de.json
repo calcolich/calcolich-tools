@@ -1,0 +1,466 @@
+{
+  "id": "brutto-netto-de",
+  "locale": "de",
+  "pageHref": "/de/brutto-netto-rechner-schweiz",
+  "title": "Brutto-Netto-Rechner Schweiz",
+  "guideHref": "/de/ratgeber/stipendio-netto-svizzera",
+  "guideTitle": "Stipendio netto in Svizzera",
+  "keyword": "Brutto-Netto-Rechner Schweiz",
+  "campaign": "brutto_netto_2026",
+  "audience": "Personen, die Lohnangebote und Netto vergleichen wollen",
+  "ctaLabel": "Brutto und Netto vergleichen",
+  "secondaryCta": "Lohn sauber einordnen",
+  "tone": "analytisch",
+  "hashtags": [
+    "#BruttoNetto",
+    "#Schweiz",
+    "#Lohn",
+    "#Budget",
+    "#Netto"
+  ],
+  "promote": "Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.",
+  "status": "bozza",
+  "priority": "media",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Brutto-Netto: il primo numero non basta",
+          "body": "Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Brutto-Netto: cosa vale davvero la pena controllare",
+          "body": "Personen, die Lohnangebote und Netto vergleichen wollen. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Lohn sauber einordnen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Brutto-Netto: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Brutto-Netto-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Brutto-Netto: un confronto utile prima della decisione",
+          "body": "Personen, die Lohnangebote und Netto vergleichen wollen. Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_2",
+          "title": "Brutto-Netto: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Brutto-Netto-Rechner Schweiz è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Lohn sauber einordnen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_3",
+          "title": "Brutto-Netto: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Brutto-Netto-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Brutto-Netto: salva questa check-list prima di fare il confronto.\n\nBruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen. La guida collegata chiarisce il contesto.\n\n#BruttoNetto #Schweiz #Lohn #Budget #Netto",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Brutto-Netto"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Personen, die Lohnangebote und Netto vergleichen wollen"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Brutto und Netto vergleichen"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Lohn sauber einordnen"
+            }
+          ],
+          "cta": "Brutto und Netto vergleichen",
+          "hashtags": [
+            "#BruttoNetto",
+            "#Schweiz",
+            "#Lohn",
+            "#Budget",
+            "#Netto"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Brutto-Netto: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nBruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.\n\n#BruttoNetto #Schweiz #Lohn #Budget #Netto",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per brutto-netto."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Personen, die Lohnangebote und Netto vergleichen wollen"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Brutto-Netto-Rechner Schweiz"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Stipendio netto in Svizzera"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Brutto und Netto vergleichen"
+            }
+          ],
+          "cta": "Lohn sauber einordnen",
+          "hashtags": [
+            "#BruttoNetto",
+            "#Schweiz",
+            "#Lohn",
+            "#Budget",
+            "#Netto"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Brutto-Netto: fai il confronto prima di agire, non dopo.\n\nBruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen.\n\nBrutto und Netto vergleichen",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Brutto und Netto vergleichen"
+            }
+          ],
+          "cta": "Brutto und Netto vergleichen",
+          "hashtags": [
+            "#BruttoNetto",
+            "#Schweiz",
+            "#Lohn",
+            "#Budget",
+            "#Netto"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Brutto-Netto 1",
+          "hook": "Brutto-Netto: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Brutto-Netto: non partire dal numero sbagliato. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=tt_1",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Brutto-Netto 2",
+          "hook": "Se il tuo caso riguarda brutto-netto, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Se il tuo caso riguarda brutto-netto, guarda prima questo. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=tt_2",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Brutto-Netto 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=tt_3",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Brutto-Netto 4",
+          "hook": "Per brutto-netto, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Per brutto-netto, il contesto cambia il risultato. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=tt_4",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Brutto-Netto 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=tt_5",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Brutto-Netto 1",
+          "hook": "Brutto-Netto: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Brutto-Netto: non partire dal numero sbagliato. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=yt_1",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Brutto-Netto 2",
+          "hook": "Se il tuo caso riguarda brutto-netto, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Se il tuo caso riguarda brutto-netto, guarda prima questo. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=yt_2",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Brutto-Netto 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=yt_3",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Brutto-Netto 4",
+          "hook": "Per brutto-netto, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Per brutto-netto, il contesto cambia il risultato. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=yt_4",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Brutto-Netto 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Brutto-Netto-Rechner Schweiz.",
+            "Scene 3: evidenzia Bruttolohn und Nettolohn mit einem klaren Schweizer Beispiel lesen..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Brutto und Netto vergleichen."
+          ],
+          "overlayText": [
+            "Brutto-Netto",
+            "Brutto-Netto-Rechner Schweiz",
+            "Brutto und Netto vergleichen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che bruttolohn und nettolohn mit einem klaren schweizer beispiel lesen.. Mostra perché personen, die lohnangebote und netto vergleichen wollen dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Brutto und Netto vergleichen.",
+          "cta": "Brutto und Netto vergleichen",
+          "utmUrl": "https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=yt_5",
+          "description": "Brutto-Netto: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    }
+  ]
+}

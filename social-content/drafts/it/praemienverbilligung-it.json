@@ -1,0 +1,466 @@
+{
+  "id": "praemienverbilligung-it",
+  "locale": "it",
+  "pageHref": "/it/calcolatore-riduzione-premi-cassa-malati-svizzera",
+  "title": "Calcolatore riduzione premi cassa malati Svizzera",
+  "guideHref": null,
+  "guideTitle": null,
+  "keyword": "Calcolatore riduzione premi cassa malati Svizzera",
+  "campaign": "riduzione_premi_2026",
+  "audience": "Famiglie e persone che vogliono orientarsi sui premi della cassa malati",
+  "ctaLabel": "Calcola la riduzione premi",
+  "secondaryCta": "Controlla il tuo caso",
+  "tone": "utile",
+  "hashtags": [
+    "#CassaMalati",
+    "#Svizzera",
+    "#Budget",
+    "#Premi",
+    "#Famiglia"
+  ],
+  "promote": "Premio mensile, budget e differenze cantonali letti in modo pratico.",
+  "status": "bozza",
+  "priority": "alta",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera: il primo numero non basta",
+          "body": "Premio mensile, budget e differenze cantonali letti in modo pratico. Se vuoi un quadro più completo, parti dalla pagina dedicata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera: cosa vale davvero la pena controllare",
+          "body": "Famiglie e persone che vogliono orientarsi sui premi della cassa malati. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Controlla il tuo caso",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Calcolatore riduzione premi cassa malati Svizzera",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=facebook&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera: un confronto utile prima della decisione",
+          "body": "Famiglie e persone che vogliono orientarsi sui premi della cassa malati. Premio mensile, budget e differenze cantonali letti in modo pratico. La pagina principale resta il punto di partenza più rapido.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_2",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Calcolatore riduzione premi cassa malati Svizzera è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Controlla il tuo caso",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "li_3",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Premio mensile, budget e differenze cantonali letti in modo pratico.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Calcolatore riduzione premi cassa malati Svizzera",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=linkedin&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Calcolatore riduzione premi cassa malati Svizzera: salva questa check-list prima di fare il confronto.\n\nPremio mensile, budget e differenze cantonali letti in modo pratico. Parti dalla pagina dedicata e leggi il risultato con calma.\n\n#CassaMalati #Svizzera #Budget #Premi #Famiglia",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Calcolatore riduzione premi cassa malati Svizzera"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Famiglie e persone che vogliono orientarsi sui premi della cassa malati"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Premio mensile, budget e differenze cantonali letti in modo pratico."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Calcola la riduzione premi"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Controlla il tuo caso"
+            }
+          ],
+          "cta": "Calcola la riduzione premi",
+          "hashtags": [
+            "#CassaMalati",
+            "#Svizzera",
+            "#Budget",
+            "#Premi",
+            "#Famiglia"
+          ],
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Calcolatore riduzione premi cassa malati Svizzera: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nPremio mensile, budget e differenze cantonali letti in modo pratico.\n\n#CassaMalati #Svizzera #Budget #Premi #Famiglia",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per calcolatore riduzione premi cassa malati svizzera."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Famiglie e persone che vogliono orientarsi sui premi della cassa malati"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Calcolatore riduzione premi cassa malati Svizzera"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Approfondimento collegato"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Calcola la riduzione premi"
+            }
+          ],
+          "cta": "Controlla il tuo caso",
+          "hashtags": [
+            "#CassaMalati",
+            "#Svizzera",
+            "#Budget",
+            "#Premi",
+            "#Famiglia"
+          ],
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Calcolatore riduzione premi cassa malati Svizzera: fai il confronto prima di agire, non dopo.\n\nPremio mensile, budget e differenze cantonali letti in modo pratico.\n\nCalcola la riduzione premi",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Calcola la riduzione premi"
+            }
+          ],
+          "cta": "Calcola la riduzione premi",
+          "hashtags": [
+            "#CassaMalati",
+            "#Svizzera",
+            "#Budget",
+            "#Premi",
+            "#Famiglia"
+          ],
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=instagram&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 1",
+          "hook": "Calcolatore riduzione premi cassa malati Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Calcolatore riduzione premi cassa malati Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=tt_1",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore riduzione premi cassa malati svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore riduzione premi cassa malati svizzera, guarda prima questo. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=tt_2",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=tt_3",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 4",
+          "hook": "Per calcolatore riduzione premi cassa malati svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Per calcolatore riduzione premi cassa malati svizzera, il contesto cambia il risultato. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=tt_4",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=tiktok&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=tt_5",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 1",
+          "hook": "Calcolatore riduzione premi cassa malati Svizzera: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Calcolatore riduzione premi cassa malati Svizzera: non partire dal numero sbagliato. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=yt_1",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 2",
+          "hook": "Se il tuo caso riguarda calcolatore riduzione premi cassa malati svizzera, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Se il tuo caso riguarda calcolatore riduzione premi cassa malati svizzera, guarda prima questo. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=yt_2",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=yt_3",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 4",
+          "hook": "Per calcolatore riduzione premi cassa malati svizzera, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Per calcolatore riduzione premi cassa malati svizzera, il contesto cambia il risultato. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=yt_4",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Calcolatore riduzione premi cassa malati Svizzera 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Calcolatore riduzione premi cassa malati Svizzera.",
+            "Scene 3: evidenzia Premio mensile, budget e differenze cantonali letti in modo pratico..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Calcola la riduzione premi."
+          ],
+          "overlayText": [
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcolatore riduzione premi cassa malati Svizzera",
+            "Calcola la riduzione premi"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che premio mensile, budget e differenze cantonali letti in modo pratico.. Mostra perché famiglie e persone che vogliono orientarsi sui premi della cassa malati dovrebbe usare il calcolatore prima di prendere una decisione. Poi ricorda che la pagina è il punto di partenza migliore. Chiudi con una CTA chiara: Calcola la riduzione premi.",
+          "cta": "Calcola la riduzione premi",
+          "utmUrl": "https://www.calcolich.ch/it/calcolatore-riduzione-premi-cassa-malati-svizzera?utm_source=youtube&utm_medium=organic_social&utm_campaign=riduzione_premi_2026&utm_content=yt_5",
+          "description": "Calcolatore riduzione premi cassa malati Svizzera: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "it"
+        }
+      ]
+    }
+  ]
+}

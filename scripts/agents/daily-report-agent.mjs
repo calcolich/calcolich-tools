@@ -1,6 +1,6 @@
 import { section, bulletList } from "./shared/output.mjs";
 
-export function buildDailyReport({ stamp, seo, content, monetization, quality }) {
+export function buildDailyReport({ stamp, seo, content, monetization, quality, social }) {
   const createdOrImproved = [
     ...seo.keywordCoverage.filter((item) => item.status === "coperta" && item.priority !== "bassa").slice(0, 6).map((item) => item.target),
     ...content.updates.slice(0, 6).map((item) => item.slug),
@@ -22,6 +22,7 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality })
 
   const impact = assessImpact({ seo, content, monetization, quality });
   const progress = assessProgress({ monetization, quality });
+  const socialSummary = social?.report?.summary ?? null;
 
   const markdown = [
     `# Calcolich Daily Report - ${stamp}`,
@@ -45,6 +46,27 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality })
     "",
     section("Stato verso CHF 1.500/mese", [progress]),
     "",
+    ...(socialSummary ? [
+      section("Social Traffic", [
+        bulletList([
+          `Contenuti generati: ${socialSummary.generatedContents.length}`,
+          `Pagine promosse: ${socialSummary.topPromotions.map((item) => item.title).join(", ")}`,
+          `Prossima pagina: ${socialSummary.nextPage ?? "non disponibile"}`,
+          `Validazione: ${socialSummary.validation.ok ? "OK" : "attenzione"}`,
+        ]),
+      ]),
+      "",
+      ...(socialSummary.launchWeek ? [
+        section("Launch Week", [
+          bulletList([
+            `Contenuti pianificati: ${socialSummary.launchWeek.generatedContents}`,
+            `Pagine prioritarie: ${socialSummary.launchWeek.promotedPages.join(", ")}`,
+            `Prossima pagina: ${socialSummary.launchWeek.nextPage ?? "non disponibile"}`,
+          ]),
+        ]),
+        "",
+      ] : []),
+    ] : []),
   ].join("\n");
 
   return {
@@ -57,6 +79,7 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality })
       nextAction,
       impact,
       progress,
+      social: socialSummary,
     },
   };
 }

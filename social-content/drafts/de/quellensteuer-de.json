@@ -1,0 +1,466 @@
+{
+  "id": "quellensteuer-de",
+  "locale": "de",
+  "pageHref": "/de/quellensteuer-rechner-schweiz",
+  "title": "Quellensteuer-Rechner Schweiz",
+  "guideHref": "/de/ratgeber/quellensteuer-schweiz-2026",
+  "guideTitle": "Quellensteuer Schweiz 2026",
+  "keyword": "Quellensteuer-Rechner Schweiz",
+  "campaign": "quellensteuer_2026",
+  "audience": "Arbeitnehmende in der Schweiz mit Quellensteuer",
+  "ctaLabel": "Quellensteuer kostenlos berechnen",
+  "secondaryCta": "Steuerfall prüfen lassen",
+  "tone": "informativ",
+  "hashtags": [
+    "#Quellensteuer",
+    "#Schweiz",
+    "#Lohn",
+    "#Netto",
+    "#Steuern"
+  ],
+  "promote": "Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird.",
+  "status": "bozza",
+  "priority": "alta",
+  "channels": [
+    {
+      "name": "facebook",
+      "source": "facebook",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "fb_1",
+          "title": "Quellensteuer: il primo numero non basta",
+          "body": "Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird. Per approfondire, passa anche dalla guida collegata.",
+          "question": "Quale dettaglio del tuo caso vuoi chiarire per primo?",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=fb_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_2",
+          "title": "Quellensteuer: cosa vale davvero la pena controllare",
+          "body": "Arbeitnehmende in der Schweiz mit Quellensteuer. Usa il calcolatore per leggere il caso con un riferimento pratico, poi confronta la guida se esiste.",
+          "question": "Ti serve prima una stima o un confronto più ordinato?",
+          "cta": "Steuerfall prüfen lassen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=fb_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "fb_3",
+          "title": "Quellensteuer: meno supposizioni, più chiarezza",
+          "body": "Quando cambiano lavoro, famiglia o situazione abitativa, il contesto conta. Questo strumento aiuta a mettere ordine senza promettere risultati che dipendono da casi reali.",
+          "question": "Qual è la voce che oggi ti crea più dubbio?",
+          "cta": "Apri Quellensteuer-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=fb_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "linkedin",
+      "source": "linkedin",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "li_1",
+          "title": "Quellensteuer: un confronto utile prima della decisione",
+          "body": "Arbeitnehmende in der Schweiz mit Quellensteuer. Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird. La guida collegata serve a leggere il quadro con più contesto.",
+          "example": "Esempio d'uso: confrontare il caso prima di procedere con una scelta di lavoro, budget o casa.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=li_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_2",
+          "title": "Quellensteuer: il valore sta nel contesto",
+          "body": "Un calcolatore serio non sostituisce fonti ufficiali, ma aiuta a preparare la verifica. Quellensteuer-Rechner Schweiz è utile proprio quando i dettagli cambiano il risultato.",
+          "example": "Punto chiave: leggere il numero nel contesto di salario, famiglia, cantone o costi ricorrenti.",
+          "cta": "Steuerfall prüfen lassen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=li_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "li_3",
+          "title": "Quellensteuer: dalla domanda al calcolatore",
+          "body": "Per chi gestisce budget o prende decisioni operative, una prima stima rende la conversazione più precisa. Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird.",
+          "example": "L'obiettivo non è promettere un risultato, ma arrivare alla domanda giusta prima di parlare con consulente o ufficio competente.",
+          "cta": "Usa Quellensteuer-Rechner Schweiz",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=li_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "instagram",
+      "source": "instagram",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "ig_1",
+          "caption": "Quellensteuer: salva questa check-list prima di fare il confronto.\n\nQuellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird. La guida collegata chiarisce il contesto.\n\n#Quellensteuer #Schweiz #Lohn #Netto #Steuern",
+          "slides": [
+            {
+              "title": "1. Il tema",
+              "text": "Quellensteuer"
+            },
+            {
+              "title": "2. Perché conta",
+              "text": "Arbeitnehmende in der Schweiz mit Quellensteuer"
+            },
+            {
+              "title": "3. Cosa cambiare",
+              "text": "Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird."
+            },
+            {
+              "title": "4. Cosa non promette",
+              "text": "Una stima non sostituisce fonti ufficiali o casi reali."
+            },
+            {
+              "title": "5. Dove andare",
+              "text": "Quellensteuer kostenlos berechnen"
+            },
+            {
+              "title": "6. Passo successivo",
+              "text": "Steuerfall prüfen lassen"
+            }
+          ],
+          "cta": "Quellensteuer kostenlos berechnen",
+          "hashtags": [
+            "#Quellensteuer",
+            "#Schweiz",
+            "#Lohn",
+            "#Netto",
+            "#Steuern"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=ig_1",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_2",
+          "caption": "Quellensteuer: quando il dettaglio cambia il quadro, serve una pagina chiara.\n\nQuellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird.\n\n#Quellensteuer #Schweiz #Lohn #Netto #Steuern",
+          "slides": [
+            {
+              "title": "1. Problema",
+              "text": "Un numero da solo non basta per quellensteuer."
+            },
+            {
+              "title": "2. Contesto",
+              "text": "Arbeitnehmende in der Schweiz mit Quellensteuer"
+            },
+            {
+              "title": "3. Strumento",
+              "text": "Quellensteuer-Rechner Schweiz"
+            },
+            {
+              "title": "4. Guida",
+              "text": "Quellensteuer Schweiz 2026"
+            },
+            {
+              "title": "5. CTA",
+              "text": "Quellensteuer kostenlos berechnen"
+            }
+          ],
+          "cta": "Steuerfall prüfen lassen",
+          "hashtags": [
+            "#Quellensteuer",
+            "#Schweiz",
+            "#Lohn",
+            "#Netto",
+            "#Steuern"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=ig_2",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "ig_3",
+          "caption": "Quellensteuer: fai il confronto prima di agire, non dopo.\n\nQuellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird.\n\nQuellensteuer kostenlos berechnen",
+          "slides": [
+            {
+              "title": "1. Prima",
+              "text": "Capire il caso reale."
+            },
+            {
+              "title": "2. Poi",
+              "text": "Aprire il calcolatore corretto."
+            },
+            {
+              "title": "3. Infine",
+              "text": "Leggere la guida o la fonte ufficiale."
+            },
+            {
+              "title": "4. Sempre",
+              "text": "Evita promesse e numeri inventati."
+            },
+            {
+              "title": "5. Chiudi",
+              "text": "Quellensteuer kostenlos berechnen"
+            }
+          ],
+          "cta": "Quellensteuer kostenlos berechnen",
+          "hashtags": [
+            "#Quellensteuer",
+            "#Schweiz",
+            "#Lohn",
+            "#Netto",
+            "#Steuern"
+          ],
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=ig_3",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "tiktok",
+      "source": "tiktok",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "tt_1",
+          "title": "Quellensteuer 1",
+          "hook": "Quellensteuer: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Quellensteuer: non partire dal numero sbagliato. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=tt_1",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_2",
+          "title": "Quellensteuer 2",
+          "hook": "Se il tuo caso riguarda quellensteuer, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Se il tuo caso riguarda quellensteuer, guarda prima questo. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=tt_2",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_3",
+          "title": "Quellensteuer 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=tt_3",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_4",
+          "title": "Quellensteuer 4",
+          "hook": "Per quellensteuer, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Per quellensteuer, il contesto cambia il risultato. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=tt_4",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "tt_5",
+          "title": "Quellensteuer 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=tt_5",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    },
+    {
+      "name": "youtube",
+      "source": "youtube",
+      "medium": "organic_social",
+      "items": [
+        {
+          "variant": "yt_1",
+          "title": "Quellensteuer 1",
+          "hook": "Quellensteuer: non partire dal numero sbagliato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Quellensteuer: non partire dal numero sbagliato. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=yt_1",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_2",
+          "title": "Quellensteuer 2",
+          "hook": "Se il tuo caso riguarda quellensteuer, guarda prima questo.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Se il tuo caso riguarda quellensteuer, guarda prima questo. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=yt_2",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_3",
+          "title": "Quellensteuer 3",
+          "hook": "Una stima utile inizia con la domanda giusta.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Una stima utile inizia con la domanda giusta. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=yt_3",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_4",
+          "title": "Quellensteuer 4",
+          "hook": "Per quellensteuer, il contesto cambia il risultato.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Per quellensteuer, il contesto cambia il risultato. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=yt_4",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        },
+        {
+          "variant": "yt_5",
+          "title": "Quellensteuer 5",
+          "hook": "Questo è il punto da controllare prima di decidere.",
+          "scenes": [
+            "Scene 1: mostra la domanda reale che la persona si fa.",
+            "Scene 2: apri Quellensteuer-Rechner Schweiz.",
+            "Scene 3: evidenzia Quellensteuer, Brutto-Netto und Lohnrechner zusammen lesen, damit der Monatslohn klarer wird..",
+            "Scene 4: se esiste, mostra la guida collegata come approfondimento.",
+            "Scene 5: chiudi con la CTA Quellensteuer kostenlos berechnen."
+          ],
+          "overlayText": [
+            "Quellensteuer",
+            "Quellensteuer-Rechner Schweiz",
+            "Quellensteuer kostenlos berechnen"
+          ],
+          "script": "Questo è il punto da controllare prima di decidere. Spiega in modo semplice che quellensteuer, brutto-netto und lohnrechner zusammen lesen, damit der monatslohn klarer wird.. Mostra perché arbeitnehmende in der schweiz mit quellensteuer dovrebbe usare il calcolatore prima di prendere una decisione. Poi indica che la guida collegata serve per capire meglio il contesto. Chiudi con una CTA chiara: Quellensteuer kostenlos berechnen.",
+          "cta": "Quellensteuer kostenlos berechnen",
+          "utmUrl": "https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=yt_5",
+          "description": "Quellensteuer: breve spiegazione, contesto e link utile per partire dalla pagina giusta.",
+          "status": "bozza",
+          "language": "de"
+        }
+      ]
+    }
+  ]
+}
