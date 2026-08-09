@@ -1,6 +1,6 @@
 import { section, bulletList } from "./shared/output.mjs";
 
-export function buildDailyReport({ stamp, seo, content, monetization, quality, social }) {
+export function buildDailyReport({ stamp, seo, content, monetization, quality, searchConsole, social, ceo, growth }) {
   const createdOrImproved = [
     ...seo.keywordCoverage.filter((item) => item.status === "coperta" && item.priority !== "bassa").slice(0, 6).map((item) => item.target),
     ...content.updates.slice(0, 6).map((item) => item.slug),
@@ -22,7 +22,11 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality, s
 
   const impact = assessImpact({ seo, content, monetization, quality });
   const progress = assessProgress({ monetization, quality });
+  const searchConsoleSummary = searchConsole?.report?.summary ?? null;
+  const trafficSummary = growth?.traffic?.report?.summary ?? growth?.traffic?.summary ?? null;
   const socialSummary = social?.report?.summary ?? null;
+  const ceoSummary = ceo?.dailyReport?.summary ?? ceo?.report?.summary ?? null;
+  const growthSummary = growth?.brief?.summary ?? null;
 
   const markdown = [
     `# Calcolich Daily Report - ${stamp}`,
@@ -46,6 +50,40 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality, s
     "",
     section("Stato verso CHF 1.500/mese", [progress]),
     "",
+    ...(growthSummary ? [
+      section("Growth Operating System", [
+        bulletList([
+          `Data mode: ${growthSummary.dataMode}`,
+          `Top 10: ${growthSummary.top10.length}`,
+          `Top 3: ${growthSummary.top3.length}`,
+          `Attivita principale: ${growthSummary.mainActivity?.page ?? "non disponibile"}`,
+          `Backlog condiviso: ${growthSummary.backlogCount}`,
+        ]),
+      ]),
+      "",
+    ] : []),
+    ...(searchConsoleSummary ? [
+      section("Search Console Opportunity", [
+        bulletList([
+          `Modalita: ${searchConsoleSummary.dataMode === "manual-export" ? "export manuale importato" : "fallback repository"}`,
+          `Pagine candidate: ${searchConsoleSummary.candidates}`,
+          `Priorita del giorno: ${searchConsoleSummary.selectedPage ?? "non disponibile"}`,
+          `Score selezionato: ${searchConsoleSummary.selectedScore ?? "n/d"}`,
+        ]),
+      ]),
+      "",
+    ] : []),
+    ...(trafficSummary ? [
+      section("Traffic Intelligence", [
+        bulletList([
+          `Stato: ${trafficSummary.dataMode ?? "provvisorio"}`,
+          `Prima pagina in crescita: ${trafficSummary.topGrowthPages?.[0]?.page ?? "non disponibile"}`,
+          `Prima pagina da sistemare: ${trafficSummary.topFixPages?.[0]?.page ?? "non disponibile"}`,
+          `Query emergenti: ${(trafficSummary.topQueries ?? []).slice(0, 3).join(", ") || "n/d"}`,
+        ]),
+      ]),
+      "",
+    ] : []),
     ...(socialSummary ? [
       section("Social Traffic", [
         bulletList([
@@ -67,6 +105,17 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality, s
         "",
       ] : []),
     ] : []),
+    ...(ceoSummary ? [
+      section("CEO / Product Manager", [
+        bulletList([
+          `Decisioni: ${ceoSummary.decisions?.length ?? 0}`,
+          `Stato: ${ceoSummary.status ?? "non disponibile"}`,
+          `Priorità principale: ${ceoSummary.decisions?.[0]?.page ?? ceoSummary.mainActivity?.page ?? "non disponibile"}`,
+          `KPI domani: ${(ceoSummary.kpisTomorrow ?? []).join(", ") || "n/d"}`,
+        ]),
+      ]),
+      "",
+    ] : []),
   ].join("\n");
 
   return {
@@ -79,7 +128,10 @@ export function buildDailyReport({ stamp, seo, content, monetization, quality, s
       nextAction,
       impact,
       progress,
+      searchConsole: searchConsoleSummary,
       social: socialSummary,
+      ceo: ceoSummary,
+      growth: growthSummary,
     },
   };
 }

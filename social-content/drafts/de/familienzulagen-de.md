@@ -1,7 +1,7 @@
 # Familienzulagen-Rechner Schweiz - Social Draft (de)
 
 - Pagina: /de/familienzulagen-rechner-schweiz
-- Guida: /de/ratgeber/praemienverbilligung-schweiz
+- Guida: /de/ratgeber/stundenlohn-berechnen-schweiz
 - Keyword: Familienzulagen-Rechner Schweiz
 - Pubblico: Familien, Eltern und Arbeitnehmende mit Kindern
 - CTA principale: Familienzulagen berechnen
@@ -76,7 +76,7 @@ Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken. La guida c
 Kinderzulagen, Ausbildungszulagen und Familienbudget zusammen denken.
 
 #Familienzulagen #Schweiz #Familie #Budget #Kinder
-- Slide: 1. Problema — Un numero da solo non basta per familienzulagen. | 2. Contesto — Familien, Eltern und Arbeitnehmende mit Kindern | 3. Strumento — Familienzulagen-Rechner Schweiz | 4. Guida — Prämienverbilligung Schweiz | 5. CTA — Familienzulagen berechnen
+- Slide: 1. Problema — Un numero da solo non basta per familienzulagen. | 2. Contesto — Familien, Eltern und Arbeitnehmende mit Kindern | 3. Strumento — Familienzulagen-Rechner Schweiz | 4. Guida — Stundenlohn berechnen Schweiz | 5. CTA — Familienzulagen berechnen
 - CTA: Budget mit Kindern prüfen
 ### Familienzulagen: confronta prima di agire
 - Variante: ig_3

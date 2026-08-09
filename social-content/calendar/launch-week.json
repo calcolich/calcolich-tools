@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-09",
   "entries": [
     {
       "day": 1,
-      "date": "2026-08-04",
+      "date": "2026-08-10",
       "campaignId": "quellensteuer-de",
       "campaign": "quellensteuer_2026",
       "locale": "de",
@@ -28,7 +28,7 @@
     },
     {
       "day": 2,
-      "date": "2026-08-05",
+      "date": "2026-08-11",
       "campaignId": "praemienverbilligung-de",
       "campaign": "praemienverbilligung_2026",
       "locale": "de",
@@ -54,7 +54,7 @@
     },
     {
       "day": 3,
-      "date": "2026-08-06",
+      "date": "2026-08-12",
       "campaignId": "brutto-netto-de",
       "campaign": "brutto_netto_2026",
       "locale": "de",
@@ -79,7 +79,7 @@
     },
     {
       "day": 4,
-      "date": "2026-08-07",
+      "date": "2026-08-13",
       "campaignId": "ueberstunden-de",
       "campaign": "ueberstunden_2026",
       "locale": "de",
@@ -120,7 +120,7 @@
     },
     {
       "day": 5,
-      "date": "2026-08-08",
+      "date": "2026-08-14",
       "campaignId": "ferien-de",
       "campaign": "ferien_2026",
       "locale": "de",
@@ -178,15 +178,15 @@
     },
     {
       "day": 6,
-      "date": "2026-08-09",
+      "date": "2026-08-15",
       "campaignId": "familienzulagen-de",
       "campaign": "familienzulagen_2026",
       "locale": "de",
       "language": "de",
       "pageHref": "/de/familienzulagen-rechner-schweiz",
       "pageTitle": "Familienzulagen-Rechner Schweiz",
-      "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
-      "guideTitle": "Prämienverbilligung Schweiz",
+      "guideHref": "/de/ratgeber/stundenlohn-berechnen-schweiz",
+      "guideTitle": "Stundenlohn berechnen Schweiz",
       "channel": "facebook",
       "channelLabel": "Facebook",
       "contentType": "post",
@@ -204,7 +204,7 @@
     },
     {
       "day": 7,
-      "date": "2026-08-10",
+      "date": "2026-08-16",
       "campaignId": "hypotheken-de",
       "campaign": "hypotheken_2026",
       "locale": "de",

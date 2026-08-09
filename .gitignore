@@ -50,6 +50,27 @@ jarvis/second-brain/inbox/*.md
 # generated daily reports
 reports/*.md
 reports/*.json
+reports/search-console-opportunities/*
+!reports/search-console-opportunities/.gitkeep
 
 # generated social reports
 social-content/reports/
+
+# generated cluster expansion reports
+reports/clusters/*
+
+# generated traffic intelligence reports
+reports/traffic/*
+
+# optional analytics imports
+analytics/exports/*
+
+# growth operating system
+growth/state/*
+reports/growth/*
+!reports/growth/.gitkeep
+!growth/README.md
+
+# manual Search Console exports
+search-console/exports/*
+!search-console/exports/.gitkeep

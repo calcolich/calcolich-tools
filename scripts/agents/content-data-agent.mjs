@@ -16,7 +16,7 @@ function summarizeMissing(slug, file, missingMarkers) {
   };
 }
 
-export async function runContentDataAgent(rules) {
+export async function runContentDataAgent(rules, context = {}) {
   const findings = [];
   const updates = [];
 
@@ -73,5 +73,6 @@ export async function runContentDataAgent(rules) {
         .join(", ");
       return `Rivedere ${item.slug} in ${item.file}: mancano o vanno rinforzati ${missing}.`;
     }),
+    upstream: context.previous ?? null,
   };
 }

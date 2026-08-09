@@ -666,16 +666,16 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     kind: "family-allowances-ch",
     category: "Familie",
     title: "Familienzulagen-Rechner Schweiz | Calcolich",
-    metaDescription: "Familienzulagen in der Schweiz aus Kinderzulage, Ausbildungszulage und Anzahl der Anspruchsmonate berechnen.",
+    metaDescription: "Familienzulagen in der Schweiz mit Kinderzulage, Ausbildungszulage, Kanton und Haushaltsbudget verständlich einordnen und als Jahreswert berechnen.",
     h1: "Familienzulagen-Rechner Schweiz",
     shortTitle: "Familienzulagen",
-    intro: "Berechne den Jahresbetrag von Kinder- und Ausbildungszulagen mit den kantonalen Monatswerten, die in deinem Fall gelten.",
+    intro: "Familienzulagen sind ein direkter Budgetposten, sobald Kinder- oder Ausbildungszulagen im Haushalt mitlaufen. Der Rechner ordnet die Beträge auf Jahresbasis und hilft dir, Kanton, Anspruchsmonate und Familienbudget sauber zusammenzudenken.",
     contentSections: [
       {
         heading: "Wann ist dieser Rechner nützlich?",
         paragraphs: [
-          "Familienzulagen sind kantonal geprägt. Der Rechner hilft dir, die monatlichen Beträge auf ein Jahr hochzurechnen und damit den realen Beitrag zum Haushaltsbudget besser zu verstehen.",
-          "Besonders praktisch ist er bei mehreren Kindern, bei Ausbildungssituationen, bei Teilzeit und wenn zwei Erwerbssituationen miteinander verglichen werden sollen.",
+          "Familienzulagen sind kantonal geprägt. Der Rechner hilft dir, monatliche Kinder- und Ausbildungszulagen auf ein Jahr hochzurechnen und den Beitrag zum Haushaltsbudget besser einzuordnen.",
+          "Besonders praktisch ist er bei mehreren Kindern, bei Ausbildungssituationen, bei Teilzeit und wenn du Einkommen, Krankenkassenprämie und Familienbudget zusammen betrachten willst.",
         ],
         bullets: [
           "Kinderzulage und Ausbildungszulage getrennt betrachten",
@@ -687,36 +687,73 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
         heading: "So funktioniert die Berechnung",
         paragraphs: [
           "Der Rechner multipliziert die monatliche Zulage pro Kind mit der Anzahl Kinder und die Ausbildungszulage mit der Anzahl Kinder in Ausbildung. Danach wird das Ergebnis mit den Monaten des Anspruchs multipliziert.",
-          "Die offiziellen Ansätze sind nicht in jedem Kanton gleich. Für eine verbindliche Beurteilung musst du die Zuständigkeit des Erwerbskantons und die dortigen Regelsätze prüfen.",
+          "Die offiziellen Ansätze sind nicht in jedem Kanton gleich. Für eine verbindliche Beurteilung musst du die Zuständigkeit des Erwerbskantons und die dortigen Regelsätze prüfen. Der Rechner zeigt deshalb bewusst eine Orientierung und keine amtliche Anspruchsprüfung.",
+        ],
+      },
+      {
+        heading: "Was sich bei Kanton, Arbeitgeber oder Ausbildung ändert",
+        paragraphs: [
+          "Wechselst du den Kanton oder den Arbeitgeber, kann sich die zuständige Stelle oder die konkrete Abwicklung ändern. Die familiäre Ausgangslage bleibt zwar gleich, aber die Auszahlung und die formale Prüfung können anders laufen.",
+          "Wird ein Kind ausbildungsrelevant oder endet die Ausbildung, verschiebt sich die Art der Zulage. Darum ist es sinnvoll, bei grösseren Änderungen den Betrag neu zu lesen statt einfach den Vorjahreswert zu übernehmen.",
+        ],
+        bullets: [
+          "Kanton prüfen, wenn sich der Wohn- oder Erwerbsort ändert",
+          "Kinder- und Ausbildungszulage sauber trennen",
+          "Teilzeit immer zusammen mit dem Nettolohn denken",
+        ],
+      },
+      {
+        heading: "Wie du den Betrag im Familienbudget liest",
+        paragraphs: [
+          "Familienzulagen wirken am stärksten, wenn du sie mit Lohn, Netto und Krankenkasse zusammen betrachtest. Ein isolierter Monatsbetrag sagt wenig aus, ein Jahresbetrag zeigt dagegen besser, welchen Platz die Zulage im Haushalt wirklich hat.",
+          "Für die nächste Einordnung sind Brutto-Netto-Rechner, Lohnrechner und Prämienverbilligung hilfreiche Ergänzungen. So bleibt die Entscheidung im Schweizer Kontext statt in einer einzigen Zahl hängen.",
         ],
       },
     ],
     formula: "Jahresanspruch = (Kinderzulage × Anzahl Kinder + Ausbildungszulage × Anzahl Kinder in Ausbildung) × Anspruchsmonate.",
-    example: "Beispiel: 2 Kinder mit CHF 250 Kinderzulage und 1 Kind in Ausbildung mit CHF 300 Ausbildungszulage ergeben monatlich CHF 800. Über 12 Monate sind das CHF 9'600.",
+    example: "Beispiel: 2 Kinder mit CHF 250 Kinderzulage und 1 Kind in Ausbildung mit CHF 300 Ausbildungszulage ergeben monatlich CHF 800. Über 12 Monate sind das CHF 9'600. Je nach Kanton und Anspruchszeitraum kann der reale Betrag abweichen.",
     supportingContent: [
       "Anspruch, Höhe und Finanzierung unterscheiden sich nach Kanton und Beschäftigungssituation. Der Rechner ist eine Budgethilfe, keine Anspruchsprüfung.",
-      "Prüfe zusätzlich, ob du als Arbeitnehmender, Selbstständiger oder Nichterwerbstätiger unterschiedliche Regeln beachten musst.",
+      "Prüfe zusätzlich, ob du als Arbeitnehmender, Selbstständiger oder Nichterwerbstätiger unterschiedliche Regeln beachten musst. Für die Budgetplanung lohnt sich der Blick auf Brutto-Netto, Stundenlohn und Krankenkassenprämien.",
     ],
     faqs: [
       { question: "Sind Familienzulagen überall gleich hoch?", answer: "Nein. Die kantonalen Ansätze und Regeln unterscheiden sich." },
-      { question: "Was ist der Unterschied zwischen Kinder- und Ausbildungszulage?", answer: "Die Ausbildungszulage gilt für ältere Kinder in Ausbildung und ist normalerweise höher." },
-      { question: "Kann ich Teilzeit abbilden?", answer: "Ja, indem du die korrekten Monatswerte und Anspruchsmonate eingibst." },
-      { question: "Ist das eine Anspruchsprüfung?", answer: "Nein. Der Rechner rechnet nur die Beträge hoch." },
-      { question: "Brauche ich mehrere Eingaben pro Kind?", answer: "Nur wenn Kinder und Ausbildungszulagen unterschiedlich behandelt werden sollen." },
+      { question: "Was ist der Unterschied zwischen Kinder- und Ausbildungszulage?", answer: "Die Ausbildungszulage gilt für Kinder in Ausbildung und ist in der Regel höher als die Kinderzulage." },
+      { question: "Kann ich Teilzeit abbilden?", answer: "Ja. Die Familienzulage bleibt eine Budgetgrösse, aber du solltest den Haushalt immer zusammen mit dem effektiven Lohn lesen." },
+      { question: "Was passiert bei einem Wechsel in einen anderen Kanton?", answer: "Dann sollte die zuständige Stelle und der dortige Anspruch neu geprüft werden." },
+      { question: "Ist das eine Anspruchsprüfung?", answer: "Nein. Der Rechner rechnet nur die Beträge hoch und hilft bei der Vorabklärung." },
+      { question: "Brauche ich mehrere Eingaben pro Kind?", answer: "Nur wenn Kinder- und Ausbildungszulage unterschiedlich behandelt werden sollen." },
     ],
-    relatedCalculators: ["budget-rechner-schweiz", "brutto-netto-rechner-schweiz", "quellensteuer-rechner-schweiz", "praemienverbilligung-rechner-schweiz"],
+    relatedCalculators: [
+      "budget-rechner-schweiz",
+      "brutto-netto-rechner-schweiz",
+      "lohnrechner-schweiz",
+      "stundenlohn-rechner-schweiz",
+      "quellensteuer-rechner-schweiz",
+      "praemienverbilligung-rechner-schweiz",
+    ],
     guideLinks: [
       {
         href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
         label: "Lohn als Basis verstehen",
         description: "Warum Lohn, Teilzeit und Familienzulagen im gleichen Haushaltsbild landen sollten.",
       },
+      {
+        href: "/de/ratgeber/quellensteuer-schweiz-2026",
+        label: "Nettoeffekt besser lesen",
+        description: "Wie Quellensteuer den Monatslohn und damit das Familienbudget beeinflusst.",
+      },
+      {
+        href: "/de/ratgeber/praemienverbilligung-schweiz",
+        label: "Krankenkassenprämien einordnen",
+        description: "Warum Familienzulagen, Prämien und Haushalt in derselben Budgetrechnung landen.",
+      },
     ],
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,
     searchIntent: "Familienzulagen in der Schweiz berechnen",
-    updatedAt: "13. Juli 2026",
+    updatedAt: "9. August 2026",
     sources: swissFamilySources,
     inputs: [
       { key: "childAllowance", label: "Kinderzulage pro Monat (CHF)", defaultValue: "250", min: "0" },

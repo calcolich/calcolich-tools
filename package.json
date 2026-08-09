@@ -17,6 +17,12 @@
     "jarvis:platform": "PORT=8097 node ../../outputs/jarvis-platform-server.mjs",
     "jarvis:remember": "node scripts/jarvis-remember.mjs",
     "agents:daily": "node scripts/agents/run-daily-report.mjs",
+    "agents:growth": "node scripts/agents/run-growth.mjs",
+    "agents:revenue": "node scripts/agents/run-revenue.mjs",
+    "agents:ceo": "node scripts/agents/run-ceo.mjs",
+    "agents:search-opportunities": "node scripts/agents/run-search-opportunities.mjs",
+    "agents:clusters": "node scripts/agents/run-clusters.mjs",
+    "agents:traffic": "node scripts/agents/run-traffic.mjs",
     "agents:social": "node scripts/agents/run-social.mjs",
     "tools:add": "node scripts/add-calculators-from-blueprints.mjs"
   },

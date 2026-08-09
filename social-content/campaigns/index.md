@@ -1,6 +1,6 @@
 # Social Traffic Campaigns
 
-Generati il 2026-08-03.
+Generati il 2026-08-09.
 
 ## Quellensteuer-Rechner Schweiz (de)
 - Pagina: /de/quellensteuer-rechner-schweiz
@@ -74,7 +74,7 @@ Generati il 2026-08-03.
 
 ## Familienzulagen-Rechner Schweiz (de)
 - Pagina: /de/familienzulagen-rechner-schweiz
-- Guida: /de/ratgeber/praemienverbilligung-schweiz
+- Guida: /de/ratgeber/stundenlohn-berechnen-schweiz
 - Keyword: Familienzulagen-Rechner Schweiz
 - Priorita: media
 - Canali: facebook (3), linkedin (3), instagram (3), tiktok (5), youtube (5)

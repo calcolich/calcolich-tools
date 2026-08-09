@@ -1,7 +1,7 @@
 {
   "days": [
     {
-      "date": "2026-08-03",
+      "date": "2026-08-09",
       "campaignId": "quellensteuer-de",
       "locale": "de",
       "pageHref": "/de/quellensteuer-rechner-schweiz",
@@ -20,7 +20,7 @@
       "nextPage": "/it/calcolatore-imposta-alla-fonte-svizzera"
     },
     {
-      "date": "2026-08-04",
+      "date": "2026-08-10",
       "campaignId": "quellensteuer-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-imposta-alla-fonte-svizzera",
@@ -39,7 +39,7 @@
       "nextPage": "/de/praemienverbilligung-rechner-schweiz"
     },
     {
-      "date": "2026-08-05",
+      "date": "2026-08-11",
       "campaignId": "praemienverbilligung-de",
       "locale": "de",
       "pageHref": "/de/praemienverbilligung-rechner-schweiz",
@@ -58,7 +58,7 @@
       "nextPage": "/it/calcolatore-riduzione-premi-cassa-malati-svizzera"
     },
     {
-      "date": "2026-08-06",
+      "date": "2026-08-12",
       "campaignId": "praemienverbilligung-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-riduzione-premi-cassa-malati-svizzera",
@@ -77,7 +77,7 @@
       "nextPage": "/de/brutto-netto-rechner-schweiz"
     },
     {
-      "date": "2026-08-07",
+      "date": "2026-08-13",
       "campaignId": "brutto-netto-de",
       "locale": "de",
       "pageHref": "/de/brutto-netto-rechner-schweiz",
@@ -96,7 +96,7 @@
       "nextPage": "/calcolo-lordo-netto-svizzera"
     },
     {
-      "date": "2026-08-08",
+      "date": "2026-08-14",
       "campaignId": "brutto-netto-it",
       "locale": "it",
       "pageHref": "/calcolo-lordo-netto-svizzera",
@@ -115,7 +115,7 @@
       "nextPage": "/de/ueberstundenrechner-schweiz"
     },
     {
-      "date": "2026-08-09",
+      "date": "2026-08-15",
       "campaignId": "ueberstunden-de",
       "locale": "de",
       "pageHref": "/de/ueberstundenrechner-schweiz",
@@ -134,7 +134,7 @@
       "nextPage": "/calcolo-straordinari-svizzera"
     },
     {
-      "date": "2026-08-10",
+      "date": "2026-08-16",
       "campaignId": "ueberstunden-it",
       "locale": "it",
       "pageHref": "/calcolo-straordinari-svizzera",
@@ -153,7 +153,7 @@
       "nextPage": "/de/ferienrechner-schweiz"
     },
     {
-      "date": "2026-08-11",
+      "date": "2026-08-17",
       "campaignId": "ferien-de",
       "locale": "de",
       "pageHref": "/de/ferienrechner-schweiz",
@@ -172,7 +172,7 @@
       "nextPage": "/calcolo-ferie-svizzera"
     },
     {
-      "date": "2026-08-12",
+      "date": "2026-08-18",
       "campaignId": "ferien-it",
       "locale": "it",
       "pageHref": "/calcolo-ferie-svizzera",
@@ -191,13 +191,13 @@
       "nextPage": "/de/familienzulagen-rechner-schweiz"
     },
     {
-      "date": "2026-08-13",
+      "date": "2026-08-19",
       "campaignId": "familienzulagen-de",
       "locale": "de",
       "pageHref": "/de/familienzulagen-rechner-schweiz",
       "pageTitle": "Familienzulagen-Rechner Schweiz",
-      "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
-      "guideTitle": "Prämienverbilligung Schweiz",
+      "guideHref": "/de/ratgeber/stundenlohn-berechnen-schweiz",
+      "guideTitle": "Stundenlohn berechnen Schweiz",
       "channel": "facebook",
       "channelLabel": "Facebook",
       "status": "bozza",
@@ -210,7 +210,7 @@
       "nextPage": "/it/calcolatore-assegni-familiari-svizzera"
     },
     {
-      "date": "2026-08-14",
+      "date": "2026-08-20",
       "campaignId": "familienzulagen-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-assegni-familiari-svizzera",
@@ -229,7 +229,7 @@
       "nextPage": "/de/hypotheken-tragbarkeit-rechner-schweiz"
     },
     {
-      "date": "2026-08-15",
+      "date": "2026-08-21",
       "campaignId": "hypotheken-de",
       "locale": "de",
       "pageHref": "/de/hypotheken-tragbarkeit-rechner-schweiz",
@@ -248,7 +248,7 @@
       "nextPage": "/it/calcolatore-sostenibilita-ipoteca-svizzera"
     },
     {
-      "date": "2026-08-16",
+      "date": "2026-08-22",
       "campaignId": "hypotheken-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-sostenibilita-ipoteca-svizzera",
@@ -267,7 +267,7 @@
       "nextPage": "/de/quellensteuer-rechner-schweiz"
     },
     {
-      "date": "2026-08-17",
+      "date": "2026-08-23",
       "campaignId": "quellensteuer-de",
       "locale": "de",
       "pageHref": "/de/quellensteuer-rechner-schweiz",
@@ -286,7 +286,7 @@
       "nextPage": "/it/calcolatore-imposta-alla-fonte-svizzera"
     },
     {
-      "date": "2026-08-18",
+      "date": "2026-08-24",
       "campaignId": "quellensteuer-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-imposta-alla-fonte-svizzera",
@@ -305,7 +305,7 @@
       "nextPage": "/de/praemienverbilligung-rechner-schweiz"
     },
     {
-      "date": "2026-08-19",
+      "date": "2026-08-25",
       "campaignId": "praemienverbilligung-de",
       "locale": "de",
       "pageHref": "/de/praemienverbilligung-rechner-schweiz",
@@ -324,7 +324,7 @@
       "nextPage": "/it/calcolatore-riduzione-premi-cassa-malati-svizzera"
     },
     {
-      "date": "2026-08-20",
+      "date": "2026-08-26",
       "campaignId": "praemienverbilligung-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-riduzione-premi-cassa-malati-svizzera",
@@ -343,7 +343,7 @@
       "nextPage": "/de/brutto-netto-rechner-schweiz"
     },
     {
-      "date": "2026-08-21",
+      "date": "2026-08-27",
       "campaignId": "brutto-netto-de",
       "locale": "de",
       "pageHref": "/de/brutto-netto-rechner-schweiz",
@@ -362,7 +362,7 @@
       "nextPage": "/calcolo-lordo-netto-svizzera"
     },
     {
-      "date": "2026-08-22",
+      "date": "2026-08-28",
       "campaignId": "brutto-netto-it",
       "locale": "it",
       "pageHref": "/calcolo-lordo-netto-svizzera",
@@ -381,7 +381,7 @@
       "nextPage": "/de/ueberstundenrechner-schweiz"
     },
     {
-      "date": "2026-08-23",
+      "date": "2026-08-29",
       "campaignId": "ueberstunden-de",
       "locale": "de",
       "pageHref": "/de/ueberstundenrechner-schweiz",
@@ -400,7 +400,7 @@
       "nextPage": "/calcolo-straordinari-svizzera"
     },
     {
-      "date": "2026-08-24",
+      "date": "2026-08-30",
       "campaignId": "ueberstunden-it",
       "locale": "it",
       "pageHref": "/calcolo-straordinari-svizzera",
@@ -419,7 +419,7 @@
       "nextPage": "/de/ferienrechner-schweiz"
     },
     {
-      "date": "2026-08-25",
+      "date": "2026-08-31",
       "campaignId": "ferien-de",
       "locale": "de",
       "pageHref": "/de/ferienrechner-schweiz",
@@ -438,7 +438,7 @@
       "nextPage": "/calcolo-ferie-svizzera"
     },
     {
-      "date": "2026-08-26",
+      "date": "2026-09-01",
       "campaignId": "ferien-it",
       "locale": "it",
       "pageHref": "/calcolo-ferie-svizzera",
@@ -457,13 +457,13 @@
       "nextPage": "/de/familienzulagen-rechner-schweiz"
     },
     {
-      "date": "2026-08-27",
+      "date": "2026-09-02",
       "campaignId": "familienzulagen-de",
       "locale": "de",
       "pageHref": "/de/familienzulagen-rechner-schweiz",
       "pageTitle": "Familienzulagen-Rechner Schweiz",
-      "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
-      "guideTitle": "Prämienverbilligung Schweiz",
+      "guideHref": "/de/ratgeber/stundenlohn-berechnen-schweiz",
+      "guideTitle": "Stundenlohn berechnen Schweiz",
       "channel": "youtube",
       "channelLabel": "YouTube Shorts",
       "status": "bozza",
@@ -476,7 +476,7 @@
       "nextPage": "/it/calcolatore-assegni-familiari-svizzera"
     },
     {
-      "date": "2026-08-28",
+      "date": "2026-09-03",
       "campaignId": "familienzulagen-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-assegni-familiari-svizzera",
@@ -495,7 +495,7 @@
       "nextPage": "/de/hypotheken-tragbarkeit-rechner-schweiz"
     },
     {
-      "date": "2026-08-29",
+      "date": "2026-09-04",
       "campaignId": "hypotheken-de",
       "locale": "de",
       "pageHref": "/de/hypotheken-tragbarkeit-rechner-schweiz",
@@ -514,7 +514,7 @@
       "nextPage": "/it/calcolatore-sostenibilita-ipoteca-svizzera"
     },
     {
-      "date": "2026-08-30",
+      "date": "2026-09-05",
       "campaignId": "hypotheken-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-sostenibilita-ipoteca-svizzera",
@@ -533,7 +533,7 @@
       "nextPage": "/de/quellensteuer-rechner-schweiz"
     },
     {
-      "date": "2026-08-31",
+      "date": "2026-09-06",
       "campaignId": "quellensteuer-de",
       "locale": "de",
       "pageHref": "/de/quellensteuer-rechner-schweiz",
@@ -552,7 +552,7 @@
       "nextPage": "/it/calcolatore-imposta-alla-fonte-svizzera"
     },
     {
-      "date": "2026-09-01",
+      "date": "2026-09-07",
       "campaignId": "quellensteuer-it",
       "locale": "it",
       "pageHref": "/it/calcolatore-imposta-alla-fonte-svizzera",

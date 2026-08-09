@@ -1,19 +1,19 @@
 # Launch Week Social - Calcolich
 
-Generato il 2026-08-03.
+Generato il 2026-08-09.
 
 | Giorno | Data | Canale | Pagina | Lingua | Orario | URL UTM | Obiettivo | Metrica | Stato |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 2026-08-04 | LinkedIn | Quellensteuer-Rechner Schweiz | de | 08:15 | https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=launch_week_1 | Traffico qualificato e apertura della guida collegata | CTR sul link e guide open | bozza |
-| 2 | 2026-08-05 | Facebook | Prämienverbilligung-Rechner Schweiz | de | 12:20 | https://www.calcolich.ch/de/praemienverbilligung-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=praemienverbilligung_2026&utm_content=launch_week_2 | Haushaltsnahe Reichweite und Linkklicks | Linkklicks und Kommentare | bozza |
-| 3 | 2026-08-06 | LinkedIn | Brutto-Netto-Rechner Schweiz | de | 07:55 | https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=launch_week_3 | Vergleich von Lohnangeboten und Budgetplanung | CTR auf den Rechner | bozza |
-| 4 | 2026-08-07 | TikTok | Überstunden-Rechner Schweiz | de | 18:30 | https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=launch_week_4 | Video-Views und Calculator-Starts | 3-Sekunden-Views und Klicks | bozza |
-| 5 | 2026-08-08 | Instagram | Ferienrechner Schweiz | de | 19:05 | https://www.calcolich.ch/de/ferienrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferien_2026&utm_content=launch_week_5 | Saves, Carousel-Completion und Linkklicks | Saves und Profilklicks | bozza |
-| 6 | 2026-08-09 | Facebook | Familienzulagen-Rechner Schweiz | de | 12:15 | https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=launch_week_6 | Relevanz für Familien und Linkklicks | Linkklicks und Lead-Starts | bozza |
-| 7 | 2026-08-10 | YouTube Shorts | Hypotheken-Tragbarkeit-Rechner Schweiz | de | 19:30 | https://www.calcolich.ch/de/hypotheken-tragbarkeit-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=hypotheken_2026&utm_content=launch_week_7 | Watch Time und Klicks zum Tragbarkeitsrechner | Durchschnittliche Wiedergabedauer und Linkklicks | bozza |
+| 1 | 2026-08-10 | LinkedIn | Quellensteuer-Rechner Schweiz | de | 08:15 | https://www.calcolich.ch/de/quellensteuer-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=quellensteuer_2026&utm_content=launch_week_1 | Traffico qualificato e apertura della guida collegata | CTR sul link e guide open | bozza |
+| 2 | 2026-08-11 | Facebook | Prämienverbilligung-Rechner Schweiz | de | 12:20 | https://www.calcolich.ch/de/praemienverbilligung-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=praemienverbilligung_2026&utm_content=launch_week_2 | Haushaltsnahe Reichweite und Linkklicks | Linkklicks und Kommentare | bozza |
+| 3 | 2026-08-12 | LinkedIn | Brutto-Netto-Rechner Schweiz | de | 07:55 | https://www.calcolich.ch/de/brutto-netto-rechner-schweiz?utm_source=linkedin&utm_medium=organic_social&utm_campaign=brutto_netto_2026&utm_content=launch_week_3 | Vergleich von Lohnangeboten und Budgetplanung | CTR auf den Rechner | bozza |
+| 4 | 2026-08-13 | TikTok | Überstunden-Rechner Schweiz | de | 18:30 | https://www.calcolich.ch/de/ueberstundenrechner-schweiz?utm_source=tiktok&utm_medium=organic_social&utm_campaign=ueberstunden_2026&utm_content=launch_week_4 | Video-Views und Calculator-Starts | 3-Sekunden-Views und Klicks | bozza |
+| 5 | 2026-08-14 | Instagram | Ferienrechner Schweiz | de | 19:05 | https://www.calcolich.ch/de/ferienrechner-schweiz?utm_source=instagram&utm_medium=organic_social&utm_campaign=ferien_2026&utm_content=launch_week_5 | Saves, Carousel-Completion und Linkklicks | Saves und Profilklicks | bozza |
+| 6 | 2026-08-15 | Facebook | Familienzulagen-Rechner Schweiz | de | 12:15 | https://www.calcolich.ch/de/familienzulagen-rechner-schweiz?utm_source=facebook&utm_medium=organic_social&utm_campaign=familienzulagen_2026&utm_content=launch_week_6 | Relevanz für Familien und Linkklicks | Linkklicks und Lead-Starts | bozza |
+| 7 | 2026-08-16 | YouTube Shorts | Hypotheken-Tragbarkeit-Rechner Schweiz | de | 19:30 | https://www.calcolich.ch/de/hypotheken-tragbarkeit-rechner-schweiz?utm_source=youtube&utm_medium=organic_social&utm_campaign=hypotheken_2026&utm_content=launch_week_7 | Watch Time und Klicks zum Tragbarkeitsrechner | Durchschnittliche Wiedergabedauer und Linkklicks | bozza |
 
 ## Giorno 1 - Quellensteuer-Rechner Schweiz
-- Data: 2026-08-04
+- Data: 2026-08-10
 - Canale: LinkedIn
 - Lingua: de
 - Orario consigliato: 08:15
@@ -26,7 +26,7 @@ Generato il 2026-08-03.
 - Testo completo: Wer in der Schweiz Quellensteuer zahlt, sollte den Lohn nicht nur als Nettobetrag betrachten. Entscheidend sind Kanton, Familienstand, Kinder und die Frage, wie der Lohn im Kontext gelesen wird. Der Quellensteuer-Rechner hilft bei der ersten Orientierung; die Anleitung erklärt den Unterschied zwischen Berechnung und offizieller Prüfung. Wenn du ein Lohnangebot oder eine Lohnabrechnung besser einordnen willst, starte hier und prüfe danach den Fall im Detail.
 
 ## Giorno 2 - Prämienverbilligung-Rechner Schweiz
-- Data: 2026-08-05
+- Data: 2026-08-11
 - Canale: Facebook
 - Lingua: de
 - Orario consigliato: 12:20
@@ -40,7 +40,7 @@ Generato il 2026-08-03.
 - Domanda finale: Weisst du schon, welcher Kanton zuständig ist?
 
 ## Giorno 3 - Brutto-Netto-Rechner Schweiz
-- Data: 2026-08-06
+- Data: 2026-08-12
 - Canale: LinkedIn
 - Lingua: de
 - Orario consigliato: 07:55
@@ -53,7 +53,7 @@ Generato il 2026-08-03.
 - Testo completo: Ein Lohnangebot ist erst dann wirklich vergleichbar, wenn Brutto- und Nettosicht zusammenpassen. Der Brutto-Netto-Rechner zeigt die Basis, damit Gespräche über Lohn, Stellenwechsel oder Budget auf Zahlen statt Annahmen beruhen. Wer zusätzlich Quellensteuer oder andere Abzüge einordnen muss, hat danach eine deutlich bessere Ausgangslage.
 
 ## Giorno 4 - Überstunden-Rechner Schweiz
-- Data: 2026-08-07
+- Data: 2026-08-13
 - Canale: TikTok
 - Lingua: de
 - Orario consigliato: 18:30
@@ -70,7 +70,7 @@ Generato il 2026-08-03.
 - Descrizione: Kurzer Überblick, wie Überstunden im Schweizer Kontext sauber eingeordnet werden.
 
 ## Giorno 5 - Ferienrechner Schweiz
-- Data: 2026-08-08
+- Data: 2026-08-14
 - Canale: Instagram
 - Lingua: de
 - Orario consigliato: 19:05
@@ -84,7 +84,7 @@ Generato il 2026-08-03.
 - Slide: 1. Ferien auf einen Blick — Der Jahresanspruch beginnt mit der richtigen Zahl. | 2. Teilzeit zählt mit — Teilzeit verändert die Rechnung, nicht die Logik. | 3. Arbeitstage lesen — Wichtig ist, wie viele Tage wirklich zählen. | 4. Kein Rätselraten — Der Rechner schafft eine klare Ausgangslage. | 5. Rechner öffnen — Jetzt den Ferienrechner nutzen. | 6. Danach die Anleitung — Kurz nachlesen, wie der Schweizer Kontext funktioniert.
 
 ## Giorno 6 - Familienzulagen-Rechner Schweiz
-- Data: 2026-08-09
+- Data: 2026-08-15
 - Canale: Facebook
 - Lingua: de
 - Orario consigliato: 12:15
@@ -98,7 +98,7 @@ Generato il 2026-08-03.
 - Domanda finale: Geht es bei dir um Kinder- oder Ausbildungszulagen?
 
 ## Giorno 7 - Hypotheken-Tragbarkeit-Rechner Schweiz
-- Data: 2026-08-10
+- Data: 2026-08-16
 - Canale: YouTube Shorts
 - Lingua: de
 - Orario consigliato: 19:30

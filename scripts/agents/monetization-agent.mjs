@@ -7,7 +7,7 @@ function scoreModel(model) {
   return { potential: "media", difficulty: "bassa", risk: "basso", time: "1 giorno" };
 }
 
-export async function runMonetizationAgent(rules) {
+export async function runMonetizationAgent(rules, context = {}) {
   const files = ["lib/german-calculators.ts", "lib/calculators.ts"];
   const texts = await Promise.all(files.map(async (file) => [file, await readRepoFile(file)]));
   const opportunities = [];
@@ -61,5 +61,6 @@ export async function runMonetizationAgent(rules) {
       if (item.model === "affiliate") return `Collegare partner coerenti e comparatori utili su ${item.slug}.`;
       return `Usare ${item.slug} come pagina di traffico e presidio AdSense futuro.`;
     }),
+    upstream: context.previous ?? null,
   };
 }

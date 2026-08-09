@@ -4,7 +4,7 @@ function titleCaseSlug(slug) {
   return slug.replace(/[-/]+/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-export async function runSeoAgent(rules) {
+export async function runSeoAgent(rules, context = {}) {
   const pageFiles = await collectFiles(["app"], (file) => file.endsWith("/page.tsx"));
   const repoFiles = [
     ...(await collectFiles(["app"], () => true)),
@@ -72,6 +72,7 @@ export async function runSeoAgent(rules) {
       ...missingMetadata.slice(0, 5).map((file) => `Aggiungere metadata o alternates espliciti in ${file}.`),
       ...isolatedPages.slice(0, 5).map((item) => `Collegare meglio ${item.target} nel cluster ${item.keyword}.`),
     ],
+    upstream: context.previous ?? null,
   };
 }
 

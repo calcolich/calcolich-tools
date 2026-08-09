@@ -30,7 +30,7 @@ function extractInternalLinks(html) {
     .filter((href) => !href.includes("."));
 }
 
-export async function runQualityAgent() {
+export async function runQualityAgent(context = {}) {
   const lint = runCommand("npm", ["run", "lint"]);
   const build = runCommand("npm", ["run", "build"]);
 
@@ -61,6 +61,13 @@ export async function runQualityAgent() {
     .filter(([, count]) => count > 1)
     .map(([title, count]) => ({ title, count }));
 
+  const blockers = [
+    !lint.ok ? "Lint non superato." : null,
+    !build.ok ? "Build non superata." : null,
+    duplicateTitles.length > 0 ? `Title duplicati rilevati: ${duplicateTitles.length}.` : null,
+    brokenLinks.length > 0 ? `Link interni rotti rilevati: ${brokenLinks.length}.` : null,
+  ].filter(Boolean);
+
   return {
     name: "Quality Agent",
     summary: "Ho eseguito lint, build e controlli statici su titoli, route e link interni generati.",
@@ -69,6 +76,7 @@ export async function runQualityAgent() {
     routeCount: routeSet.size,
     duplicateTitles,
     brokenLinks: brokenLinks.slice(0, 40),
+    blockers,
     checks: {
       sitemap: await fileExistsSafe("app/sitemap.ts"),
       robots: await fileExistsSafe("app/robots.ts"),
@@ -80,6 +88,7 @@ export async function runQualityAgent() {
       duplicateTitles.length > 0 ? "Ridurre i title duplicati individuati nel rendering statico." : null,
       brokenLinks.length > 0 ? "Verificare i link interni segnalati dall'HTML generato." : null,
     ].filter(Boolean),
+    upstream: context.previous ?? null,
   };
 }
 

@@ -66,6 +66,117 @@
       { "slug": "hypotheken-tragbarkeit-rechner-schweiz", "model": "lead" }
     ]
   },
+  "searchConsole": {
+    "exportsDir": "search-console/exports",
+    "reportDir": "reports/search-console-opportunities",
+    "manualImport": {
+      "formats": ["csv", "json"],
+      "requiredColumns": ["page", "query", "clicks", "impressions", "ctr", "position"],
+      "optionalColumns": [
+        "previousClicks",
+        "previousImpressions",
+        "previousCtr",
+        "previousPosition",
+        "indexStatus",
+        "ctaPresent",
+        "internalLinks",
+        "guideLinks"
+      ]
+    },
+    "targets": [
+      {
+        "slug": "quellensteuer-rechner-schweiz",
+        "pageHref": "/de/quellensteuer-rechner-schweiz",
+        "pageTitle": "Quellensteuer-Rechner Schweiz",
+        "locale": "de",
+        "cluster": "fiscale",
+        "valueWeight": 3,
+        "guideCount": 1,
+        "linkedCalculators": ["brutto-netto-rechner-schweiz", "ueberstundenrechner-schweiz", "ahv-beitraege-selbststaendige-rechner"],
+        "queries": ["Quellensteuer Schweiz", "Quellensteuer-Rechner Schweiz", "Quellensteuer Kanton"],
+        "ctaLabel": "Quellensteuer kostenlos berechnen",
+        "guideHref": "/de/ratgeber/quellensteuer-schweiz-2026"
+      },
+      {
+        "slug": "praemienverbilligung-rechner-schweiz",
+        "pageHref": "/de/praemienverbilligung-rechner-schweiz",
+        "pageTitle": "Prämienverbilligung-Rechner Schweiz",
+        "locale": "de",
+        "cluster": "assicurativa",
+        "valueWeight": 3,
+        "guideCount": 1,
+        "linkedCalculators": ["familienzulagen-rechner-schweiz", "brutto-netto-rechner-schweiz"],
+        "queries": ["Prämienverbilligung Schweiz", "Prämienverbilligung Rechner", "Krankenkasse verbilligen"],
+        "ctaLabel": "Prämienverbilligung berechnen",
+        "guideHref": "/de/ratgeber/praemienverbilligung-schweiz"
+      },
+      {
+        "slug": "brutto-netto-rechner-schweiz",
+        "pageHref": "/de/brutto-netto-rechner-schweiz",
+        "pageTitle": "Brutto-Netto-Rechner Schweiz",
+        "locale": "de",
+        "cluster": "lavoro",
+        "valueWeight": 2.5,
+        "guideCount": 1,
+        "linkedCalculators": ["quellensteuer-rechner-schweiz", "ueberstundenrechner-schweiz", "ferienrechner-schweiz"],
+        "queries": ["Brutto Netto Schweiz", "Lohn netto Schweiz", "Nettolohn Rechner"],
+        "ctaLabel": "Brutto und Netto vergleichen",
+        "guideHref": "/de/ratgeber/stipendio-netto-svizzera"
+      },
+      {
+        "slug": "ueberstundenrechner-schweiz",
+        "pageHref": "/de/ueberstundenrechner-schweiz",
+        "pageTitle": "Überstunden-Rechner Schweiz",
+        "locale": "de",
+        "cluster": "lavoro",
+        "valueWeight": 2.4,
+        "guideCount": 1,
+        "linkedCalculators": ["calcolo-ore-lavoro", "calcolo-giorni-lavorativi-svizzera"],
+        "queries": ["Überstunden Schweiz", "Überstunden Rechner", "Mehrarbeit berechnen"],
+        "ctaLabel": "Überstunden berechnen",
+        "guideHref": "/de/ratgeber/pausenregelung-arbeitszeit-schweiz"
+      },
+      {
+        "slug": "ferienrechner-schweiz",
+        "pageHref": "/de/ferienrechner-schweiz",
+        "pageTitle": "Ferienrechner Schweiz",
+        "locale": "de",
+        "cluster": "lavoro",
+        "valueWeight": 2.2,
+        "guideCount": 1,
+        "linkedCalculators": ["ueberstundenrechner-schweiz", "calcolo-giorni-lavorativi-svizzera"],
+        "queries": ["Ferien Schweiz", "Ferienrechner", "Ferienanspruch Teilzeit"],
+        "ctaLabel": "Ferien berechnen",
+        "guideHref": "/de/ratgeber/ferienanspruch-teilzeit-schweiz"
+      },
+      {
+        "slug": "familienzulagen-rechner-schweiz",
+        "pageHref": "/de/familienzulagen-rechner-schweiz",
+        "pageTitle": "Familienzulagen-Rechner Schweiz",
+        "locale": "de",
+        "cluster": "famiglia",
+        "valueWeight": 2.8,
+        "guideCount": 1,
+        "linkedCalculators": ["praemienverbilligung-rechner-schweiz", "quellensteuer-rechner-schweiz"],
+        "queries": ["Familienzulagen Schweiz", "Kinderzulage Rechner", "Ausbildungszulage Schweiz"],
+        "ctaLabel": "Familienzulagen berechnen",
+        "guideHref": "/de/ratgeber/praemienverbilligung-schweiz"
+      },
+      {
+        "slug": "hypotheken-tragbarkeit-rechner-schweiz",
+        "pageHref": "/de/hypotheken-tragbarkeit-rechner-schweiz",
+        "pageTitle": "Hypotheken-Tragbarkeit-Rechner Schweiz",
+        "locale": "de",
+        "cluster": "casa",
+        "valueWeight": 3,
+        "guideCount": 1,
+        "linkedCalculators": ["piano-cashflow-online", "scorporo-iva-svizzera"],
+        "queries": ["Hypothek Tragbarkeit Schweiz", "Hypotheken Rechner", "Tragbarkeit berechnen"],
+        "ctaLabel": "Tragbarkeit prüfen",
+        "guideHref": "/guide/costo-vita-svizzera"
+      }
+    ]
+  },
   "quality": {
     "routeFiles": [
       "app/de/page.tsx",
@@ -255,8 +366,8 @@
         "locale": "de",
         "pageHref": "/de/familienzulagen-rechner-schweiz",
         "title": "Familienzulagen-Rechner Schweiz",
-        "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
-        "guideTitle": "Prämienverbilligung Schweiz",
+        "guideHref": "/de/ratgeber/stundenlohn-berechnen-schweiz",
+        "guideTitle": "Stundenlohn berechnen Schweiz",
         "keyword": "Familienzulagen-Rechner Schweiz",
         "campaign": "familienzulagen_2026",
         "audience": "Familien, Eltern und Arbeitnehmende mit Kindern",
@@ -313,6 +424,87 @@
         "tone": "consulenziale",
         "hashtags": ["#Ipoteca", "#Casa", "#Svizzera", "#Budget", "#Mutuo"],
         "promote": "Reddito, costi di casa e sostenibilità letti in modo prudente."
+      }
+    ]
+  },
+  "growth": {
+    "focusPages": [
+      {
+        "pageHref": "/de/praemienverbilligung-rechner-schweiz",
+        "locale": "de",
+        "title": "Prämienverbilligung-Rechner Schweiz",
+        "cluster": "assicurativa",
+        "valueWeight": 3,
+        "ctaLabel": "Prämienverbilligung berechnen",
+        "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
+        "linkedPages": ["/de/familienzulagen-rechner-schweiz", "/de/brutto-netto-rechner-schweiz"],
+        "keywords": ["Prämienverbilligung Schweiz", "Prämienverbilligung Rechner", "Krankenkasse verbilligen"]
+      },
+      {
+        "pageHref": "/de/quellensteuer-rechner-schweiz",
+        "locale": "de",
+        "title": "Quellensteuer-Rechner Schweiz",
+        "cluster": "fiscale",
+        "valueWeight": 3,
+        "ctaLabel": "Quellensteuer kostenlos berechnen",
+        "guideHref": "/de/ratgeber/quellensteuer-schweiz-2026",
+        "linkedPages": ["/de/brutto-netto-rechner-schweiz", "/de/ueberstundenrechner-schweiz", "/de/ahv-beitraege-selbststaendige-rechner"],
+        "keywords": ["Quellensteuer Schweiz", "Quellensteuer-Rechner Schweiz", "Quellensteuer Kanton"]
+      },
+      {
+        "pageHref": "/de/brutto-netto-rechner-schweiz",
+        "locale": "de",
+        "title": "Brutto-Netto-Rechner Schweiz",
+        "cluster": "lavoro",
+        "valueWeight": 2.5,
+        "ctaLabel": "Brutto und Netto vergleichen",
+        "guideHref": "/de/ratgeber/stipendio-netto-svizzera",
+        "linkedPages": ["/de/quellensteuer-rechner-schweiz", "/de/ueberstundenrechner-schweiz", "/de/ferienrechner-schweiz"],
+        "keywords": ["Brutto Netto Schweiz", "Lohn netto Schweiz", "Nettolohn Rechner"]
+      },
+      {
+        "pageHref": "/de/familienzulagen-rechner-schweiz",
+        "locale": "de",
+        "title": "Familienzulagen-Rechner Schweiz",
+        "cluster": "famiglia",
+        "valueWeight": 2.8,
+        "ctaLabel": "Familienzulagen berechnen",
+        "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
+        "linkedPages": ["/de/praemienverbilligung-rechner-schweiz", "/de/quellensteuer-rechner-schweiz"],
+        "keywords": ["Familienzulagen Schweiz", "Kinderzulage Rechner", "Ausbildungszulage Schweiz"]
+      },
+      {
+        "pageHref": "/de/hypotheken-tragbarkeit-rechner-schweiz",
+        "locale": "de",
+        "title": "Hypotheken-Tragbarkeit-Rechner Schweiz",
+        "cluster": "casa",
+        "valueWeight": 3,
+        "ctaLabel": "Tragbarkeit prüfen",
+        "guideHref": "/guide/costo-vita-svizzera",
+        "linkedPages": ["/piano-cashflow-online", "/scorporo-iva-svizzera"],
+        "keywords": ["Hypothek Tragbarkeit Schweiz", "Hypotheken Rechner", "Tragbarkeit berechnen"]
+      },
+      {
+        "pageHref": "/de/ferienrechner-schweiz",
+        "locale": "de",
+        "title": "Ferienrechner Schweiz",
+        "cluster": "lavoro",
+        "valueWeight": 2.2,
+        "ctaLabel": "Ferien berechnen",
+        "guideHref": "/de/ratgeber/ferienanspruch-teilzeit-schweiz",
+        "linkedPages": ["/de/ueberstundenrechner-schweiz", "/de/brutto-netto-rechner-schweiz"],
+        "keywords": ["Ferien Schweiz", "Ferienrechner", "Ferienanspruch Teilzeit"]
+      },
+      {
+        "pageHref": "/calcolo-straordinari-svizzera",
+        "locale": "it",
+        "title": "Calcolo straordinari Svizzera",
+        "cluster": "lavoro",
+        "valueWeight": 2.4,
+        "ctaLabel": "Straordinari calcolare",
+        "guideHref": "/guide/straordinari-svizzera",
+        "linkedPages": ["/calcolo-ore-lavoro", "/calcolo-salario-netto-svizzera", "/calcolo-giorni-lavorativi-svizzera"],
+        "keywords": ["straordinari Svizzera", "calcolo straordinari", "ore straordinarie"]
       }
     ]
   }

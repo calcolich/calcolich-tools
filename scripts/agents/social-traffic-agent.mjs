@@ -170,7 +170,9 @@ export async function runSocialTrafficAgent(rules, context = {}) {
   const seo = context.seo ?? (await runSeoAgent(rules));
   const content = context.content ?? (await runContentDataAgent(rules));
   const monetization = context.monetization ?? (await runMonetizationAgent(rules));
-  const targets = orderTargets(rules.social.targets, seo, monetization);
+  const revenue = context.revenue ?? null;
+  const traffic = context.traffic ?? null;
+  const targets = orderTargets(rules.social.targets, seo, monetization, revenue, traffic);
   const knownRoutes = new Set(
     targets.flatMap((target) => [target.pageHref, target.guideHref].filter(Boolean)),
   );
@@ -209,16 +211,19 @@ export async function runSocialTrafficAgent(rules, context = {}) {
     validation,
     launchWeek,
     report,
+    upstream: context.previous ?? null,
   };
 }
 
-function orderTargets(targets, seo, monetization) {
+function orderTargets(targets, seo, monetization, revenue, traffic) {
   const monetizationRank = new Map((monetization.topOpportunities ?? []).map((item, index) => [item.slug, 100 - index]));
   const seoRank = new Map((seo.keywordCoverage ?? []).map((item, index) => [slugFromKeyword(item.keyword), 80 - index]));
+  const revenueRank = new Map((revenue?.ranking ?? []).map((item, index) => [item.slug, 120 - index]));
+  const trafficRank = new Map((traffic?.topGrowthPages ?? []).map((item, index) => [item.slug ?? item.page?.split("/").filter(Boolean).pop(), 130 - index]));
 
   return [...targets].sort((a, b) => {
-    const scoreA = (monetizationRank.get(a.slug) ?? 0) + (seoRank.get(a.slug) ?? 0);
-    const scoreB = (monetizationRank.get(b.slug) ?? 0) + (seoRank.get(b.slug) ?? 0);
+    const scoreA = (monetizationRank.get(a.slug) ?? 0) + (seoRank.get(a.slug) ?? 0) + (revenueRank.get(a.slug) ?? 0) + (trafficRank.get(a.slug) ?? 0);
+    const scoreB = (monetizationRank.get(b.slug) ?? 0) + (seoRank.get(b.slug) ?? 0) + (revenueRank.get(b.slug) ?? 0) + (trafficRank.get(b.slug) ?? 0);
     return scoreB - scoreA;
   });
 }

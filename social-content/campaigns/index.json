@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-09",
   "campaigns": [
     {
       "id": "quellensteuer-de",
@@ -336,8 +336,8 @@
       "locale": "de",
       "pageHref": "/de/familienzulagen-rechner-schweiz",
       "title": "Familienzulagen-Rechner Schweiz",
-      "guideHref": "/de/ratgeber/praemienverbilligung-schweiz",
-      "guideTitle": "Prämienverbilligung Schweiz",
+      "guideHref": "/de/ratgeber/stundenlohn-berechnen-schweiz",
+      "guideTitle": "Stundenlohn berechnen Schweiz",
       "keyword": "Familienzulagen-Rechner Schweiz",
       "status": "bozza",
       "priority": "media",
