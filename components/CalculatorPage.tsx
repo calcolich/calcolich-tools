@@ -56,7 +56,8 @@ export default function CalculatorPage({
     calculator.slug === "calcolo-terzo-pilastro-risparmio-fiscale" ||
     calculator.slug.includes("terzo-pilastro") ||
     calculator.slug.includes("pillar-3a") ||
-    calculator.slug.includes("saeule-3a");
+    calculator.slug.includes("saeule-3a") ||
+    calculator.slug.includes("troisieme-pilier");
   const leadSegment = isThirdPillar ? "pension_tax_ch" : calculator.category;
   const leadInterest = isThirdPillar ? "Pensione & tasse" : calculator.category;
   const leadMagnet = isThirdPillar ? "Ricevi il riepilogo 3a e la checklist fiscale" : ui.newsletterTitle;

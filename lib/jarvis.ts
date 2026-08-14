@@ -10,6 +10,13 @@ export type JarvisLeadContext = {
 };
 
 const thirdPillarSlug = "calcolo-terzo-pilastro-risparmio-fiscale";
+const thirdPillarLocalizedSlugs = new Set([
+  thirdPillarSlug,
+  "calcolatore-terzo-pilastro-risparmio-fiscale",
+  "pillar-3a-tax-savings-calculator",
+  "saeule-3a-steuerersparnis-rechner",
+  "calculateur-troisieme-pilier-economie-impot",
+]);
 
 export function getJarvisLeadContext(
   source?: string,
@@ -19,7 +26,7 @@ export function getJarvisLeadContext(
 ): JarvisLeadContext | undefined {
   const slug = source?.includes(":") ? source.split(":").at(-1) : source;
 
-  if (slug === thirdPillarSlug) {
+  if (slug && thirdPillarLocalizedSlugs.has(slug)) {
     return {
       owner: "jarvis",
       workflow: `calculator-funnel:${thirdPillarSlug}`,
