@@ -33,6 +33,53 @@ const defaultLabels: CalculatorPageLabels = {
   relatedTitle: "Strumenti collegati",
 };
 
+const thirdPillarLeadCopy: Record<Locale, {
+  leadMagnet: string;
+  intro: string;
+  button: string;
+  sidebarTitle: string;
+  sidebarText: string;
+  sidebarButton: string;
+  interest: string;
+}> = {
+  de: {
+    leadMagnet: "3a-Zusammenfassung und Steuer-Checkliste erhalten",
+    intro: "Wir senden dir die Zusammenfassung der Berechnung, eine praktische Checkliste fuer die Saeule 3a und Erinnerungen zu wichtigen Schweizer Steuerfristen.",
+    button: "Zusammenfassung und Checkliste senden",
+    sidebarTitle: "Berechnung und naechste Schritte sichern",
+    sidebarText: "Hinterlasse deine E-Mail, um Erinnerungen und Inhalte passend zu deiner Berechnung zu erhalten.",
+    sidebarButton: "Updates erhalten",
+    interest: "Vorsorge & Steuern",
+  },
+  it: {
+    leadMagnet: "Ricevi il riepilogo 3a e la checklist fiscale",
+    intro: "Ti mando il riepilogo del calcolo, una checklist pratica per valutare il pilastro 3a e promemoria utili sulle scadenze fiscali svizzere.",
+    button: "Mandami riepilogo e checklist",
+    sidebarTitle: "Tieniti il calcolo e i prossimi passi",
+    sidebarText: "Lascia l'email per ricevere promemoria e contenuti collegati al tuo calcolo.",
+    sidebarButton: "Ricevi aggiornamenti",
+    interest: "Pensione & tasse",
+  },
+  en: {
+    leadMagnet: "Get the 3a summary and tax checklist",
+    intro: "We will send your calculation summary, a practical checklist for reviewing pillar 3a options, and useful reminders for Swiss tax deadlines.",
+    button: "Send summary and checklist",
+    sidebarTitle: "Keep the calculation and next steps",
+    sidebarText: "Leave your email to receive reminders and content linked to your calculation.",
+    sidebarButton: "Get updates",
+    interest: "Pension & tax",
+  },
+  fr: {
+    leadMagnet: "Recevoir le resume 3a et la checklist fiscale",
+    intro: "Nous vous envoyons le resume du calcul, une checklist pratique pour evaluer le pilier 3a et des rappels utiles sur les echeances fiscales suisses.",
+    button: "Envoyer le resume et la checklist",
+    sidebarTitle: "Garder le calcul et les prochaines etapes",
+    sidebarText: "Laissez votre e-mail pour recevoir des rappels et des contenus lies a votre calcul.",
+    sidebarButton: "Recevoir les mises a jour",
+    interest: "Prevoyance & impots",
+  },
+};
+
 type CalculatorPageProps = {
   calculator: Calculator;
   backHref?: string;
@@ -58,9 +105,10 @@ export default function CalculatorPage({
     calculator.slug.includes("pillar-3a") ||
     calculator.slug.includes("saeule-3a") ||
     calculator.slug.includes("troisieme-pilier");
+  const thirdPillarCopy = thirdPillarLeadCopy[locale];
   const leadSegment = isThirdPillar ? "pension_tax_ch" : calculator.category;
-  const leadInterest = isThirdPillar ? "Pensione & tasse" : calculator.category;
-  const leadMagnet = isThirdPillar ? "Ricevi il riepilogo 3a e la checklist fiscale" : ui.newsletterTitle;
+  const leadInterest = isThirdPillar ? thirdPillarCopy.interest : calculator.category;
+  const leadMagnet = isThirdPillar ? thirdPillarCopy.leadMagnet : ui.newsletterTitle;
   const languageLinks = calculator.isPriority && locale === "de" && !hasTranslatedLocaleSlug(locale, calculator.slug)
     ? [["de", `${siteUrl}/de/${calculator.slug}`]]
     : backHref === "/"
@@ -176,7 +224,7 @@ export default function CalculatorPage({
           <h2 className="text-2xl font-black">{isThirdPillar ? leadMagnet : ui.newsletterTitle}</h2>
           <p className="mt-2 max-w-2xl text-gray-200">
             {isThirdPillar
-              ? "Ti mando il riepilogo del calcolo, una checklist pratica per valutare il pilastro 3a e promemoria utili sulle scadenze fiscali svizzere."
+              ? thirdPillarCopy.intro
               : publicCopy(calculator.cta)}
           </p>
           <LeadForm
@@ -184,7 +232,7 @@ export default function CalculatorPage({
             segment={leadSegment}
             interest={leadInterest}
             leadMagnet={leadMagnet}
-            buttonLabel={isThirdPillar ? "Mandami riepilogo e checklist" : ui.newsletterButton}
+            buttonLabel={isThirdPillar ? thirdPillarCopy.button : ui.newsletterButton}
             dark
           />
         </section>
@@ -322,13 +370,13 @@ export default function CalculatorPage({
             </div>
             <div className="mt-6">
               <LeadCaptureBox
-                title={isThirdPillar ? "Tieniti il calcolo e i prossimi passi" : "Ricevi nuovi strumenti utili"}
-                text={isThirdPillar ? "Lascia l'email per ricevere promemoria e contenuti collegati al tuo calcolo." : publicCopy(calculator.cta)}
+                title={isThirdPillar ? thirdPillarCopy.sidebarTitle : "Ricevi nuovi strumenti utili"}
+                text={isThirdPillar ? thirdPillarCopy.sidebarText : publicCopy(calculator.cta)}
                 source={isThirdPillar ? `sidebar:${calculator.slug}` : `sidebar-newsletter:${calculator.slug}`}
                 segment={leadSegment}
                 interest={leadInterest}
                 leadMagnet={leadMagnet}
-                buttonLabel="Ricevi aggiornamenti"
+                buttonLabel={isThirdPillar ? thirdPillarCopy.sidebarButton : "Ricevi aggiornamenti"}
                 compact
               />
             </div>
