@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getJarvisLeadContext, type JarvisLeadContext } from "@/lib/jarvis";
 
 const webhookUrl = process.env.LEADS_WEBHOOK_URL;
 const webhookSecret = process.env.LEADS_WEBHOOK_SECRET;
@@ -8,18 +9,30 @@ const leadsFromEmail = cleanEnvValue(process.env.LEADS_FROM_EMAIL, "LEADS_FROM_E
 
 type LeadPayload = {
   source?: string;
+  segment?: string;
+  interest?: string;
+  leadMagnet?: string;
+  marketingConsent?: string;
   name?: string;
   email?: string;
   phone?: string;
   packageName?: string;
   message?: string;
   page?: string;
+  path?: string;
+  referrer?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmContent?: string;
+  utmTerm?: string;
   company?: string;
   siteUrl?: string;
 };
 
 type LeadRecord = LeadPayload & {
   leadId: string;
+  jarvis?: JarvisLeadContext;
   createdAt: string;
   site: string;
 };
@@ -87,6 +100,12 @@ export async function POST(request: Request) {
   const lead = {
     ...cleanPayload,
     leadId: crypto.randomUUID(),
+    jarvis: getJarvisLeadContext(
+      cleanPayload.source,
+      cleanPayload.segment,
+      cleanPayload.interest,
+      cleanPayload.leadMagnet,
+    ),
     createdAt: new Date().toISOString(),
     site: "calcolich.ch",
   } satisfies LeadRecord;
@@ -286,12 +305,23 @@ function getErrorMessage(error: unknown) {
 function sanitizeLeadPayload(payload: LeadPayload): LeadPayload {
   return {
     source: cleanField(payload.source),
+    segment: cleanField(payload.segment),
+    interest: cleanField(payload.interest),
+    leadMagnet: cleanField(payload.leadMagnet),
+    marketingConsent: payload.marketingConsent ? "yes" : undefined,
     name: cleanField(payload.name),
     email: cleanField(payload.email)?.toLowerCase(),
     phone: cleanField(payload.phone),
     packageName: cleanField(payload.packageName),
     message: cleanField(payload.message, 2000),
     page: cleanField(payload.page, 500),
+    path: cleanField(payload.path, 300),
+    referrer: cleanField(payload.referrer, 500),
+    utmSource: cleanField(payload.utmSource, 120),
+    utmMedium: cleanField(payload.utmMedium, 120),
+    utmCampaign: cleanField(payload.utmCampaign, 160),
+    utmContent: cleanField(payload.utmContent, 160),
+    utmTerm: cleanField(payload.utmTerm, 160),
     company: cleanField(payload.company),
     siteUrl: cleanUrl(payload.siteUrl),
   };
@@ -322,6 +352,10 @@ function formatLeadEmail(lead: LeadRecord) {
     `ID: ${lead.leadId}`,
     `Priorita: ${priority}`,
     `Fonte: ${source}`,
+    `Segmento: ${lead.segment ?? "-"}`,
+    `Interesse: ${lead.interest ?? "-"}`,
+    `Lead magnet: ${lead.leadMagnet ?? "-"}`,
+    `Consenso marketing: ${lead.marketingConsent ?? "no"}`,
     `Data: ${formatDate(lead.createdAt)}`,
     "",
     "CONTATTO",
@@ -337,7 +371,17 @@ function formatLeadEmail(lead: LeadRecord) {
     "",
     "CONTESTO",
     `Pagina: ${lead.page ?? "-"}`,
+    `Path: ${lead.path ?? "-"}`,
+    `Referrer: ${lead.referrer ?? "-"}`,
+    `UTM source: ${lead.utmSource ?? "-"}`,
+    `UTM medium: ${lead.utmMedium ?? "-"}`,
+    `UTM campaign: ${lead.utmCampaign ?? "-"}`,
     `Sito: ${lead.site}`,
+    "",
+    "JARVIS",
+    `Workflow: ${lead.jarvis?.workflow ?? "-"}`,
+    `Priorita Jarvis: ${lead.jarvis?.priority ?? "-"}`,
+    `Prossime azioni: ${lead.jarvis?.nextActions.join(" | ") ?? "-"}`,
   ].join("\n");
 }
 
@@ -348,6 +392,10 @@ function formatLeadEmailHtml(lead: LeadRecord) {
     ["ID", lead.leadId],
     ["Priorita", priority],
     ["Fonte", source],
+    ["Segmento", lead.segment ?? "-"],
+    ["Interesse", lead.interest ?? "-"],
+    ["Lead magnet", lead.leadMagnet ?? "-"],
+    ["Consenso marketing", lead.marketingConsent ?? "no"],
     ["Data", formatDate(lead.createdAt)],
     ["Nome", lead.name ?? "-"],
     ["Email", lead.email ?? "-"],
@@ -357,6 +405,14 @@ function formatLeadEmailHtml(lead: LeadRecord) {
     ["Pacchetto", lead.packageName ?? "-"],
     ["Messaggio", lead.message ?? "-"],
     ["Pagina", lead.page ?? "-"],
+    ["Path", lead.path ?? "-"],
+    ["Referrer", lead.referrer ?? "-"],
+    ["UTM source", lead.utmSource ?? "-"],
+    ["UTM medium", lead.utmMedium ?? "-"],
+    ["UTM campaign", lead.utmCampaign ?? "-"],
+    ["Jarvis workflow", lead.jarvis?.workflow ?? "-"],
+    ["Jarvis priorita", lead.jarvis?.priority ?? "-"],
+    ["Jarvis prossime azioni", lead.jarvis?.nextActions.join("\n") ?? "-"],
     ["Sito", lead.site],
   ];
 
@@ -392,6 +448,14 @@ function getLeadSourceLabel(source?: string) {
 
   if (source.startsWith("newsletter:")) {
     return `Newsletter - ${source.replace("newsletter:", "")}`;
+  }
+
+  if (source.startsWith("leadmagnet:")) {
+    return `Lead magnet - ${source.replace("leadmagnet:", "")}`;
+  }
+
+  if (source.startsWith("sidebar:")) {
+    return `Sidebar - ${source.replace("sidebar:", "")}`;
   }
 
   if (source.startsWith("audit-sito-gratuito-ticino")) {

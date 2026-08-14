@@ -2,6 +2,7 @@ import AdSlot from "@/components/AdSlot";
 import CalculatorActions from "@/components/CalculatorActions";
 import CalculatorWidget from "@/components/CalculatorWidget";
 import ConsultationCta from "@/components/ConsultationCta";
+import LeadCaptureBox from "@/components/LeadCaptureBox";
 import LeadForm from "@/components/LeadForm";
 import RevenueCta from "@/components/RevenueCta";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
@@ -51,6 +52,10 @@ export default function CalculatorPage({
 }: CalculatorPageProps) {
   const ui = { ...defaultLabels, ...labels };
   const related = relatedCalculators ?? getRelatedCalculators(calculator);
+  const isThirdPillar = calculator.slug === "calcolo-terzo-pilastro-risparmio-fiscale";
+  const leadSegment = isThirdPillar ? "pension_tax_ch" : calculator.category;
+  const leadInterest = isThirdPillar ? "Pensione & tasse" : calculator.category;
+  const leadMagnet = isThirdPillar ? "Ricevi il riepilogo 3a e la checklist fiscale" : ui.newsletterTitle;
   const languageLinks = calculator.isPriority && locale === "de" && !hasTranslatedLocaleSlug(locale, calculator.slug)
     ? [["de", `${siteUrl}/de/${calculator.slug}`]]
     : backHref === "/"
@@ -163,9 +168,20 @@ export default function CalculatorPage({
         ) : null}
 
         <section className="mt-8 rounded-3xl bg-gray-950 p-6 text-white shadow-sm md:p-8">
-          <h2 className="text-2xl font-black">{ui.newsletterTitle}</h2>
-          <p className="mt-2 max-w-2xl text-gray-200">{publicCopy(calculator.cta)}</p>
-          <LeadForm source={`newsletter:${calculator.slug}`} buttonLabel={ui.newsletterButton} dark />
+          <h2 className="text-2xl font-black">{isThirdPillar ? leadMagnet : ui.newsletterTitle}</h2>
+          <p className="mt-2 max-w-2xl text-gray-200">
+            {isThirdPillar
+              ? "Ti mando il riepilogo del calcolo, una checklist pratica per valutare il pilastro 3a e promemoria utili sulle scadenze fiscali svizzere."
+              : publicCopy(calculator.cta)}
+          </p>
+          <LeadForm
+            source={isThirdPillar ? `leadmagnet:${calculator.slug}` : `newsletter:${calculator.slug}`}
+            segment={leadSegment}
+            interest={leadInterest}
+            leadMagnet={leadMagnet}
+            buttonLabel={isThirdPillar ? "Mandami riepilogo e checklist" : ui.newsletterButton}
+            dark
+          />
         </section>
 
         <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_320px]">
@@ -298,6 +314,18 @@ export default function CalculatorPage({
                   {publicCopy(tool.shortTitle)}
                 </TrackedInternalLink>
               ))}
+            </div>
+            <div className="mt-6">
+              <LeadCaptureBox
+                title={isThirdPillar ? "Tieniti il calcolo e i prossimi passi" : "Ricevi nuovi strumenti utili"}
+                text={isThirdPillar ? "Lascia l'email per ricevere promemoria e contenuti collegati al tuo calcolo." : publicCopy(calculator.cta)}
+                source={isThirdPillar ? `sidebar:${calculator.slug}` : `sidebar-newsletter:${calculator.slug}`}
+                segment={leadSegment}
+                interest={leadInterest}
+                leadMagnet={leadMagnet}
+                buttonLabel="Ricevi aggiornamenti"
+                compact
+              />
             </div>
           </aside>
         </section>

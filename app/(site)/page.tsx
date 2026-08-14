@@ -5,6 +5,7 @@ import { publicCopy } from "@/lib/copy";
 import { localizedHref } from "@/lib/i18n";
 import { guides } from "@/lib/guides";
 import { servicePages } from "@/lib/service-pages";
+import LeadCaptureBox from "@/components/LeadCaptureBox";
 import { TrackedLink } from "@/components/CommercialTracking";
 import Link from "next/link";
 
@@ -90,6 +91,26 @@ export default function Home() {
               <h2 className="mt-2 text-xl font-black tracking-tight">{category.shortTitle}</h2>
             </Link>
           ))}
+        </section>
+
+        <section className="mb-10 grid gap-5 lg:grid-cols-[1fr_380px] lg:items-center">
+          <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
+            <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Newsletter pratica</p>
+            <h2 className="mt-2 text-3xl font-black tracking-tight">Promemoria, checklist e calcolatori nuovi</h2>
+            <p className="mt-3 leading-7 text-gray-700">
+              Un solo canale per ricevere strumenti utili su tasse, stipendio, budget e decisioni finanziarie in Svizzera.
+            </p>
+          </div>
+          <LeadCaptureBox
+            title="Ricevi il meglio di Calcolich"
+            text="Ti mando aggiornamenti mirati in base al tema che scegli, senza bloccare i calcoli gratuiti."
+            source="homepage-newsletter"
+            segment="general_ch"
+            interest="Calcolich"
+            leadMagnet="Aggiornamenti Calcolich"
+            buttonLabel="Iscrivimi"
+            compact
+          />
         </section>
 
         <section className="mb-10 border-y border-gray-200 py-8" aria-label="Servizi per aziende">

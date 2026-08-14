@@ -10,6 +10,10 @@ type LeadFormProps = {
   source: string;
   buttonLabel: string;
   dark?: boolean;
+  segment?: string;
+  interest?: string;
+  leadMagnet?: string;
+  consentLabel?: string;
   showName?: boolean;
   showPhone?: boolean;
   showCompany?: boolean;
@@ -25,6 +29,10 @@ export default function LeadForm({
   source,
   buttonLabel,
   dark = false,
+  segment,
+  interest,
+  leadMagnet,
+  consentLabel = "Acconsento a ricevere email da Calcolich su questo tema. Posso disiscrivermi in qualsiasi momento.",
   showName = false,
   showPhone = false,
   showCompany = false,
@@ -51,6 +59,17 @@ export default function LeadForm({
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     const attributedSource = getAttributedSource(source);
+    const url = new URL(window.location.href);
+    const attribution = {
+      page: window.location.href,
+      path: window.location.pathname,
+      referrer: document.referrer,
+      utmSource: url.searchParams.get("utm_source"),
+      utmMedium: url.searchParams.get("utm_medium"),
+      utmCampaign: url.searchParams.get("utm_campaign"),
+      utmContent: url.searchParams.get("utm_content"),
+      utmTerm: url.searchParams.get("utm_term"),
+    };
     sendAnalyticsEvent("lead_form_submitted", { source: attributedSource });
     try {
       const response = await fetch("/api/leads", {
@@ -59,7 +78,10 @@ export default function LeadForm({
         body: JSON.stringify({
           ...data,
           source: attributedSource,
-          page: window.location.href,
+          segment,
+          interest,
+          leadMagnet,
+          ...attribution,
         }),
       });
 
@@ -126,7 +148,12 @@ export default function LeadForm({
         <textarea className={`${inputClass} min-h-32`} name="message" placeholder="Di cosa hai bisogno?" />
       ) : null}
 
-      <button className={showMessage ? `${buttonClass} w-full` : buttonClass} disabled={status === "loading"} type="submit">
+      <label className={showMessage ? "flex gap-3 text-sm leading-6" : "flex gap-3 text-sm leading-6 md:col-span-2"}>
+        <input className="mt-1 h-4 w-4 shrink-0" name="marketingConsent" type="checkbox" required />
+        <span className={dark ? "text-gray-200" : "text-gray-700"}>{consentLabel}</span>
+      </label>
+
+      <button className={showMessage ? `${buttonClass} w-full` : `${buttonClass} md:col-start-2 md:row-start-1`} disabled={status === "loading"} type="submit">
         {status === "loading" ? "Invio..." : buttonLabel}
       </button>
 
