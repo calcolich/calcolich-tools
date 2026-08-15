@@ -18,6 +18,24 @@ const thirdPillarLocalizedSlugs = new Set([
   "calculateur-troisieme-pilier-economie-impot",
 ]);
 
+const taxSalarySlug = "calcolo-imposta-alla-fonte-svizzera";
+const taxSalaryLocalizedSlugs = new Set([
+  taxSalarySlug,
+  "calcolatore-imposta-alla-fonte-svizzera",
+  "withholding-tax-calculator-switzerland",
+  "quellensteuer-rechner-schweiz",
+  "calculateur-impot-a-la-source-suisse",
+]);
+
+const mortgageSlug = "calcolo-sostenibilita-ipoteca-svizzera";
+const mortgageLocalizedSlugs = new Set([
+  mortgageSlug,
+  "calcolatore-sostenibilita-ipoteca-svizzera",
+  "mortgage-affordability-calculator-switzerland",
+  "hypotheken-tragbarkeit-rechner-schweiz",
+  "calculateur-viabilite-hypotheque-suisse",
+]);
+
 export function getJarvisLeadContext(
   source?: string,
   segment?: string,
@@ -25,6 +43,50 @@ export function getJarvisLeadContext(
   leadMagnet?: string,
 ): JarvisLeadContext | undefined {
   const slug = source?.includes(":") ? source.split(":").at(-1) : source;
+
+  if (slug && taxSalaryLocalizedSlugs.has(slug)) {
+    return {
+      owner: "jarvis",
+      workflow: `calculator-funnel:${taxSalarySlug}`,
+      priority: "high",
+      segmentId: "tax_salary_ch",
+      segmentLabel: "Salario & imposta alla fonte",
+      nextActions: [
+        "salva lead nel CRM/newsletter con segmento e consenso",
+        "invia checklist imposta alla fonte promessa",
+        "classifica lingua e caso: offerta lavoro, busta paga, trasferimento o frontalieri",
+        "misura ritorno su calcolatori lordo-netto, salario netto e budget",
+      ],
+      followUpSequence: [
+        "Email 0: checklist dati da preparare per imposta alla fonte e avviso che il risultato e una stima.",
+        "Email 3 giorni: guida su cantone, tariffa, stato civile, figli e busta paga.",
+        "Email 10 giorni: invito a confrontare netto, budget e riduzione premi se pertinenti.",
+      ],
+      partnerSlots: [],
+    };
+  }
+
+  if (slug && mortgageLocalizedSlugs.has(slug)) {
+    return {
+      owner: "jarvis",
+      workflow: `calculator-funnel:${mortgageSlug}`,
+      priority: "high",
+      segmentId: "mortgage_ch",
+      segmentLabel: "Ipoteca & casa",
+      nextActions: [
+        "salva lead nel CRM/newsletter con segmento e consenso",
+        "invia checklist sostenibilita ipoteca promessa",
+        "classifica stato: esplorazione, colloquio banca, offerta immobile o confronto affitto",
+        "attribuisci eventuali click partner solo quando i link saranno configurati",
+      ],
+      followUpSequence: [
+        "Email 0: checklist sostenibilita, capitale proprio e budget.",
+        "Email 4 giorni: spiegazione su tasso teorico, costi accessori e soglia del reddito.",
+        "Email 14 giorni: invito a ricalcolare con budget, affitto e reddito netto.",
+      ],
+      partnerSlots: ["mortgage"],
+    };
+  }
 
   if (slug && thirdPillarLocalizedSlugs.has(slug)) {
     return {

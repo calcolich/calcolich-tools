@@ -3,11 +3,19 @@
 import { useMemo, useState } from "react";
 import type { Calculator } from "@/lib/calculators";
 import { sendAnalyticsEvent } from "@/lib/analytics-events";
+import type { Locale } from "@/lib/i18n";
 
 type Values = Record<string, string>;
 type ResultRow = { label: string; value: string };
+const completeLabels: Record<Locale, string> = {
+  de: "Ergebnis geprüft",
+  it: "Risultato verificato",
+  en: "Result checked",
+  fr: "Resultat verifie",
+};
 
 export default function CalculatorWidget({ calculator }: { calculator: Calculator }) {
+  const locale = calculator.locale ?? "it";
   const defaults = Object.fromEntries(
     calculator.inputs.map((input) => [input.key, input.defaultValue]),
   );
@@ -81,7 +89,7 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
         })}
         className="mt-5 rounded-xl bg-gray-950 px-5 py-3 font-bold text-white"
       >
-        Ergebnis geprüft
+        {completeLabels[locale]}
       </button>
     </section>
   );

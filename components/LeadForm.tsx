@@ -5,9 +5,11 @@ import { getAttributedSource } from "@/components/CommercialTracking";
 import { sendAnalyticsEvent } from "@/lib/analytics-events";
 
 const fallbackEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "calcolich@gmail.com";
+type LeadFormLocale = "de" | "it" | "en" | "fr";
 
 type LeadFormProps = {
   source: string;
+  calculatorId?: string;
   buttonLabel: string;
   dark?: boolean;
   segment?: string;
@@ -21,18 +23,50 @@ type LeadFormProps = {
   showPackage?: boolean;
   showMessage?: boolean;
   packageOptions?: string[];
+  locale?: LeadFormLocale;
 };
 
 const defaultPackageOptions = ["Starter - CHF 490", "Business - CHF 990", "Premium - CHF 1.990"];
+const formCopy = {
+  de: {
+    consent: "Ich stimme zu, E-Mails von Calcolich zu diesem Thema zu erhalten. Ich kann mich jederzeit abmelden.",
+    email: "Deine E-Mail",
+    loading: "Senden...",
+    fallback: "Es öffnet sich ein E-Mail-Entwurf: Sende ihn, um die Anfrage abzuschliessen.",
+    success: "Anfrage erhalten. Ich melde mich bald.",
+  },
+  it: {
+    consent: "Acconsento a ricevere email da Calcolich su questo tema. Posso disiscrivermi in qualsiasi momento.",
+    email: "La tua email",
+    loading: "Invio...",
+    fallback: "Si apre una bozza email: inviala per completare la richiesta.",
+    success: "Richiesta ricevuta. Ti ricontatto presto.",
+  },
+  en: {
+    consent: "I agree to receive emails from Calcolich about this topic. I can unsubscribe at any time.",
+    email: "Your email",
+    loading: "Sending...",
+    fallback: "An email draft opens: send it to complete the request.",
+    success: "Request received. I will get back to you soon.",
+  },
+  fr: {
+    consent: "J'accepte de recevoir des e-mails de Calcolich sur ce theme. Je peux me desinscrire a tout moment.",
+    email: "Votre e-mail",
+    loading: "Envoi...",
+    fallback: "Un brouillon d'e-mail s'ouvre: envoyez-le pour finaliser la demande.",
+    success: "Demande recue. Je vous recontacte bientot.",
+  },
+} satisfies Record<LeadFormLocale, Record<string, string>>;
 
 export default function LeadForm({
   source,
+  calculatorId,
   buttonLabel,
   dark = false,
   segment,
   interest,
   leadMagnet,
-  consentLabel = "Acconsento a ricevere email da Calcolich su questo tema. Posso disiscrivermi in qualsiasi momento.",
+  consentLabel,
   showName = false,
   showPhone = false,
   showCompany = false,
@@ -40,15 +74,18 @@ export default function LeadForm({
   showPackage = false,
   showMessage = false,
   packageOptions = defaultPackageOptions,
+  locale = "it",
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
   const startedRef = useRef(false);
+  const labels = formCopy[locale];
+  const resolvedConsentLabel = consentLabel ?? labels.consent;
 
   function markStarted() {
     if (startedRef.current) return;
     startedRef.current = true;
-    sendAnalyticsEvent("lead_form_started", { source });
+    sendAnalyticsEvent("lead_form_started", { source, target: segment, calculatorId });
   }
 
   async function submitLead(event: React.FormEvent<HTMLFormElement>) {
@@ -70,7 +107,7 @@ export default function LeadForm({
       utmContent: url.searchParams.get("utm_content"),
       utmTerm: url.searchParams.get("utm_term"),
     };
-    sendAnalyticsEvent("lead_form_submitted", { source: attributedSource });
+    sendAnalyticsEvent("lead_form_submitted", { source: attributedSource, target: segment, calculatorId });
     try {
       const response = await fetch("/api/leads", {
         method: "POST",
@@ -87,11 +124,11 @@ export default function LeadForm({
 
       const result = await response.json();
       if (result.emailFallback) {
-        trackLead("lead_fallback", attributedSource);
+        trackLead("lead_fallback", attributedSource, segment);
         openEmailFallback(data, attributedSource);
         form.reset();
         setStatus("success");
-        setMessage("Si apre una bozza email: inviala per completare la richiesta.");
+        setMessage(labels.fallback);
         return;
       }
 
@@ -100,18 +137,19 @@ export default function LeadForm({
       }
 
       if (!result.configured) {
-        trackLead("lead_fallback", attributedSource);
+        trackLead("lead_fallback", attributedSource, segment);
         openEmailFallback(data, attributedSource);
         form.reset();
         setStatus("success");
-        setMessage("Si apre una bozza email: inviala per completare la richiesta.");
+        setMessage(labels.fallback);
         return;
       }
 
       form.reset();
-      trackLead("generate_lead", attributedSource);
+      trackLead("generate_lead", attributedSource, segment);
+      sendAnalyticsEvent("lead_submit", { source: attributedSource, target: segment, calculatorId });
       setStatus("success");
-      setMessage("Richiesta ricevuta. Ti ricontatto presto.");
+      setMessage(labels.success);
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Invio non riuscito.");
@@ -137,7 +175,7 @@ export default function LeadForm({
       {showName ? <input className={inputClass} name="name" placeholder="Nome" autoComplete="name" /> : null}
       {showCompany ? <input className={inputClass} name="company" placeholder="Azienda / attivita" autoComplete="organization" /> : null}
       {showSiteUrl ? <input className={inputClass} name="siteUrl" placeholder="iltuosito.ch" type="text" inputMode="url" autoComplete="url" required /> : null}
-      <input className={inputClass} name="email" placeholder="La tua email" type="email" autoComplete="email" required />
+      <input className={inputClass} name="email" placeholder={labels.email} type="email" autoComplete="email" required />
       {showPhone ? <input className={inputClass} name="phone" placeholder="Telefono / WhatsApp" autoComplete="tel" /> : null}
       {showPackage ? (
         <select className={inputClass} name="packageName" defaultValue={packageOptions[0]}>
@@ -150,11 +188,11 @@ export default function LeadForm({
 
       <label className={showMessage ? "flex gap-3 text-sm leading-6" : "flex gap-3 text-sm leading-6 md:col-span-2"}>
         <input className="mt-1 h-4 w-4 shrink-0" name="marketingConsent" type="checkbox" required />
-        <span className={dark ? "text-gray-200" : "text-gray-700"}>{consentLabel}</span>
+        <span className={dark ? "text-gray-200" : "text-gray-700"}>{resolvedConsentLabel}</span>
       </label>
 
       <button className={showMessage ? `${buttonClass} w-full` : `${buttonClass} md:col-start-2 md:row-start-1`} disabled={status === "loading"} type="submit">
-        {status === "loading" ? "Invio..." : buttonLabel}
+        {status === "loading" ? labels.loading : buttonLabel}
       </button>
 
       {message ? (
@@ -166,13 +204,14 @@ export default function LeadForm({
   );
 }
 
-function trackLead(eventName: "generate_lead" | "lead_fallback", source: string) {
+function trackLead(eventName: "generate_lead" | "lead_fallback", source: string, segment?: string) {
   const analyticsWindow = window as Window & {
     gtag?: (command: "event", event: string, params: Record<string, string>) => void;
   };
 
   analyticsWindow.gtag?.("event", eventName, {
     lead_source: source,
+    lead_segment: segment ?? "unknown",
     page_path: window.location.pathname,
   });
 }

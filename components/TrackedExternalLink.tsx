@@ -7,6 +7,7 @@ type TrackedExternalLinkProps = {
   event: AnalyticsEventName;
   source?: string;
   target?: string;
+  calculatorId?: string;
   className?: string;
   children: React.ReactNode;
 };
@@ -16,6 +17,7 @@ export default function TrackedExternalLink({
   event,
   source,
   target,
+  calculatorId,
   className,
   children,
 }: TrackedExternalLinkProps) {
@@ -25,7 +27,7 @@ export default function TrackedExternalLink({
       className={className}
       rel="noreferrer"
       target="_blank"
-      onClick={() => sendAnalyticsEvent(event, { source, target: target ?? href })}
+      onClick={() => sendAnalyticsEvent(event, { source, target: target ?? href, calculatorId })}
     >
       {children}
     </a>

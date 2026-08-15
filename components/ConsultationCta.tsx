@@ -68,34 +68,7 @@ export default function ConsultationCta({
   calculator: Calculator;
   locale: Locale;
 }) {
-  const taxCaseCopy: Partial<Record<Locale, ConsultationCopy>> | null =
-    calculator.slug === "quellensteuer-rechner-schweiz" || calculator.slug === "calcolatore-imposta-alla-fonte-svizzera"
-      ? {
-          de: {
-            eyebrow: "Steuerfall prüfen",
-            title: "Möchtest du deine Quellensteuer sauber einordnen?",
-            description:
-              "Nutze die Schätzung für den ersten Vergleich und sende danach eine konkrete Anfrage, wenn du den Fall mit einer sauberen Prüfung oder einer Beratung einordnen willst.",
-            button: "Steuerfall prüfen lassen",
-            partnerEyebrow: "Partnerbereich reserviert",
-            partnerTitle: "Platz fuer kuenftige Partner",
-            partnerDescription:
-              "Der Bereich bleibt fuer spaetere Kooperationen mit praxistauglichen Anbietern vorbereitet, ohne den Rechner mit Werbung zu ueberladen.",
-          },
-          it: {
-            eyebrow: "Verifica fiscale",
-            title: "Vuoi inquadrare meglio la tua imposta alla fonte?",
-            description:
-              "Usa la stima per un primo confronto e poi invia una richiesta concreta se vuoi verificare il caso con un controllo ordinato o una consulenza mirata.",
-            button: "Verifica il caso fiscale",
-            partnerEyebrow: "Spazio partner riservato",
-            partnerTitle: "Pronto per future collaborazioni",
-            partnerDescription:
-              "L'area resta predisposta per partner utili e coerenti, senza trasformare il calcolatore in una pagina piena di promozioni invasive.",
-          },
-        }
-      : null;
-  const ui = taxCaseCopy?.[locale] ?? copy[locale];
+  const ui = getIntentCopy(calculator.slug)?.[locale] ?? copy[locale];
 
   return (
     <section className="mt-6 grid gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm md:grid-cols-[1fr_280px] md:p-6">
@@ -121,4 +94,89 @@ export default function ConsultationCta({
       </div>
     </section>
   );
+}
+
+function getIntentCopy(slug: string): Partial<Record<Locale, ConsultationCopy>> | null {
+  if (slug.includes("quellensteuer") || slug.includes("imposta-alla-fonte") || slug.includes("withholding-tax")) {
+    return {
+      de: {
+        eyebrow: "Steuerfall prüfen",
+        title: "Möchtest du deine Quellensteuer sauber einordnen?",
+        description:
+          "Nutze die Schätzung für den ersten Vergleich und sende danach eine konkrete Anfrage, wenn du den Fall mit einer sauberen Prüfung oder einer Beratung einordnen willst.",
+        button: "Steuerfall prüfen lassen",
+        partnerEyebrow: "Partnerbereich reserviert",
+        partnerTitle: "Platz fuer kuenftige Partner",
+        partnerDescription:
+          "Der Bereich bleibt fuer spaetere Kooperationen mit praxistauglichen Anbietern vorbereitet, ohne den Rechner mit Werbung zu ueberladen.",
+      },
+      it: {
+        eyebrow: "Verifica fiscale",
+        title: "Vuoi inquadrare meglio la tua imposta alla fonte?",
+        description:
+          "Usa la stima per un primo confronto e poi invia una richiesta concreta se vuoi verificare il caso con un controllo ordinato o una consulenza mirata.",
+        button: "Verifica il caso fiscale",
+        partnerEyebrow: "Spazio partner riservato",
+        partnerTitle: "Pronto per future collaborazioni",
+        partnerDescription:
+          "L'area resta predisposta per partner utili e coerenti, senza trasformare il calcolatore in una pagina piena di promozioni invasive.",
+      },
+    };
+  }
+
+  if (slug.includes("hypotheken") || slug.includes("ipoteca") || slug.includes("hypotheque") || slug.includes("mortgage")) {
+    return {
+      de: {
+        eyebrow: "Finanzierung vorbereiten",
+        title: "Möchtest du die Tragbarkeit vor dem Bankgespräch prüfen?",
+        description:
+          "Nutze die Schätzung als Vorab-Check und sende danach eine Anfrage, wenn du Budget, Eigenmittel und nächste Schritte sauber sortieren willst.",
+        button: "Finanzierung vorbereiten",
+        partnerEyebrow: "Partnerbereich reserviert",
+        partnerTitle: "Bereit fuer passende Hypothekenpartner",
+        partnerDescription:
+          "Externe Angebote werden erst angezeigt, wenn echte Partnerlinks redaktionell geprueft und technisch konfiguriert sind.",
+      },
+      it: {
+        eyebrow: "Preparazione finanziamento",
+        title: "Vuoi verificare la sostenibilita prima del colloquio in banca?",
+        description:
+          "Usa la stima come controllo iniziale e invia una richiesta se vuoi ordinare budget, capitale proprio e prossimi passi.",
+        button: "Prepara il finanziamento",
+        partnerEyebrow: "Spazio partner riservato",
+        partnerTitle: "Pronto per partner ipotecari pertinenti",
+        partnerDescription:
+          "Le offerte esterne compariranno solo dopo verifica editoriale e configurazione di link reali.",
+      },
+    };
+  }
+
+  if (slug.includes("terzo-pilastro") || slug.includes("pillar-3a") || slug.includes("saeule-3a") || slug.includes("troisieme-pilier")) {
+    return {
+      de: {
+        eyebrow: "Vorsorge und Steuern",
+        title: "Möchtest du die 3a-Entscheidung sauber vorbereiten?",
+        description:
+          "Nutze die Schätzung als Ausgangspunkt und prüfe danach Grenzsteuersatz, Budget, Gebühren und Anlagehorizont ohne falsche Präzision.",
+        button: "3a-Check vorbereiten",
+        partnerEyebrow: "Partnerbereich reserviert",
+        partnerTitle: "Bereit fuer echte 3a-Partnerlinks",
+        partnerDescription:
+          "3a-Partner erscheinen nur, wenn die Affiliate-URLs wirklich konfiguriert sind.",
+      },
+      it: {
+        eyebrow: "Previdenza e tasse",
+        title: "Vuoi preparare meglio la decisione sul pilastro 3a?",
+        description:
+          "Usa la stima come punto di partenza e confronta aliquota marginale, budget, costi e orizzonte senza falsa precisione.",
+        button: "Prepara il check 3a",
+        partnerEyebrow: "Spazio partner riservato",
+        partnerTitle: "Pronto per link 3a reali",
+        partnerDescription:
+          "I partner 3a compariranno solo quando le URL affiliate saranno davvero configurate.",
+      },
+    };
+  }
+
+  return null;
 }

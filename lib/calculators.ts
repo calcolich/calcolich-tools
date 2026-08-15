@@ -350,6 +350,7 @@ export const calculators: Calculator[] = [
       { question: "Posso confrontare tassi diversi?", answer: "Si, cambia il tasso annuo per vedere come varia rata e costo totale." },
     ],
     relatedSlugs: ["calcolo-interessi-composti", "calcolo-salario-netto-svizzera", "calcolo-lordo-netto-svizzera"],
+    monetizationType: "lead",
   },
   {
     slug: "calcolo-sostenibilita-ipoteca-svizzera",
@@ -374,6 +375,8 @@ export const calculators: Calculator[] = [
       "Il calcolatore stima debito ipotecario, costi annui teorici e quota del reddito lordo. Se la quota supera il limite impostato, il finanziamento potrebbe risultare difficile o richiedere piu capitale proprio.",
       "Il risultato e indicativo: ogni banca applica criteri propri e puo considerare ammortamento, secondo pilastro, eta, oggetto, sostenibilita a lungo termine e situazione familiare.",
     ],
+    formula: "Sostenibilita = (ipoteca x tasso teorico + prezzo immobile x quota costi accessori) / reddito lordo annuo x 100.",
+    example: "Esempio: con CHF 850'000 di prezzo, CHF 180'000 di capitale proprio e tasso teorico del 5%, l'ipoteca stimata e CHF 670'000 e i costi annui teorici partono da CHF 33'500 prima dei costi accessori.",
     faqs: [
       { question: "Che tasso devo usare?", answer: "Molte simulazioni usano un tasso teorico prudente, ad esempio 5%, ma la banca decide il criterio effettivo." },
       { question: "Il capitale proprio minimo e sempre 20%?", answer: "Spesso si parte da almeno 20%, ma provenienza dei fondi e regole bancarie contano." },
@@ -382,6 +385,23 @@ export const calculators: Calculator[] = [
       { question: "Perche si usa il reddito lordo?", answer: "La sostenibilita bancaria viene spesso confrontata con il reddito lordo annuo del nucleo." },
     ],
     relatedSlugs: ["calcolo-mutuo-svizzera", "calcolo-affitto-sostenibile-svizzera", "calcolo-budget-mensile"],
+    guideLinks: [
+      {
+        href: "/guide/costo-vita-svizzera",
+        label: "Guida costo della vita",
+        description: "Come leggere reddito, affitto, costi ricorrenti e margine prima di un impegno immobiliare.",
+      },
+    ],
+    updatedAt: "12 luglio 2026",
+    sources: [
+      { label: "FINMA: Hypotheken", href: "https://www.finma.ch/de/dokumentation/dossier/dossier-hypotheken/" },
+      { label: "ch.ch: finanziare proprieta abitativa", href: "https://www.ch.ch/it/abitazione/proprieta-abitativa/" },
+    ],
+    resultLabels: ["Ipoteca stimata", "Costi annui teorici", "Sostenibilita"],
+    monetizationType: "lead",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Verificare la sostenibilita di una ipoteca svizzera prima del colloquio in banca",
   },
   {
     slug: "calcolo-rischio-trading",
@@ -1174,6 +1194,13 @@ export const calculators: Calculator[] = [
       { label: "ESTV: Quellensteuertarife für übrige Einkünfte", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
       { label: "ch.ch: Steuern bezahlen", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
     ],
+    formula: "Netto stimato = salario lordo - deduzioni sociali - imposta alla fonte. Deduzioni e imposta sono calcolate come percentuale del lordo.",
+    example: "Esempio: con CHF 6'500 lordi, 12% di deduzioni sociali e 8% di imposta alla fonte, il netto stimato e CHF 5'200.",
+    resultLabels: ["Deduzioni sociali", "Imposta alla fonte", "Netto stimato"],
+    monetizationType: "mixed",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Stimare imposta alla fonte e salario netto mensile in Svizzera",
   },
   {
     slug: "calcolo-cassa-malati-svizzera",
@@ -1428,12 +1455,31 @@ export const calculators: Calculator[] = [
       "In tedesco e inglese il tema vive con query come Saule 3a Steuerersparnis Rechner e pillar 3a tax savings calculator. Il valore commerciale della pagina e alto.",
       "Collega il risultato al calcolatore interessi composti e obiettivo risparmio per valutare anche il capitale futuro.",
     ],
+    formula: "Risparmio fiscale annuo = versamento 3a x aliquota marginale stimata. Il risparmio totale moltiplica la stima annua per gli anni inseriti.",
+    example: "Esempio: con CHF 7'056 versati nel pilastro 3a e aliquota marginale del 22%, il risparmio fiscale stimato e circa CHF 1'552.32 per un anno.",
     faqs: [
       { question: "Il risparmio fiscale e garantito?", answer: "No, dipende da reddito, cantone, situazione fiscale e limiti annui applicabili." },
       { question: "Il calcolo include rendimento degli investimenti?", answer: "No, mostra il risparmio fiscale stimato. Per la crescita usa il calcolatore interessi composti." },
       { question: "Quale aliquota devo inserire?", answer: "Inserisci una stima della tua aliquota marginale o un valore calcolato da un consulente/fonte fiscale." },
     ],
     relatedSlugs: ["calcolo-interessi-composti", "calcolo-obiettivo-risparmio", "calcolo-imposta-alla-fonte-svizzera"],
+    guideLinks: [
+      {
+        href: "/guide/terzo-pilastro-risparmio-fiscale",
+        label: "Guida terzo pilastro",
+        description: "Come leggere risparmio fiscale, limite annuo e pianificazione prima del versamento.",
+      },
+    ],
+    updatedAt: "12 luglio 2026",
+    sources: [
+      { label: "BSV: pilastro 3a", href: "https://www.bsv.admin.ch/bsv/it/home/assicurazioni-sociali/bv/basi-e-leggi/pilastro-3a.html" },
+      { label: "ch.ch: previdenza privata", href: "https://www.ch.ch/it/pensionamento/previdenza-privata/" },
+    ],
+    resultLabels: ["Risparmio fiscale annuo", "Versamenti totali", "Risparmio fiscale totale"],
+    monetizationType: "affiliate",
+    schemaType: "WebApplication",
+    isPriority: true,
+    searchIntent: "Calcolare il risparmio fiscale del terzo pilastro in Svizzera",
   },
   {
     slug: "calcolo-budget-mensile",

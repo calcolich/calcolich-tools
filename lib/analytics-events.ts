@@ -9,6 +9,8 @@ export type AnalyticsEventName =
   | "guide_click"
   | "guide_opened"
   | "official_source_clicked"
+  | "funnel_view"
+  | "partner_click"
   | "lead_submit"
   | "lead_form_started"
   | "lead_form_submitted"

@@ -29,6 +29,19 @@ export const localeHome = {
     guideLinksTitle: "Passende Ratgeber",
     recommendedAd: "Empfohlene Ressource",
     relatedTitle: "Verwandte Rechner",
+    formulaTitle: "Formel",
+    exampleTitle: "Praktisches Beispiel",
+    usageTitle: "Hinweis zur Nutzung",
+    usageText:
+      "Die Ergebnisse sind indikative Berechnungen auf Basis deiner Eingaben. Sie ersetzen keine verbindliche Lohnabrechnung, Rechtsberatung oder Auskunft einer offiziellen Stelle.",
+    importantNotesTitle: "Wichtige Hinweise",
+    sourcesTitle: "Quellen und Aktualisierung",
+    updatedAtPrefix: "Zuletzt aktualisiert",
+    partnerEyebrow: "Passende Angebote",
+    partnerReservedText:
+      "Vergleichsangebote und Partnerressourcen werden hier erst ergaenzt, wenn sie redaktionell geprueft und mit echten Links konfiguriert sind.",
+    sidebarNewsletterTitle: "Neue passende Rechner erhalten",
+    sidebarNewsletterButton: "Updates erhalten",
   },
   it: {
     label: "Italiano",
@@ -46,6 +59,19 @@ export const localeHome = {
     guideLinksTitle: "Guide collegate",
     recommendedAd: "Risorsa consigliata",
     relatedTitle: "Calcolatori collegati",
+    formulaTitle: "Formula",
+    exampleTitle: "Esempio pratico",
+    usageTitle: "Nota d'uso",
+    usageText:
+      "I risultati sono calcoli indicativi basati sui valori inseriti. Non sostituiscono una busta paga vincolante, una consulenza legale o una risposta ufficiale.",
+    importantNotesTitle: "Note importanti",
+    sourcesTitle: "Fonti e aggiornamento",
+    updatedAtPrefix: "Ultimo aggiornamento",
+    partnerEyebrow: "Offerte pertinenti",
+    partnerReservedText:
+      "Confronti e risorse partner saranno aggiunti qui solo dopo verifica editoriale e configurazione di link reali.",
+    sidebarNewsletterTitle: "Ricevi nuovi strumenti utili",
+    sidebarNewsletterButton: "Ricevi aggiornamenti",
   },
   fr: {
     label: "Francais",
@@ -63,6 +89,19 @@ export const localeHome = {
     guideLinksTitle: "Guides lies",
     recommendedAd: "Ressource recommandee",
     relatedTitle: "Calculateurs lies",
+    formulaTitle: "Formule",
+    exampleTitle: "Exemple pratique",
+    usageTitle: "Note d'utilisation",
+    usageText:
+      "Les resultats sont des calculs indicatifs bases sur vos saisies. Ils ne remplacent pas une fiche de salaire contraignante, un conseil juridique ou une reponse officielle.",
+    importantNotesTitle: "Notes importantes",
+    sourcesTitle: "Sources et mise a jour",
+    updatedAtPrefix: "Derniere mise a jour",
+    partnerEyebrow: "Offres pertinentes",
+    partnerReservedText:
+      "Les comparaisons et ressources partenaires seront ajoutees ici uniquement apres verification editoriale et configuration de vrais liens.",
+    sidebarNewsletterTitle: "Recevoir de nouveaux outils utiles",
+    sidebarNewsletterButton: "Recevoir les mises a jour",
   },
   en: {
     label: "English",
@@ -80,6 +119,19 @@ export const localeHome = {
     guideLinksTitle: "Related guides",
     recommendedAd: "Recommended resource",
     relatedTitle: "Related calculators",
+    formulaTitle: "Formula",
+    exampleTitle: "Practical example",
+    usageTitle: "Usage note",
+    usageText:
+      "Results are indicative calculations based on your inputs. They do not replace a binding payslip, legal advice or an official answer.",
+    importantNotesTitle: "Important notes",
+    sourcesTitle: "Sources and update",
+    updatedAtPrefix: "Last updated",
+    partnerEyebrow: "Relevant offers",
+    partnerReservedText:
+      "Comparison offers and partner resources will appear here only after editorial review and real link configuration.",
+    sidebarNewsletterTitle: "Get useful new tools",
+    sidebarNewsletterButton: "Get updates",
   },
 } satisfies Record<Locale, Record<string, string>>;
 

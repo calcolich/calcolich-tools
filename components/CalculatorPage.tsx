@@ -1,5 +1,6 @@
 import AdSlot from "@/components/AdSlot";
 import CalculatorActions from "@/components/CalculatorActions";
+import FunnelViewTracker from "@/components/FunnelViewTracker";
 import CalculatorWidget from "@/components/CalculatorWidget";
 import ConsultationCta from "@/components/ConsultationCta";
 import LeadCaptureBox from "@/components/LeadCaptureBox";
@@ -21,6 +22,17 @@ type CalculatorPageLabels = {
   guideLinksTitle: string;
   recommendedAd: string;
   relatedTitle: string;
+  formulaTitle: string;
+  exampleTitle: string;
+  usageTitle: string;
+  usageText: string;
+  importantNotesTitle: string;
+  sourcesTitle: string;
+  updatedAtPrefix: string;
+  partnerEyebrow: string;
+  partnerReservedText: string;
+  sidebarNewsletterTitle: string;
+  sidebarNewsletterButton: string;
 };
 
 const defaultLabels: CalculatorPageLabels = {
@@ -31,9 +43,23 @@ const defaultLabels: CalculatorPageLabels = {
   guideLinksTitle: "Guide collegate",
   recommendedAd: "Risorsa consigliata",
   relatedTitle: "Strumenti collegati",
+  formulaTitle: "Formula",
+  exampleTitle: "Esempio pratico",
+  usageTitle: "Nota d'uso",
+  usageText:
+    "I risultati sono calcoli indicativi basati sui valori inseriti. Non sostituiscono una busta paga vincolante, una consulenza legale o una risposta ufficiale.",
+  importantNotesTitle: "Note importanti",
+  sourcesTitle: "Fonti e aggiornamento",
+  updatedAtPrefix: "Ultimo aggiornamento",
+  partnerEyebrow: "Offerte pertinenti",
+  partnerReservedText:
+    "Confronti e risorse partner saranno aggiunti qui solo dopo verifica editoriale e configurazione di link reali.",
+  sidebarNewsletterTitle: "Ricevi nuovi strumenti utili",
+  sidebarNewsletterButton: "Ricevi aggiornamenti",
 };
 
-const thirdPillarLeadCopy: Record<Locale, {
+type FunnelLeadCopy = {
+  segment: string;
   leadMagnet: string;
   intro: string;
   button: string;
@@ -41,8 +67,11 @@ const thirdPillarLeadCopy: Record<Locale, {
   sidebarText: string;
   sidebarButton: string;
   interest: string;
-}> = {
+};
+
+const thirdPillarLeadCopy: Record<Locale, FunnelLeadCopy> = {
   de: {
+    segment: "pension_tax_ch",
     leadMagnet: "3a-Zusammenfassung und Steuer-Checkliste erhalten",
     intro: "Wir senden dir die Zusammenfassung der Berechnung, eine praktische Checkliste fuer die Saeule 3a und Erinnerungen zu wichtigen Schweizer Steuerfristen.",
     button: "Zusammenfassung und Checkliste senden",
@@ -52,6 +81,7 @@ const thirdPillarLeadCopy: Record<Locale, {
     interest: "Vorsorge & Steuern",
   },
   it: {
+    segment: "pension_tax_ch",
     leadMagnet: "Ricevi il riepilogo 3a e la checklist fiscale",
     intro: "Ti mando il riepilogo del calcolo, una checklist pratica per valutare il pilastro 3a e promemoria utili sulle scadenze fiscali svizzere.",
     button: "Mandami riepilogo e checklist",
@@ -61,6 +91,7 @@ const thirdPillarLeadCopy: Record<Locale, {
     interest: "Pensione & tasse",
   },
   en: {
+    segment: "pension_tax_ch",
     leadMagnet: "Get the 3a summary and tax checklist",
     intro: "We will send your calculation summary, a practical checklist for reviewing pillar 3a options, and useful reminders for Swiss tax deadlines.",
     button: "Send summary and checklist",
@@ -70,6 +101,7 @@ const thirdPillarLeadCopy: Record<Locale, {
     interest: "Pension & tax",
   },
   fr: {
+    segment: "pension_tax_ch",
     leadMagnet: "Recevoir le resume 3a et la checklist fiscale",
     intro: "Nous vous envoyons le resume du calcul, une checklist pratique pour evaluer le pilier 3a et des rappels utiles sur les echeances fiscales suisses.",
     button: "Envoyer le resume et la checklist",
@@ -79,6 +111,93 @@ const thirdPillarLeadCopy: Record<Locale, {
     interest: "Prevoyance & impots",
   },
 };
+
+const highIntentLeadCopy = {
+  tax: {
+    de: {
+      segment: "tax_salary_ch",
+      leadMagnet: "Quellensteuer-Checkliste erhalten",
+      intro: "Erhalte eine kurze Checkliste, welche Angaben du vor einer offiziellen Quellensteuer-Pruefung bereithalten solltest.",
+      button: "Checkliste senden",
+      sidebarTitle: "Quellensteuer spaeter sauber pruefen",
+      sidebarText: "Lass dir eine Erinnerung und passende Lohn-/Steuerinhalte schicken.",
+      sidebarButton: "Checkliste erhalten",
+      interest: "Lohn & Quellensteuer",
+    },
+    it: {
+      segment: "tax_salary_ch",
+      leadMagnet: "Ricevi la checklist imposta alla fonte",
+      intro: "Ti mando una checklist pratica con i dati da preparare prima di verificare una busta paga o una tabella cantonale.",
+      button: "Mandami la checklist",
+      sidebarTitle: "Verifica meglio l'imposta alla fonte",
+      sidebarText: "Lascia l'email per ricevere promemoria e contenuti collegati a salario, tasse e budget.",
+      sidebarButton: "Ricevi la checklist",
+      interest: "Salario & imposta alla fonte",
+    },
+    en: {
+      segment: "tax_salary_ch",
+      leadMagnet: "Get the withholding tax checklist",
+      intro: "Receive a practical checklist of the data to prepare before checking a payslip or cantonal table.",
+      button: "Send the checklist",
+      sidebarTitle: "Review withholding tax later",
+      sidebarText: "Leave your email to receive salary, tax and budget follow-ups.",
+      sidebarButton: "Get the checklist",
+      interest: "Salary & withholding tax",
+    },
+    fr: {
+      segment: "tax_salary_ch",
+      leadMagnet: "Recevoir la checklist impot a la source",
+      intro: "Recevez une checklist pratique des donnees a preparer avant de verifier une fiche de salaire ou une table cantonale.",
+      button: "Envoyer la checklist",
+      sidebarTitle: "Revoir l'impot a la source plus tard",
+      sidebarText: "Laissez votre e-mail pour recevoir des contenus lies au salaire, aux impots et au budget.",
+      sidebarButton: "Recevoir la checklist",
+      interest: "Salaire & impot a la source",
+    },
+  },
+  mortgage: {
+    de: {
+      segment: "mortgage_ch",
+      leadMagnet: "Hypotheken-Tragbarkeit als Checkliste sichern",
+      intro: "Wir senden dir eine kompakte Vorbereitung fuer Bankgespraech, Eigenmittel und Budgetvergleich.",
+      button: "Hypotheken-Checkliste senden",
+      sidebarTitle: "Bankgespraech vorbereiten",
+      sidebarText: "Erhalte passende Erinnerungen zu Tragbarkeit, Budget und Eigenmitteln.",
+      sidebarButton: "Checkliste erhalten",
+      interest: "Hypothek & Wohnen",
+    },
+    it: {
+      segment: "mortgage_ch",
+      leadMagnet: "Ricevi la checklist sostenibilita ipoteca",
+      intro: "Ti mando una preparazione compatta per colloquio bancario, capitale proprio e confronto budget.",
+      button: "Mandami la checklist ipoteca",
+      sidebarTitle: "Prepara il colloquio in banca",
+      sidebarText: "Ricevi promemoria utili su sostenibilita, budget e capitale proprio.",
+      sidebarButton: "Ricevi la checklist",
+      interest: "Ipoteca & casa",
+    },
+    en: {
+      segment: "mortgage_ch",
+      leadMagnet: "Get the mortgage affordability checklist",
+      intro: "Receive a compact preparation for bank conversations, equity and budget comparison.",
+      button: "Send the mortgage checklist",
+      sidebarTitle: "Prepare the bank conversation",
+      sidebarText: "Get useful follow-ups on affordability, budget and equity.",
+      sidebarButton: "Get the checklist",
+      interest: "Mortgage & housing",
+    },
+    fr: {
+      segment: "mortgage_ch",
+      leadMagnet: "Recevoir la checklist viabilite hypotheque",
+      intro: "Recevez une preparation compacte pour l'entretien bancaire, les fonds propres et le budget.",
+      button: "Envoyer la checklist hypotheque",
+      sidebarTitle: "Preparer l'entretien bancaire",
+      sidebarText: "Recevez des rappels utiles sur la viabilite, le budget et les fonds propres.",
+      sidebarButton: "Recevoir la checklist",
+      interest: "Hypotheque & logement",
+    },
+  },
+} satisfies Record<"tax" | "mortgage", Record<Locale, FunnelLeadCopy>>;
 
 type CalculatorPageProps = {
   calculator: Calculator;
@@ -99,16 +218,11 @@ export default function CalculatorPage({
 }: CalculatorPageProps) {
   const ui = { ...defaultLabels, ...labels };
   const related = relatedCalculators ?? getRelatedCalculators(calculator);
-  const isThirdPillar =
-    calculator.slug === "calcolo-terzo-pilastro-risparmio-fiscale" ||
-    calculator.slug.includes("terzo-pilastro") ||
-    calculator.slug.includes("pillar-3a") ||
-    calculator.slug.includes("saeule-3a") ||
-    calculator.slug.includes("troisieme-pilier");
-  const thirdPillarCopy = thirdPillarLeadCopy[locale];
-  const leadSegment = isThirdPillar ? "pension_tax_ch" : calculator.category;
-  const leadInterest = isThirdPillar ? thirdPillarCopy.interest : calculator.category;
-  const leadMagnet = isThirdPillar ? thirdPillarCopy.leadMagnet : ui.newsletterTitle;
+  const highIntentFunnel = getHighIntentFunnel(locale, calculator.slug);
+  const leadSegment = highIntentFunnel?.segment ?? calculator.category;
+  const leadInterest = highIntentFunnel?.interest ?? calculator.category;
+  const leadMagnet = highIntentFunnel?.leadMagnet ?? ui.newsletterTitle;
+  const calculatorId = calculator.id ?? calculator.slug;
   const languageLinks = calculator.isPriority && locale === "de" && !hasTranslatedLocaleSlug(locale, calculator.slug)
     ? [["de", `${siteUrl}/de/${calculator.slug}`]]
     : backHref === "/"
@@ -162,9 +276,17 @@ export default function CalculatorPage({
       { "@type": "ListItem", position: 3, name: publicCopy(calculator.title), item: currentUrl },
     ],
   };
+  const partnerOffers = getPartnerOffers(locale, calculator.slug);
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
+      {highIntentFunnel ? (
+        <FunnelViewTracker
+          calculatorId={calculator.id ?? calculator.slug}
+          slug={calculator.slug}
+          segment={highIntentFunnel.segment}
+        />
+      ) : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -209,30 +331,50 @@ export default function CalculatorPage({
 
         {calculator.isPriority ? <ConsultationCta calculator={calculator} locale={locale} /> : null}
 
-        {calculator.isPriority ? <CalculatorActions calculatorId={calculator.id ?? calculator.slug} /> : null}
+        {calculator.isPriority ? <CalculatorActions calculatorId={calculator.id ?? calculator.slug} locale={locale} /> : null}
 
         {backHref === "/" ? <RevenueCta calculator={calculator} /> : null}
 
         {calculator.isPriority ? (
           <aside className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
-            <p className="text-xs font-black uppercase tracking-wide text-emerald-700">Passende Angebote</p>
-            <p className="mt-2 font-bold text-gray-950">Vergleichsangebote und Partnerressourcen werden hier ergänzt, sobald sie redaktionell geprüft sind.</p>
+            <p className="text-xs font-black uppercase tracking-wide text-emerald-700">{ui.partnerEyebrow}</p>
+            {partnerOffers.length ? (
+              <div className="mt-3 flex flex-wrap gap-3">
+                {partnerOffers.map((offer) => (
+                  <TrackedExternalLink
+                    key={offer.partner}
+                    href={offer.href}
+                    event="partner_click"
+                    source={calculator.slug}
+                    target={offer.partner}
+                    calculatorId={calculatorId}
+                    className="rounded-xl bg-white px-4 py-3 text-sm font-black text-emerald-800 shadow-sm hover:text-emerald-950"
+                  >
+                    {offer.label}
+                  </TrackedExternalLink>
+                ))}
+              </div>
+            ) : (
+              <p className="mt-2 font-bold text-gray-950">{ui.partnerReservedText}</p>
+            )}
           </aside>
         ) : null}
 
         <section className="mt-8 rounded-3xl bg-gray-950 p-6 text-white shadow-sm md:p-8">
-          <h2 className="text-2xl font-black">{isThirdPillar ? leadMagnet : ui.newsletterTitle}</h2>
+          <h2 className="text-2xl font-black">{highIntentFunnel ? leadMagnet : ui.newsletterTitle}</h2>
           <p className="mt-2 max-w-2xl text-gray-200">
-            {isThirdPillar
-              ? thirdPillarCopy.intro
+            {highIntentFunnel
+              ? highIntentFunnel.intro
               : publicCopy(calculator.cta)}
           </p>
           <LeadForm
-            source={isThirdPillar ? `leadmagnet:${calculator.slug}` : `newsletter:${calculator.slug}`}
+            source={highIntentFunnel ? `leadmagnet:${calculator.slug}` : `newsletter:${calculator.slug}`}
+            calculatorId={calculatorId}
             segment={leadSegment}
             interest={leadInterest}
             leadMagnet={leadMagnet}
-            buttonLabel={isThirdPillar ? thirdPillarCopy.button : ui.newsletterButton}
+            buttonLabel={highIntentFunnel ? highIntentFunnel.button : ui.newsletterButton}
+            locale={locale}
             dark
           />
         </section>
@@ -262,28 +404,28 @@ export default function CalculatorPage({
 
             {calculator.formula ? (
               <section className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-5">
-                <h2 className="text-2xl font-black tracking-tight text-gray-950">Formel</h2>
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.formulaTitle}</h2>
                 <p className="mt-3 text-lg leading-8 text-gray-700">{calculator.formula}</p>
               </section>
             ) : null}
 
             {calculator.example ? (
               <section className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
-                <h2 className="text-2xl font-black tracking-tight text-gray-950">Praktisches Beispiel</h2>
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.exampleTitle}</h2>
                 <p className="mt-3 text-lg leading-8 text-gray-700">{calculator.example}</p>
               </section>
             ) : null}
 
             <section className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5">
-              <h2 className="text-2xl font-black tracking-tight text-gray-950">Hinweis zur Nutzung</h2>
+              <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.usageTitle}</h2>
               <p className="mt-3 text-lg leading-8 text-gray-700">
-                Die Ergebnisse sind indikative Berechnungen auf Basis deiner Eingaben. Sie ersetzen keine verbindliche Lohnabrechnung, Rechtsberatung oder Auskunft einer offiziellen Stelle.
+                {ui.usageText}
               </p>
             </section>
 
             {calculator.contentSections && calculator.article.slice(2).length > 0 ? (
               <section className="mt-8">
-                <h2 className="text-2xl font-black tracking-tight text-gray-950">Wichtige Hinweise</h2>
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.importantNotesTitle}</h2>
                 <div className="mt-3 space-y-4 text-lg leading-8 text-gray-700">
                   {calculator.article.slice(2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 </div>
@@ -328,9 +470,9 @@ export default function CalculatorPage({
 
             {calculator.sources?.length || calculator.updatedAt ? (
               <section className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-5">
-                <h2 className="text-2xl font-black tracking-tight text-gray-950">Quellen und Aktualisierung</h2>
+                <h2 className="text-2xl font-black tracking-tight text-gray-950">{ui.sourcesTitle}</h2>
                 {calculator.updatedAt ? (
-                  <p className="mt-3 text-base font-semibold text-gray-700">Zuletzt aktualisiert: {calculator.updatedAt}</p>
+                  <p className="mt-3 text-base font-semibold text-gray-700">{ui.updatedAtPrefix}: {calculator.updatedAt}</p>
                 ) : null}
                 {calculator.sources?.length ? (
                   <div className="mt-4 space-y-2">
@@ -370,13 +512,15 @@ export default function CalculatorPage({
             </div>
             <div className="mt-6">
               <LeadCaptureBox
-                title={isThirdPillar ? thirdPillarCopy.sidebarTitle : "Ricevi nuovi strumenti utili"}
-                text={isThirdPillar ? thirdPillarCopy.sidebarText : publicCopy(calculator.cta)}
-                source={isThirdPillar ? `sidebar:${calculator.slug}` : `sidebar-newsletter:${calculator.slug}`}
+                title={highIntentFunnel ? highIntentFunnel.sidebarTitle : ui.sidebarNewsletterTitle}
+                text={highIntentFunnel ? highIntentFunnel.sidebarText : publicCopy(calculator.cta)}
+                source={highIntentFunnel ? `sidebar:${calculator.slug}` : `sidebar-newsletter:${calculator.slug}`}
+                calculatorId={calculatorId}
                 segment={leadSegment}
                 interest={leadInterest}
                 leadMagnet={leadMagnet}
-                buttonLabel={isThirdPillar ? thirdPillarCopy.sidebarButton : "Ricevi aggiornamenti"}
+                buttonLabel={highIntentFunnel ? highIntentFunnel.sidebarButton : ui.sidebarNewsletterButton}
+                locale={locale}
                 compact
               />
             </div>
@@ -385,6 +529,42 @@ export default function CalculatorPage({
       </div>
     </main>
   );
+}
+
+function getHighIntentFunnel(locale: Locale, slug: string) {
+  if (slug.includes("quellensteuer") || slug.includes("imposta-alla-fonte") || slug.includes("withholding-tax")) {
+    return highIntentLeadCopy.tax[locale];
+  }
+  if (slug.includes("hypotheken") || slug.includes("ipoteca") || slug.includes("hypotheque") || slug.includes("mortgage")) {
+    return highIntentLeadCopy.mortgage[locale];
+  }
+  if (slug.includes("terzo-pilastro") || slug.includes("pillar-3a") || slug.includes("saeule-3a") || slug.includes("troisieme-pilier")) {
+    return thirdPillarLeadCopy[locale];
+  }
+  return null;
+}
+
+function getPartnerOffers(locale: Locale, slug: string) {
+  const isPillar3a =
+    slug.includes("terzo-pilastro") ||
+    slug.includes("pillar-3a") ||
+    slug.includes("saeule-3a") ||
+    slug.includes("troisieme-pilier");
+  if (!isPillar3a) return [];
+
+  const franklyHref = process.env.NEXT_PUBLIC_FRANKLY_AFFILIATE_URL;
+  const yuhHref = process.env.NEXT_PUBLIC_YUH_AFFILIATE_URL;
+  const labels = {
+    de: { frankly: "frankly 3a prüfen", yuh: "Yuh 3a prüfen" },
+    it: { frankly: "Valuta frankly 3a", yuh: "Valuta Yuh 3a" },
+    en: { frankly: "Check frankly 3a", yuh: "Check Yuh 3a" },
+    fr: { frankly: "Verifier frankly 3a", yuh: "Verifier Yuh 3a" },
+  } satisfies Record<Locale, Record<"frankly" | "yuh", string>>;
+
+  return [
+    franklyHref ? { partner: "frankly", href: franklyHref, label: labels[locale].frankly } : null,
+    yuhHref ? { partner: "yuh", href: yuhHref, label: labels[locale].yuh } : null,
+  ].filter((offer): offer is { partner: string; href: string; label: string } => Boolean(offer));
 }
 
 function getApplicationCategory(category: string) {

@@ -1,13 +1,16 @@
 import LeadForm from "@/components/LeadForm";
+import type { Locale } from "@/lib/i18n";
 
 type LeadCaptureBoxProps = {
   title: string;
   text: string;
   source: string;
+  calculatorId?: string;
   buttonLabel: string;
   segment?: string;
   interest?: string;
   leadMagnet?: string;
+  locale?: Locale;
   dark?: boolean;
   compact?: boolean;
 };
@@ -16,10 +19,12 @@ export default function LeadCaptureBox({
   title,
   text,
   source,
+  calculatorId,
   buttonLabel,
   segment,
   interest,
   leadMagnet,
+  locale = "it",
   dark = false,
   compact = false,
 }: LeadCaptureBoxProps) {
@@ -35,10 +40,12 @@ export default function LeadCaptureBox({
       <p className={textClass}>{text}</p>
       <LeadForm
         source={source}
+        calculatorId={calculatorId}
         segment={segment}
         interest={interest}
         leadMagnet={leadMagnet}
         buttonLabel={buttonLabel}
+        locale={locale}
         dark={dark}
       />
     </section>
