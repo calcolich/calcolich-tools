@@ -10,7 +10,7 @@ import TrackedExternalLink from "@/components/TrackedExternalLink";
 import TrackedInternalLink from "@/components/TrackedInternalLink";
 import { type Calculator, getRelatedCalculators } from "@/lib/calculators";
 import { publicCopy } from "@/lib/copy";
-import { hasTranslatedLocaleSlug, localizedAlternates, localizedHref, type Locale } from "@/lib/i18n";
+import { hasTranslatedLocaleSlug, localeHome, localizedAlternates, localizedHref, type Locale } from "@/lib/i18n";
 import { siteUrl } from "@/lib/site-metadata";
 import Link from "next/link";
 
@@ -216,7 +216,7 @@ export default function CalculatorPage({
   calculatorHref = (tool) => localizedHref("it", tool),
   locale = "it",
 }: CalculatorPageProps) {
-  const ui = { ...defaultLabels, ...labels };
+  const ui = { ...defaultLabels, ...localeHome[locale], ...labels };
   const related = relatedCalculators ?? getRelatedCalculators(calculator);
   const highIntentFunnel = getHighIntentFunnel(locale, calculator.slug);
   const leadSegment = highIntentFunnel?.segment ?? calculator.category;
