@@ -1,13 +1,14 @@
 import AdSenseScript from "@/components/AdSenseScript";
 import MarketingScripts from "@/components/MarketingScripts";
 import SiteFooter from "@/components/SiteFooter";
+import { type Locale } from "@/lib/i18n";
 
 export default function SiteDocument({
   children,
   lang,
 }: Readonly<{
   children: React.ReactNode;
-  lang: string;
+  lang: Locale;
 }>) {
   return (
     <html lang={lang} className="h-full antialiased">
@@ -16,7 +17,7 @@ export default function SiteDocument({
         <AdSenseScript />
         <div className="flex min-h-screen flex-col">
           <div className="flex-1">{children}</div>
-          <SiteFooter />
+          <SiteFooter lang={lang} />
         </div>
       </body>
     </html>
