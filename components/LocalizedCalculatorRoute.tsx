@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { pageSocialMetadata } from "@/lib/site-metadata";
 import CalculatorPage from "@/components/CalculatorPage";
 import {
   getLocalizedCalculator,
@@ -21,6 +22,7 @@ export async function getLocalizedMetadata(locale: Locale, params: Params): Prom
     title: calculator.metaTitle,
     description: calculator.metaDescription,
     alternates: localizedAlternates(locale, slug),
+    ...pageSocialMetadata(calculator.metaTitle, calculator.metaDescription, localizedHref(locale, calculator)),
   };
 }
 
