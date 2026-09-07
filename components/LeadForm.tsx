@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getAttributedSource } from "@/components/CommercialTracking";
 import { sendAnalyticsEvent } from "@/lib/analytics-events";
 
@@ -31,30 +31,54 @@ const formCopy = {
   de: {
     consent: "Ich stimme zu, E-Mails von Calcolich zu diesem Thema zu erhalten. Ich kann mich jederzeit abmelden.",
     email: "Deine E-Mail",
+    name: "Dein Name",
+    company: "Unternehmen / Taetigkeit",
+    phone: "Telefon / WhatsApp",
+    siteUrl: "deinewebseite.ch",
+    message: "Wobei kann ich dir helfen?",
     loading: "Senden...",
     fallback: "Es öffnet sich ein E-Mail-Entwurf: Sende ihn, um die Anfrage abzuschliessen.",
     success: "Anfrage erhalten. Ich melde mich bald.",
+    error: "Senden fehlgeschlagen.",
   },
   it: {
     consent: "Acconsento a ricevere email da Calcolich su questo tema. Posso disiscrivermi in qualsiasi momento.",
     email: "La tua email",
+    name: "Il tuo nome",
+    company: "Azienda / attivita",
+    phone: "Telefono / WhatsApp",
+    siteUrl: "iltuosito.ch",
+    message: "Di cosa hai bisogno?",
     loading: "Invio...",
     fallback: "Si apre una bozza email: inviala per completare la richiesta.",
     success: "Richiesta ricevuta. Ti ricontatto presto.",
+    error: "Invio non riuscito.",
   },
   en: {
     consent: "I agree to receive emails from Calcolich about this topic. I can unsubscribe at any time.",
     email: "Your email",
+    name: "Your name",
+    company: "Company / activity",
+    phone: "Phone / WhatsApp",
+    siteUrl: "yourwebsite.ch",
+    message: "What do you need?",
     loading: "Sending...",
     fallback: "An email draft opens: send it to complete the request.",
     success: "Request received. I will get back to you soon.",
+    error: "Submission failed.",
   },
   fr: {
     consent: "J'accepte de recevoir des e-mails de Calcolich sur ce theme. Je peux me desinscrire a tout moment.",
     email: "Votre e-mail",
+    name: "Votre nom",
+    company: "Entreprise / activite",
+    phone: "Telephone / WhatsApp",
+    siteUrl: "votresite.ch",
+    message: "De quoi avez-vous besoin?",
     loading: "Envoi...",
     fallback: "Un brouillon d'e-mail s'ouvre: envoyez-le pour finaliser la demande.",
     success: "Demande recue. Je vous recontacte bientot.",
+    error: "Envoi echoue.",
   },
 } satisfies Record<LeadFormLocale, Record<string, string>>;
 
@@ -82,6 +106,11 @@ export default function LeadForm({
   const labels = formCopy[locale];
   const resolvedConsentLabel = consentLabel ?? labels.consent;
 
+  useEffect(() => {
+    sendAnalyticsEvent("lead_form_view", { source, target: segment, calculatorId });
+    // Fire once per mounted form instance.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   function markStarted() {
     if (startedRef.current) return;
     startedRef.current = true;
@@ -94,19 +123,19 @@ export default function LeadForm({
     setMessage("");
 
     const form = event.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
-    const attributedSource = getAttributedSource(source);
-    const url = new URL(window.location.href);
-    const attribution = {
-      page: window.location.href,
-      path: window.location.pathname,
-      referrer: document.referrer,
-      utmSource: url.searchParams.get("utm_source"),
-      utmMedium: url.searchParams.get("utm_medium"),
-      utmCampaign: url.searchParams.get("utm_campaign"),
-      utmContent: url.searchParams.get("utm_content"),
-      utmTerm: url.searchParams.get("utm_term"),
-    };
+    const data = Object.fromEntries(new FormData(form).entries());      const attributedSource = getAttributedSource(source);
+      const url = new URL(window.location.href);
+      const attribution = {
+        page: window.location.href,
+        path: window.location.pathname,
+        referrer: document.referrer,
+        language: locale,
+        utmSource: url.searchParams.get("utm_source"),
+        utmMedium: url.searchParams.get("utm_medium"),
+        utmCampaign: url.searchParams.get("utm_campaign"),
+        utmContent: url.searchParams.get("utm_content"),
+        utmTerm: url.searchParams.get("utm_term"),
+      };
     sendAnalyticsEvent("lead_form_submitted", { source: attributedSource, target: segment, calculatorId });
     try {
       const response = await fetch("/api/leads", {
@@ -133,7 +162,7 @@ export default function LeadForm({
       }
 
       if (!response.ok || !result.ok) {
-        throw new Error(result.error ?? "Invio non riuscito.");
+        throw new Error(result.error ?? labels.error);
       }
 
       if (!result.configured) {
@@ -152,7 +181,7 @@ export default function LeadForm({
       setMessage(labels.success);
     } catch (error) {
       setStatus("error");
-      setMessage(error instanceof Error ? error.message : "Invio non riuscito.");
+      setMessage(error instanceof Error ? error.message : labels.error);
     }
   }
 
@@ -172,18 +201,18 @@ export default function LeadForm({
     >
       <input className="hidden" name="website" tabIndex={-1} autoComplete="off" />
 
-      {showName ? <input className={inputClass} name="name" placeholder="Nome" autoComplete="name" /> : null}
-      {showCompany ? <input className={inputClass} name="company" placeholder="Azienda / attivita" autoComplete="organization" /> : null}
-      {showSiteUrl ? <input className={inputClass} name="siteUrl" placeholder="iltuosito.ch" type="text" inputMode="url" autoComplete="url" required /> : null}
+      {showName ? <input className={inputClass} name="name" placeholder={labels.name} autoComplete="name" /> : null}
+      {showCompany ? <input className={inputClass} name="company" placeholder={labels.company} autoComplete="organization" /> : null}
+      {showSiteUrl ? <input className={inputClass} name="siteUrl" placeholder={labels.siteUrl} type="text" inputMode="url" autoComplete="url" required /> : null}
       <input className={inputClass} name="email" placeholder={labels.email} type="email" autoComplete="email" required />
-      {showPhone ? <input className={inputClass} name="phone" placeholder="Telefono / WhatsApp" autoComplete="tel" /> : null}
+      {showPhone ? <input className={inputClass} name="phone" placeholder={labels.phone} autoComplete="tel" /> : null}
       {showPackage ? (
         <select className={inputClass} name="packageName" defaultValue={packageOptions[0]}>
           {packageOptions.map((option) => <option key={option}>{option}</option>)}
         </select>
       ) : null}
       {showMessage ? (
-        <textarea className={`${inputClass} min-h-32`} name="message" placeholder="Di cosa hai bisogno?" />
+        <textarea className={`${inputClass} min-h-32`} name="message" placeholder={labels.message} />
       ) : null}
 
       <label className={showMessage ? "flex gap-3 text-sm leading-6" : "flex gap-3 text-sm leading-6 md:col-span-2"}>

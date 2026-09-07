@@ -1,4 +1,5 @@
 import AdSlot from "@/components/AdSlot";
+import AffiliateCtaSlot from "@/components/AffiliateCtaSlot";
 import CalculatorActions from "@/components/CalculatorActions";
 import FunnelViewTracker from "@/components/FunnelViewTracker";
 import CalculatorWidget from "@/components/CalculatorWidget";
@@ -276,7 +277,6 @@ export default function CalculatorPage({
       { "@type": "ListItem", position: 3, name: publicCopy(calculator.title), item: currentUrl },
     ],
   };
-  const partnerOffers = getPartnerOffers(locale, calculator.slug);
 
   return (
     <main className="min-h-screen bg-[#f6f8fb] px-5 py-8 text-gray-950 md:px-10">
@@ -327,7 +327,7 @@ export default function CalculatorPage({
           <p className="max-w-3xl text-lg leading-8 text-gray-700">{publicCopy(calculator.intro)}</p>
         </section>
 
-        <CalculatorWidget calculator={calculator} />
+        <CalculatorWidget calculator={calculator} locale={locale} />
 
         {calculator.isPriority ? <ConsultationCta calculator={calculator} locale={locale} /> : null}
 
@@ -338,25 +338,12 @@ export default function CalculatorPage({
         {calculator.isPriority ? (
           <aside className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
             <p className="text-xs font-black uppercase tracking-wide text-emerald-700">{ui.partnerEyebrow}</p>
-            {partnerOffers.length ? (
-              <div className="mt-3 flex flex-wrap gap-3">
-                {partnerOffers.map((offer) => (
-                  <TrackedExternalLink
-                    key={offer.partner}
-                    href={offer.href}
-                    event="partner_click"
-                    source={calculator.slug}
-                    target={offer.partner}
-                    calculatorId={calculatorId}
-                    className="rounded-xl bg-white px-4 py-3 text-sm font-black text-emerald-800 shadow-sm hover:text-emerald-950"
-                  >
-                    {offer.label}
-                  </TrackedExternalLink>
-                ))}
-              </div>
-            ) : (
-              <p className="mt-2 font-bold text-gray-950">{ui.partnerReservedText}</p>
-            )}
+            <AffiliateCtaSlot
+              slug={calculator.slug}
+              calculatorId={calculatorId}
+              locale={locale}
+              reservedText={ui.partnerReservedText}
+            />
           </aside>
         ) : null}
 
@@ -542,29 +529,6 @@ function getHighIntentFunnel(locale: Locale, slug: string) {
     return thirdPillarLeadCopy[locale];
   }
   return null;
-}
-
-function getPartnerOffers(locale: Locale, slug: string) {
-  const isPillar3a =
-    slug.includes("terzo-pilastro") ||
-    slug.includes("pillar-3a") ||
-    slug.includes("saeule-3a") ||
-    slug.includes("troisieme-pilier");
-  if (!isPillar3a) return [];
-
-  const franklyHref = process.env.NEXT_PUBLIC_FRANKLY_AFFILIATE_URL;
-  const yuhHref = process.env.NEXT_PUBLIC_YUH_AFFILIATE_URL;
-  const labels = {
-    de: { frankly: "frankly 3a prüfen", yuh: "Yuh 3a prüfen" },
-    it: { frankly: "Valuta frankly 3a", yuh: "Valuta Yuh 3a" },
-    en: { frankly: "Check frankly 3a", yuh: "Check Yuh 3a" },
-    fr: { frankly: "Verifier frankly 3a", yuh: "Verifier Yuh 3a" },
-  } satisfies Record<Locale, Record<"frankly" | "yuh", string>>;
-
-  return [
-    franklyHref ? { partner: "frankly", href: franklyHref, label: labels[locale].frankly } : null,
-    yuhHref ? { partner: "yuh", href: yuhHref, label: labels[locale].yuh } : null,
-  ].filter((offer): offer is { partner: string; href: string; label: string } => Boolean(offer));
 }
 
 function getApplicationCategory(category: string) {

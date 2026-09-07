@@ -11,9 +11,12 @@ export type AnalyticsEventName =
   | "official_source_clicked"
   | "funnel_view"
   | "partner_click"
+  | "lead_form_view"
   | "lead_submit"
   | "lead_form_started"
   | "lead_form_submitted"
+  | "affiliate_cta_view"
+  | "affiliate_click"
   | "cta_click"
   | "tax_help_cta_clicked";
 

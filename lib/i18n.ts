@@ -460,6 +460,356 @@ const inputLabels: Record<Locale, Record<string, string>> = {
   },
 };
 
+// Localized guide links for translated calculator pages. Base calculators are
+// Italian, so DE/EN/FR pages must not inherit Italian guide labels. DE remaps
+// to German Ratgeber where a real equivalent exists; links without a localized
+// entry are omitted instead of showing mixed-language labels.
+type LocalizedGuideLink = { href: string; label: string; description: string };
+
+const localizedGuideLinks: Record<Exclude<Locale, "it">, Record<string, LocalizedGuideLink>> = {
+  de: {
+    "/guide/imposta-alla-fonte-svizzera": {
+      href: "/de/ratgeber/quellensteuer-schweiz-2026",
+      label: "Ratgeber Quellensteuer Schweiz 2026",
+      description: "Tarif, kantonale Unterschiede und offizielle Verifikation der Quellensteuer.",
+    },
+    "/guide/stipendio-netto-svizzera": {
+      href: "/de/ratgeber/stundenlohn-berechnen-schweiz",
+      label: "Ratgeber Stundenlohn berechnen",
+      description: "Formeln, 13. Monatslohn und Ferienzuschlag fuer den Nettovergleich.",
+    },
+    "/guide/cassa-malati-svizzera": {
+      href: "/de/ratgeber/praemienverbilligung-schweiz",
+      label: "Ratgeber Praemienverbilligung",
+      description: "Praemien, Franchise und Jahreskosten zusammen lesen.",
+    },
+    "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti": {
+      href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti",
+      label: "Offizielle AHV/IV-Berechnung",
+      description: "Kanton, Satz und definitive Beitraege auf dem offiziellen Portal pruefen.",
+    },
+    "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html": {
+      href: "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html",
+      label: "Offizielle Stelle: Arbeitslosenversicherung",
+      description: "Regeln zum versicherten Lohn, zu Saetzen und zur Auszahlung der Taggelder.",
+    },
+  },
+  en: {
+    "/guide/imposta-alla-fonte-svizzera": {
+      href: "/guide/imposta-alla-fonte-svizzera",
+      label: "Withholding tax guide for Switzerland",
+      description: "Data to prepare, limits of the estimate and how it connects to net salary.",
+    },
+    "/guide/stipendio-netto-svizzera": {
+      href: "/guide/stipendio-netto-svizzera",
+      label: "Net salary guide",
+      description: "How to read deductions and disposable net income before a salary decision.",
+    },
+    "/guide/cassa-malati-svizzera": {
+      href: "/guide/cassa-malati-svizzera",
+      label: "Health insurance guide for Switzerland",
+      description: "Premium, deductible and annual cost read together to avoid partial comparisons.",
+    },
+    "/guide/costo-vita-svizzera": {
+      href: "/guide/costo-vita-svizzera",
+      label: "Cost of living guide",
+      description: "How to read income, rent, recurring costs and margin before a housing commitment.",
+    },
+    "/guide/affitto-sostenibile-svizzera": {
+      href: "/guide/affitto-sostenibile-svizzera",
+      label: "Affordable rent guide",
+      description: "How to start from net income and keep margin for expenses, surprises and savings.",
+    },
+    "/guide/terzo-pilastro-risparmio-fiscale": {
+      href: "/guide/terzo-pilastro-risparmio-fiscale",
+      label: "Pillar 3a guide",
+      description: "How to read tax savings, the annual limit and planning before contributing.",
+    },
+    "/guide/freelance-svizzera": {
+      href: "/guide/freelance-svizzera",
+      label: "Freelance guide for Switzerland",
+      description: "Rate, costs, margin and sustainability of an independent activity.",
+    },
+    "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti": {
+      href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti",
+      label: "Official AHV/IV calculation",
+      description: "Verify canton, rate and definitive contributions on the official portal.",
+    },
+    "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html": {
+      href: "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html",
+      label: "Official source: unemployment insurance",
+      description: "Rules on insured income, rates and payment of benefits.",
+    },
+  },
+  fr: {
+    "/guide/imposta-alla-fonte-svizzera": {
+      href: "/guide/imposta-alla-fonte-svizzera",
+      label: "Guide impot a la source en Suisse",
+      description: "Donnees a preparer, limites de l'estimation et lien avec le salaire net.",
+    },
+    "/guide/stipendio-netto-svizzera": {
+      href: "/guide/stipendio-netto-svizzera",
+      label: "Guide salaire net",
+      description: "Comment lire deductions et net disponible avant une decision salariale.",
+    },
+    "/guide/cassa-malati-svizzera": {
+      href: "/guide/cassa-malati-svizzera",
+      label: "Guide assurance maladie en Suisse",
+      description: "Prime, franchise et cout annuel lus ensemble pour eviter des comparaisons partielles.",
+    },
+    "/guide/costo-vita-svizzera": {
+      href: "/guide/costo-vita-svizzera",
+      label: "Guide cout de la vie",
+      description: "Comment lire revenu, loyer, couts recurrents et marge avant un engagement immobilier.",
+    },
+    "/guide/affitto-sostenibile-svizzera": {
+      href: "/guide/affitto-sostenibile-svizzera",
+      label: "Guide loyer abordable",
+      description: "Comment partir du net et garder une marge pour frais, imprevus et epargne.",
+    },
+    "/guide/terzo-pilastro-risparmio-fiscale": {
+      href: "/guide/terzo-pilastro-risparmio-fiscale",
+      label: "Guide troisieme pilier",
+      description: "Comment lire economie d'impot, limite annuelle et planification avant le versement.",
+    },
+    "/guide/freelance-svizzera": {
+      href: "/guide/freelance-svizzera",
+      label: "Guide freelance en Suisse",
+      description: "Tarif, couts, marge et viabilite d'une activite independante.",
+    },
+    "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti": {
+      href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti",
+      label: "Calcul officiel AVS/AI",
+      description: "Verifiez canton, taux et cotisations definitives sur le portail officiel.",
+    },
+    "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html": {
+      href: "https://www.arbeit.swiss/secoalv/it/home/menue/stellensuchende/arbeitslos-was-tun-/finanzielles.html",
+      label: "Source officielle: assurance chomage",
+      description: "Regles sur le gain assure, les taux et le paiement des indemnites.",
+    },
+  },
+};
+
+function localizeGuideLinks(locale: Locale, links: Calculator["guideLinks"]) {
+  if (locale === "it") return links;
+
+  const map = localizedGuideLinks[locale];
+  const localized = (links ?? [])
+    .map((link) => map[link.href])
+    .filter((link): link is LocalizedGuideLink => Boolean(link));
+
+  return localized.length > 0 ? localized : undefined;
+}
+
+// Localized formula, example, sources and date for translated calculators whose
+// base content carries Italian text. Base `resultLabels` are intentionally not
+// inherited on non-IT pages: the widget map in lib/result-labels.ts supplies
+// localized labels. Only real, verified URLs are used (German URLs come from
+// the German priority calculators; otherwise the existing href is kept).
+type LocalizedCalculatorExtras = {
+  formula?: string;
+  example?: string;
+  updatedAt?: string;
+  sources?: { label: string; href: string }[];
+};
+
+const localizedCalculatorExtras: Record<string, Partial<Record<Locale, LocalizedCalculatorExtras>>> = {
+  "calcolo-sostenibilita-ipoteca-svizzera": {
+    de: {
+      formula: "Tragbarkeit = (Hypothek x kalkulatorischer Zinssatz + Kaufpreis x Anteil Nebenkosten) / Bruttoeinkommen pro Jahr x 100.",
+      example: "Beispiel: bei CHF 850'000 Kaufpreis, CHF 180'000 Eigenmitteln und 5% kalkulatorischem Zinssatz betraegt die geschaetzte Hypothek CHF 670'000, und die theoretischen Jahreskosten starten bei CHF 33'500 vor Nebenkosten.",
+      updatedAt: "12. Juli 2026",
+      sources: [
+        { label: "FINMA: Hypotheken", href: "https://www.finma.ch/de/dokumentation/dossier/dossier-hypotheken/" },
+        { label: "ch.ch: Wohneigentum finanzieren", href: "https://www.ch.ch/de/wohnen/wohneigentum/" },
+      ],
+    },
+    en: {
+      formula: "Affordability = (mortgage x imputed rate + property price x ancillary cost share) / annual gross income x 100.",
+      example: "Example: with a CHF 850'000 price, CHF 180'000 equity and a 5% imputed rate, the estimated mortgage is CHF 670'000 and theoretical annual costs start at CHF 33'500 before ancillary costs.",
+      updatedAt: "July 12, 2026",
+      sources: [
+        { label: "FINMA: Mortgages", href: "https://www.finma.ch/de/dokumentation/dossier/dossier-hypotheken/" },
+        { label: "ch.ch: Financing residential property", href: "https://www.ch.ch/it/abitazione/proprieta-abitativa/" },
+      ],
+    },
+    fr: {
+      formula: "Viabilite = (hypotheque x taux theorique + prix du bien x part des frais annexes) / revenu brut annuel x 100.",
+      example: "Exemple: avec un prix de CHF 850'000, CHF 180'000 de fonds propres et un taux theorique de 5%, l'hypothèque estimee est de CHF 670'000 et les couts annuels theoriques partent de CHF 33'500 avant frais annexes.",
+      updatedAt: "12 juillet 2026",
+      sources: [
+        { label: "FINMA: Hypotheques", href: "https://www.finma.ch/de/dokumentation/dossier/dossier-hypotheken/" },
+        { label: "ch.ch: Financer une propriete", href: "https://www.ch.ch/it/abitazione/proprieta-abitativa/" },
+      ],
+    },
+  },
+  "calcolo-imposta-alla-fonte-svizzera": {
+    de: {
+      formula: "Netto geschaetzt = Bruttolohn - Sozialabgaben - Quellensteuer. Abzuege und Steuer werden als Prozentsatz des Bruttolohns berechnet.",
+      example: "Beispiel: mit CHF 6'500 brutto, 12% Sozialabgaben und 8% Quellensteuer betraegt das geschaetzte Netto CHF 5'200.",
+      updatedAt: "25. Juli 2026",
+      sources: [
+        { label: "ESTV: Schweizerische Quellensteuer QST", href: "https://www.estv.admin.ch/de/quellensteuer" },
+        { label: "ESTV: Quellensteuertarife für übrige Einkünfte", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
+        { label: "ch.ch: Steuern bezahlen", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
+      ],
+    },
+    en: {
+      formula: "Estimated net = gross salary - social deductions - withholding tax. Deductions and tax are calculated as a percentage of gross.",
+      example: "Example: with CHF 6'500 gross, 12% social deductions and 8% withholding tax, the estimated net is CHF 5'200.",
+      updatedAt: "July 25, 2026",
+      sources: [
+        { label: "FTA: Swiss withholding tax QST", href: "https://www.estv.admin.ch/de/quellensteuer" },
+        { label: "FTA: Withholding tax rates for other income", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
+        { label: "ch.ch: Paying taxes", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
+      ],
+    },
+    fr: {
+      formula: "Net estime = salaire brut - cotisations sociales - impot a la source. Les retenues et l'impot sont calcules en pourcentage du brut.",
+      example: "Exemple: avec CHF 6'500 brut, 12% de cotisations sociales et 8% d'impot a la source, le net estime est de CHF 5'200.",
+      updatedAt: "25 juillet 2026",
+      sources: [
+        { label: "AFC: Impot a la source suisse", href: "https://www.estv.admin.ch/de/quellensteuer" },
+        { label: "AFC: Tarifs d'impot a la source pour autres revenus", href: "https://www.estv.admin.ch/de/quellensteuertarife-fuer-uebrige-einkuenfte" },
+        { label: "ch.ch: Payer des impots", href: "https://www.ch.ch/de/steuern-und-finanzen/steuern-bezahlen/" },
+      ],
+    },
+  },
+  "calcolo-riduzione-premi-cassa-malati-svizzera": {
+    de: {
+      formula: "Moegliche Verbilligung = Jahrespraemie Krankenkasse - (Jahreseinkommen x tragbarer Anteil). Das Ergebnis ersetzt die kantonale Pruefung nicht.",
+      example: "Beispiel: bei CHF 45'000 Einkommen, CHF 5'400 Jahrespraemie und 8% tragbarem Anteil zeigt das Modell eine moegliche Verbilligung von CHF 1'800.",
+      updatedAt: "13. Juli 2026",
+      sources: [
+        { label: "BAG: Praemienverbilligung", href: "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-versicherte-mit-wohnsitz-in-der-schweiz/praemienverbilligung.html" },
+      ],
+    },
+    en: {
+      formula: "Potential subsidy = annual health insurance premium - (annual income x affordable share). The result does not replace the cantonal review.",
+      example: "Example: with CHF 45'000 income, CHF 5'400 annual premium and an 8% affordable share, the model shows a potential subsidy of CHF 1'800.",
+      updatedAt: "July 13, 2026",
+      sources: [
+        { label: "FOPH: Premium subsidies", href: "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-versicherte-mit-wohnsitz-in-der-schweiz/praemienverbilligung.html" },
+      ],
+    },
+    fr: {
+      formula: "Reduction potentielle = prime annuelle assurance maladie - (revenu annuel x part supportable). Le resultat ne remplace pas la verification cantonale.",
+      example: "Exemple: avec CHF 45'000 de revenu, CHF 5'400 de prime annuelle et une part supportable de 8%, le modele montre une reduction potentielle de CHF 1'800.",
+      updatedAt: "13 juillet 2026",
+      sources: [
+        { label: "OFSP: Reduction des primes", href: "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-versicherte-mit-wohnsitz-in-der-schweiz/praemienverbilligung.html" },
+      ],
+    },
+  },
+  "calcolo-assegni-familiari-svizzera": {
+    de: {
+      formula: "Jahresbetrag = (Kinderzulage x Anzahl Kinder + Ausbildungszulage x Anzahl Kinder in Ausbildung) x anspruchsberechtigte Monate.",
+      example: "Beispiel: 2 Kinder mit CHF 250 Kinderzulage und 1 Kind in Ausbildung mit CHF 300 ergeben CHF 800 pro Monat und CHF 9'600 in 12 Monaten.",
+      updatedAt: "13. Juli 2026",
+      sources: [
+        { label: "BSV: Familienzulagen", href: "https://www.bsv.admin.ch/de/familienzulagen-gesetze-und-verordnungen" },
+      ],
+    },
+    en: {
+      formula: "Annual amount = (child allowance x number of children + education allowance x children in education) x entitled months.",
+      example: "Example: 2 children with CHF 250 child allowance and 1 child in education with CHF 300 produce CHF 800 per month and CHF 9'600 in 12 months.",
+      updatedAt: "July 13, 2026",
+      sources: [
+        { label: "BSV: Family allowances", href: "https://www.bsv.admin.ch/de/familienzulagen-gesetze-und-verordnungen" },
+      ],
+    },
+    fr: {
+      formula: "Montant annuel = (allocation pour enfant x nombre d'enfants + allocation de formation x enfants en formation) x mois de droit.",
+      example: "Exemple: 2 enfants avec CHF 250 d'allocation et 1 enfant en formation avec CHF 300 donnent CHF 800 par mois et CHF 9'600 en 12 mois.",
+      updatedAt: "13 juillet 2026",
+      sources: [
+        { label: "BSV: Allocations familiales", href: "https://www.bsv.admin.ch/de/familienzulagen-gesetze-und-verordnungen" },
+      ],
+    },
+  },
+  "calcolo-terzo-pilastro-risparmio-fiscale": {
+    de: {
+      formula: "Steuerminderung pro Jahr = 3a-Einzahlung x geschaetzter Grenzsteuersatz. Die Steuerminderung total multipliziert die jaehrliche Schaetzung mit den eingegebenen Jahren.",
+      example: "Beispiel: mit CHF 7'056 Einzahlung in die Saeule 3a und 22% Grenzsteuersatz betraegt die geschaetzte Steuerminderung rund CHF 1'552.32 pro Jahr.",
+      updatedAt: "12. Juli 2026",
+      sources: [
+        { label: "BSV: Saeule 3a", href: "https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/bv/grundlagen-und-gesetze/saeule-3a.html" },
+        { label: "ESTV: Direkte Bundessteuer", href: "https://www.estv.admin.ch/estv/de/home/direkte-bundessteuer.html" },
+      ],
+    },
+    en: {
+      formula: "Annual tax savings = pillar 3a contribution x estimated marginal tax rate. Total tax savings multiplies the annual estimate by the years entered.",
+      example: "Example: with CHF 7'056 contributed to pillar 3a and a 22% marginal rate, the estimated tax saving is about CHF 1'552.32 per year.",
+      updatedAt: "July 12, 2026",
+      sources: [
+        { label: "BSV: Pillar 3a", href: "https://www.bsv.admin.ch/bsv/it/home/assicurazioni-sociali/bv/basi-e-leggi/pilastro-3a.html" },
+        { label: "ch.ch: Private pension provision", href: "https://www.ch.ch/it/pensionamento/previdenza-privata/" },
+      ],
+    },
+    fr: {
+      formula: "Economie d'impot annuelle = versement 3a x taux marginal estime. L'economie totale multiplie l'estimation annuelle par les annees saisies.",
+      example: "Exemple: avec CHF 7'056 verses dans le 3e pilier et un taux marginal de 22%, l'economie d'impot estimee est d'environ CHF 1'552.32 par an.",
+      updatedAt: "12 juillet 2026",
+      sources: [
+        { label: "BSV: Troisieme pilier", href: "https://www.bsv.admin.ch/bsv/it/home/assicurazioni-sociali/bv/basi-e-leggi/pilastro-3a.html" },
+        { label: "ch.ch: Prevoyance privee", href: "https://www.ch.ch/it/pensionamento/previdenza-privata/" },
+      ],
+    },
+  },
+  "calcolo-contributi-avs-indipendenti": {
+    de: {
+      formula: "Geschaetzte Beitraege = Nettoeinkommen pro Jahr x AHV/IV/IPG-Satz. Liegt das Ergebnis unter dem Minimum, gilt der Mindestbeitrag, danach kommen die Verwaltungskosten dazu.",
+      example: "Beispiel: CHF 90'000 Nettoeinkommen mit 9,8% Satz ergeben CHF 8'820 Beitraege; mit 4% Verwaltungskosten steigt der Totalbetrag auf CHF 9'172.80.",
+      updatedAt: "13. Juli 2026",
+      sources: [
+        { label: "ahv-iv.ch: Beitraege der Selbststaendigen", href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti" },
+      ],
+    },
+    en: {
+      formula: "Estimated contributions = annual net income x AHV/IV/IPG rate. If the result is below the minimum, the minimum contribution applies, then admin costs are added.",
+      example: "Example: CHF 90'000 net income at a 9.8% rate generates CHF 8'820 in contributions; with 4% admin costs the total reaches CHF 9'172.80.",
+      updatedAt: "July 13, 2026",
+      sources: [
+        { label: "ahv-iv.ch: Contributions of the self-employed", href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti" },
+      ],
+    },
+    fr: {
+      formula: "Cotisations estimees = revenu net annuel x taux AVS/AI/IPG. Si le resultat est sous le minimum, la cotisation minimale s'applique, puis s'ajoutent les frais administratifs.",
+      example: "Exemple: CHF 90'000 de revenu net a 9,8% donnent CHF 8'820 de cotisations; avec 4% de frais administratifs le total monte a CHF 9'172.80.",
+      updatedAt: "13 juillet 2026",
+      sources: [
+        { label: "ahv-iv.ch: Cotisations des independants", href: "https://www.ahv-iv.ch/it/Assicurazioni-sociali/Assicurazione-vecchiaia-e-superstiti-AVS/Ausilio-per-il-calcolo/Calcolo-dei-contributi-degli-indipendenti" },
+      ],
+    },
+  },
+  "calcolo-indennita-disoccupazione-svizzera": {
+    de: {
+      formula: "Taggeld = versicherter Lohn / 21,7 x Entschaedigungssatz. Das monatliche Taggeld brutto = Taggeld x entschaedigungsberechtigte Tage.",
+      example: "Beispiel: CHF 6'500 versicherter Lohn mit 70% Satz ergeben ein Taggeld von rund CHF 209.91. Auf 21,7 Tage sind das rund CHF 4'556 brutto im Monat.",
+      updatedAt: "13. Juli 2026",
+      sources: [
+        { label: "SECO: Arbeitslosenversicherung", href: "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitslosenversicherung.html" },
+      ],
+    },
+    en: {
+      formula: "Daily allowance = insured income / 21.7 x compensation rate. Gross monthly allowance = daily allowance x payable days.",
+      example: "Example: CHF 6'500 insured income at a 70% rate gives a daily allowance of about CHF 209.91. Over 21.7 days the month is worth about CHF 4'556 gross.",
+      updatedAt: "July 13, 2026",
+      sources: [
+        { label: "arbeit.swiss: Unemployment insurance benefits", href: "https://www.arbeit.swiss/it/persone-in-cerca-dimpiego/prestazioni-dellassicurazione" },
+      ],
+    },
+    fr: {
+      formula: "Indemnite journaliere = gain assure / 21,7 x taux d'indemnite. L'indemnite mensuelle brute = indemnite journaliere x jours indemnisables.",
+      example: "Exemple: CHF 6'500 de gain assure a 70% donnent une indemnite journaliere d'environ CHF 209.91. Sur 21,7 jours, le mois vaut environ CHF 4'556 brut.",
+      updatedAt: "13 juillet 2026",
+      sources: [
+        { label: "arbeit.swiss: Prestations de l'assurance chomage", href: "https://www.arbeit.swiss/it/persone-in-cerca-dimpiego/prestazioni-dellassicurazione" },
+      ],
+    },
+  },
+};
+
 const localizedContent = buildLocalizedContent();
 
 export function getLocalizedCalculators(locale: Locale) {
@@ -590,6 +940,9 @@ function buildLocalizedContent() {
               article: copy.article(title),
               faqs: copy.faqs(title),
               relatedSlugs: base?.relatedSlugs ?? [],
+              guideLinks: localizeGuideLinks(locale, base?.guideLinks),
+              resultLabels: undefined,
+              ...(localizedCalculatorExtras[baseSlug]?.[locale] ?? {}),
             },
           ];
         }),
