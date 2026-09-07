@@ -13,6 +13,7 @@ type LeadPayload = {
   interest?: string;
   leadMagnet?: string;
   marketingConsent?: string;
+  language?: string;
   name?: string;
   email?: string;
   phone?: string;
@@ -309,6 +310,7 @@ function sanitizeLeadPayload(payload: LeadPayload): LeadPayload {
     interest: cleanField(payload.interest),
     leadMagnet: cleanField(payload.leadMagnet),
     marketingConsent: payload.marketingConsent ? "yes" : undefined,
+    language: cleanLanguage(payload.language),
     name: cleanField(payload.name),
     email: cleanField(payload.email)?.toLowerCase(),
     phone: cleanField(payload.phone),
@@ -336,6 +338,12 @@ function cleanField(value: unknown, maxLength = 300) {
   return clean || undefined;
 }
 
+function cleanLanguage(value: unknown) {
+  const allowedLanguages = new Set(["de", "it", "en", "fr"]);
+  const clean = cleanField(value, 8)?.toLowerCase();
+  return clean && allowedLanguages.has(clean) ? clean : undefined;
+}
+
 function formatLeadSubject(lead: LeadRecord) {
   const source = getLeadSourceLabel(lead.source);
   const contact = lead.name || lead.email || lead.phone || "contatto";
@@ -356,6 +364,7 @@ function formatLeadEmail(lead: LeadRecord) {
     `Interesse: ${lead.interest ?? "-"}`,
     `Lead magnet: ${lead.leadMagnet ?? "-"}`,
     `Consenso marketing: ${lead.marketingConsent ?? "no"}`,
+    `Lingua: ${lead.language ?? "-"}`,
     `Data: ${formatDate(lead.createdAt)}`,
     "",
     "CONTATTO",
@@ -396,6 +405,7 @@ function formatLeadEmailHtml(lead: LeadRecord) {
     ["Interesse", lead.interest ?? "-"],
     ["Lead magnet", lead.leadMagnet ?? "-"],
     ["Consenso marketing", lead.marketingConsent ?? "no"],
+    ["Lingua", lead.language ?? "-"],
     ["Data", formatDate(lead.createdAt)],
     ["Nome", lead.name ?? "-"],
     ["Email", lead.email ?? "-"],

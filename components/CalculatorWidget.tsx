@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import type { Calculator } from "@/lib/calculators";
 import { sendAnalyticsEvent } from "@/lib/analytics-events";
 import type { Locale } from "@/lib/i18n";
+import { getResultLabels } from "@/lib/result-labels";
 
 type Values = Record<string, string>;
 type ResultRow = { label: string; value: string };
@@ -14,20 +15,28 @@ const completeLabels: Record<Locale, string> = {
   fr: "Resultat verifie",
 };
 
-export default function CalculatorWidget({ calculator }: { calculator: Calculator }) {
-  const locale = calculator.locale ?? "it";
+export default function CalculatorWidget({
+  calculator,
+  locale: pageLocale,
+}: {
+  calculator: Calculator;
+  locale?: Locale;
+}) {
+  const locale = pageLocale ?? calculator.locale ?? "it";
   const defaults = Object.fromEntries(
     calculator.inputs.map((input) => [input.key, input.defaultValue]),
   );
   const [values, setValues] = useState<Values>(defaults);
   const [started, setStarted] = useState(false);
 
+  const localizedLabels = useMemo(() => getResultLabels(calculator.kind, locale), [calculator.kind, locale]);
+
   const results = useMemo(
     () => calculate(calculator, values).map((row, index) => ({
       ...row,
-      label: calculator.resultLabels?.[index] ?? row.label,
+      label: calculator.resultLabels?.[index] ?? localizedLabels[index] ?? row.label,
     })),
-    [calculator, values],
+    [calculator, localizedLabels, values],
   );
 
   return (

@@ -22,7 +22,7 @@ export async function getLocalizedMetadata(locale: Locale, params: Params): Prom
     title: calculator.metaTitle,
     description: calculator.metaDescription,
     alternates: localizedAlternates(locale, slug),
-    ...pageSocialMetadata(calculator.metaTitle, calculator.metaDescription, localizedHref(locale, calculator)),
+    ...pageSocialMetadata(calculator.metaTitle, calculator.metaDescription, localizedHref(locale, calculator), locale),
   };
 }
 

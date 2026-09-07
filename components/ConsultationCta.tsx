@@ -121,6 +121,28 @@ function getIntentCopy(slug: string): Partial<Record<Locale, ConsultationCopy>> 
         partnerDescription:
           "L'area resta predisposta per partner utili e coerenti, senza trasformare il calcolatore in una pagina piena di promozioni invasive.",
       },
+      en: {
+        eyebrow: "Review your tax case",
+        title: "Want to put your withholding tax into context?",
+        description:
+          "Use the estimate for a first comparison, then send a concrete request if you want the case reviewed with a clean check or a focused consultation.",
+        button: "Have the tax case reviewed",
+        partnerEyebrow: "Partner space reserved",
+        partnerTitle: "Ready for future partners",
+        partnerDescription:
+          "This area is prepared for useful, relevant partners without turning the calculator into a wall of promotions.",
+      },
+      fr: {
+        eyebrow: "Verifier votre cas fiscal",
+        title: "Vous voulez mieux situer votre impot a la source?",
+        description:
+          "Utilisez l'estimation pour un premier comparatif, puis envoyez une demande concrete si vous souhaitez un controle clair ou un conseil cible.",
+        button: "Faire verifier le cas fiscal",
+        partnerEyebrow: "Espace partenaire reserve",
+        partnerTitle: "Pret pour de futurs partenaires",
+        partnerDescription:
+          "L'espace reste prepare pour des partenaires utiles et pertinents, sans transformer le calculateur en page promotionnelle.",
+      },
     };
   }
 
@@ -148,6 +170,28 @@ function getIntentCopy(slug: string): Partial<Record<Locale, ConsultationCopy>> 
         partnerDescription:
           "Le offerte esterne compariranno solo dopo verifica editoriale e configurazione di link reali.",
       },
+      en: {
+        eyebrow: "Prepare your financing",
+        title: "Want to check affordability before the bank conversation?",
+        description:
+          "Use the estimate as a first check, then send a request if you want to sort out budget, equity and next steps cleanly.",
+        button: "Prepare the financing",
+        partnerEyebrow: "Partner space reserved",
+        partnerTitle: "Ready for relevant mortgage partners",
+        partnerDescription:
+          "External offers appear only after editorial review and real partner links are configured.",
+      },
+      fr: {
+        eyebrow: "Preparer le financement",
+        title: "Vous voulez verifier la viabilite avant l'entretien bancaire?",
+        description:
+          "Utilisez l'estimation comme premier controle, puis envoyez une demande si vous souhaitez organiser budget, fonds propres et prochaines etapes.",
+        button: "Preparer le financement",
+        partnerEyebrow: "Espace partenaire reserve",
+        partnerTitle: "Pret pour des partenaires hypothecaires pertinents",
+        partnerDescription:
+          "Les offres externes n'apparaissent qu'apres verification editoriale et configuration de vrais liens.",
+      },
     };
   }
 
@@ -174,6 +218,28 @@ function getIntentCopy(slug: string): Partial<Record<Locale, ConsultationCopy>> 
         partnerTitle: "Pronto per link 3a reali",
         partnerDescription:
           "I partner 3a compariranno solo quando le URL affiliate saranno davvero configurate.",
+      },
+      en: {
+        eyebrow: "Pension and taxes",
+        title: "Want to prepare your pillar 3a decision properly?",
+        description:
+          "Use the estimate as a starting point, then compare marginal tax rate, budget, fees and horizon without false precision.",
+        button: "Prepare the 3a check",
+        partnerEyebrow: "Partner space reserved",
+        partnerTitle: "Ready for real 3a partner links",
+        partnerDescription:
+          "3a partners appear only once the affiliate URLs are actually configured.",
+      },
+      fr: {
+        eyebrow: "Prevoyance et impots",
+        title: "Vous voulez preparer votre decision 3e pilier?",
+        description:
+          "Utilisez l'estimation comme point de depart, puis comparez taux marginal, budget, frais et horizon sans fausse precision.",
+        button: "Preparer le check 3a",
+        partnerEyebrow: "Espace partenaire reserve",
+        partnerTitle: "Pret pour de vrais liens 3a",
+        partnerDescription:
+          "Les partenaires 3a n'apparaissent que lorsque les URLs affiliates sont reellement configurees.",
       },
     };
   }

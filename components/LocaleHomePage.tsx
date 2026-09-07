@@ -11,7 +11,7 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
     { href: "/de/brutto-netto-rechner-schweiz", label: "Brutto-Netto", text: "Bruttolohn und Nettolohn fuer die Schweiz vergleichen." },
     { href: "/de/saeule-3a-steuerersparnis-rechner", label: "Saeule 3a", text: "Steuerersparnis mit Grenzsteuersatz einschaetzen." },
     { href: "/de/hypotheken-tragbarkeit-rechner-schweiz", label: "Hypothek", text: "Tragbarkeit vor dem Bankgespraech pruefen." },
-    { href: "/calcolo-straordinari-svizzera", label: "Überstunden", text: "Straordinari und Stundenmehrarbeit im Schweizer Alltag abschaetzen." },
+    { href: "/de/ueberstundenrechner-schweiz", label: "Überstunden", text: "Ueberstunden und Stundenmehrarbeit im Schweizer Alltag abschaetzen." },
     { href: "/de/praemienverbilligung-rechner-schweiz", label: "Praemienverbilligung", text: "Krankenkassenpraemien und tragbaren Anteil gegeneinander stellen." },
     { href: "/de/familienzulagen-rechner-schweiz", label: "Familienzulagen", text: "Kinderzulagen und Ausbildungszulagen auf Jahresbasis berechnen." },
     { href: "/de/ahv-beitraege-selbststaendige-rechner", label: "AHV Selbststaendige", text: "Beitraege fuer selbststaendige Einkommen in die Kalkulation nehmen." },
@@ -99,7 +99,7 @@ export default function LocaleHomePage({ locale }: { locale: Locale }) {
                 <p className="mt-2 text-sm leading-6 text-gray-600">Arbeitszeit, Ueberstunden, Ferien, Stundenlohn und Nettolohn zusammen betrachten.</p>
                 <div className="mt-3 flex flex-col gap-2">
                   <Link href="/de/arbeitszeitrechner" className="inline-flex text-sm font-black text-emerald-800">Arbeitszeit berechnen</Link>
-                  <Link href="/calcolo-straordinari-svizzera" className="inline-flex text-sm font-black text-emerald-800">Überstunden berechnen</Link>
+                  <Link href="/de/ueberstundenrechner-schweiz" className="inline-flex text-sm font-black text-emerald-800">Ueberstunden berechnen</Link>
                 </div>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-5">

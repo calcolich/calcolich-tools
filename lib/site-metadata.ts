@@ -27,7 +27,16 @@ const localizedSiteCopy = {
   },
 } satisfies Record<SiteLocale, { title: string; description: string }>;
 
-export function pageSocialMetadata(title: string, description: string, path?: string): Metadata {
+const openGraphLocales: Record<SiteLocale, string> = {
+  de: "de_DE",
+  it: "it_IT",
+  en: "en_GB",
+  fr: "fr_FR",
+};
+
+const siteLocales: SiteLocale[] = ["de", "it", "en", "fr"];
+
+export function pageSocialMetadata(title: string, description: string, path?: string, locale?: SiteLocale): Metadata {
   return {
     openGraph: {
       type: "website",
@@ -35,6 +44,7 @@ export function pageSocialMetadata(title: string, description: string, path?: st
       title,
       description,
       url: path ? `${siteUrl}${path}` : siteUrl,
+      ...(locale ? { locale: openGraphLocales[locale], alternateLocale: siteLocales.filter((item) => item !== locale).map((item) => openGraphLocales[item]) } : {}),
     },
     twitter: {
       card: "summary",
@@ -54,7 +64,7 @@ export function getSiteMetadata(locale: SiteLocale): Metadata {
       template: "%s",
     },
     description: copy.description,
-    ...pageSocialMetadata(copy.title, copy.description),
+    ...pageSocialMetadata(copy.title, copy.description, undefined, locale),
     verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
       ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
       : undefined,

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: localeHome.de.title,
   description: localeHome.de.description,
   alternates: localizedAlternates("de"),
-  ...pageSocialMetadata(localeHome.de.title, localeHome.de.description, "/de"),
+  ...pageSocialMetadata(localeHome.de.title, localeHome.de.description, "/de", "de"),
 };
 
 export default function Page() {
