@@ -2,29 +2,63 @@ import type { Metadata } from "next";
 
 export const siteUrl = "https://www.calcolich.ch";
 
-export const siteMetadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "Calcolich | Calcolatori gratuiti online",
-    template: "%s",
+type SiteLocale = "de" | "it" | "en" | "fr";
+
+const localizedSiteCopy = {
+  de: {
+    title: "Calcolich Schweiz | Kostenlose Online-Rechner",
+    description:
+      "Kostenlose Online-Rechner fuer Lohn, Steuern, Vorsorge, Wohnen, Budget und praktische Entscheidungen in der Schweiz.",
   },
-  description:
-    "Calcolatori online gratuiti per lavoro, business, finanza, trading e strumenti pratici per decidere meglio.",
-  openGraph: {
-    type: "website",
-    siteName: "Calcolich",
+  it: {
     title: "Calcolich | Calcolatori gratuiti online",
     description:
-      "Calcolatori online gratuiti per lavoro, business, finanza e decisioni quotidiane.",
-    url: siteUrl,
+      "Calcolatori online gratuiti per lavoro, business, finanza, trading e strumenti pratici per decidere meglio.",
   },
-  twitter: {
-    card: "summary",
-    title: "Calcolich | Calcolatori gratuiti online",
+  en: {
+    title: "Calcolich Switzerland | Free online calculators",
     description:
-      "Calcolatori online gratuiti per lavoro, business, finanza e decisioni quotidiane.",
+      "Free online calculators for Swiss salary, tax, pension, housing, budget and practical everyday decisions.",
   },
-  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-    : undefined,
-};
+  fr: {
+    title: "Calcolich Suisse | Calculateurs gratuits en ligne",
+    description:
+      "Calculateurs gratuits pour le salaire, les impots, la prevoyance, le logement, le budget et les decisions pratiques en Suisse.",
+  },
+} satisfies Record<SiteLocale, { title: string; description: string }>;
+
+export function pageSocialMetadata(title: string, description: string, path?: string): Metadata {
+  return {
+    openGraph: {
+      type: "website",
+      siteName: "Calcolich",
+      title,
+      description,
+      url: path ? `${siteUrl}${path}` : siteUrl,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
+}
+
+export function getSiteMetadata(locale: SiteLocale): Metadata {
+  const copy = localizedSiteCopy[locale];
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: copy.title,
+      template: "%s",
+    },
+    description: copy.description,
+    ...pageSocialMetadata(copy.title, copy.description),
+    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : undefined,
+  };
+}
+
+export const siteMetadata: Metadata = getSiteMetadata("it");

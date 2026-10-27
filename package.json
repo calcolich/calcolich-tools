@@ -16,6 +16,7 @@
     "jarvis:cashflow": "sed -n '1,240p' jarvis/agents/cashflow-map.md",
     "jarvis:platform": "PORT=8097 node ../../outputs/jarvis-platform-server.mjs",
     "jarvis:remember": "node scripts/jarvis-remember.mjs",
+    "jarvis:test": "node tests/jarvis/smoke.mjs",
     "agents:daily": "node scripts/agents/run-daily-report.mjs",
     "agents:growth": "node scripts/agents/run-growth.mjs",
     "agents:revenue": "node scripts/agents/run-revenue.mjs",

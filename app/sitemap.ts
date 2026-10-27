@@ -21,6 +21,7 @@ const routes = Array.from(new Set([
   "/chi-siamo",
   "/contatti",
   "/guide",
+  "/social",
   ...calculatorCategories.map((category) => `/categorie/${category.slug}`),
   ...guides.map((guide) => `/guide/${guide.slug}`),
   ...servicePages.map((page) => `/servizi/${page.slug}`),
