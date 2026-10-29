@@ -136,7 +136,6 @@ export default function LeadForm({
         utmContent: url.searchParams.get("utm_content"),
         utmTerm: url.searchParams.get("utm_term"),
       };
-    sendAnalyticsEvent("lead_form_submitted", { source: attributedSource, target: segment, calculatorId });
     try {
       const response = await fetch("/api/leads", {
         method: "POST",
@@ -155,8 +154,7 @@ export default function LeadForm({
       if (result.emailFallback) {
         trackLead("lead_fallback", attributedSource, segment);
         openEmailFallback(data, attributedSource);
-        form.reset();
-        setStatus("success");
+        setStatus("error");
         setMessage(labels.fallback);
         return;
       }
@@ -175,6 +173,7 @@ export default function LeadForm({
       }
 
       form.reset();
+      sendAnalyticsEvent("lead_form_submitted", { source: attributedSource, target: segment, calculatorId });
       trackLead("generate_lead", attributedSource, segment);
       sendAnalyticsEvent("lead_submit", { source: attributedSource, target: segment, calculatorId });
       setStatus("success");
