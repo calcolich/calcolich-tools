@@ -7,8 +7,6 @@ import { getLocalizedCalculators, hasLocalizedCalculator, locales, localizedAlte
 import { servicePages } from "@/lib/service-pages";
 import { siteUrl } from "@/lib/site-metadata";
 
-const contentUpdatedAt = new Date("2026-07-12T00:00:00.000Z");
-
 const routes = Array.from(new Set([
   "",
   "/scorporo-iva-svizzera",
@@ -50,13 +48,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...routes.map((route) => ({
       url: `${siteUrl}${route}`,
-      lastModified: contentUpdatedAt,
       changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
       priority: route === "" ? 1 : 0.8,
     })),
     ...localizedRoutes.map(({ route, alternates }) => ({
       url: `${siteUrl}${route}`,
-      lastModified: contentUpdatedAt,
       changeFrequency: route.length === 3 ? "weekly" as const : "monthly" as const,
       priority: route.length === 3 ? 0.9 : 0.75,
       alternates: {
@@ -65,7 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...germanRatgeberRoutes.map((route) => ({
       url: `${siteUrl}${route}`,
-      lastModified: contentUpdatedAt,
       changeFrequency: "monthly" as const,
       priority: route === "/de/ratgeber" ? 0.75 : 0.7,
     })),
