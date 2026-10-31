@@ -1,4 +1,4 @@
-import { type Calculator, getCalculator } from "@/lib/calculators";
+import { type Calculator, type CalculatorKind, getCalculator } from "@/lib/calculators";
 import { germanPriorityCalculators, getGermanPriorityCalculator } from "@/lib/german-calculators";
 import { siteUrl } from "@/lib/site-metadata";
 
@@ -460,8 +460,6 @@ const inputLabels: Record<Locale, Record<string, string>> = {
   },
 };
 
-const localizedContent = buildLocalizedContent();
-
 export function getLocalizedCalculators(locale: Locale) {
   const translated = Object.keys(localizedContent[locale])
     .map((baseSlug) => getLocalizedCalculatorByBaseSlug(locale, baseSlug))
@@ -590,6 +588,14 @@ function buildLocalizedContent() {
               article: copy.article(title),
               faqs: copy.faqs(title),
               relatedSlugs: base?.relatedSlugs ?? [],
+              formula: undefined,
+              example: undefined,
+              guideLinks: undefined,
+              sources: undefined,
+              contentSections: undefined,
+              supportingContent: undefined,
+              updatedAt: localizeUpdatedAt(locale, base?.updatedAt),
+              resultLabels: localizeResultLabels(locale, base?.kind),
             },
           ];
         }),
@@ -604,3 +610,94 @@ function localizeInputs(locale: Locale, calculator?: Calculator) {
     label: inputLabels[locale][input.key] ?? input.label,
   }));
 }
+
+const monthTranslations: Record<Exclude<Locale, "it">, Record<string, string>> = {
+  de: {
+    luglio: "Juli",
+    agosto: "August",
+  },
+  en: {
+    luglio: "July",
+    agosto: "August",
+  },
+  fr: {
+    luglio: "juillet",
+    agosto: "aout",
+  },
+};
+
+function localizeUpdatedAt(locale: Locale, updatedAt?: string) {
+  if (!updatedAt || locale === "it") return updatedAt;
+
+  const match = updatedAt.match(/^(\d{1,2}) ([a-z]+) (\d{4})$/i);
+  if (!match) return undefined;
+
+  const [, day, month, year] = match;
+  const translatedMonth = monthTranslations[locale][month.toLowerCase()];
+  if (!translatedMonth) return undefined;
+
+  if (locale === "en") return `${translatedMonth} ${day}, ${year}`;
+  if (locale === "de") return `${day}. ${translatedMonth} ${year}`;
+  return `${day} ${translatedMonth} ${year}`;
+}
+
+const localizedResultLabels: Record<Exclude<Locale, "it">, Partial<Record<CalculatorKind, string[]>>> = {
+  de: {
+    "withholding-tax-ch": ["Sozialabgaben", "Quellensteuer", "Nettolohn geschaetzt"],
+    "health-insurance-ch": ["Jahrespraemien", "Geschaetzte Gesundheitskosten", "Geschaetzte Jahreskosten"],
+    "premium-subsidy-ch": ["Jahrespraemien", "Tragbarer Anteil", "Geschaetzte Entlastung"],
+    "rent-affordability-ch": ["Wohnbudget total", "Zusatzkosten", "Tragbare Miete"],
+    "mortgage-affordability-ch": ["Hypothek geschaetzt", "Theoretische Jahreskosten", "Tragbarkeit"],
+    "hourly-wage-ch": ["Jahreslohn", "Jahresstunden", "Stundenlohn"],
+    "part-time-salary-ch": ["Teilzeit-Bruttolohn", "Geschaetzte Abzuege", "Geschaetzter Nettolohn"],
+    "pillar3a-tax-ch": ["Steuerersparnis pro Jahr", "Einzahlungen total", "Steuerersparnis total"],
+    "monthly-budget-ch": ["Gesamtausgaben", "Sparquote", "Monatlicher Saldo"],
+    "car-cost-ch": ["Monatskosten", "Jahreskosten", "Durchschnitt pro Tag"],
+    "freelance-rate-ch": ["Noetiger Umsatz", "Tagessatz", "Stundensatz"],
+    "selling-price": ["Nettopreis", "MWST", "Endpreis"],
+    "self-employed-ahv-ch": ["AHV/IV/EO geschaetzt", "Verwaltungskosten", "Geschaetzte Jahreskosten"],
+    "family-allowances-ch": ["Monatsbetrag", "Anspruchsmonate", "Jahresbetrag"],
+    "unemployment-benefit-ch": ["Versicherter Verdienst", "Taggeld", "Brutto-Monatsleistung"],
+  },
+  en: {
+    "withholding-tax-ch": ["Estimated social deductions", "Withholding tax", "Estimated net salary"],
+    "health-insurance-ch": ["Annual premiums", "Estimated health costs", "Estimated annual cost"],
+    "premium-subsidy-ch": ["Annual premiums", "Affordable share", "Estimated subsidy"],
+    "rent-affordability-ch": ["Total housing budget", "Extra costs", "Affordable rent"],
+    "mortgage-affordability-ch": ["Estimated mortgage", "Theoretical annual costs", "Affordability"],
+    "hourly-wage-ch": ["Annual salary", "Annual hours", "Hourly wage"],
+    "part-time-salary-ch": ["Part-time gross salary", "Estimated deductions", "Estimated net salary"],
+    "pillar3a-tax-ch": ["Annual tax saving", "Total contributions", "Total tax saving"],
+    "monthly-budget-ch": ["Total expenses", "Savings rate", "Monthly balance"],
+    "car-cost-ch": ["Monthly cost", "Annual cost", "Average daily cost"],
+    "freelance-rate-ch": ["Required revenue", "Daily rate", "Hourly rate"],
+    "selling-price": ["Net price", "VAT", "Final price"],
+    "self-employed-ahv-ch": ["Estimated AHV/IV/EO", "Administration costs", "Estimated annual total"],
+    "family-allowances-ch": ["Monthly amount", "Eligible months", "Annual amount"],
+    "unemployment-benefit-ch": ["Insured income", "Daily allowance", "Gross monthly allowance"],
+  },
+  fr: {
+    "withholding-tax-ch": ["Cotisations estimees", "Impot a la source", "Salaire net estime"],
+    "health-insurance-ch": ["Primes annuelles", "Frais de sante estimes", "Cout annuel estime"],
+    "premium-subsidy-ch": ["Primes annuelles", "Part supportable", "Reduction estimee"],
+    "rent-affordability-ch": ["Budget logement total", "Frais supplementaires", "Loyer supportable"],
+    "mortgage-affordability-ch": ["Hypotheque estimee", "Couts annuels theoriques", "Viabilite"],
+    "hourly-wage-ch": ["Salaire annuel", "Heures annuelles", "Salaire horaire"],
+    "part-time-salary-ch": ["Salaire brut temps partiel", "Deductions estimees", "Salaire net estime"],
+    "pillar3a-tax-ch": ["Economie fiscale annuelle", "Versements totaux", "Economie fiscale totale"],
+    "monthly-budget-ch": ["Depenses totales", "Taux d'epargne", "Solde mensuel"],
+    "car-cost-ch": ["Cout mensuel", "Cout annuel", "Cout moyen par jour"],
+    "freelance-rate-ch": ["Revenu necessaire", "Tarif journalier", "Tarif horaire"],
+    "selling-price": ["Prix net", "TVA", "Prix final"],
+    "self-employed-ahv-ch": ["AVS/AI/APG estimees", "Frais administratifs", "Total annuel estime"],
+    "family-allowances-ch": ["Montant mensuel", "Mois de droit", "Montant annuel"],
+    "unemployment-benefit-ch": ["Gain assure", "Indemnite journaliere", "Indemnite mensuelle brute"],
+  },
+};
+
+function localizeResultLabels(locale: Locale, kind?: CalculatorKind) {
+  if (!kind || locale === "it") return undefined;
+  return localizedResultLabels[locale][kind];
+}
+
+const localizedContent = buildLocalizedContent();

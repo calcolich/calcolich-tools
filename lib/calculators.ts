@@ -272,8 +272,8 @@ export const calculators: Calculator[] = [
     title: "Calcolatore IVA Svizzera",
     shortTitle: "IVA Svizzera",
     category: "Business Svizzera",
-    metaTitle: "Calcolatrice IVA Svizzera 2026: calcolo e scorporo",
-    metaDescription: "Calcola o scorpora l'IVA svizzera all'8.1%, 3.8% o 2.6%. Ottieni subito imponibile, imposta e totale in CHF.",
+    metaTitle: "Calcolo IVA Svizzera 2026: scorporo 8.1%, 3.8%, 2.6%",
+    metaDescription: "Calcola e scorpora l'IVA svizzera 2026 al 8.1%, 3.8% o 2.6%. Ottieni imponibile, IVA inclusa e totale in CHF, gratis.",
     intro: "Aggiungi o scorpora l'IVA svizzera e calcola subito imponibile, imposta e totale in CHF.",
     cta: "Ricevi strumenti gratuiti per freelance, aziende e calcoli fiscali in Svizzera.",
     inputs: [
@@ -1208,8 +1208,8 @@ export const calculators: Calculator[] = [
     title: "Calcolatore Cassa Malati Svizzera",
     shortTitle: "Cassa malati",
     category: "Assicurazioni Svizzera",
-    metaTitle: "Calcolo Cassa Malati Svizzera | Premi e Franchigia | Calcolich",
-    metaDescription: "Stima costo annuo della cassa malati in Svizzera combinando premio mensile, franchigia e spese mediche.",
+    metaTitle: "Calcolatore Cassa Malati Svizzera 2026: premio e franchigia",
+    metaDescription: "Calcola il costo annuo della cassa malati in Svizzera: premio mensile, franchigia e spese mediche. Confronta scenari in pochi secondi.",
     intro: "Confronta premio mensile, franchigia e spese previste per stimare il costo annuo della cassa malati.",
     cta: "Ricevi strumenti utili per pianificare spese, assicurazioni e budget in Svizzera.",
     inputs: [
@@ -1220,7 +1220,7 @@ export const calculators: Calculator[] = [
     article: [
       "La cassa malati e una delle spese ricorrenti piu importanti in Svizzera. Il premio mensile non racconta tutto: franchigia, spese mediche previste e partecipazione ai costi cambiano molto il costo annuo reale.",
       "Questo calcolatore confronta premio annuo, quota di spese fino alla franchigia e una stima semplice della partecipazione. Serve per ragionare su scenari, non per sostituire un confronto assicurativo ufficiale.",
-      "Il tema ha forte domanda anche in tedesco e inglese, da Krankenkasse Pramien Rechner a health insurance premium calculator Switzerland. Una pagina chiara puo intercettare persone residenti, expat e nuovi arrivati.",
+      "Il confronto è utile sia per residenti sia per chi si trasferisce in Svizzera: prova più franchigie e premi mensili per vedere come cambia il costo reale, non solo il prezzo pubblicizzato.",
       "Collega il risultato al budget mensile e al salario netto per capire quanto pesa davvero la cassa malati sul reddito disponibile.",
     ],
     faqs: [

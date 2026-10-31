@@ -34,6 +34,8 @@ export default function Home() {
             <Link href="/it" className="rounded-full px-2 py-2 hover:bg-gray-100">IT</Link>
             <Link href="/en" className="rounded-full px-2 py-2 hover:bg-gray-100">EN</Link>
             <Link href="/fr" className="rounded-full px-2 py-2 hover:bg-gray-100">FR</Link>
+            <Link href="/jarvis" className="rounded-full px-3 py-2 hover:bg-gray-100">Jarvis</Link>
+            <Link href="/social" className="rounded-full px-3 py-2 hover:bg-gray-100">Social</Link>
             <Link href="/audit-sito-gratuito-ticino" className="rounded-full px-3 py-2 hover:bg-gray-100">Audit</Link>
             <Link href="/servizi-ai-seo" className="rounded-full px-3 py-2 hover:bg-gray-100">Servizi</Link>
           </nav>

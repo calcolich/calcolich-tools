@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "projectMemory": {
+    "stack": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "file-based Jarvis runtime"
+    ],
+    "site": "calcolich.ch",
+    "languages": [
+      "it",
+      "de",
+      "en",
+      "fr"
+    ],
+    "rules": [
+      "no secrets in repo",
+      "review before code/content changes",
+      "fail closed on unclear approval"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "task_1790959662873",
+      "title": "Smoke test task lifecycle",
+      "description": "Verify task creation and authorization defaults.",
+      "agent": "tech",
+      "priority": "P2",
+      "status": "QUEUED",
+      "authorizationLevel": "AUTO",
+      "createdAt": "2026-10-02T16:47:42.871Z",
+      "updatedAt": "2026-10-02T16:47:42.871Z",
+      "startedAt": null,
+      "completedAt": null,
+      "result": null,
+      "evidence": [],
+      "auditResult": null,
+      "parentTask": null,
+      "dependencies": [],
+      "error": null,
+      "retryCount": 0
+    },
+    {
+      "id": "task_1790959662874",
+      "title": "Repository SEO audit",
+      "description": "Audit metadata, sitemap, robots and calculator SEO fields.",
+      "agent": "seo",
+      "priority": "P1",
+      "status": "COMPLETED",
+      "authorizationLevel": "AUTO",
+      "createdAt": "2026-10-02T16:47:42.874Z",
+      "updatedAt": "2026-10-02T16:47:42.878Z",
+      "startedAt": "2026-10-02T16:47:42.875Z",
+      "completedAt": "2026-10-02T16:47:42.878Z",
+      "result": "SEO audit completed with repository evidence and no blocking issue.",
+      "evidence": [
+        {
+          "title": "sitemap present",
+          "ok": true,
+          "source": "app/sitemap.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "robots present",
+          "ok": true,
+          "source": "app/robots.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "site metadata has canonical/social fields",
+          "ok": true,
+          "source": "lib/site-metadata.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "Italian calculators include SEO fields",
+          "ok": true,
+          "source": "lib/calculators.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "German calculators include SEO fields",
+          "ok": true,
+          "source": "lib/german-calculators.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        }
+      ],
+      "auditResult": {
+        "status": "APPROVED",
+        "reason": "Evidence checks passed and no destructive action was requested.",
+        "risk": "low"
+      },
+      "parentTask": null,
+      "dependencies": [],
+      "error": null,
+      "retryCount": 0
+    },
+    {
+      "id": "task_1790959662878",
+      "title": "Tech health check",
+      "description": "Run real lint-aware technical checks.",
+      "agent": "tech",
+      "priority": "P1",
+      "status": "COMPLETED",
+      "authorizationLevel": "AUTO",
+      "createdAt": "2026-10-02T16:47:42.878Z",
+      "updatedAt": "2026-10-02T16:47:57.533Z",
+      "startedAt": "2026-10-02T16:47:42.879Z",
+      "completedAt": "2026-10-02T16:47:57.533Z",
+      "result": "Tech health check completed successfully.",
+      "evidence": [
+        {
+          "title": "lint passed",
+          "ok": true,
+          "source": "npm run lint",
+          "checkedAt": "2026-10-02T16:47:57.532Z"
+        },
+        {
+          "title": "Next config present",
+          "ok": true,
+          "source": "next.config.ts",
+          "checkedAt": "2026-10-02T16:47:57.533Z"
+        },
+        {
+          "title": "package lock present",
+          "ok": true,
+          "source": "package-lock.json",
+          "checkedAt": "2026-10-02T16:47:57.533Z"
+        }
+      ],
+      "auditResult": {
+        "status": "APPROVED",
+        "reason": "Evidence checks passed and no destructive action was requested.",
+        "risk": "low"
+      },
+      "parentTask": null,
+      "dependencies": [],
+      "error": null,
+      "retryCount": 0
+    }
+  ],
+  "activity": [
+    {
+      "id": "event_1790959662873_bab1a6e7114e3",
+      "type": "TASK_CREATED",
+      "message": "tech queued: Smoke test task lifecycle",
+      "agent": "tech",
+      "taskId": "task_1790959662873",
+      "createdAt": "2026-10-02T16:47:42.873Z"
+    },
+    {
+      "id": "event_1790959662874_5a9330d74e0fe8",
+      "type": "TASK_CREATED",
+      "message": "seo queued: Repository SEO audit",
+      "agent": "seo",
+      "taskId": "task_1790959662874",
+      "createdAt": "2026-10-02T16:47:42.874Z"
+    },
+    {
+      "id": "event_1790959662875_70ca6d21d11628",
+      "type": "TASK_STARTED",
+      "message": "seo started: Repository SEO audit",
+      "agent": "seo",
+      "taskId": "task_1790959662874",
+      "createdAt": "2026-10-02T16:47:42.875Z"
+    },
+    {
+      "id": "event_1790959662878_2b48380222e188",
+      "type": "AUDIT_STARTED",
+      "message": "Auditor checked Repository SEO audit",
+      "agent": "auditor",
+      "taskId": "task_1790959662874",
+      "createdAt": "2026-10-02T16:47:42.878Z"
+    },
+    {
+      "id": "event_1790959662878_45267e3d480da8",
+      "type": "AUDIT_APPROVED",
+      "message": "Auditor result: APPROVED",
+      "agent": "auditor",
+      "taskId": "task_1790959662874",
+      "createdAt": "2026-10-02T16:47:42.878Z"
+    },
+    {
+      "id": "event_1790959662878_2af78e8933ff2",
+      "type": "MEMORY_UPDATED",
+      "message": "Saved result for Repository SEO audit",
+      "agent": "memory",
+      "taskId": "task_1790959662874",
+      "createdAt": "2026-10-02T16:47:42.878Z"
+    },
+    {
+      "id": "event_1790959662878_4a599a4b10ba38",
+      "type": "TASK_CREATED",
+      "message": "tech queued: Tech health check",
+      "agent": "tech",
+      "taskId": "task_1790959662878",
+      "createdAt": "2026-10-02T16:47:42.878Z"
+    },
+    {
+      "id": "event_1790959662879_35ae14aa006058",
+      "type": "TASK_STARTED",
+      "message": "tech started: Tech health check",
+      "agent": "tech",
+      "taskId": "task_1790959662878",
+      "createdAt": "2026-10-02T16:47:42.879Z"
+    },
+    {
+      "id": "event_1790959677533_d2b5db5a84d498",
+      "type": "AUDIT_STARTED",
+      "message": "Auditor checked Tech health check",
+      "agent": "auditor",
+      "taskId": "task_1790959662878",
+      "createdAt": "2026-10-02T16:47:57.533Z"
+    },
+    {
+      "id": "event_1790959677533_78f4cf3fdee6e8",
+      "type": "AUDIT_APPROVED",
+      "message": "Auditor result: APPROVED",
+      "agent": "auditor",
+      "taskId": "task_1790959662878",
+      "createdAt": "2026-10-02T16:47:57.533Z"
+    },
+    {
+      "id": "event_1790959677533_112dd776d92c58",
+      "type": "MEMORY_UPDATED",
+      "message": "Saved result for Tech health check",
+      "agent": "memory",
+      "taskId": "task_1790959662878",
+      "createdAt": "2026-10-02T16:47:57.533Z"
+    }
+  ],
+  "approvals": [],
+  "decisions": [
+    {
+      "id": "decision_1790959662878",
+      "taskId": "task_1790959662874",
+      "agent": "seo",
+      "decision": "APPROVED",
+      "reason": "Evidence checks passed and no destructive action was requested.",
+      "evidence": [
+        {
+          "title": "sitemap present",
+          "ok": true,
+          "source": "app/sitemap.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "robots present",
+          "ok": true,
+          "source": "app/robots.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "site metadata has canonical/social fields",
+          "ok": true,
+          "source": "lib/site-metadata.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "Italian calculators include SEO fields",
+          "ok": true,
+          "source": "lib/calculators.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        },
+        {
+          "title": "German calculators include SEO fields",
+          "ok": true,
+          "source": "lib/german-calculators.ts",
+          "checkedAt": "2026-10-02T16:47:42.877Z"
+        }
+      ],
+      "createdAt": "2026-10-02T16:47:42.878Z"
+    },
+    {
+      "id": "decision_1790959677533",
+      "taskId": "task_1790959662878",
+      "agent": "tech",
+      "decision": "APPROVED",
+      "reason": "Evidence checks passed and no destructive action was requested.",
+      "evidence": [
+        {
+          "title": "lint passed",
+          "ok": true,
+          "source": "npm run lint",
+          "checkedAt": "2026-10-02T16:47:57.532Z"
+        },
+        {
+          "title": "Next config present",
+          "ok": true,
+          "source": "next.config.ts",
+          "checkedAt": "2026-10-02T16:47:57.533Z"
+        },
+        {
+          "title": "package lock present",
+          "ok": true,
+          "source": "package-lock.json",
+          "checkedAt": "2026-10-02T16:47:57.533Z"
+        }
+      ],
+      "createdAt": "2026-10-02T16:47:57.533Z"
+    }
+  ],
+  "learning": []
+}
