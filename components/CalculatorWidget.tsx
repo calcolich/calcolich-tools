@@ -245,7 +245,9 @@ function calculate(calculator: Calculator, values: Values): ResultRow[] {
       const principal = number(values, "principal");
       const months = number(values, "years") * 12;
       const monthlyRate = number(values, "rate") / 100 / 12;
-      const payment = monthlyRate === 0 ? principal / months : principal * (monthlyRate / (1 - (1 + monthlyRate) ** -months));
+      const payment = months > 0
+        ? (monthlyRate === 0 ? principal / months : principal * (monthlyRate / (1 - (1 + monthlyRate) ** -months)))
+        : 0;
       return [
         { label: "Rata mensile", value: money(payment) },
         { label: "Totale pagato", value: money(payment * months) },
