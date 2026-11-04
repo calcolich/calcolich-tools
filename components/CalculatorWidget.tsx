@@ -22,12 +22,13 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
   const [values, setValues] = useState<Values>(defaults);
   const [started, setStarted] = useState(false);
 
+  const validationError = validateInputs(calculator, values);
   const results = useMemo(
-    () => calculate(calculator, values).map((row, index) => ({
+    () => validationError ? [] : calculate(calculator, values).map((row, index) => ({
       ...row,
       label: calculator.resultLabels?.[index] ?? row.label,
     })),
-    [calculator, values],
+    [calculator, values, validationError],
   );
 
   return (
@@ -70,7 +71,8 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
         ))}
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
+      {validationError && <p role="alert" className="mt-4 rounded-xl bg-red-50 p-4 text-red-800">{validationError}</p>}
+      <div aria-live="polite" className="mt-6 grid gap-4 md:grid-cols-3">
         {results.map((row, index) => (
           <div
             key={row.label}
@@ -83,11 +85,12 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
       </div>
       <button
         type="button"
+        disabled={Boolean(validationError) || !started}
         onClick={() => sendAnalyticsEvent("calculator_completed", {
           calculatorId: calculator.id ?? calculator.slug,
           source: calculator.slug,
         })}
-        className="mt-5 rounded-xl bg-gray-950 px-5 py-3 font-bold text-white"
+        className="mt-5 rounded-xl bg-gray-950 px-5 py-3 font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
       >
         {completeLabels[locale]}
       </button>
@@ -102,6 +105,23 @@ export default function CalculatorWidget({ calculator }: { calculator: Calculato
       source: calculator.slug,
     });
   }
+}
+
+function validateInputs(calculator: Calculator, values: Values): string | null {
+  for (const input of calculator.inputs) {
+    if (input.type === "select" || input.type === "time") continue;
+    const raw = values[input.key];
+    if (raw === undefined || raw.trim() === "" || !Number.isFinite(Number(raw))) {
+      return `Inserisci un valore numerico valido per "${input.label}".`;
+    }
+    const value = Number(raw);
+    if (input.min !== undefined && value < Number(input.min)) return `"${input.label}" deve essere almeno ${input.min}.`;
+    if (input.max !== undefined && value > Number(input.max)) return `"${input.label}" deve essere al massimo ${input.max}.`;
+  }
+  if (calculator.kind === "mortgage-ch" && Number(values.years) <= 0) {
+    return "La durata del mutuo deve essere maggiore di zero.";
+  }
+  return null;
 }
 
 function number(values: Values, key: string) {
