@@ -1889,8 +1889,15 @@ const allCalculators: Calculator[] = [
   },
 ];
 
+const hiddenCalculatorSlugs = new Set([
+  "calcolo-roi",
+  "calcolo-break-even",
+]);
+
 export const calculators = allCalculators.filter(
-  (calculator) => calculator.category !== "Trading",
+  (calculator) =>
+    calculator.category !== "Trading" &&
+    !hiddenCalculatorSlugs.has(calculator.slug),
 );
 
 export function getCalculator(slug: string) {
