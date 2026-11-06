@@ -31,6 +31,7 @@ export type CalculatorKind =
   | "premium-subsidy-ch"
   | "rent-affordability-ch"
   | "hourly-wage-ch"
+  | "offer-comparison-ch"
   | "part-time-salary-ch"
   | "pillar3a-tax-ch"
   | "monthly-budget-ch"
@@ -92,6 +93,39 @@ export type Calculator = {
 };
 
 export const calculators: Calculator[] = [
+  {
+    slug: "confronto-offerte-lavoro-svizzera",
+    kind: "offer-comparison-ch",
+    title: "Confronta due offerte di lavoro in Svizzera",
+    shortTitle: "Confronto offerte lavoro",
+    category: "Stipendio Svizzera",
+    metaTitle: "Confronto offerte di lavoro Svizzera: lordo, netto e 13esima | Calcolich",
+    metaDescription: "Confronta due offerte di lavoro svizzere: stipendio lordo, percentuale d'impiego, tredicesima, deduzioni AVS/LPP e imposte stimate.",
+    intro: "Confronta due offerte usando lo stipendio mensile a tempo pieno, la percentuale di lavoro e le trattenute indicative.",
+    cta: "Ricevi strumenti pratici per valutare offerte e contratti di lavoro in Svizzera.",
+    inputs: [
+      { key: "grossA", label: "Offerta A: lordo mensile al 100% (CHF)", defaultValue: "6000", min: "0" },
+      { key: "workA", label: "Offerta A: impiego (%)", defaultValue: "100", min: "1", max: "100" },
+      { key: "monthsA", label: "Offerta A: mensilita (12 o 13)", type: "select", defaultValue: "13", options: [{ label: "12", value: "12" }, { label: "13", value: "13" }] },
+      { key: "grossB", label: "Offerta B: lordo mensile al 100% (CHF)", defaultValue: "6500", min: "0" },
+      { key: "workB", label: "Offerta B: impiego (%)", defaultValue: "80", min: "1", max: "100" },
+      { key: "monthsB", label: "Offerta B: mensilita (12 o 13)", type: "select", defaultValue: "13", options: [{ label: "12", value: "12" }, { label: "13", value: "13" }] },
+      { key: "socialRate", label: "AVS/AI/IPG, AD e altre trattenute (%)", defaultValue: "6.4", min: "0", max: "50", step: "0.1" },
+      { key: "pensionRate", label: "LPP/BVG stimata (%)", defaultValue: "6", min: "0", max: "50", step: "0.1" },
+      { key: "taxRate", label: "Imposta alla fonte stimata (%)", defaultValue: "8", min: "0", max: "50", step: "0.1" },
+    ],
+    article: [
+      "Inserisci lo stipendio mensile a tempo pieno di ciascuna offerta. Il calcolatore applica la percentuale d'impiego, considera 12 o 13 mensilita e confronta il reddito annuo.",
+      "Le percentuali di trattenuta sono ipotesi modificabili, applicate ugualmente alle due offerte. Non sono aliquote ufficiali: la previdenza professionale dipende dal piano e dal salario assicurato; l'imposta alla fonte dipende da cantone e situazione personale.",
+      "Il netto annuo stimato e utile per un primo confronto, ma non considera bonus, assegni familiari, spese di trasporto, vacanze, assicurazioni o benefit. Per decidere, verifica sempre le buste paga e le condizioni contrattuali.",
+    ],
+    faqs: [
+      { question: "Il calcolo include la tredicesima?", answer: "Si. Puoi scegliere 12 o 13 mensilita separatamente per ogni offerta." },
+      { question: "Le trattenute AVS e LPP sono esatte?", answer: "No. Sono percentuali illustrative che puoi adattare ai dati delle offerte; il calcolo ufficiale puo differire." },
+      { question: "Posso confrontare un impiego all'80% con uno al 100%?", answer: "Si. Indica la percentuale lavorativa per ogni offerta e confronta i totali annui." },
+    ],
+    relatedSlugs: ["calcolo-salario-netto-svizzera", "calcolo-lordo-netto-svizzera", "calcolo-salario-part-time-svizzera", "calcolo-imposta-alla-fonte-svizzera"],
+  },
   {
     slug: "calcolo-ore-lavoro",
     kind: "work-hours",
