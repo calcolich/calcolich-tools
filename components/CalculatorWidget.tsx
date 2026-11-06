@@ -480,6 +480,18 @@ function calculate(calculator: Calculator, values: Values): ResultRow[] {
         { label: "Salario orario", value: money(hourly) },
       ];
     }
+    case "offer-comparison-ch": {
+      const rate = (number(values, "socialRate") + number(values, "pensionRate") + number(values, "taxRate")) / 100;
+      const annualA = number(values, "grossA") * number(values, "workA") / 100 * Number(values.monthsA);
+      const annualB = number(values, "grossB") * number(values, "workB") / 100 * Number(values.monthsB);
+      const netA = annualA * (1 - rate);
+      const netB = annualB * (1 - rate);
+      return [
+        { label: "Offerta A: lordo / netto annuo stimato", value: `${money(annualA)} / ${money(netA)}` },
+        { label: "Offerta B: lordo / netto annuo stimato", value: `${money(annualB)} / ${money(netB)}` },
+        { label: "Differenza netta annua B - A", value: money(netB - netA) },
+      ];
+    }
     case "part-time-salary-ch": {
       const gross = (number(values, "fullTimeSalary") * number(values, "workPercent")) / 100;
       const deductions = (gross * number(values, "deductionRate")) / 100;
