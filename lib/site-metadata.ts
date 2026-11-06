@@ -13,7 +13,7 @@ const localizedSiteCopy = {
   it: {
     title: "Calcolich | Calcolatori gratuiti online",
     description:
-      "Calcolatori online gratuiti per lavoro, business, finanza, trading e strumenti pratici per decidere meglio.",
+      "Calcolatori online gratuiti per lavoro, business, finanza, casa e strumenti pratici per decidere meglio.",
   },
   en: {
     title: "Calcolich Switzerland | Free online calculators",

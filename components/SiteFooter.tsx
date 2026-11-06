@@ -70,19 +70,13 @@ const footerCopy = {
   },
   it: {
     description:
-      "Calcolatori online gratuiti per lavoro, business, finanza, casa e trading. I risultati sono stime informative.",
+      "Calcolatori online gratuiti per lavoro, business, finanza e casa. I risultati sono stime informative.",
     editorial: "Editore: Calcolich · Contatto: calcolich@gmail.com · Ultimo aggiornamento contenuti: 12 luglio 2026",
     navLabel: "Link legali e informativi",
     links: [
       ...languageLinks,
       { href: "/categorie/stipendio-lavoro", label: "Lavoro" },
       { href: "/categorie/business-freelance", label: "Business" },
-      { href: "/categorie/trading", label: "Trading" },
-      { href: "/guide", label: "Guide" },
-      { href: "/jarvis", label: "Jarvis" },
-      { href: "/social", label: "Social" },
-      { href: "/servizi-ai-seo", label: "Servizi" },
-      { href: "/audit-sito-gratuito-ticino", label: "Audit gratuito" },
       { href: "/chi-siamo", label: "Chi siamo" },
       ...legalLinks.it,
     ],

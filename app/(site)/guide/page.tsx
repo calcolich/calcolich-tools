@@ -3,9 +3,9 @@ import Link from "next/link";
 import { guides } from "@/lib/guides";
 
 export const metadata: Metadata = {
-  title: "Guide Calcolich | Stipendio, budget, freelance e trading",
+  title: "Guide Calcolich | Stipendio, budget e freelance",
   description:
-    "Guide pratiche Calcolich per usare meglio i calcolatori online su stipendio, costo della vita, freelance e trading.",
+    "Guide pratiche Calcolich per usare meglio i calcolatori online su stipendio, costo della vita e freelance.",
   alternates: {
     canonical: "https://www.calcolich.ch/guide",
   },
@@ -23,7 +23,7 @@ export default function GuidesPage() {
           <p className="mb-3 text-xs font-black uppercase tracking-wide text-emerald-700">Guide Calcolich</p>
           <h1 className="max-w-4xl text-4xl font-black tracking-tight md:text-6xl">Guide pratiche per decidere con numeri piu chiari</h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-700">
-            Approfondimenti semplici su stipendio, budget, freelance e trading. Ogni guida collega spiegazione pratica e calcolatori utili.
+            Approfondimenti semplici su stipendio, budget e freelance. Ogni guida collega spiegazione pratica e calcolatori utili.
           </p>
         </section>
 

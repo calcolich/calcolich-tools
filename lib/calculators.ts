@@ -91,7 +91,7 @@ export type Calculator = {
   }[];
 };
 
-export const calculators: Calculator[] = [
+const allCalculators: Calculator[] = [
   {
     slug: "calcolo-ore-lavoro",
     kind: "work-hours",
@@ -497,7 +497,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Percentuale Online | Calcolich",
     metaDescription: "Calcola rapidamente una percentuale di un importo senza formule manuali. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Calcola rapidamente una percentuale di un importo senza formule manuali.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "base",
@@ -547,7 +547,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Sconto Online | Calcolich",
     metaDescription: "Calcola sconto, importo risparmiato e prezzo finale partendo dal prezzo iniziale. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Calcola sconto, importo risparmiato e prezzo finale partendo dal prezzo iniziale.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "price",
@@ -598,7 +598,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Aumento Percentuale Online | Calcolich",
     metaDescription: "Misura aumento o diminuzione percentuale tra due valori. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Misura aumento o diminuzione percentuale tra due valori.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "startValue",
@@ -648,7 +648,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Margine Profitto Online | Calcolich",
     metaDescription: "Calcola profitto, margine e markup partendo da costo e prezzo di vendita. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Calcola profitto, margine e markup partendo da costo e prezzo di vendita.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "cost",
@@ -698,7 +698,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore ROI Online | Calcolich",
     metaDescription: "Calcola ritorno sull'investimento, profitto netto e rendimento percentuale. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Calcola ritorno sull'investimento, profitto netto e rendimento percentuale.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "cost",
@@ -748,7 +748,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Break Even Online | Calcolich",
     metaDescription: "Scopri quante vendite servono per coprire i costi e arrivare al pareggio. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Scopri quante vendite servono per coprire i costi e arrivare al pareggio.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "fixedCosts",
@@ -804,7 +804,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Rata Prestito Online | Calcolich",
     metaDescription: "Stima rata mensile, interessi e totale pagato per un prestito. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Stima rata mensile, interessi e totale pagato per un prestito.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "principal",
@@ -861,7 +861,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Profitto Trading Online | Calcolich",
     metaDescription: "Calcola profitto o perdita di un trade partendo da entrata, uscita e quantita. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Calcola profitto o perdita di un trade partendo da entrata, uscita e quantita.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "direction",
@@ -933,7 +933,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Risk Reward Online | Calcolich",
     metaDescription: "Confronta rischio e potenziale profitto prima di aprire un trade. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Confronta rischio e potenziale profitto prima di aprire un trade.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "entry",
@@ -989,7 +989,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Obiettivo Risparmio Online | Calcolich",
     metaDescription: "Calcola quanto tempo serve per raggiungere un obiettivo di risparmio. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Calcola quanto tempo serve per raggiungere un obiettivo di risparmio.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "goal",
@@ -1045,7 +1045,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Costo Orario Online | Calcolich",
     metaDescription: "Trasforma un costo mensile in costo orario per lavoro, servizi o freelance. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Trasforma un costo mensile in costo orario per lavoro, servizi o freelance.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "monthlyCost",
@@ -1095,7 +1095,7 @@ export const calculators: Calculator[] = [
     metaTitle: "Calcolatore Stipendio Annuale Mensile Online | Calcolich",
     metaDescription: "Converti uno stipendio annuale in importo mensile su 12 o 13 mensilita. Strumento gratuito con spiegazione semplice, FAQ e link utili.",
     intro: "Converti uno stipendio annuale in importo mensile su 12 o 13 mensilita.",
-    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza, business e trading.",
+    cta: "Ricevi nuovi calcolatori gratuiti per lavoro, finanza e business.",
     inputs: [
       {
         key: "annual",
@@ -1888,6 +1888,10 @@ export const calculators: Calculator[] = [
     ],
   },
 ];
+
+export const calculators = allCalculators.filter(
+  (calculator) => calculator.category !== "Trading",
+);
 
 export function getCalculator(slug: string) {
   return calculators.find((calculator) => calculator.slug === slug);

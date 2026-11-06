@@ -15,7 +15,7 @@ export type Guide = {
   alternates?: Partial<Record<"de", string>>;
 };
 
-export const guides: Guide[] = [
+const allGuides: Guide[] = [
   {
     slug: "stipendio-netto-svizzera",
     title: "Stipendio netto in Svizzera: cosa controllare prima di accettare un'offerta",
@@ -358,6 +358,10 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+export const guides = allGuides.filter(
+  (guide) => guide.categoryLabel !== "Trading",
+);
 
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);

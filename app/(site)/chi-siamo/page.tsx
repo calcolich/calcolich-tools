@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Chi siamo | Calcolich",
-  description: "Scopri Calcolich, il sito di calcolatori online gratuiti per lavoro, business, finanza, casa e trading.",
+  description: "Scopri Calcolich, il sito di calcolatori online gratuiti per lavoro, business, finanza e casa.",
   alternates: {
     canonical: "https://www.calcolich.ch/chi-siamo",
   },
@@ -21,7 +21,7 @@ export default function AboutPage() {
             gestisce un budget, valuta un investimento o prende decisioni operative a trasformare un dubbio in un numero.
           </p>
           <p>
-            Il sito combina calcolatori per Svizzera, business, finanza personale e trading con guide semplici,
+            Il sito combina calcolatori per Svizzera, lavoro, business, finanza personale e casa con spiegazioni semplici,
             FAQ e collegamenti tra strumenti correlati. Ogni pagina e pensata per dare una risposta rapida e poi
             aiutare l&apos;utente a capire il significato del risultato.
           </p>

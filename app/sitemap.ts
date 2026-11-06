@@ -2,9 +2,7 @@ import type { MetadataRoute } from "next";
 import { germanLongTailArticles } from "@/content/de/ratgeber";
 import { calculatorCategories } from "@/lib/categories";
 import { calculators } from "@/lib/calculators";
-import { guides } from "@/lib/guides";
 import { getLocalizedCalculators, hasLocalizedCalculator, locales, localizedAlternates } from "@/lib/i18n";
-import { servicePages } from "@/lib/service-pages";
 import { siteUrl } from "@/lib/site-metadata";
 
 const contentUpdatedAt = new Date("2026-07-12T00:00:00.000Z");
@@ -15,16 +13,9 @@ const routes = Array.from(new Set([
   "/calcolo-tredicesima-svizzera",
   "/calcolo-giorni-lavorativi-svizzera",
   "/calcolo-straordinari-svizzera",
-  "/servizi-ai-seo",
-  "/audit-sito-gratuito-ticino",
-  "/piano-cashflow-online",
   "/chi-siamo",
   "/contatti",
-  "/guide",
-  "/social",
   ...calculatorCategories.map((category) => `/categorie/${category.slug}`),
-  ...guides.map((guide) => `/guide/${guide.slug}`),
-  ...servicePages.map((page) => `/servizi/${page.slug}`),
   ...calculators
     .filter((calculator) => !hasLocalizedCalculator(calculator.slug))
     .map((calculator) => `/${calculator.slug}`),

@@ -52,19 +52,6 @@ export const calculatorCategories: CalculatorCategory[] = [
     ],
   },
   {
-    slug: "trading",
-    title: "Calcolatori trading e risk management",
-    shortTitle: "Trading",
-    description: "Calcolatori per rischio per trade, lot size forex, drawdown, profitto e rapporto rischio rendimento.",
-    metaTitle: "Calcolatori trading e risk management | Calcolich",
-    metaDescription: "Calcolatori gratuiti per rischio trading, lot size forex, drawdown, profitto e risk reward.",
-    match: ["Trading"],
-    intro: [
-      "Nel trading il calcolo viene prima dell'entrata. Questa sezione aiuta a definire rischio, size, potenziale profitto e drawdown prima di esporre capitale.",
-      "Gli strumenti non sono segnali finanziari: servono a rendere piu disciplinata la gestione del rischio e la lettura degli scenari.",
-    ],
-  },
-  {
     slug: "finanza",
     title: "Calcolatori finanza e investimenti",
     shortTitle: "Finanza",

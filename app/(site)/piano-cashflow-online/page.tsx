@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Piano Cashflow Online | Calcolich",
   description:
-    "Piano operativo Calcolich per creare traffico SEO, raccogliere lead e monetizzare con servizi, AdSense e contenuti trading.",
+    "Piano operativo Calcolich per far crescere i calcolatori gratuiti con traffico SEO, contenuti utili e strumenti per la Svizzera.",
   alternates: {
     canonical: "https://www.calcolich.ch/piano-cashflow-online",
   },
@@ -35,7 +35,7 @@ export default function Page() {
               Traffico, lead e prime entrate online
             </h1>
             <p className="mt-5 text-lg leading-8 text-gray-700">
-              Calcolich cresce con calcolatori SEO, contenuti trading e servizi AI/SEO per aziende.
+              Calcolich cresce con calcolatori SEO, contenuti utili e strumenti pratici per chi vive e lavora in Svizzera.
               L&apos;obiettivo non e fare un sito bello e basta: e creare una macchina che porta visite,
               contatti e vendite.
             </p>
