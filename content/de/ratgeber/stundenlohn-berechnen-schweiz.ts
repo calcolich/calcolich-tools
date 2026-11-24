@@ -78,6 +78,7 @@ export const stundenlohnBerechnenSchweiz = {
     { href: "/de/lohnrechner-schweiz", label: "Lohnrechner Schweiz" },
     { href: "/de/brutto-netto-rechner-schweiz", label: "Brutto-Netto-Rechner Schweiz" },
     { href: "/de/arbeitszeitrechner", label: "Arbeitszeitrechner" },
+    { href: "/de/ferienrechner-schweiz", label: "Ferientage für die Schweiz berechnen" },
   ],
   relatedArticleSlugs: ["pausenregelung-arbeitszeit-schweiz", "ferienanspruch-teilzeit-schweiz"],
   sources: [

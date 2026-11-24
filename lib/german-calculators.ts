@@ -1453,11 +1453,11 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     slug: "ferienrechner-schweiz",
     kind: "vacation-ch",
     category: "Zeit & Datum",
-    title: "Ferienrechner Schweiz: Ferienanspruch 2026 berechnen | Calcolich",
-    metaDescription: "Ferienanspruch in der Schweiz berechnen: Ferientage bei Vollzeit, Teilzeit, Eintritt oder Austritt. Kostenloser Ferienrechner 2026.",
-    h1: "Ferienrechner Schweiz: Ferienanspruch berechnen",
+    title: "Ferienrechner Schweiz: Ferientage berechnen | Calcolich",
+    metaDescription: "Berechne deine Ferientage in der Schweiz pro Jahr und anteilig bei Teilzeit, Eintritt oder Austritt. Mit Formel und Rechenbeispielen.",
+    h1: "Ferienrechner Schweiz: Ferientage berechnen",
     shortTitle: "Ferienrechner",
-    intro: "Berechne deinen jährlichen Ferienanspruch und den anteiligen Anspruch für eine bestimmte Anzahl Beschäftigungsmonate.",
+    intro: "Gib deine Arbeitstage pro Woche, deine Ferienwochen pro Jahr und die Anzahl Beschäftigungsmonate ein. Der Rechner zeigt dir den vollen Jahresanspruch und deine anteiligen Ferientage bei einem Ein- oder Austritt während des Jahres.",
     contentSections: [
       {
         heading: "Wann ist dieser Rechner nützlich?",
@@ -1472,10 +1472,17 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
         ],
       },
       {
-        heading: "So funktioniert die Berechnung",
+        heading: "Ferientage bei Eintritt oder Austritt berechnen",
         paragraphs: [
-          "Nach Artikel 329a OR beträgt der Mindestanspruch bis zum vollendeten 20. Altersjahr fünf Wochen, danach vier Wochen pro Dienstjahr. Mindestens zwei Ferienwochen müssen zusammenhängen. Verträge und Gesamtarbeitsverträge dürfen einen höheren Anspruch vorsehen.",
-          "Der Rechner multipliziert Arbeitstage pro Woche mit Ferienwochen. Für einen Teil des Jahres wird dieser Wert mit den Beschäftigungsmonaten geteilt durch zwölf multipliziert. Ferien sollen grundsätzlich tatsächlich bezogen und während des laufenden Arbeitsverhältnisses nicht durch Geld ersetzt werden; bei unregelmässiger Teilzeit und am Ende eines Arbeitsverhältnisses bestehen begrenzte Ausnahmen.",
+          "Multipliziere deine Arbeitstage pro Woche mit deinen Ferienwochen. Für einen Teil des Jahres multiplizierst du den Jahresanspruch mit den Beschäftigungsmonaten und teilst durch zwölf.",
+          "Bei fünf Arbeitstagen pro Woche und fünf Ferienwochen ergibt das 25 Ferientage pro Jahr. Sechs Beschäftigungsmonate ergeben einen anteiligen Anspruch von 25 × 6 ÷ 12 = 12,5 Ferientagen. Für die Abrechnung einzelner Tage und für Rundungen sind die anwendbaren Vertrags- und Personalregeln massgebend.",
+        ],
+      },
+      {
+        heading: "Gesetzlicher Mindestanspruch in der Schweiz",
+        paragraphs: [
+          "Nach Artikel 329a OR beträgt der Mindestanspruch bis zum vollendeten 20. Altersjahr fünf Wochen, danach vier Wochen pro Dienstjahr. Arbeits- und Gesamtarbeitsverträge dürfen einen höheren Anspruch vorsehen.",
+          "Nach Artikel 329c OR müssen mindestens zwei Ferienwochen zusammenhängen. Ferien sollen grundsätzlich bezogen werden. Eine finanzielle Abgeltung kommt nur in begrenzten Fällen infrage, etwa für Restferien beim Ende des Arbeitsverhältnisses.",
         ],
       },
     ],
@@ -1483,7 +1490,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     example: "Beispiel: Ein 60-%-Pensum verteilt auf drei Arbeitstage pro Woche mit fünf Ferienwochen ergibt 3 × 5 = 15 Ferientage pro Jahr. Nach sechs Beschäftigungsmonaten beträgt der rechnerische Anspruch 7,5 Tage.",
     supportingContent: [
       "Der Rechner zeigt einen mathematischen Anspruch. Arbeitsvertrag, Eintritts- und Austrittsdatum, unbezahlter Urlaub sowie Rundungsregeln können den offiziellen Saldo beeinflussen.",
-      "Vom berechneten Anspruch müssen bereits bezogene Tage und genehmigte Überträge abgezogen werden. Bei Krankheit während geplanter Ferien ist entscheidend, ob der Erholungszweck tatsächlich verhindert war; ein ärztlicher Nachweis kann erforderlich sein. Längere Abwesenheiten können unter bestimmten Voraussetzungen zu einer Kürzung führen. Ferienzeitpunkt und Übertrag werden mit dem Arbeitgeber abgestimmt. Bei Beendigung des Arbeitsverhältnisses sollen Restferien grundsätzlich bezogen werden, soweit dies während der Kündigungsfrist möglich und zumutbar ist.",
+      "Für deinen verbleibenden Feriensaldo addierst du genehmigte Überträge aus dem Vorjahr und ziehst bereits bezogene Ferientage ab. Bei Krankheit während geplanter Ferien ist entscheidend, ob der Erholungszweck tatsächlich verhindert war. Ein ärztlicher Nachweis kann erforderlich sein. Längere Abwesenheiten können unter bestimmten Voraussetzungen zu einer Kürzung führen. Ferienzeitpunkt und Übertrag werden mit dem Arbeitgeber abgestimmt. Bei Beendigung des Arbeitsverhältnisses sollen Restferien grundsätzlich bezogen werden, soweit dies während der Kündigungsfrist möglich und zumutbar ist.",
     ],
     faqs: [
       { question: "Wie viele Ferientage ergeben vier Ferienwochen?", answer: "Bei fünf Arbeitstagen pro Woche sind es 20 Tage; bei vier Arbeitstagen sind es 16 Tage." },
@@ -1492,7 +1499,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
       { question: "Verfallen nicht bezogene Ferien?", answer: "Ferienansprüche verjähren grundsätzlich nach fünf Jahren. Die Frist beginnt nach Ablauf des Jahres, für das die Ferien bestimmt waren." },
       { question: "Was passiert bei Krankheit während der Ferien?", answer: "Wenn Krankheit oder Unfall den Erholungszweck verhindert, können die betroffenen Tage mit entsprechendem Nachweis nachgewährt werden." },
     ],
-    relatedCalculators: ["stundenrechner", "arbeitszeitrechner", "lohnrechner-schweiz"],
+    relatedCalculators: ["arbeitstage-rechner-schweiz", "arbeitszeitrechner", "lohnrechner-schweiz"],
     guideLinks: [
       {
         href: "/de/ratgeber/ferienanspruch-teilzeit-schweiz",
@@ -1508,7 +1515,7 @@ export const germanPriorityCalculatorData: CentralizedCalculator[] = [
     monetizationType: "lead",
     schemaType: "WebApplication",
     isPriority: true,
-    searchIntent: "Ferienanspruch in der Schweiz anteilig berechnen",
+    searchIntent: "Ferientage und anteiligen Ferienanspruch in der Schweiz berechnen",
     updatedAt: "12. Juli 2026",
     sources: swissVacationSources,
     inputs: [

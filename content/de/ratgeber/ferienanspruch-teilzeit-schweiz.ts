@@ -76,7 +76,7 @@ export const ferienanspruchTeilzeitSchweiz = {
     { question: "Werden Krankheitstage während der Ferien zurückgegeben?", answer: "Wenn Krankheit oder Unfall den Erholungszweck tatsächlich verhindert und dies nachgewiesen wird, können die betroffenen Tage nachgewährt werden." },
   ],
   internalLinks: [
-    { href: "/de/ferienrechner-schweiz", label: "Ferienrechner Schweiz" },
+    { href: "/de/ferienrechner-schweiz", label: "Ferientage bei Teilzeit berechnen" },
     { href: "/de/arbeitszeitrechner", label: "Arbeitszeitrechner" },
     { href: "/de/lohnrechner-schweiz", label: "Lohnrechner Schweiz" },
   ],

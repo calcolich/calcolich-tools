@@ -218,6 +218,19 @@ export default function CalculatorPage({
 }: CalculatorPageProps) {
   const ui = { ...defaultLabels, ...localeHome[locale], ...labels };
   const related = relatedCalculators ?? getRelatedCalculators(calculator);
+  const relatedLinks = related.map((tool) => ({
+    slug: tool.slug,
+    href: calculatorHref(tool),
+    title: tool.shortTitle,
+  }));
+  const thirteenthSalarySlug = "calcolo-tredicesima-svizzera";
+  if (locale === "it" && !relatedCalculators && calculator.relatedSlugs.includes(thirteenthSalarySlug)) {
+    relatedLinks.push({
+      slug: thirteenthSalarySlug,
+      href: `/${thirteenthSalarySlug}`,
+      title: "Calcolo tredicesima svizzera",
+    });
+  }
   const highIntentFunnel = getHighIntentFunnel(locale, calculator.slug);
   const leadSegment = highIntentFunnel?.segment ?? calculator.category;
   const leadInterest = highIntentFunnel?.interest ?? calculator.category;
@@ -497,16 +510,16 @@ export default function CalculatorPage({
           <aside className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
             <h2 className="mb-4 text-xl font-black">{ui.relatedTitle}</h2>
             <div className="space-y-3">
-              {related.map((tool) => (
+              {relatedLinks.map((tool) => (
                 <TrackedInternalLink
                   key={tool.slug}
-                  href={calculatorHref(tool)}
+                  href={tool.href}
                   event="related_calculator_clicked"
                   source={calculator.slug}
                   target={tool.slug}
                   className="block rounded-2xl border border-gray-200 p-4 font-bold text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50"
                 >
-                  {publicCopy(tool.shortTitle)}
+                  {publicCopy(tool.title)}
                 </TrackedInternalLink>
               ))}
             </div>
